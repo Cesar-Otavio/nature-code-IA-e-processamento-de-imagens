@@ -354,5 +354,13 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 });
 
 // Iniciar
-loadSavedAnswers();
-renderQuestion();
+// Única alteração feita neste arquivo pela integração com IA (Fase 3).
+// Se a camada de IA estiver carregada, ela decide de onde vêm as questões e chama
+// loadSavedAnswers() e renderQuestion() no momento certo. Se não estiver, o quiz roda
+// exatamente como antes — o site continua funcionando com a IA desligada.
+if (typeof InterfaceQuizIA !== "undefined") {
+  InterfaceQuizIA.iniciar();
+} else {
+  loadSavedAnswers();
+  renderQuestion();
+}
