@@ -27,6 +27,14 @@ const MetricasIA = (function () {
       falhasPorTipo: {},
       latenciasMs: [],
       porModelo: {},
+
+      // Quantos quizzes foram servidos por cada nível da cascata, e por que os que não
+      // vieram da IA não vieram. Acrescentado na Fase 4: até então a camada media a
+      // qualidade da geração, mas não registrava qual nível acabou atendendo o aluno —
+      // que é justamente o número que mostra a cascata funcionando.
+      origens: { ia: 0, cache: 0, fixo: 0 },
+      motivosDeFallback: {},
+
       primeiroRegistro: null,
       ultimoRegistro: null,
     };
@@ -96,6 +104,19 @@ const MetricasIA = (function () {
     gravar(m);
   }
 
+  /**
+   * Um quiz entregue ao aluno, e por qual nível da cascata.
+   * `motivo` só é gravado quando a origem não foi a IA — é o "por que caiu para cá".
+   */
+  function registrarOrigem(origem, motivo) {
+    const m = ler();
+    if (!m.origens) m.origens = { ia: 0, cache: 0, fixo: 0 };
+    if (!m.motivosDeFallback) m.motivosDeFallback = {};
+    incrementar(m.origens, origem);
+    if (origem !== "ia" && motivo) incrementar(m.motivosDeFallback, motivo);
+    gravar(m);
+  }
+
   function percentil(ordenadas, fracao) {
     if (!ordenadas.length) return 0;
     const indice = Math.min(ordenadas.length - 1, Math.floor(fracao * ordenadas.length));
@@ -120,6 +141,10 @@ const MetricasIA = (function () {
         : null,
       rejeicoesPorMotivo: m.rejeicoesPorMotivo,
       estrategiasDoParser: m.estrategiasDoParser,
+      origens: m.origens || { ia: 0, cache: 0, fixo: 0 },
+      motivosDeFallback: m.motivosDeFallback || {},
+      quizzesServidos:
+        (m.origens ? m.origens.ia + m.origens.cache + m.origens.fixo : 0) || 0,
       latencia: {
         amostras: ordenadas.length,
         mediaMs: ordenadas.length ? Math.round(soma / ordenadas.length) : 0,
@@ -147,6 +172,7 @@ const MetricasIA = (function () {
     registrarGeracao,
     registrarFalhaDeChamada,
     registrarValidacao,
+    registrarOrigem,
     resumo,
     limpar,
     lerBruto: ler,

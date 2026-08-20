@@ -249,9 +249,28 @@ const ServicoQuiz = (function () {
       cascata: [],
     };
 
+    /**
+     * Resume em uma frase curta por que o quiz não veio da IA. É o que a página de
+     * diagnóstico agrupa em "motivos de fallback" — sem isso a métrica diria apenas
+     * que caiu, e não de onde.
+     */
+    function motivoDoFallback() {
+      if (!elegibilidade.elegivel) return `tópico não elegível: ${elegibilidade.motivo}`;
+      const status = diagnostico.status;
+      if (status && !status.online) return "Ollama fora do ar";
+      if (status && !status.modeloRegistrado) return `modelo não registrado: ${status.motivo}`;
+      const geracao = diagnostico.geracao;
+      if (geracao && geracao.erroFinal) return `falha na chamada: ${geracao.erroFinal.tipo}`;
+      if (geracao && geracao.totalRejeitadas) return "questões recusadas pelo validador";
+      if (geracao) return "modelo não devolveu questão aproveitável";
+      return "indeterminado";
+    }
+
     function entregar(origem, questoes, extras) {
       diagnostico.totalMs = Date.now() - inicio;
       diagnostico.origem = origem;
+      diagnostico.motivoFallback = origem === "ia" ? null : motivoDoFallback();
+      MetricasIA.registrarOrigem(origem, diagnostico.motivoFallback);
       return Object.assign(
         {
           questoes,
