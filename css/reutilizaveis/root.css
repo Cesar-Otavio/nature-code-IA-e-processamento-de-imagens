@@ -1,0 +1,108 @@
+/* ==============================================
+   root.css — base global do projeto
+   Importado por TODOS os outros arquivos CSS.
+   Contém: variáveis, classes de fonte, reset,
+   header de navegação e botão .btn (vidro).
+   ============================================== */
+
+/* ---------- Classes utilitárias de fonte ---------- */
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---------- Variáveis CSS ---------- */
+:root {
+  --color-background:        #121212;
+  --color-text-primary:      #ffffff;
+  --color-text-secondary:    #b0b0b0;
+  --color-brand-green:       #4caf50;
+  --color-brand-green-light: #66bb6a;
+  --color-counter-bg:        #1b4332;
+  --color-counter-text:      #80e27e;
+  --color-divider:           #2c2c2c;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  color: white; /* ← adiciona aqui */
+}
+
+/* ---------- Header de navegação (reutilizado em todas as páginas) ---------- */
+header.navegacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+/* ---------- Botão estilo vidro — usado em todas as páginas ---------- */
+/* ---------- Botão VOLTAR — global ---------- */
+.btn-voltar {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 8px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- Responsividade do .btn ---------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn-voltar {
+    font-size: 15px;
+    padding: 9px 22px;
+    margin: 8px 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .btn-voltar {
+    font-size: 16px;
+    padding: 10px 26px;
+    margin: 10px 24px;
+  }
+}

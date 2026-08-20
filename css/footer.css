@@ -1,0 +1,140 @@
+/* ==============================================
+   footer.css — estilos do rodapé
+   Importa apenas root.css.
+   NÃO redefine body, background nem font-family.
+   NÃO importa style.css.
+   ============================================== */
+
+@import url("./reutilizaveis/root.css");
+
+/* ---------- Rodapé ---------- */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 50px 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: "Libre Baskerville", serif;
+}
+
+footer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+footer p,
+footer li,
+footer small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-devs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dev-list-col {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 10px;
+}
+
+.icone-devs {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(70%) sepia(73%) saturate(458%)
+          hue-rotate(104deg) brightness(95%) contrast(86%);
+}
+
+.dev-list-coluna {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dev-list-coluna li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+  footer { padding: 40px 20px; text-align: center; }
+
+  .footer-container { grid-template-columns: 1fr; gap: 30px; }
+
+  footer h2 { font-size: 1.6rem; }
+  footer h3 { font-size: 1.2rem; text-align: center; }
+
+  .dev-list-coluna {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    justify-items: center;
+  }
+
+  .dev-list-coluna li {
+    white-space: normal;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .icone-devs { width: 20px; height: 20px; }
+}
+
+@media (max-width: 475px) {
+  footer { padding: 30px 15px; }
+  .footer-container { gap: 25px; }
+  footer h2 { font-size: 1.4rem; }
+  footer h3 { font-size: 1.1rem; }
+  footer p, footer li, footer small { font-size: 0.9rem; }
+
+  .dev-list-coluna { grid-template-columns: 1fr; gap: 10px; }
+
+  .dev-list-coluna li {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .icone-devs { width: 18px; height: 18px; margin-right: 0; margin-bottom: 4px; }
+}
+
+@media (max-width: 375px) {
+  footer { padding: 25px 10px; }
+  .footer-container { gap: 20px; }
+  footer h2 { font-size: 1.2rem; }
+  footer h3 { font-size: 1rem; margin-bottom: 8px; }
+  footer p, footer li, footer small { font-size: 0.85rem; }
+  .dev-list-coluna { gap: 8px; }
+  .dev-list-coluna li { font-size: 12px; }
+  .icone-devs { width: 16px; height: 16px; }
+}

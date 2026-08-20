@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Code - Definição e Componentes</title>
+
+    <!-- Bootstrap PRIMEIRO -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Seu CSS DEPOIS -->
+    <link rel="stylesheet" href="../../../../css/topicsConteude.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="../../../../images/icons/folha-verde.svg"
+    />
+  </head>
+
+  <body>
+    <canvas id="particles"></canvas>
+    <!-- Menu de navegação -->
+    <header class="top-bar">
+      <a href="../../ecossistemas.html" class="btn-voltar">VOLTAR</a>
+    </header>
+
+    <div class="parent">
+      <div class="div1">
+        <div class="container-div">
+          <div class="conteudo-header">
+            <div class="header-content">
+              <div class="header-title">Definição e Componentes</div>
+              <div class="header-subtitle">Módulo: Ecossistemas</div>
+            </div>
+          </div>
+
+          <div class="content">
+            <h2 class="section-title">O que é um Ecossistema?</h2>
+            <p class="text">
+              Um ecossistema é uma comunidade de organismos vivos em conjunto
+              com os componentes não vivos do seu ambiente, interagindo como um
+              sistema. Inclui todos os organismos em uma área específica, junto
+              com o ambiente físico (como solo, água, ar) com o qual interagem.
+            </p>
+
+            <img
+              src="../../../../images/conteudos/conteudo-ecossistemas/topico-definicao/ecossistema.jpg"
+              alt="Ecossistema"
+              class="ecosystem-image"
+            />
+
+            <h2 class="section-title">Componentes do Ecossistema</h2>
+            <p class="text">Os ecossistemas têm dois componentes principais:</p>
+
+            <div class="list-item">
+              <strong>1. Componentes Bióticos:</strong> Todos os organismos
+              vivos em um ecossistema, como plantas, animais, fungos e
+              microrganismos.
+            </div>
+
+            <div class="list-item">
+              <strong>2. Componentes Abióticos:</strong> Todos os elementos
+              não-vivos que afetam os organismos vivos, como solo, água, ar, luz
+              solar, temperatura e umidade.
+            </div>
+
+            <h2 class="section-title">Tipos de Ecossistemas</h2>
+            <p class="text">
+              Os ecossistemas podem ser classificados em dois tipos principais:
+            </p>
+
+            <div class="list-item">
+              <strong>1. Ecossistemas Naturais:</strong> Formados naturalmente,
+              como florestas, desertos, oceanos e lagos.
+            </div>
+
+            <div class="list-item">
+              <strong>2. Ecossistemas Artificiais:</strong> Criados ou
+              modificados pelo ser humano, como parques urbanos, fazendas e
+              aquários.
+            </div>
+
+            <h2 class="section-title">Écotone</h2>
+            <p class="text">
+              Região de transição entre dois ecossistemas diferentes, onde
+              ocorre uma mistura de características de ambos os ecossistemas
+              adjacentes.
+            </p>
+
+            <div class="bottom-spacing"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div2">
+        <!-- Coluna direita: Quiz -->
+        <div class="quiz-container">
+          <!-- Header -->
+          <div class="quiz-header">
+            <div class="quiz-header-left">
+              <!-- <button class="close-btn"></button> -->
+              <div class="header-title" id="quizTitle">
+                Conceitos Básicos de Ecossistemas
+              </div>
+            </div>
+            <div class="difficulty">
+              <span class="star">⭐</span>
+              <span id="score">1/2</span>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="progress-info" id="progressInfo">Questão 1 de 2</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="progressFill"
+              style="width: 50%"
+            ></div>
+          </div>
+
+          <!-- Question Type -->
+          <div class="question-type" id="questionType">
+            <span class="question-type-icon">☰</span>
+            <span id="questionTypeText">Escolha múltipla</span>
+          </div>
+
+          <!-- Question Title -->
+          <div class="question-title" id="questionTitle">
+            O que é um ecossistema?
+          </div>
+
+          <!-- Options for Multiple Choice -->
+          <div class="options" id="optionsContainer"></div>
+
+          <!-- True/False Buttons -->
+          <div
+            class="true-false-buttons"
+            id="trueFalseContainer"
+            style="display: none"
+          ></div>
+
+          <!-- Explanation -->
+          <div class="explanation" id="explanation">
+            <div class="explanation-header">
+              <span class="explanation-icon">💡</span>
+              <span>Explicação</span>
+            </div>
+            <div class="explanation-text" id="explanationText">
+              Um ecossistema é formado por todos os organismos vivos
+              (componentes bióticos) e elementos não vivos (componentes
+              abióticos) que interagem em um determinado ambiente.
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="quiz-footer">
+            <button type="button" class="quiz-back-btn"></button>
+            <div class="nav-buttons">
+              <button type="button" class="nav-btn" id="prevBtn" disabled>
+                ←
+              </button>
+              <button type="button" class="nav-btn" id="nextNavBtn">→</button>
+            </div>
+            <!-- Botão novo -->
+            <button type="button" id="resetBtn" class="reset-btn">
+              ↺ Resetar
+            </button>
+            <button type="button" class="next-btn" id="nextBtn" disabled>
+              Próximo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="../../../../script/particles-content.js"></script>
+    <script src="../.../../../../../script/../local-storage/quiz_ecossistemas/quiz_definicao_componentes.js"></script>
+    <script src="../../../../script/quiz-engine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

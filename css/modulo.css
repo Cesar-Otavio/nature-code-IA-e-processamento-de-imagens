@@ -1,0 +1,290 @@
+/* ==============================================
+   modulo.css — página de módulos (carrossel)
+   Importa apenas root.css.
+   ============================================== */
+
+@import url("./reutilizaveis/root.css");
+
+/* ---------- Body ---------- */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header desta página ---------- */
+header.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ---------- Main centralizado ---------- */
+main {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.navegacao ul {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Carrossel ---------- */
+#cardsCarousel {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-item {
+  padding: 0 100px;
+}
+
+.carousel-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel .card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background-color: #05001e;
+  border-radius: 12px;
+  margin-bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  width: 900px;
+  max-width: 900px;
+  min-width: 900px;
+  height: auto;
+  box-sizing: border-box;
+  z-index: 200;
+  color: #fefefe;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+}
+
+.badge {
+  background-color: #1b4332;
+  color: #80e27e;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* Botão Continuar — verde */
+.btn-continuar {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn-continuar:hover {
+  background-color: #66bb6a;
+  color: #ffffff;
+}
+
+/* ---------- Hover do card ---------- */
+.cards-container a:hover .card,
+.card:hover {
+  transform: scale(1.03);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+/* ---------- Background blur ---------- */
+#carouselBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px);
+  z-index: -1;
+  transition: background-image 0.6s ease-in-out;
+  display: none; /* ← inicialmente escondido, só aparece quando o JS define a imagem */
+}
+
+/* ---------- Setas ---------- */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.carousel-control-prev { left: -120px; }
+.carousel-control-next { right: -120px; }
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100%, 100%;
+}
+
+.carousel-item:not(.active) {
+  opacity: 0.3;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+.carousel-indicators { bottom: -50px; }
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.carousel-indicators .active { background-color: #4caf50; }
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablet — esconde setas */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .carousel-item { padding: 0 20px; }
+  .card { width: 90%; max-width: 90%; min-width: 300px; }
+}
+
+/* Laptop 1024px — setas menores e mais perto */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-control-prev { left: -50px; }
+  .carousel-control-next { right: -50px; }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+  }
+  .carousel-item { padding: 0 50px; }
+}
+
+/* Laptop 1440px — setas mais perto do card */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .carousel-control-prev { left: -70px; }
+  .carousel-control-next { right: -70px; }
+  .carousel-item { padding: 0 70px; }
+}
+
+/* Mobile: permite scroll pois o card não cabe na tela */
+@media (max-width: 576px) {
+  main {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+    padding: 80px 12px 60px;
+    align-items: center; /* ← era flex-start, muda pra center */
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next { display: none !important; }
+
+  #cardsCarousel { max-width: 100%; width: 100%; padding: 0; }
+  .carousel-item { padding: 0 8px; }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto;
+  }
+
+  .card-img { height: 200px; }
+  .carousel-indicators { bottom: -40px; }
+  .carousel-inner { touch-action: pan-y; }
+}
+
+/* ---------- Efeito de ondas background (canvas) ---------- */
+#waves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

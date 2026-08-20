@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Code</title>
+  <link rel="stylesheet" href="css/style.css" !important>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..
+900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Marcellus+SC&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg" href="./images/icons/folha-verde.svg">
+</head>
+
+<body>
+
+  <!-- Ícone de Informação -->
+  <div class="info-icon" id="infoIcon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <i>i</i>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-header">
+        <h2 class="modal-title">Informações do Projeto</h2>
+        <button class="close-btn" id="closeBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          &times;
+        </button>
+      </div>
+
+      <div class="info-section">
+        <h3>Disciplina</h3>
+        <p>Aplicações Digitais: Planejamento e Produção</p>
+      </div>
+
+      <div class="info-section">
+        <h3>Professor Orientador</h3>
+        <p>Prof. Luiz Ricardo Mantovani da Silva</p>
+      </div>
+
+      <div class="info-section">
+        <h3>Desenvolvedores</h3>
+        <ul>
+          <li>Cesar Otavio da Silva Boiani</li>
+          <li>Giovana Giraldeli</li>
+          <li>Giovani Nogueira Pires</li>
+          <li>Marcus Vinicius da Silva Capeteruchi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="conteudo-principal">
+
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop playsinline class="video-fundo">
+      <source src="./images/background-video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+
+    <div class="sobrepor-texto">
+      <h1 class="titulo-principal">Nature Code</h1>
+      <p>Aprenda sobre animais, plantas e ecossistemas</p>
+    </div>
+
+
+    <div class="btn-comecar">
+      <a href="./pages/modulos.html" class=" btn-animado"><!-- From Uiverse.io by JkHuger -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        COMEÇAR
+      </a>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="./script/script.js"></script>
+  <script src="script/modal.js"></script>
+</body>
+
+</html>

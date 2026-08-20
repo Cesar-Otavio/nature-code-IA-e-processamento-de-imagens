@@ -1,0 +1,53 @@
+/* =============================================
+   animations.css
+   Todas as @keyframes do projeto em um só lugar
+   ============================================= */
+
+/* Bordas animadas (usadas em .btn-animado, .info-icon, .close-btn da home) */
+@keyframes btn-anim1 {
+  0%       { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+@keyframes btn-anim2 {
+  0%       { top: -100%; }
+  50%, 100% { top: 100%; }
+}
+
+@keyframes btn-anim3 {
+  0%       { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+
+@keyframes btn-anim4 {
+  0%       { bottom: -100%; }
+  50%, 100% { bottom: 100%; }
+}
+
+/* Modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Sparkle button */
+@keyframes bounce {
+  35%, 65% { scale: var(--scale); }
+}
+
+@keyframes flip {
+  to { rotate: 360deg; }
+}
+
+@keyframes rotate {
+  to { transform: rotate(90deg); }
+}
+
+@keyframes float-out {
+  to { rotate: 360deg; }
+}

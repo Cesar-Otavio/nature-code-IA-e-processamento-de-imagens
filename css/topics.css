@@ -1,0 +1,287 @@
+/* ==============================================
+   topics.css — página de tópicos (cards flip)
+   Importa apenas root.css.
+
+   NOTA: .container e .topics-container são aliases
+   — ambos funcionam. Se quiser migrar o HTML para
+   .topics-container, pode remover .container depois.
+   ============================================== */
+
+@import url("../../css/reutilizaveis/root.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+/* ---------- Body ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #101933;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* No topics.css */
+header.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+/* ---------- Título ---------- */
+.text-center {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 38px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .text-center {
+    padding-top: 90px !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================
+   IMAGENS DE FUNDO DOS CARDS
+========================= */
+
+/* ECOSSISTEMAS */
+.card-definicao          { background-image: url(../../../../images/capas-topicos/capa-definicao.jpg); }
+.card-ecossistema        { background-image: url(../../../../images/capas-topicos/capa-ecossistemas-terra.jpg); }
+.card-mundo-vivo         { background-image: url(../../../../images/capas-topicos/capa-mundo-vivo.jpg); }
+.card-fluxo-de-energia   { background-image: url(../../../../images/capas-topicos/capa-fluxo-energia.jpg); }
+.card-sucessao-ecologica { background-image: url(../../../../images/capas-topicos/capa-sucessao.jpg); }
+.card-piramides-ecologicas { background-image: url(../../../../images/capas-topicos/capa-piramides.jpg); }
+
+/* ANIMAIS */
+.card-reino-animalia       { background-image: url(../../../../images/capas-topicos/capa-reino-animal.jpg); }
+.card-filo-dos-poriferos   { background-image: url(../../../../images/capas-topicos/capa-poriferos.jpg); }
+.card-filo-dos-cnidarios   { background-image: url(../../../../images/capas-topicos/capa-cnidarios.jpg); }
+.card-filo-dos-platelmintos  { background-image: url(../../../../images/capas-topicos/capa-platelmintos.jpg); }
+.card-filo-dos-nematelmintos { background-image: url(../../../../images/capas-topicos/capa-nematelmintos.jpg); }
+.card-filo-dos-moluscos    { background-image: url(../../../../images/capas-topicos/capa-moluscos.jpg); }
+.card-filo-dos-anelideos   { background-image: url(../../../../images/capas-topicos/capa-anelideos.jpg); }
+.card-filo-dos-artropodes  { background-image: url(../../../../images/capas-topicos/capa-artropodes.jpg); }
+.card-filo-dos-equinodermos { background-image: url(../../../../images/capas-topicos/capa-equinodermos.jpg); }
+.card-filo-dos-cordados    { background-image: url(../../../../images/capas-topicos/capa-cordados.jpg); }
+
+/* PLANTAS */
+.card-reino-plantae  { background-image: url(../../../../images/capas-topicos/capa_reino-plantae.jpg); }
+.card-briofitas      { background-image: url(../../../../images/capas-topicos/capa-briofitas.jpg); }
+.card-pteridofitas   { background-image: url(../../../../images/capas-topicos/capa-pteridofitas.jpg); }
+.card-gimnospermas   { background-image: url(../../../../images/capas-topicos/capa-gimnospermas.jpg); }
+.card-angiospermas   { background-image: url(../../../../images/capas-topicos/capa-angiospermas.jpg); }
+
+/* =========================
+   GRID — .container e .topics-container são aliases
+========================= */
+.container,
+.topics-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  line-height: 1.6;
+  /* Reseta qualquer estilo de container do Bootstrap */
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.container a,
+.topics-container a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-shadow: 4px 3px 8px #2b2b2b;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* =========================
+   EFEITO FLIP
+========================= */
+.flip {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+
+.flip > .front {
+  transform: rotateY(0deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.flip:hover > .front {
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+  transform: rotateY(180deg);
+}
+
+.flip:hover > .back {
+  box-shadow: 0 0 5px #66bb6a, 0 0 10px #66bb6a, 0 0 20px #66bb6a, 0 0 40px #66bb6a;
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.flip.flip-vertical > .back        { transform: rotateX(-180deg); }
+.flip.flip-vertical:hover > .front { transform: rotateX(180deg); }
+.flip.flip-vertical:hover > .back  { transform: rotateX(0deg); }
+
+/* ---------- Frente do card ---------- */
+.flip > .front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  padding: 1em 2em;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: scroll — NÃO usar fixed: quebra o flip e não funciona em mobile */
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+/* ---------- Verso do card ---------- */
+.flip > .back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 220px;
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+
+.flip > .back p {
+  font-size: 20px;
+  line-height: 160%;
+  color: #000000;
+}
+
+.flip > .front h1 {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+  .text-center { font-size: 32px; padding: 0 20px; }
+
+  .container,
+  .topics-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .container a,
+  .topics-container a { max-width: 100%; }
+
+  .flip { max-width: 100%; }
+  .flip > .front, .flip > .back { height: 200px; }
+  .flip > .front h1 { font-size: 22px; }
+  .flip > .back h2  { font-size: 20px; }
+  .flip > .back p   { font-size: 16px; }
+}
+
+@media (max-width: 475px) {
+  .text-center {
+    font-size: 26px;
+    padding: 0 15px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .container,
+  .topics-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .flip > .front, .flip > .back { height: 180px; }
+  .flip > .front h1 { font-size: 20px; }
+  .flip > .back h2  { font-size: 18px; margin-bottom: 10px; }
+  .flip > .back p   { font-size: 15px; line-height: 150%; }
+}
+
+@media (max-width: 375px) {
+  .text-center { font-size: 22px; }
+
+  .container,
+  .topics-container { padding: 15px 10px; gap: 15px; }
+
+  .flip > .front, .flip > .back { height: 160px; padding: 1em; }
+  .flip > .front h1 { font-size: 18px; }
+  .flip > .back h2  { font-size: 16px; }
+  .flip > .back p   { font-size: 14px; }
+}
+
+/* Header fixo */
+@media (max-width: 768px) {
+  header.top-bar { height: 60px; }
+  header.top-bar .btn { padding: 8px 20px; font-size: 14px; }
+}
+
+@media (max-width: 475px) {
+  header.top-bar { height: 50px; }
+  header.top-bar .btn { padding: 6px 16px; font-size: 13px; }
+}
+
+/* ---------- Partículas de fundo (reutilizado em todas as páginas tópicos) ---------- */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

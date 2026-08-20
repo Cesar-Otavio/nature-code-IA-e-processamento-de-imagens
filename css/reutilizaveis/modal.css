@@ -1,0 +1,218 @@
+@import url("./root.css");
+@import url("./animations.css");
+
+/* =============================================
+   modal.css
+   Modal de informações da página principal
+   ============================================= */
+
+/* ---------- Ícone de info (botão que abre o modal) ---------- */
+.info-icon {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.info-icon:hover {
+  background: #ffffff;
+  box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 100px #ffffff;
+  border-radius: 5px;
+}
+
+.info-icon i {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.info-icon:hover i {
+  color: #888888;
+}
+
+/* Bordas animadas do ícone */
+.info-icon span { position: absolute; display: block; }
+
+.info-icon span:nth-child(1) {
+  top: 0; left: -100%; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: btn-anim1 1s linear infinite;
+}
+.info-icon span:nth-child(2) {
+  top: -100%; right: 0; width: 2px; height: 100%;
+  background: linear-gradient(180deg, transparent, #ffffff);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+.info-icon span:nth-child(3) {
+  bottom: 0; right: -100%; width: 100%; height: 2px;
+  background: linear-gradient(270deg, transparent, #ffffff);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+.info-icon span:nth-child(4) {
+  bottom: -100%; left: 0; width: 2px; height: 100%;
+  background: linear-gradient(360deg, transparent, #ffffff);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+/* ---------- Overlay ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* ---------- Caixa do modal ---------- */
+.modal-content {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 480px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.modal-content::-webkit-scrollbar       { width: 6px; }
+.modal-content::-webkit-scrollbar-track { background: transparent; }
+.modal-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+.modal-content::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
+
+/* ---------- Header do modal ---------- */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Botão fechar ---------- */
+.modal-close-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.modal-close-btn:hover {
+  background: #ffffff;
+  color: #888888;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 100px #ffffff;
+}
+
+.modal-close-btn span { position: absolute; display: block; }
+
+.modal-close-btn span:nth-child(1) {
+  top: 0; left: -100%; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: btn-anim1 1s linear infinite;
+}
+.modal-close-btn span:nth-child(2) {
+  top: -100%; right: 0; width: 2px; height: 100%;
+  background: linear-gradient(180deg, transparent, #ffffff);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+.modal-close-btn span:nth-child(3) {
+  bottom: 0; right: -100%; width: 100%; height: 2px;
+  background: linear-gradient(270deg, transparent, #ffffff);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+.modal-close-btn span:nth-child(4) {
+  bottom: -100%; left: 0; width: 2px; height: 100%;
+  background: linear-gradient(360deg, transparent, #ffffff);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+/* ---------- Seções de conteúdo ---------- */
+.info-section {
+  margin-bottom: 24px;
+}
+.info-section:last-child { margin-bottom: 0; }
+
+.info-section h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.info-section p,
+.info-section ul li {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.info-section ul { list-style: none; padding-left: 0; }
+
+.info-section ul li {
+  padding: 6px 0;
+}
+
+.info-section ul li::before {
+  content: "•";
+  margin-right: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+  .modal-content  { padding: 28px 24px; width: 95%; }
+  .modal-title    { font-size: 18px; }
+  .info-section h3 { font-size: 11px; }
+  .info-section p,
+  .info-section ul li { font-size: 14px; }
+  .info-icon { width: 45px; height: 45px; top: 20px; left: 20px; }
+  .info-icon i { font-size: 20px; }
+  .modal-close-btn { width: 36px; height: 36px; font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+  .modal-content { padding: 24px 20px; }
+  .modal-title   { font-size: 17px; }
+}

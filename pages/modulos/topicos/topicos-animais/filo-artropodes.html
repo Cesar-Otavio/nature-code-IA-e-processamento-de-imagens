@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Code - Filo dos Artrópodes</title>
+
+    <!-- Bootstrap PRIMEIRO -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Seu CSS DEPOIS -->
+    <link rel="stylesheet" href="../../../../css/topicsConteude.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="../../../../images/icons/folha-verde.svg"
+    />
+  </head>
+
+  <body>
+    <canvas id="particles"></canvas>
+    <!-- Menu de navegação -->
+    <header class="top-bar">
+      <a href="../../animais.html" class="btn-voltar">VOLTAR</a>
+    </header>
+
+    <div class="parent">
+      <div class="div1">
+        <div class="container-div">
+          <div class="conteudo-header">
+            <div class="header-content">
+              <div class="header-title">Filo dos Artrópodes</div>
+              <div class="header-subtitle">Módulo: Animais</div>
+            </div>
+          </div>
+
+          <div class="content">
+            <h2 class="section-title">Características Gerais</h2>
+            <p class="text">
+              - Celomados; Triblásticos; Protostômios; <br /><strong
+                >- Simetria:</strong
+              >
+              bilateral; <br />- Corpo segmentado com apêndices articulados;
+              <br />- Exoesqueleto de quitina (polissacarídeo) impermeável e
+              resistente; <br /><strong>- Consequência: </strong>impede o
+              crescimento. <br /><strong>- Solução: </strong>- Realizar muda
+              (ecdise) (troca periódica do exoesqueleto) - hormônio ecdisona.
+            </p>
+
+            <h2 class="section-title">Morfologia</h2>
+
+            <p class="text">
+              <strong>- Sistema digestório:</strong> completo - anatomia bucal -
+              peças diferenciadas; <br /><strong
+                >- Sistema respiratório: </strong
+              >traqueal, pulmões foliáceos e branquial; <br /><strong
+                >- Sistema circulatório:</strong
+              >
+              aberto com pigmento respiratório, exceto insetos; <br /><strong
+                >- Sistema excretor:</strong
+              >
+              túbulos de Malpighi, glândulas coxais; glândulas verdes nas
+              antenas; <br /><strong>- Sistema nervoso:</strong> ganglionar -
+              órgãos sensoriais; <br /><strong>Reprodução:</strong> sexuada,
+              dioicos ou monoicos. Fecundação interna ou externa.
+              Desenvolvimento direto ou indireto (metamorfose).
+            </p>
+
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/morfologia-artropodes.png"
+              alt="Morfologia Artrópodes"
+              class="ecosystem-image"
+            />
+
+            <p class="text">
+              Apêndices corporais articulados (patas, antenas, etc.), embora o
+              nome do filo faça menção apenas aos pés, o copro dos artrópodes
+              possui muitas outras articulações. essas características dos
+              artrópodes contribuíram, em maior ou menor grau, para o sucesso
+              evolutivo do grupo.
+            </p>
+
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/articulacao-insetos.png"
+              alt="Morfologia Artrópodes"
+              class="ecosystem-image"
+            />
+
+            <h2 class="section-title">Classe Insecta</h2>
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/estrutura-insecta.png"
+              alt="Classe Insecta"
+              class="ecosystem-image"
+            />
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/classe-insecta.png"
+              alt="Classe Insecta"
+              class="ecosystem-image"
+            />
+
+            <h2 class="section-title">Classe Crustacea</h2>
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/estrutura-crustaceo.png"
+              alt="Classe Crustacea"
+              class="ecosystem-image"
+            />
+
+            <h2 class="section-title">Classe Arachnida</h2>
+            <img
+              src="../../../../images/conteudos/conteudo-animais/topico-artropodes/estrutura-aranha.png"
+              alt="Classe Arachnida"
+              class="ecosystem-image"
+            />
+
+            <div class="bottom-spacing"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div2">
+        <!-- Coluna direita: Quiz -->
+        <div class="quiz-container">
+          <!-- Header -->
+          <div class="quiz-header">
+            <div class="quiz-header-left">
+              <!-- <button class="close-btn"></button> -->
+              <div class="header-title" id="quizTitle">
+                Conceitos Básicos de Ecossistemas
+              </div>
+            </div>
+            <div class="difficulty">
+              <span class="star">⭐</span>
+              <span id="score">1/2</span>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="progress-info" id="progressInfo">Questão 1 de 2</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="progressFill"
+              style="width: 50%"
+            ></div>
+          </div>
+
+          <!-- Question Type -->
+          <div class="question-type" id="questionType">
+            <span class="question-type-icon">☰</span>
+            <span id="questionTypeText">Escolha múltipla</span>
+          </div>
+
+          <!-- Question Title -->
+          <div class="question-title" id="questionTitle">
+            O que é um ecossistema?
+          </div>
+
+          <!-- Options for Multiple Choice -->
+          <div class="options" id="optionsContainer"></div>
+
+          <!-- True/False Buttons -->
+          <div
+            class="true-false-buttons"
+            id="trueFalseContainer"
+            style="display: none"
+          ></div>
+
+          <!-- Explanation -->
+          <div class="explanation" id="explanation">
+            <div class="explanation-header">
+              <span class="explanation-icon">💡</span>
+              <span>Explicação</span>
+            </div>
+            <div class="explanation-text" id="explanationText">
+              Um ecossistema é formado por todos os organismos vivos
+              (componentes bióticos) e elementos não vivos (componentes
+              abióticos) que interagem em um determinado ambiente.
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="quiz-footer">
+            <button type="button" class="quiz-back-btn"></button>
+            <div class="nav-buttons">
+              <button type="button" class="nav-btn" id="prevBtn" disabled>
+                ←
+              </button>
+              <button type="button" class="nav-btn" id="nextNavBtn">→</button>
+            </div>
+            <!-- Botão novo -->
+            <button type="button" id="resetBtn" class="reset-btn">
+              ↺ Resetar
+            </button>
+            <button type="button" class="next-btn" id="nextBtn" disabled>
+              Próximo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="../../../../script/particles-content.js"></script>
+    <script src="../.../../../../../script/../local-storage/quiz_animais/quiz_filo_artropodes.js"></script>
+    <script src="../../../../script/quiz-engine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
