@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Code — Diagnóstico da IA</title>
+    <link rel="icon" type="image/svg" href="../images/icons/folha-verde.svg" />
+
+    <!--
+      Página independente, FORA do fluxo do site. Nenhuma página do site aponta para cá.
+      Não usa nenhum CSS do site: o estilo é próprio e local, para que mexer aqui nunca
+      possa afetar o visual das páginas de conteúdo. As cores foram copiadas de
+      css/topicsConteude.css só para manter a mesma linguagem visual.
+    -->
+    <style>
+      :root {
+        --fundo: #0d1117;
+        --cartao: #161b22;
+        --cartao-borda: #2c2c2c;
+        --texto: #e6edf3;
+        --texto-fraco: #b0b0b0;
+        --verde: #00ff88;
+        --verde-escuro: #0d4a3a;
+        --verde-claro: #80e27e;
+        --azul: #b0d9ff;
+        --amarelo: #f0c674;
+        --vermelho: #ff6b6b;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        background: var(--fundo);
+        color: var(--texto);
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        line-height: 1.5;
+        padding: 24px;
+      }
+      a { color: var(--verde); }
+      h1 { font-size: 24px; margin-bottom: 4px; }
+      h2 { font-size: 16px; margin-bottom: 14px; color: var(--verde); font-weight: 600; }
+      h3 { font-size: 13px; color: var(--texto-fraco); font-weight: 600;
+           text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+
+      .topo { display: flex; justify-content: space-between; align-items: flex-start;
+              gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+      .subtitulo { color: var(--texto-fraco); font-size: 14px; }
+
+      .grade { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+      .cartao { background: var(--cartao); border: 1px solid var(--cartao-borda);
+                border-radius: 12px; padding: 18px; }
+      .cartao.largo { grid-column: 1 / -1; }
+
+      .linha { display: flex; justify-content: space-between; gap: 12px;
+               padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 14px; }
+      .linha:last-child { border-bottom: none; }
+      .linha dt { color: var(--texto-fraco); }
+      .linha dd { text-align: right; font-variant-numeric: tabular-nums; word-break: break-word; }
+
+      .selo { display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+              border-radius: 20px; padding: 3px 12px; border: 1px solid var(--cartao-borda);
+              color: var(--texto-fraco); white-space: nowrap; }
+      .selo.ok    { color: var(--verde); border-color: var(--verde-escuro); background: rgba(13,74,58,.4); }
+      .selo.aviso { color: var(--amarelo); border-color: #4a3a0d; background: rgba(74,58,13,.4); }
+      .selo.ruim  { color: var(--vermelho); border-color: #4a1616; background: rgba(74,22,22,.4); }
+
+      button {
+        background: none; border: 1px solid var(--cartao-borda); color: var(--verde);
+        font-size: 13px; border-radius: 20px; padding: 7px 16px; cursor: pointer;
+        font-family: inherit; transition: border-color .2s, opacity .2s;
+      }
+      button:hover:not(:disabled) { border-color: var(--verde); }
+      button:disabled { opacity: .45; cursor: default; }
+      button.perigo { color: var(--vermelho); }
+      button.perigo:hover:not(:disabled) { border-color: var(--vermelho); }
+      select, input {
+        background: var(--fundo); border: 1px solid var(--cartao-borda); color: var(--texto);
+        border-radius: 8px; padding: 7px 10px; font-family: inherit; font-size: 13px;
+      }
+      label { font-size: 13px; color: var(--texto-fraco); display: flex;
+              flex-direction: column; gap: 5px; }
+      .controles { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 14px; }
+      .caixa { flex-direction: row; align-items: center; gap: 7px; }
+
+      /* Cartões de origem: o painel que precisa ser lido de longe. */
+      .origens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+      .origem { border: 2px solid var(--cartao-borda); border-radius: 12px;
+                padding: 14px; text-align: center; background: rgba(0,0,0,.25); }
+      .origem .numero { font-size: 34px; font-weight: 700; line-height: 1.1;
+                        font-variant-numeric: tabular-nums; }
+      .origem .rotulo { font-size: 12px; color: var(--texto-fraco); margin-top: 2px; }
+      .origem.ia    { border-color: var(--verde);       color: var(--verde); }
+      .origem.cache { border-color: var(--verde-claro); color: var(--verde-claro); }
+      .origem.fixo  { border-color: #3a5570;            color: var(--azul); }
+      .origem.apagada { opacity: .35; }
+
+      .barra { height: 12px; border-radius: 6px; overflow: hidden; display: flex;
+               background: #1e2a32; margin-bottom: 6px; }
+      .barra span { height: 100%; }
+      .barra .fatia-ia    { background: var(--verde); }
+      .barra .fatia-cache { background: var(--verde-claro); }
+      .barra .fatia-fixo  { background: #3a5570; }
+      .barra .fatia-taxa  { background: linear-gradient(90deg, #00ff88 0%, #00cc6f 100%); }
+      .legenda { font-size: 12px; color: var(--texto-fraco); display: flex;
+                 gap: 14px; flex-wrap: wrap; }
+      .legenda i { display: inline-block; width: 10px; height: 10px; border-radius: 3px;
+                   margin-right: 5px; vertical-align: middle; font-style: normal; }
+
+      table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,.06); }
+      th { color: var(--texto-fraco); font-weight: 600; font-size: 12px;
+           text-transform: uppercase; letter-spacing: .4px; }
+      td.numero { text-align: right; font-variant-numeric: tabular-nums; }
+      tr.habilitado { background: rgba(13,74,58,.35); }
+      tr.habilitado td:first-child { border-left: 3px solid var(--verde); }
+      tr.sem-ia td { color: var(--texto-fraco); }
+
+      .vazio { color: var(--texto-fraco); font-size: 13px; font-style: italic; }
+
+      /* Gerador manual: prompt | JSON cru | validação, lado a lado. */
+      .painel-triplo { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 1100px) { .painel-triplo { grid-template-columns: 1fr; } }
+      .coluna { background: var(--fundo); border: 1px solid var(--cartao-borda);
+                border-radius: 10px; padding: 12px; min-width: 0; }
+      pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 11.5px;
+            line-height: 1.45; white-space: pre-wrap; word-break: break-word;
+            max-height: 380px; overflow-y: auto; color: var(--texto-fraco); margin: 0; }
+      .questao { border: 1px solid var(--cartao-borda); border-radius: 10px;
+                 padding: 12px; margin-bottom: 10px; }
+      .questao .enunciado { font-weight: 600; margin-bottom: 8px; }
+      .questao ol { margin: 0 0 8px 20px; font-size: 13.5px; color: var(--texto-fraco); }
+      .questao li.correta { color: var(--verde); font-weight: 600; }
+      .questao .explicacao { font-size: 13px; color: var(--azul); }
+      .questao .conceito { font-size: 12px; color: var(--texto-fraco); margin-top: 6px; }
+      .recusa { border-left: 3px solid var(--vermelho); padding: 6px 10px;
+                margin-bottom: 8px; font-size: 13px; background: rgba(74,22,22,.25); }
+      .recusa code { color: var(--vermelho); }
+
+      .rodape { margin-top: 26px; color: var(--texto-fraco); font-size: 12.5px;
+                border-top: 1px solid var(--cartao-borda); padding-top: 14px; }
+    </style>
+  </head>
+
+  <body>
+    <div class="topo">
+      <div>
+        <h1>Diagnóstico da camada de IA</h1>
+        <p class="subtitulo">
+          Nature Code — página de ferramentas, fora do fluxo do site.
+          <a href="../index.html">Voltar ao site</a>
+        </p>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button type="button" id="btn-atualizar">↻ Atualizar painéis</button>
+        <button type="button" id="btn-testar">⚡ Testar conexão</button>
+      </div>
+    </div>
+
+    <div class="grade">
+      <!-- ============ Configuração ativa ============ -->
+      <section class="cartao">
+        <h2>Configuração ativa</h2>
+        <dl>
+          <div class="linha"><dt>Provedor</dt><dd id="cfg-provedor">—</dd></div>
+          <div class="linha"><dt>Modelo</dt><dd id="cfg-modelo">—</dd></div>
+          <div class="linha"><dt>Endpoint</dt><dd id="cfg-host">—</dd></div>
+          <div class="linha"><dt>JSON Schema no <code>format</code></dt><dd id="cfg-schema">—</dd></div>
+          <div class="linha"><dt>Timeout</dt><dd id="cfg-timeout">—</dd></div>
+          <div class="linha"><dt>Temperatura / top_p</dt><dd id="cfg-geracao">—</dd></div>
+          <div class="linha"><dt>Teto de tokens</dt><dd id="cfg-tokens">—</dd></div>
+          <div class="linha"><dt>Tentativas por quiz</dt><dd id="cfg-tentativas">—</dd></div>
+          <div class="linha"><dt>Camada habilitada</dt><dd id="cfg-habilitada">—</dd></div>
+          <div class="linha"><dt>Cache habilitado</dt><dd id="cfg-cache">—</dd></div>
+        </dl>
+        <p class="subtitulo" style="margin-top: 12px" id="cfg-observacao"></p>
+      </section>
+
+      <!-- ============ Conexão ============ -->
+      <section class="cartao">
+        <h2>Conexão com o Ollama</h2>
+        <dl>
+          <div class="linha"><dt>Status do daemon</dt><dd id="con-status">—</dd></div>
+          <div class="linha"><dt>Modelo registrado</dt><dd id="con-modelo">—</dd></div>
+          <div class="linha"><dt>Latência do <code>/api/tags</code></dt><dd id="con-latencia">—</dd></div>
+          <div class="linha"><dt>Latência de uma geração</dt><dd id="con-latencia-chat">—</dd></div>
+        </dl>
+        <h3 style="margin-top: 14px">Modelos registrados</h3>
+        <div id="con-modelos" class="vazio">Clique em “Testar conexão”.</div>
+        <p class="subtitulo" style="margin-top: 12px" id="con-detalhe"></p>
+      </section>
+
+      <!-- ============ Origem dos quizzes ============ -->
+      <section class="cartao largo">
+        <h2>De onde vieram os quizzes servidos</h2>
+        <div class="origens">
+          <div class="origem ia" id="origem-cartao-ia">
+            <div class="numero" id="origem-ia">0</div>
+            <div class="rotulo">✨ gerados por IA</div>
+          </div>
+          <div class="origem cache" id="origem-cartao-cache">
+            <div class="numero" id="origem-cache">0</div>
+            <div class="rotulo">💾 vindos do cache</div>
+          </div>
+          <div class="origem fixo" id="origem-cartao-fixo">
+            <div class="numero" id="origem-fixo">0</div>
+            <div class="rotulo">📘 quiz fixo do site</div>
+          </div>
+        </div>
+        <div class="barra" id="origem-barra"></div>
+        <div class="legenda">
+          <span><i style="background: #00ff88"></i>IA</span>
+          <span><i style="background: #80e27e"></i>Cache</span>
+          <span><i style="background: #3a5570"></i>Fixo</span>
+          <span id="origem-total">0 quizzes servidos</span>
+        </div>
+        <h3 style="margin-top: 16px">Por que caiu no fallback</h3>
+        <div id="motivos-fallback" class="vazio">Nenhum fallback registrado.</div>
+      </section>
+
+      <!-- ============ Geração ============ -->
+      <section class="cartao">
+        <h2>Geração e validação</h2>
+        <dl>
+          <div class="linha"><dt>Chamadas ao modelo</dt><dd id="met-chamadas">0</dd></div>
+          <div class="linha"><dt>Chamadas com erro</dt><dd id="met-erros">0</dd></div>
+          <div class="linha"><dt>Questões recebidas</dt><dd id="met-recebidas">0</dd></div>
+          <div class="linha"><dt>Questões aprovadas</dt><dd id="met-aprovadas">0</dd></div>
+          <div class="linha"><dt>Questões rejeitadas</dt><dd id="met-rejeitadas">0</dd></div>
+          <div class="linha"><dt>Taxa de aprovação</dt><dd id="met-taxa">—</dd></div>
+        </dl>
+        <div class="barra" style="margin-top: 10px"><span class="fatia-taxa" id="met-taxa-barra" style="width: 0%"></span></div>
+        <h3 style="margin-top: 16px">Motivos de rejeição</h3>
+        <div id="met-rejeicoes" class="vazio">Nenhuma rejeição registrada.</div>
+        <h3 style="margin-top: 16px">Erros de chamada</h3>
+        <div id="met-erros-tipo" class="vazio">Nenhum erro registrado.</div>
+      </section>
+
+      <!-- ============ Latência ============ -->
+      <section class="cartao">
+        <h2>Tempo de geração</h2>
+        <dl>
+          <div class="linha"><dt>Amostras</dt><dd id="lat-amostras">0</dd></div>
+          <div class="linha"><dt>Média</dt><dd id="lat-media">—</dd></div>
+          <div class="linha"><dt>Mediana</dt><dd id="lat-mediana">—</dd></div>
+          <div class="linha"><dt>p95</dt><dd id="lat-p95">—</dd></div>
+          <div class="linha"><dt>Mínimo</dt><dd id="lat-min">—</dd></div>
+          <div class="linha"><dt>Máximo</dt><dd id="lat-max">—</dd></div>
+        </dl>
+        <h3 style="margin-top: 16px">Como o JSON foi extraído</h3>
+        <div id="met-parser" class="vazio">Nenhuma extração registrada.</div>
+        <h3 style="margin-top: 16px">Por modelo</h3>
+        <div id="met-por-modelo" class="vazio">Nenhum modelo registrado.</div>
+      </section>
+
+      <!-- ============ Cache ============ -->
+      <section class="cartao">
+        <h2>Banco de questões (cache)</h2>
+        <dl>
+          <div class="linha"><dt>Questões guardadas</dt><dd id="cache-total">0</dd></div>
+          <div class="linha"><dt>Espaço usado</dt><dd id="cache-bytes">—</dd></div>
+        </dl>
+        <h3 style="margin-top: 14px">Por tópico</h3>
+        <div id="cache-topicos" class="vazio">Cache vazio.</div>
+        <div style="display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap">
+          <button type="button" class="perigo" id="btn-limpar-cache">Limpar cache</button>
+          <button type="button" class="perigo" id="btn-limpar-metricas">Zerar métricas</button>
+        </div>
+        <p class="subtitulo" style="margin-top: 10px" id="cache-aviso"></p>
+      </section>
+
+      <!-- ============ Tópicos ============ -->
+      <section class="cartao largo">
+        <h2>Tópicos e capacidade de geração</h2>
+        <p class="subtitulo" id="topicos-resumo" style="margin-bottom: 12px"></p>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr>
+                <th>Módulo</th><th>Tópico</th>
+                <th class="numero">Caract.</th><th class="numero">Seções</th>
+                <th class="numero">Conceitos</th><th class="numero">Máx. questões</th>
+                <th>Suficiência</th><th>Limitado por</th><th>IA</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-topicos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============ Gerador manual ============ -->
+      <section class="cartao largo">
+        <h2>Gerador manual</h2>
+        <p class="subtitulo" style="margin-bottom: 14px">
+          Roda as camadas uma a uma — prompt, cliente, parser, validador — e mostra o que
+          cada uma produziu. Funciona em qualquer tópico com conteúdo suficiente, mesmo nos
+          que ainda não estão habilitados no site.
+        </p>
+        <div class="controles">
+          <label>Módulo <select id="sel-modulo"></select></label>
+          <label>Tópico <select id="sel-topico"></select></label>
+          <label>Questões <input type="number" id="inp-questoes" min="1" max="5" value="3" style="width: 80px" /></label>
+          <label class="caixa"><input type="checkbox" id="chk-cache" /> guardar no cache</label>
+          <button type="button" id="btn-gerar">▶ Gerar</button>
+          <span id="ger-status" class="selo">pronto</span>
+        </div>
+
+        <div class="painel-triplo">
+          <div class="coluna">
+            <h3>1. Prompt enviado</h3>
+            <pre id="col-prompt">—</pre>
+          </div>
+          <div class="coluna">
+            <h3>2. Resposta crua do modelo</h3>
+            <pre id="col-cru">—</pre>
+          </div>
+          <div class="coluna">
+            <h3>3. Parser e validação</h3>
+            <div id="col-validacao" class="vazio">—</div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 18px">Questões aprovadas</h3>
+        <div id="ger-questoes" class="vazio">Nenhuma geração feita nesta página ainda.</div>
+      </section>
+    </div>
+
+    <p class="rodape" id="rodape">
+      Esta página lê e escreve as mesmas chaves de armazenamento que o site usa
+      (<code>quiz_ia_banco</code> e <code>quiz_ia_metricas</code>) e
+      <strong>nunca toca em <code>quizProgress</code></strong>, que guarda o progresso do aluno.
+    </p>
+
+    <!-- Camada de IA — mesma ordem de dependência das páginas de tópico -->
+    <script src="../dados/base-conhecimento.js"></script>
+    <script src="../script/ia/config-ia.js"></script>
+    <script src="../script/ia/metricas-ia.js"></script>
+    <script src="../script/ia/cliente-ollama.js"></script>
+    <script src="../script/ia/prompt-quiz.js"></script>
+    <script src="../script/ia/parser-quiz.js"></script>
+    <script src="../script/ia/validador-quiz.js"></script>
+    <script src="../script/ia/cache-quiz.js"></script>
+    <script src="../script/ia/servico-quiz.js"></script>
+    <script src="diagnostico.js"></script>
+  </body>
+</html>
