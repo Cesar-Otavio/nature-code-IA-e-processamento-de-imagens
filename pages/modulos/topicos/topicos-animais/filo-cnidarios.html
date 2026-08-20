@@ -197,6 +197,18 @@
     <!-- Script -->
     <script src="../../../../script/particles-content.js"></script>
     <script src="../.../../../../../script/../local-storage/quiz_animais/quiz_filo_cnidarios.js"></script>
+    <!-- Camada de IA (Fase 3) — ordem de dependência obrigatória -->
+    <script src="../../../../dados/base-conhecimento.js"></script>
+    <script src="../../../../script/ia/config-ia.js"></script>
+    <script src="../../../../script/ia/metricas-ia.js"></script>
+    <script src="../../../../script/ia/cliente-ollama.js"></script>
+    <script src="../../../../script/ia/prompt-quiz.js"></script>
+    <script src="../../../../script/ia/parser-quiz.js"></script>
+    <script src="../../../../script/ia/validador-quiz.js"></script>
+    <script src="../../../../script/ia/cache-quiz.js"></script>
+    <script src="../../../../script/ia/servico-quiz.js"></script>
+    <script src="../../../../script/ia/interface-quiz.js"></script>
+    <!-- fim da camada de IA -->
     <script src="../../../../script/quiz-engine.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
