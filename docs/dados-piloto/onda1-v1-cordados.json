@@ -1,0 +1,2770 @@
+{
+  "rotulo": "onda1-v1-cordados",
+  "versaoPrompt": "V1",
+  "modelo": "gpt-oss:120b-cloud",
+  "provedor": "cloud",
+  "inicio": "2026-08-21T23:04:09.402Z",
+  "geracoesPorTopico": 20,
+  "topicos": [
+    {
+      "moduloId": "animais",
+      "topicoId": "filo-cordados",
+      "titulo": "Filo dos Cordados",
+      "caracteres": 4675,
+      "maxQuestoes": 5,
+      "suficiencia": "adequado",
+      "limitadoPor": "teto configurado",
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 49487,
+          "totalMs": 49704,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente a formação do encéfalo nos cordados?",
+              "explicacao": "A formação do encéfalo ocorre pela dilatação da região anterior do tubo nervoso dorsal, conforme descrito nas características exclusivas dos cordados. A ideia de que a notocorda se transforma em crânio está incorreta porque a notocorda pode ser substituída por estruturas ósseas, mas não forma diretamente o encéfalo. A região posterior do tubo nervoso dorsal gera a medula espinhal, não o encéfalo. As fendas faríngeas são estruturas da faringe e não participam da formação do encéfalo.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "A região posterior do tubo nervoso dorsal se dilata e forma o encéfalo.",
+                  "correta": false
+                },
+                {
+                  "texto": "A região anterior do tubo nervoso dorsal se dilata e forma o encéfalo.",
+                  "correta": true
+                },
+                {
+                  "texto": "As fendas faríngeas dão origem ao encéfalo.",
+                  "correta": false
+                },
+                {
+                  "texto": "A notocorda se transforma em crânio durante a embriogênese.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual afirmação sobre a notocorda está de acordo com o texto?",
+              "explicacao": "A descrição da notocorda como bastão cilíndrico e maciço que sustenta o embrião corresponde ao que o texto indica. O texto afirma que a notocorda pode persistir por toda a vida ou ser substituída, portanto não desaparece sempre. A substituição ocorre durante a embriogênese, mas não é restrita a espécies sem coluna vertebral. A notocorda é rígida, não flexível, como mencionado.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "Permanece flexível durante todo o desenvolvimento, não fornecendo rigidez.",
+                  "correta": false
+                },
+                {
+                  "texto": "Desaparece sempre antes do nascimento em todos os cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "É um bastão cilíndrico e maciço constituído por células e substância gelatinosa que sustenta o corpo do embrião.",
+                  "correta": true
+                },
+                {
+                  "texto": "É substituída por cartilagem ou osso apenas em espécies que não possuem coluna vertebral.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em quais cordados as fendas faríngeas permanecem no adulto?",
+              "explicacao": "As fendas faríngeas permanecem no adulto apenas nos cordados que mantêm a respiração por brânquias, conforme o texto. O texto deixa claro que nos demais cordados as fendas desaparecem na embriogênese, logo não estão presentes em todos os vertebrados. Mamíferos não utilizam brânquias e, portanto, perdem as fendas. A presença de cloaca não está relacionada à manutenção das fendas faríngeas.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "Nos que respiram por brânquias.",
+                  "correta": true
+                },
+                {
+                  "texto": "Em todos os vertebrados, independentemente do modo de respiração.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos que apresentam cloaca.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apenas nos mamíferos.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica não se aplica aos Condrictes?",
+              "explicacao": "Os Condrictes não possuem bexiga natatória, conforme indicado no texto, enquanto as demais características listadas são descritas para esse grupo. As escamas placóides, a respiração branquial exclusiva e o coração bicavitário são atributos corretos dos Condrictes. Portanto, a alternativa que menciona a presença de bexiga natatória está errada.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração exclusivamente branquial.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam bexiga natatória.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem escamas placóides.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmativas sobre o coração dos mamíferos está correta?",
+              "explicacao": "O texto especifica que os mamíferos têm coração tetracavitário, distinguindo quatro cavidades. As outras opções descrevem números de cavidades que correspondem a outros grupos (tricavitário aos anfíbios, bicavitário a peixes) ou negam a presença de cavidades, o que contradiz a informação fornecida.",
+              "conceitoAvaliado": "Mamíferos",
+              "alternativas": [
+                {
+                  "texto": "Não apresentam cavidades cardíacas distintas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração tetracavitário.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem coração tricavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração bicavitário.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 2,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 9207,
+          "totalMs": 9223,
+          "questoes": [
+            {
+              "enunciado": "Qual afirmação descreve corretamente a metameria nos cordados?",
+              "explicacao": "A metameria nos cordados é a segmentação corporal que se destaca na fase embrionária, conforme o texto. A alternativa que associa metameria à fase adulta está errada porque a segmentação é menos evidente depois do desenvolvimento. Também está incorreto dizer que se trata do tubo nervoso dorsal, que é outra característica exclusiva.",
+              "conceitoAvaliado": "metameria",
+              "alternativas": [
+                {
+                  "texto": "A metameria refere‑se à presença de um tubo nervoso dorsal.",
+                  "correta": false
+                },
+                {
+                  "texto": "A metameria ocorre apenas em vertebrados, não nos demais cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "A metameria corresponde à segmentação corporal que se torna mais evidente na fase embrionária.",
+                  "correta": true
+                },
+                {
+                  "texto": "A metameria é mais evidente na fase adulta dos cordados.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Quais grupos de vertebrados apresentam linha lateral, segundo o material?",
+              "explicacao": "O texto indica que tanto Condrictes quanto Osteíctes possuem linha lateral, logo a alternativa que menciona ambos está correta. As demais opções falham ao excluir um dos grupos ou ao negar a presença da estrutura em vertebrados.",
+              "conceitoAvaliado": "linha lateral",
+              "alternativas": [
+                {
+                  "texto": "Apenas os Condrictes apresentam linha lateral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apenas os Osteíctes apresentam linha lateral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nenhum dos vertebrados possui linha lateral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Condrictes e Osteíctes apresentam linha lateral.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Quantas classes são reconhecidas no subfilo Vertebrata (ou craniata)?",
+              "explicacao": "O material lista sete classes dentro do subfilo Vertebrata, portanto a opção que menciona sete está correta. As outras quantidades não correspondem ao número indicado no texto.",
+              "conceitoAvaliado": "7 classes",
+              "alternativas": [
+                {
+                  "texto": "Oito classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Seis classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cinco classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Sete classes.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das seguintes adaptações está relacionada ao voo nas aves?",
+              "explicacao": "Os ossos pneumáticos diminuem a massa corporal das aves, contribuindo para a capacidade de voo, como descrito. A presença de bexiga urinária e a função exclusiva das penas para isolamento não correspondem ao que o texto indica, e o esterno realmente tem forma de quilha para inserção muscular, portanto a alternativa que nega isso está errada.",
+              "conceitoAvaliado": "ossos pneumáticos",
+              "alternativas": [
+                {
+                  "texto": "O esterno das aves não possui projeções para inserção dos músculos peitorais.",
+                  "correta": false
+                },
+                {
+                  "texto": "As penas das aves são derivadas de escamas e servem apenas para isolamento térmico.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os ossos pneumáticos reduzem o peso corporal, facilitando o voo.",
+                  "correta": true
+                },
+                {
+                  "texto": "As aves mantêm uma bexiga urinária que armazena ácido úrico.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica distingue os cornos dos chifres nos mamíferos?",
+              "explicacao": "De acordo com o texto, cornos são projeções ósseas cobertas por queratina que crescem de forma contínua e não são trocados, diferenciando‑se dos chifres que são substituídos anualmente. As demais afirmações descrevem atributos dos chifres ou apresentam informações incorretas sobre cornos.",
+              "conceitoAvaliado": "Diferença entre Cornos e Chifres",
+              "alternativas": [
+                {
+                  "texto": "Cornos apresentam ramificações e bifurcações.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos crescem continuamente e não são trocados durante a vida.",
+                  "correta": true
+                },
+                {
+                  "texto": "Cornos são cobertos por veludo vascularizado que é trocado anualmente.",
+                  "correta": false
+                },
+                {
+                  "texto": "Chifres são projeções ósseas sem camada de queratina.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 3,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 12729,
+          "totalMs": 12741,
+          "questoes": [
+            {
+              "enunciado": "De acordo com as características gerais dos cordados, qual das afirmativas está correta?",
+              "explicacao": "A afirmação correta indica que os cordados são celomados, como consta nas características gerais. A alternativa que menciona acoelomados está errada porque cordados possuem cavidade corporal verdadeira, e a opção sobre pseudocelomados confunde com outro tipo de organização corporal que não se aplica a esse filo.",
+              "conceitoAvaliado": "Características Gerais",
+              "alternativas": [
+                {
+                  "texto": "São pseudocelomados",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados",
+                  "correta": true
+                },
+                {
+                  "texto": "Não possuem cavidade corporal",
+                  "correta": false
+                },
+                {
+                  "texto": "São acoelomados",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual estrutura se forma a partir da dilatação da região anterior do tubo nervoso dorsal nos cordados?",
+              "explicacao": "A região anterior do tubo nervoso dorsal se dilata e dá origem ao encéfalo, conforme descrito nas características exclusivas. A medula espinhal se forma na região posterior, a notocorda é um bastão de sustentação e o crânio resulta da substituição da notocorda, mas não da dilatação anterior do tubo nervoso.",
+              "conceitoAvaliado": "encéfalo",
+              "alternativas": [
+                {
+                  "texto": "Notocorda",
+                  "correta": false
+                },
+                {
+                  "texto": "Crânio",
+                  "correta": false
+                },
+                {
+                  "texto": "Encéfalo",
+                  "correta": true
+                },
+                {
+                  "texto": "Medula espinhal",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre os ciclóstomas, qual das afirmações abaixo está correta?",
+              "explicacao": "Ciclóstomas são descritos como aquáticos, sem mandíbulas, e com boca circular, o que corresponde à alternativa correta. A ideia de mandíbulas desenvolvidas contradiz a definição de ausência de maxilas, e a presença de bexiga natatória e vida terrestre não corresponde ao grupo mencionado.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "Apresentam escamas placóides e bexiga natatória",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem mandíbulas bem desenvolvidas",
+                  "correta": false
+                },
+                {
+                  "texto": "São aquáticos sem mandíbulas e possuem boca circular",
+                  "correta": true
+                },
+                {
+                  "texto": "São predominantemente terrestres",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica respiratória distingue os osteíctes dos demais vertebrados citados?",
+              "explicacao": "Nos osteíctes a respiração ocorre por brânquias cobertas por um opérculo, conforme descrito no texto. A opção de respiração exclusivamente pulmonar se aplica a répteis e aves, enquanto a brânquias sem proteção não corresponde ao osteíctes, e a respiração cutânea permanente não é mencionada para esse grupo.",
+              "conceitoAvaliado": "Osteíctes",
+              "alternativas": [
+                {
+                  "texto": "Respiração branquial sem nenhum tipo de proteção",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração exclusivamente pulmonar",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração branquial com opérculo protegendo as brânquias",
+                  "correta": true
+                },
+                {
+                  "texto": "Respiração cutânea permanente",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual grupo de vertebrados apresenta coração tetracavitário?",
+              "explicacao": "O texto indica que as aves possuem coração tetracavitário, diferindo dos anfíbios (tricavitário) e répteis (maioria tricavitário). Ciclóstomas, por não serem vertebrados, não têm essa classificação cardíaca. Assim, a alternativa que menciona as aves está correta, enquanto as demais confundem o número de cavidades cardíacas.",
+              "conceitoAvaliado": "coração tetracavitário",
+              "alternativas": [
+                {
+                  "texto": "Ciclóstomas",
+                  "correta": false
+                },
+                {
+                  "texto": "Anfíbios",
+                  "correta": false
+                },
+                {
+                  "texto": "Aves",
+                  "correta": true
+                },
+                {
+                  "texto": "Répteis",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 4,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 2,
+          "recebidas": 6,
+          "aprovadas": 5,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 150 caracteres contra média 78 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 15964,
+          "totalMs": 15977,
+          "questoes": [
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, assinale a alternativa correta.",
+              "explicacao": "A alternativa que indica que as fendas faríngeas permanecem nos adultos que utilizam brânquias e desaparecem nos demais está de acordo com a descrição do conteúdo. A opção que sugere que elas se transformam em membros é equivocada, pois o texto não menciona tal transformação.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "Permanecem no adulto dos animais que respiram por brânquias e desaparecem na embriogênese dos demais.",
+                  "correta": true
+                },
+                {
+                  "texto": "Transformam‑se em membros posteriores nos vertebrados tetrapodes.",
+                  "correta": false
+                },
+                {
+                  "texto": "São substituídas por pulmões em todos os vertebrados durante o desenvolvimento embrionário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Estão presentes apenas na fase larval de todos os cordados, independentemente do modo de respiração.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica diferencia os condrictes dos demais grupos de vertebrados descritos?",
+              "explicacao": "A alternativa que relaciona esqueleto cartilaginoso, ausência de bexiga natatória e escamas placóides corresponde exatamente às informações sobre condrictes. A opção que menciona opercúlio e escamas cicloides descreve os osteíctes, não os condrictes, sendo portanto incorreta.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Apresentam opercúlio que cobre as brânquias e escamas cicloides.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem esqueleto cartilaginoso, não têm bexiga natatória e apresentam escamas placóides.",
+                  "correta": true
+                },
+                {
+                  "texto": "São ovíparos com coração tetracavitário e possuem penas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm esqueleto predominantemente ósseo e utilizam a bexiga natatória para flutuação.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações a seguir sobre o ciclo de vida dos anfíbios está correta?",
+              "explicacao": "A alternativa que descreve a postura de ovos na água, a fase larval aquática com brânquias e a metamorfose para forma terrestre está em conformidade com o texto. A opção que afirma desenvolvimento direto em terra sem fase larval ignora a presença de girinos, que é característica dos anfíbios.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "A reprodução dos anfíbios é vivípara, com os filhotes nascendo já formados dentro da mãe.",
+                  "correta": false
+                },
+                {
+                  "texto": "Durante todo o desenvolvimento, os girinos utilizam exclusivamente a respiração pulmonar.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os ovos são depositados na água, onde eclodem em girinos que respiram por brânquias e, após metamorfose, tornam‑se adultos terrestres.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os adultos põem ovos em terra firme que se desenvolvem diretamente em mini‑adultos, sem fase larval aquática.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual adaptação dos aves está diretamente relacionada à capacidade de voo?",
+              "explicacao": "A alternativa que menciona sacos aéreos ligados aos pulmões como mecanismo que diminui a densidade corporal corresponde à adaptação para voo descrita. A opção que traz pele grossa e queratinizada refere‑se a répteis e não contribui para o voo, sendo portanto incorreta.",
+              "conceitoAvaliado": "Aves",
+              "alternativas": [
+                {
+                  "texto": "Pele grossa e queratinizada que impede a perda de água durante o voo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Presença de sacos aéreos que se comunicam com os pulmões, reduzindo o peso corporal.",
+                  "correta": true
+                },
+                {
+                  "texto": "Cloaca única que serve para excreção e reprodução, facilitando a aerodinâmica.",
+                  "correta": false
+                },
+                {
+                  "texto": "Crânio grande e pesado que acomoda um encéfalo proporcionalmente maior.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Considerando as informações sobre o filo dos Cordados, assinale a alternativa que descreve corretamente uma característica dos répteis.",
+              "explicacao": "A alternativa que menciona pele grossa e queratinizada está correta, pois o texto indica que os répteis têm esse tipo de pele para evitar a perda de água. A opção que fala de pele fina, penas e glândula uropigeana descreve as aves, não os répteis, portanto está errada. As demais confundem características de outros grupos, como coração tetracavitário (presente em aves e mamíferos) e escamas placóides (características dos condrictes).",
+              "conceitoAvaliado": "Répteis",
+              "alternativas": [
+                {
+                  "texto": "Possuem pele fina coberta por penas e glândula uropigeana na base da cauda.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração tetracavitário e respiração exclusivamente pulmonar.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem pele grossa rica em queratina que impede a perda de água.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem boca ventral e escamas placóides.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 5,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 3,
+          "recebidas": 9,
+          "aprovadas": 5,
+          "rejeitadas": 4,
+          "rejeicoes": [
+            {
+              "motivo": "explicacao_cita_letra",
+              "detalhe": "a explicação cita a alternativa por letra (\"alternativa a.\"), e as alternativas são reordenadas antes de exibir"
+            },
+            {
+              "motivo": "explicacao_cita_letra",
+              "detalhe": "a explicação cita a alternativa por letra (\"alternativa a.\"), e as alternativas são reordenadas antes de exibir"
+            },
+            {
+              "motivo": "explicacao_cita_letra",
+              "detalhe": "a explicação cita a alternativa por letra (\"alternativa a.\"), e as alternativas são reordenadas antes de exibir"
+            },
+            {
+              "motivo": "alternativa_vazia",
+              "detalhe": "alternativa \"a\" curta demais"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 25922,
+          "totalMs": 25950,
+          "questoes": [
+            {
+              "enunciado": "Qual característica descrita corresponde à região posterior do tubo nervoso dorsal nos cordados?",
+              "explicacao": "Segundo o material, a região posterior do tubo nervoso dorsal se alonga e forma a medula espinhal, logo a alternativa a está correta. A alternativa que fala em dilatação para formar o encéfalo descreve a região anterior, não a posterior; as demais opções não são mencionadas no texto.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "Ela se dilata formando o encéfalo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ela se alonga formando a medula espinhal.",
+                  "correta": true
+                },
+                {
+                  "texto": "Ela se transforma em notocorda.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ela desaparece durante a fase larval.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação aos cornos e aos chifres, qual afirmação diferencia corretamente esses dois tipos de estruturas?",
+              "explicacao": "O texto indica que cornos não são bifurcados e que chifres são ramificados, tornando a alternativa a a correta. As demais opções invertem as características descritas: cornos não são trocados anualmente, chifres não são cobertos por queratina, e o crescimento dos cornos é contínuo, não restrito à infância.",
+              "conceitoAvaliado": "Diferença entre Cornos e Chifres",
+              "alternativas": [
+                {
+                  "texto": "Cornos são trocados anualmente, ao passo que chifres permanecem durante a vida inteira.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos são cobertos por pele vascularizada (veludo), ao contrário dos chifres que têm camada de queratina.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos não são bifurcados, enquanto chifres são ramificados.",
+                  "correta": true
+                },
+                {
+                  "texto": "Cornos crescem apenas durante a infância, enquanto chifres continuam a crescer ao longo da vida.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações a seguir descreve corretamente a notocorda nos cordados?",
+              "explicacao": "A alternativa correta indica que a notocorda é um bastão cilíndrico e maciço formado por células e substância gelatinosa, conforme descrito no texto. A opção que fala em flexibilidade está errada porque a notocorda é rígida e serve de suporte ao corpo do embrião. A ideia de que ela permanece em todos os adultos também está incorreta, já que em alguns cordados ela desaparece ou é substituída por estruturas ósseas ou cartilaginosas. Por fim, a substituição pela coluna vertebral não se restringe apenas aos mamíferos, ocorrendo em diversos grupos durante a embriogênese.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "É substituída pela coluna vertebral em mamíferos, mas nunca em outros grupos.",
+                  "correta": false
+                },
+                {
+                  "texto": "É flexível e permite a movimentação lateral do embrião.",
+                  "correta": false
+                },
+                {
+                  "texto": "É um bastão cilíndrico e maciço constituído por células e substância gelatinosa.",
+                  "correta": true
+                },
+                {
+                  "texto": "Persiste em todos os cordados ao longo de toda a vida adulta.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em que circunstância a notocorda deixa de estar presente e é substituída por estruturas cartilaginosas ou ósseas?",
+              "explicacao": "A alternativa correta reflete que a substituição da notocorda por crânio e coluna vertebral acontece durante a embriogênese em alguns cordados, conforme descrito no texto. A ideia de que a substituição ocorre apenas após o nascimento em todos os cordados é equivocada, pois o processo pode acontecer antes do nascimento e não é universal. A opção que afirma que a notocorda nunca é substituída contradiz a informação de que em alguns casos ela desaparece. Por fim, limitar a substituição a espécies aquáticas não tem respaldo no material.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "Apenas após o nascimento, em todos os cordados, a notocorda é substituída.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nunca ocorre substituição; a notocorda permanece em todos os adultos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Somente em espécies aquáticas a notocorda é substituída por estruturas ósseas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Durante a embriogênese, em alguns cordados, ocorre a substituição por crânio e coluna vertebral.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Quantas classes compõem o sub‑filo Vertebrata (ou craniata) dos cordados?",
+              "explicacao": "O texto indica que o sub‑filo Vertebrata possui exatamente sete classes, listando-as em sequência. A alternativa que menciona seis classes parece plausível porque o número é próximo, mas está errada, já que a contagem correta inclui sete grupos distintos.",
+              "conceitoAvaliado": "Vertebrados",
+              "alternativas": [
+                {
+                  "texto": "Cinco classes",
+                  "correta": false
+                },
+                {
+                  "texto": "Oito classes",
+                  "correta": false
+                },
+                {
+                  "texto": "Seis classes",
+                  "correta": false
+                },
+                {
+                  "texto": "Sete classes",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 6,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 2,
+          "recebidas": 6,
+          "aprovadas": 5,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 70 caracteres contra média 39 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 17788,
+          "totalMs": 17799,
+          "questoes": [
+            {
+              "enunciado": "De acordo com o texto, qual das afirmações descreve corretamente uma característica geral dos cordados?",
+              "explicacao": "A característica celomados está correta porque o texto indica que os cordados são celomados. A alternativa que afirma que são acelomados está errada porque não há menção de ausência de cavidade; a opção que diz que são pseudocelomados também não corresponde ao que o texto descreve; a última opção que nega qualquer cavidade corporal contradiz a própria definição de celomado.",
+              "conceitoAvaliado": "Celomados",
+              "alternativas": [
+                {
+                  "texto": "São pseudocelomados",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados",
+                  "correta": true
+                },
+                {
+                  "texto": "São acelomados",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possuem cavidade corporal",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em que fase a metameria é mais evidente nos cordados, segundo o material?",
+              "explicacao": "Metameria é mais evidente na fase embrionária, conforme o texto. A opção que coloca a metameria na fase adulta está equivocada porque o texto destaca sua evidência embrionária; a alternativa que nega a ocorrência nos cordados ignora a informação dada; a opção que restringe a metameria apenas aos vertebrados também não tem apoio no texto.",
+              "conceitoAvaliado": "Metameria",
+              "alternativas": [
+                {
+                  "texto": "É mais evidente na fase embrionária",
+                  "correta": true
+                },
+                {
+                  "texto": "Só ocorre nos vertebrados",
+                  "correta": false
+                },
+                {
+                  "texto": "É mais evidente na fase adulta",
+                  "correta": false
+                },
+                {
+                  "texto": "Não ocorre nos cordados",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações abaixo sobre os ciclóstomas está correta?",
+              "explicacao": "Ciclóstomas são descritos como aquáticos sem mandíbulas, portanto essa afirmação está correta. A alternativa que menciona mandíbulas contradiz a definição; a opção que os classifica como terrestres com boca ventral não corresponde ao texto; a afirmação sobre escamas cicloides confunde com osteíctes, não com ciclóstomas.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "Possuem mandíbulas e maxilas",
+                  "correta": false
+                },
+                {
+                  "texto": "São aquáticos sem mandíbulas",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam escamas cicloides",
+                  "correta": false
+                },
+                {
+                  "texto": "São terrestres e têm boca ventral",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica dos osteíctes está corretamente descrita no material?",
+              "explicacao": "Osteíctes possuem bexiga natatória, como indica o material. A alternativa que nega a presença de escamas contraria a informação de que têm escamas cicloides; a opção que os descreve como ovovivíparos confunde com outros grupos, pois os osteíctes são ovulíparos; a afirmação de que não têm linha lateral também está errada, já que o texto menciona a presença de linha lateral.",
+              "conceitoAvaliado": "Osteíctes",
+              "alternativas": [
+                {
+                  "texto": "São ovovivíparos",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possuem escamas",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem bexiga natatória",
+                  "correta": true
+                },
+                {
+                  "texto": "Não têm linha lateral",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmativas abaixo descreve corretamente uma característica de desenvolvimento dos animais do filo dos Cordados?",
+              "explicacao": "Os cordados são descritos no texto como deuterostômios, portanto desenvolvem-se segundo esse padrão. A afirmação de que são protostômios está errada porque o texto não indica essa característica. Também está incorreta a ideia de que são diploblásticos, já que o material indica que são trilásticos. Por fim, dizer que possuem apenas duas camadas germinativas contradiz a informação de que são trilásticos, logo tem três camadas.",
+              "conceitoAvaliado": "Deuterostômios",
+              "alternativas": [
+                {
+                  "texto": "Apresentam desenvolvimento protostômio.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam desenvolvimento diploblástico.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam apenas duas camadas germinativas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam desenvolvimento deuterostômio.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 7,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 10869,
+          "totalMs": 10880,
+          "questoes": [
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, qual afirmação está correta?",
+              "explicacao": "A opção correta reflete que o texto indica que as fendas permanecem no adulto nos cordados que respiram por brânquias. A alternativa que afirma desaparecimento universal está errada porque o texto especifica que isso ocorre apenas nos que não utilizam brânquias. As demais opções atribuem funções que não são mencionadas para as fendas faríngeas.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "As fendas faríngeas desaparecem sempre durante a embriogênese, independentemente do modo de respiração.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas são encontradas exclusivamente nos vertebrados.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas dão origem ao coração dos cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas permanecem no adulto apenas nos cordados que respiram por brânquias.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica NÃO se aplica aos condrictes?",
+              "explicacao": "O texto deixa claro que os condrictes não possuem bexiga natatória, tornando essa a única afirmação incorreta. As outras opções descrevem atributos que o texto atribui aos condrictes, como esqueleto cartilaginoso, linha lateral e coração bicavitário.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Os condrictes têm linha lateral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os condrictes apresentam bexiga natatória.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os condrictes possuem coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os condrictes possuem esqueleto predominantemente cartilaginoso.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente a respiração dos anfíbios em fase adulta?",
+              "explicacao": "A resposta correta corresponde ao trecho que indica respiração pulmonar e cutânea nos adultos. A alternativa que menciona apenas pulmões é enganosa, pois omite a contribuição da pele, que o texto destaca como parte do processo respiratório.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "Nos anfíbios adultos a respiração ocorre apenas pelos pulmões.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos anfíbios adultos a respiração ocorre apenas pela pele.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos anfíbios adultos a respiração ocorre por pulmões e pela pele.",
+                  "correta": true
+                },
+                {
+                  "texto": "Nos anfíbios adultos a respiração ocorre exclusivamente por brânquias.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Entre as adaptações para o voo das aves, qual das seguintes não está listada no material?",
+              "explicacao": "O texto menciona a ausência total da bexiga urinária nas aves, não uma redução, portanto essa alternativa não corresponde ao que foi descrito. As demais opções são exatamente as adaptações citadas como características do voo nas aves.",
+              "conceitoAvaliado": "Aves",
+              "alternativas": [
+                {
+                  "texto": "As aves possuem sacos aéreos conectados aos pulmões.",
+                  "correta": false
+                },
+                {
+                  "texto": "As aves têm ossos pneumáticos.",
+                  "correta": false
+                },
+                {
+                  "texto": "As aves apresentam redução da bexiga urinária.",
+                  "correta": true
+                },
+                {
+                  "texto": "As aves possuem esterno em forma de quilha.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre os mamíferos, qual característica está correta segundo o texto?",
+              "explicacao": "O material indica explicitamente que os mamíferos possuem glândulas mamárias, tornando essa a afirmação correta. A opção sobre coração tricavitário pertence a anfíbios, a descrição de pele sem pelos contradiz a presença de pelos, e o texto afirma que o encéfalo dos mamíferos é proporcionalmente maior, não menor.",
+              "conceitoAvaliado": "Mamíferos",
+              "alternativas": [
+                {
+                  "texto": "Os mamíferos apresentam glândulas mamárias.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os mamíferos são endotérmicos e possuem pele sem pelos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os mamíferos têm coração tricavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "O encéfalo dos mamíferos é proporcionalmente menor que o de outros grupos.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 8,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 13068,
+          "totalMs": 13080,
+          "questoes": [
+            {
+              "enunciado": "Sobre o tubo nervoso dorsal (TND) dos cordados, qual afirmação está correta?",
+              "explicacao": "A região anterior do tubo nervoso dorsal realmente se dilata e dá origem ao encéfalo, conforme descrito no texto. A alternativa que menciona a região posterior como formadora do encéfalo confunde as porções anterior e posterior. As demais opções colocam o tubo nervoso em posição ventral ou afirmam que ele desaparece, o que contradiz a informação de que ele está presente e forma encéfalo e medula espinhal.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "O tubo nervoso dorsal desaparece na fase adulta dos cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "A região anterior do tubo nervoso dorsal se dilata formando o encéfalo.",
+                  "correta": true
+                },
+                {
+                  "texto": "O tubo nervoso dorsal está localizado ventralmente ao corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "A região posterior do tubo nervoso dorsal se dilata formando o encéfalo.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre a notocorda nos cordados, qual alternativa descreve corretamente sua presença ao longo da vida?",
+              "explicacao": "O texto indica que a notocorda pode permanecer ao longo da vida ou ser substituída por estruturas cartilaginosas ou ósseas durante a embriogênese, exatamente como descrito na alternativa correta. As outras opções apresentam situações absolutas – presença permanente em todos ou desaparecimento total, ou substituição obrigatória – que não são apoiadas pelo material.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "A notocorda pode persistir por toda a vida ou ser substituída por estrutura cartilaginosa ou óssea durante a embriogênese.",
+                  "correta": true
+                },
+                {
+                  "texto": "A notocorda desaparece completamente na embriogênese em todos os cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "A notocorda é sempre substituída por ossos formando crânio e coluna vertebral em todos os cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "A notocorda permanece inalterada durante toda a vida de todos os cordados.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Considerando a organização dos tecidos dos cordados, assinale a opção correta.",
+              "explicacao": "O material classifica os cordados como trilobásticos, ou seja, possuem três camadas germinativas. A alternativa que fala em diploblastismo confunde com grupos mais simples, enquanto as opções sobre pseudocelomados e acoelomados descrevem condições que não correspondem ao que o texto indica para os cordados.",
+              "conceitoAvaliado": "Triblásticos",
+              "alternativas": [
+                {
+                  "texto": "Os cordados são pseudocelomados, sem cavidade corporal verdadeira.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os cordados são acoelomados, sem cavidade corporal.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os cordados são trilobásticos, apresentando três camadas germinativas.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os cordados são diploblásticos, desenvolvendo apenas duas camadas germinativas.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre os condrictes (peixes cartilaginosos), qual característica NÃO se aplica a eles?",
+              "explicacao": "O texto deixa claro que os condrictes não possuem bexiga natatória, tornando essa a afirmação incorreta. As escamas placóides são descritas como típicas desse grupo, enquanto mandíbula e brânquias externas não são mencionadas, mas também não são apresentadas como características reais; ainda assim, a única opção explicitamente refutada pelo texto é a presença de bexiga natatória.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Possuem bexiga natatória.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem mandíbula.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem escamas placóides.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem brânquias externas.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre as diferenças entre cornos e chifres, assinale a alternativa correta.",
+              "explicacao": "De acordo com o texto, cornos apresentam crescimento contínuo e não são substituídos ao longo da vida, correspondendo à alternativa correta. As demais opções confundem as características, atribuindo ao corno a pele veludosa típica dos chifres, invertendo o padrão de troca ou descrevendo chifres como não ramificados, o que contradiz a definição apresentada.",
+              "conceitoAvaliado": "Diferença entre Cornos e Chifres",
+              "alternativas": [
+                {
+                  "texto": "Chifres são trocados anualmente, enquanto cornos permanecem durante a vida.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos são estruturas ósseas cobertas por pele vascularizada chamada veludo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Chifres não possuem ramificações e são lisos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos crescem continuamente e não são trocados durante a vida.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 9,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 7330,
+          "totalMs": 7342,
+          "questoes": [
+            {
+              "enunciado": "Sobre as características gerais dos cordados, qual afirmação está correta?",
+              "explicacao": "A alternativa que indica que os cordados são celomados, triblásticos e deuterostômios, com metameria mais evidente na fase embrionária, corresponde exatamente ao que o texto descreve. A opção que menciona a ausência de metameria é atraente porque inclui dois termos corretos (celomados e deuterostômios), porém nega a presença de metameria, contradizendo a informação do material.",
+              "conceitoAvaliado": "Características Gerais",
+              "alternativas": [
+                {
+                  "texto": "São celomados, triblásticos e deuterostômios, apresentando metameria evidente na fase embrionária.",
+                  "correta": true
+                },
+                {
+                  "texto": "São celomados, diploblásticos e deuterostômios, mas não apresentam metameria.",
+                  "correta": false
+                },
+                {
+                  "texto": "São acelomados, diploblásticos e protostômios, sem metameria.",
+                  "correta": false
+                },
+                {
+                  "texto": "São acelomados, triblásticos e protostômios, apresentando metameria apenas no adulto.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica distingue os ciclóstomas dos demais vertebrados descritos no texto?",
+              "explicacao": "A descrição de animais aquáticos, sem mandíbulas, com boca circular e corpo alongado corresponde à definição de ciclóstomas presente no conteúdo. A alternativa que traz mandíbulas e escamas placóides pode confundir, pois descreve características de outros peixes, mas não dos ciclóstomas.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "São animais terrestres com mandíbulas e escamas cicloides.",
+                  "correta": false
+                },
+                {
+                  "texto": "São mamíferos aquáticos com dentes e mandíbula.",
+                  "correta": false
+                },
+                {
+                  "texto": "São peixes com mandíbulas, escamas placóides e respiração branquial.",
+                  "correta": false
+                },
+                {
+                  "texto": "São aquáticos sem mandíbulas, com boca circular e corpo alongado.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação aos osteíctes, qual das afirmações está de acordo com o texto?",
+              "explicacao": "O texto afirma que os osteíctes têm esqueleto predominantemente ósseo e que apresentam bexiga natatória, coincidindo com a alternativa correta. A opção que combina esqueleto ósseo com a ausência de bexiga parece plausível, mas contradiz diretamente a informação fornecida.",
+              "conceitoAvaliado": "Osteíctes",
+              "alternativas": [
+                {
+                  "texto": "Possuem esqueleto cartilaginoso e bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm esqueleto predominantemente ósseo, mas carecem de bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam esqueleto cartilaginoso e não possuem bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam esqueleto predominantemente ósseo e possuem bexiga natatória.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações a seguir descreve corretamente a pele dos répteis?",
+              "explicacao": "De acordo com o conteúdo, a pele dos répteis é grossa, rica em queratina e serve para evitar a perda de água, exatamente como descrito na alternativa correta. A opção que menciona glândulas sebáceas pode parecer razoável, porém o texto não indica a presença dessas glândulas nos répteis, tornando‑a incorreta.",
+              "conceitoAvaliado": "Répteis",
+              "alternativas": [
+                {
+                  "texto": "Têm pele úmida com glândulas mucosas para troca gasosa.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam pele fina sem glândulas, coberta por penas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem pele grossa rica em queratina que impede a perda de água.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem pele escamosa com glândulas sebáceas.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Quantas classes são reconhecidas no sub‑filo Vertebrata (ou Craniata) segundo o material?",
+              "explicacao": "O texto lista explicitamente sete classes dentro do sub‑filo Vertebrata, correspondendo à alternativa correta. A opção que indica seis classes pode parecer próxima, mas o número exato fornecido no material é sete, portanto está errada.",
+              "conceitoAvaliado": "Vertebrados",
+              "alternativas": [
+                {
+                  "texto": "Oito classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cinco classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Seis classes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Sete classes.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 10,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 14738,
+          "totalMs": 14751,
+          "questoes": [
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, assinale a alternativa correta.",
+              "explicacao": "A afirmação correta reflete que, nos cordados que utilizam brânquias, as fendas faríngeas permanecem no adulto, conforme o texto. A alternativa que diz que todas as fendas desaparecem está errada porque a persistência ocorre nos que respiram por brânquias. As outras opções introduzem situações que não são mencionadas no material, como presença exclusiva em anfíbios ou transformação em estruturas respiratórias nos terrestres.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "As fendas faríngeas são encontradas apenas na fase larval dos anfíbios.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos cordados que respiram por brânquias, as fendas faríngeas permanecem no adulto.",
+                  "correta": true
+                },
+                {
+                  "texto": "Em todos os cordados as fendas faríngeas desaparecem durante a embriogênese.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos cordados terrestres as fendas faríngeas se transformam em estruturas respiratórias adultas.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre os anfíbios adultos, qual afirmação está correta?",
+              "explicacao": "Adultos de anfíbios utilizam pulmões e a pele (cutânea) para respirar, como indicado no texto. A ideia de respiração apenas branquial corresponde à fase larval, não ao adulto. A pele dos anfíbios possui glândulas mucosas, portanto a alternativa que nega isso está errada. O coração dos anfíbios é tricavitário, não bicavitário, como descreve o material.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "Realizam respiração exclusivamente branquial durante toda a vida.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm pele sem glândulas mucosas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem respiração pulmonar e cutânea.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das seguintes características NÃO é típica das aves?",
+              "explicacao": "Aves apresentam sacos aéreos, penas e glândula uropigiana, conforme o texto. Elas não têm glândulas mamárias, que são exclusivas dos mamíferos, logo essa afirmação está incorreta. Essa opção costuma ser confundida por estudantes que associam a presença de glândulas a todos os vertebrados, mas o material deixa claro que as glândulas mamárias pertencem aos mamíferos.",
+              "conceitoAvaliado": "Aves",
+              "alternativas": [
+                {
+                  "texto": "Possuem glândula uropigiana na base da cauda.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem glândulas mamárias.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem penas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem sacos aéreos ligados aos pulmões.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre a circulação dos mamíferos, assinale a alternativa correta.",
+              "explicacao": "O texto afirma que os mamíferos têm separação completa de sangue venoso e arterial no coração, permitindo controle eficiente da pressão arterial. O coração bicavitário é típico de peixes, não de mamíferos. Mamíferos não possuem bexiga natatória nem respiram por brânquias, características ausentes no material.",
+              "conceitoAvaliado": "Mamíferos",
+              "alternativas": [
+                {
+                  "texto": "Possuem separação completa de sangue venoso e arterial no coração.",
+                  "correta": true
+                },
+                {
+                  "texto": "A respiração ocorre exclusivamente por brânquias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem bexiga natatória para controle de flutuabilidade.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração bicavitário.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual é a característica cardíaca dos anfíbios?",
+              "explicacao": "Conforme o texto, os anfíbios apresentam coração tricavitário. O coração tetracavitário pertence a aves e mamíferos, enquanto o bicavitário é típico de peixes; nenhum desses se aplica aos anfíbios. A ideia de um coração sem cavidades não tem respaldo no material apresentado.",
+              "conceitoAvaliado": "Coração tricavitário",
+              "alternativas": [
+                {
+                  "texto": "Possuem coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração tricavitário.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem coração sem cavidades.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração tetracavitário.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 11,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 10352,
+          "totalMs": 10364,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente uma característica exclusiva dos cordados?",
+              "explicacao": "A alternativa correta indica que o tubo nervoso dorsal se dilata formando o encéfalo na parte anterior e a medula espinhal na parte posterior, conforme descrito no texto. A opção que menciona um tubo nervoso dorsal restrito à fase larval está errada, pois o tubo continua a dar origem ao sistema nervoso central ao longo do desenvolvimento.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "Possuem um tubo nervoso dorsal que forma o encéfalo na região anterior e a medula espinhal na região posterior.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem um tubo nervoso dorsal que permanece apenas na fase larval.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem um tubo nervoso ventral que se diferencia em encéfalo e medula espinhal.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem um tubo nervoso dorsal que não está associado ao desenvolvimento do sistema nervoso central.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação à notocorda nos cordados, qual afirmativa está correta?",
+              "explicacao": "O texto afirma que, em certos cordados, a notocorda dá lugar ao crânio e à coluna vertebral durante a embriogênese, o que corresponde à alternativa correta. A ideia de que a notocorda permanece em todos os cordados é equivocada, pois o texto indica que pode desaparecer ou ser substituída.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "A notocorda desaparece antes da fase embrionária em todos os cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "A notocorda é substituída por bexiga natatória em espécies aquáticas.",
+                  "correta": false
+                },
+                {
+                  "texto": "A notocorda permanece inalterada em todos os cordados ao longo da vida.",
+                  "correta": false
+                },
+                {
+                  "texto": "Em alguns grupos a notocorda é substituída durante a embriogênese por crânio e coluna vertebral.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das opções descreve corretamente a presença das fendas faríngeas nos cordados adultos?",
+              "explicacao": "Segundo o material, nas espécies que utilizam brânquias as fendas faríngeas permanecem no adulto, correspondendo à alternativa correta. A opção que afirma desaparecimento universal está errada, pois o texto especifica que o desaparecimento ocorre apenas nos que não respiram por brânquias.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "As fendas faríngeas permanecem apenas nos cordados que apresentam bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas são transformadas em estruturas respiratórias nos vertebrados terrestres.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas desaparecem em todos os cordados durante a embriogênese.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas permanecem no adulto dos cordados que respiram por brânquias.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre os condrictes, qual característica é típica desse grupo?",
+              "explicacao": "O texto descreve os condrictes como peixes com escamas placóides e coração bicavitário, o que confirma a alternativa correta. A alternativa que combina escamas cicloides com coração bicavitário é enganosa, pois escamas cicloides são características dos osteíctes, não dos condrictes.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Possuem escamas cicloides e coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem escamas cicloides e bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem escamas placóides e coração bicavitário.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem escamas placóides e coração tricavitário.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual estrutura substitui a notocorda em alguns cordados durante a embriogênese?",
+              "explicacao": "Conforme o conteúdo, a notocorda pode ser substituída por crânio e coluna vertebral, estruturas cartilaginosas ou ósseas, o que corresponde à alternativa correta. A opção que atribui essa substituição ao tubo nervoso dorsal confunde duas estruturas distintas descritas no texto.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "A bexiga natatória, que assume a sustentação corporal.",
+                  "correta": false
+                },
+                {
+                  "texto": "O crânio e a coluna vertebral, formados por tecido cartilaginoso ou ósseo.",
+                  "correta": true
+                },
+                {
+                  "texto": "As fendas faríngeas, que se transformam em brânquias.",
+                  "correta": false
+                },
+                {
+                  "texto": "O tubo nervoso dorsal, que se diferencia em encéfalo e medula.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 12,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 4,
+          "aprovadas": 4,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "reparo"
+          ],
+          "latenciaModeloMs": 18073,
+          "totalMs": 18104,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmações a seguir descreve corretamente uma característica geral dos cordados?",
+              "explicacao": "A descrição correta corresponde ao que o texto indica: os cordados exibem metameria, sobretudo na fase embrionária. A alternativa que menciona ser protostômios está errada porque o material classifica-os como deuterostômios. A afirmação de que são acelomados contradiz a informação de que são celomados, e a ideia de diploblásticos conflita com a condição de trilobulados (triploblásticos).",
+              "conceitoAvaliado": "metameria",
+              "alternativas": [
+                {
+                  "texto": "São acelomados, sem cavidade corporal.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam metameria, mais evidente na fase embrionária.",
+                  "correta": true
+                },
+                {
+                  "texto": "São diploblásticos, contendo apenas duas camadas germinativas.",
+                  "correta": false
+                },
+                {
+                  "texto": "São protostômios, desenvolvendo a boca antes do ânus.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual classe de cordados possui corpo alongado, boca circular e ausência de mandíbulas?",
+              "explicacao": "Ciclóstomas são descritos como aquáticos, sem mandíbulas, com boca circular e corpo alongado, exatamente como a opção correta indica. A alternativa que fala em peixes ósseos com mandíbula está errada porque esses animais possuem mandíbulas, ao contrário da classe em questão. As opções que citam invertebrados ou moluscos não pertencem ao filo dos Cordados, portanto não podem corresponder à descrição proposta.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "Invertebrados marinhos",
+                  "correta": false
+                },
+                {
+                  "texto": "Ciclóstomas",
+                  "correta": true
+                },
+                {
+                  "texto": "Moluscos de água doce",
+                  "correta": false
+                },
+                {
+                  "texto": "Peixes ósseos com mandíbula",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em qual grupo de cordados a presença de bexiga natatória é mencionada como característica?",
+              "explicacao": "O texto indica que os Osteíctes possuem bexiga natatória, tornando essa a alternativa correta. Ciclóstomas não têm referência a esse órgão, e os invertebrados aquáticos nem sequer pertencem ao filo dos Cordados. A opção sobre peixes de água doce sem bexiga descreve a ausência do órgão, portanto não corresponde ao que se busca.",
+              "conceitoAvaliado": "bexiga natatória",
+              "alternativas": [
+                {
+                  "texto": "Ciclóstomas",
+                  "correta": false
+                },
+                {
+                  "texto": "Invertebrados aquáticos",
+                  "correta": false
+                },
+                {
+                  "texto": "Peixes de água doce sem bexiga",
+                  "correta": false
+                },
+                {
+                  "texto": "Osteíctes",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmativas diferencia corretamente cornos de chifres?",
+              "explicacao": "A alternativa correta reflete que cornos são projeções ósseas cobertas por queratina, não ramificadas e que permanecem ao longo da vida, enquanto chifres são estruturas ramificadas que são renovadas anualmente. As demais opções confundem as composições (atribuir queratina aos chifres) ou invertam o padrão de crescimento e troca, o que contradiz a definição apresentada no texto.",
+              "conceitoAvaliado": "Diferença entre Cornos e Chifres",
+              "alternativas": [
+                {
+                  "texto": "Ambos cornos e chifres são substituídos anualmente, mas apenas os chifres possuem camada de pele vascularizada.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos não são ramificados e não são trocados durante a vida, enquanto chifres são ramificados e são trocados anualmente.",
+                  "correta": true
+                },
+                {
+                  "texto": "Chifres são formados por queratina sobre os ossos, enquanto cornos são estruturas ósseas sólidas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Cornos crescem apenas durante a infância, enquanto chifres continuam crescendo ao longo da vida.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 13,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 14370,
+          "totalMs": 14382,
+          "questoes": [
+            {
+              "enunciado": "Qual das seguintes classes não faz parte do sub‑filo Vertebrata (ou craniata)?",
+              "explicacao": "O texto enumera as sete classes do sub‑filo Vertebrata: Ciclóstomas, Condrictes, Osteíctes, Anfíbios, Répteis, Aves e Mamíferos. As opções que citam aves, répteis e anfíbios correspondem a classes listadas, portanto estão corretas. A alternativa que menciona insetos está errada porque insetos pertencem a outro filo, não ao Vertebrata.",
+              "conceitoAvaliado": "Sub‑Filo Vertebrata (ou craniata)",
+              "alternativas": [
+                {
+                  "texto": "Répteis",
+                  "correta": false
+                },
+                {
+                  "texto": "Insetos",
+                  "correta": true
+                },
+                {
+                  "texto": "Anfíbios",
+                  "correta": false
+                },
+                {
+                  "texto": "Aves",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual tipo de respiração predomina nos adultos dos Anfíbios?",
+              "explicacao": "O material afirma que, nos adultos dos Anfíbios, a respiração ocorre tanto pelos pulmões quanto pela pele. A alternativa que menciona apenas respiração branquial está errada porque esse modo ocorre nas larvas. A opção que indica respiração exclusivamente pulmonar omite a contribuição cutânea, que também está presente.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "Respiração branquial",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração cutânea apenas",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração exclusivamente pulmonar",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiração pulmonar e cutânea",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica da pele dos Répteis ajuda a evitar a perda de água?",
+              "explicacao": "Segundo o texto, os répteis possuem pele grossa e rica em queratina, o que impede a desidratação. Glândulas mucosas são típicas de anfíbios, penas pertencem às aves e escamas cicloides são características dos Osteíctes, não dos répteis.",
+              "conceitoAvaliado": "Pele grossa rica em queratina",
+              "alternativas": [
+                {
+                  "texto": "Pele fina coberta por penas",
+                  "correta": false
+                },
+                {
+                  "texto": "Presença de escamas cicloides",
+                  "correta": false
+                },
+                {
+                  "texto": "Pele grossa rica em queratina",
+                  "correta": true
+                },
+                {
+                  "texto": "Presença de glândulas mucosas",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em qual estrutura das aves ocorre a produção de som?",
+              "explicacao": "O texto indica que a siringe é responsável pela produção de som nas aves. A bexiga natatória não está presente nas aves, a glândula uropigeana tem função de impermeabilizar penas, e o coração tetracavitário está relacionado à circulação, não à produção de som.",
+              "conceitoAvaliado": "Siringe",
+              "alternativas": [
+                {
+                  "texto": "Coração tetracavitário",
+                  "correta": false
+                },
+                {
+                  "texto": "Bexiga natatória",
+                  "correta": false
+                },
+                {
+                  "texto": "Glândula uropigeana",
+                  "correta": false
+                },
+                {
+                  "texto": "Siringe",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual classe dos vertebrados possui escamas cicloides?",
+              "explicacao": "O material descreve que os Osteíctes apresentam escamas cicloides. As aves não têm escamas, os anfíbios não são descritos como tendo escamas e os répteis não são associados a esse tipo de escama no texto. Assim, a alternativa que menciona Osteíctes está correta.",
+              "conceitoAvaliado": "Escamas cicloides",
+              "alternativas": [
+                {
+                  "texto": "Anfíbios",
+                  "correta": false
+                },
+                {
+                  "texto": "Osteíctes",
+                  "correta": true
+                },
+                {
+                  "texto": "Aves",
+                  "correta": false
+                },
+                {
+                  "texto": "Répteis",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 14,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 11169,
+          "totalMs": 11184,
+          "questoes": [
+            {
+              "enunciado": "Sobre as características gerais dos cordados, qual das afirmações está correta?",
+              "explicacao": "O texto descreve os cordados como celomados, triblásticos e deuterostômios, correspondendo exatamente à alternativa correta. As opções que combinam celomados com diploblásticos ou protostômios confundem categorias que não se aplicam aos cordados, e a que menciona acelomados está em desacordo com a definição de celomados.",
+              "conceitoAvaliado": "Características Gerais",
+              "alternativas": [
+                {
+                  "texto": "São acelomados, triblásticos e deuterostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados, triblásticos e deuterostômios.",
+                  "correta": true
+                },
+                {
+                  "texto": "São celomados, diploblásticos e protostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São acelomados, diploblásticos e protostômios.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação ao tubo nervoso dorsal (TND) dos cordados, qual alternativa descreve corretamente sua formação?",
+              "explicacao": "Conforme o material, a parte anterior do TND se dilata e dá origem ao encéfalo. A alternativa que atribui essa dilatação ao posterior troca as regiões, e a que coloca o TND ventralmente contradiz a própria definição de tubo nervoso dorsal.",
+              "conceitoAvaliado": "Tubo nervoso dorsal (TND)",
+              "alternativas": [
+                {
+                  "texto": "O tubo nervoso dorsal está localizado ventralmente no embrião.",
+                  "correta": false
+                },
+                {
+                  "texto": "A região posterior do tubo nervoso dorsal se dilata formando o encéfalo.",
+                  "correta": false
+                },
+                {
+                  "texto": "A região anterior do tubo nervoso dorsal se dilata formando o encéfalo.",
+                  "correta": true
+                },
+                {
+                  "texto": "A região anterior do tubo nervoso dorsal se alonga formando a medula espinhal.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, assinale a alternativa correta.",
+              "explicacao": "O texto informa que, nos cordados que mantêm a respiração branquial, as fendas faríngeas permanecem até a fase adulta. As demais opções invertem essa relação ou descrevem localização que não corresponde à descrição de fendas bilaterais na faringe.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "Em cordados que respiram por brânquias, as fendas faríngeas desaparecem na embriogênese.",
+                  "correta": false
+                },
+                {
+                  "texto": "As fendas faríngeas estão localizadas na região posterior do corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Em cordados que não utilizam brânquias, as fendas faríngeas permanecem no adulto.",
+                  "correta": false
+                },
+                {
+                  "texto": "Em cordados que respiram por brânquias, as fendas faríngeas permanecem no adulto.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Considerando os peixes condrictes, qual das afirmações abaixo NÃO se aplica a esse grupo?",
+              "explicacao": "Condrictes são descritos como não possuindo bexiga natatória, portanto essa afirmação está errada. As demais características – escamas placóides, coração bicavitário e respiração exclusivamente branquial – são explicitamente mencionadas no texto como atributos dos condrictes.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Possuem coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam escamas placóides.",
+                  "correta": false
+                },
+                {
+                  "texto": "Respiram exclusivamente por brânquias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam bexiga natatória.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação aos mamíferos, assinale a alternativa correta.",
+              "explicacao": "O material indica que mamíferos têm coração tetracavitário, o que confirma a alternativa correta. As opções que afirmam ser heterotérmicos, possuir cloaca ou ter penas descrevem características de outros grupos e não se aplicam aos mamíferos.",
+              "conceitoAvaliado": "Mamíferos",
+              "alternativas": [
+                {
+                  "texto": "São heterotérmicos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm pele coberta por penas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam cloaca.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem coração tetracavitário.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 15,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 2,
+          "recebidas": 6,
+          "aprovadas": 5,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 159 caracteres contra média 65 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 19446,
+          "totalMs": 19463,
+          "questoes": [
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, qual alternativa está correta?",
+              "explicacao": "O texto indica que as fendas faríngeas ficam bilateralmente na faringe e só permanecem em adultos que mantêm respiração branquial, exatamente como descrito na alternativa correta. As demais opções deslocam a posição das fendas, restringem‑nos a vertebrados ou atribuem a elas uma função de produção de som, nenhuma das quais está presente no material.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "São responsáveis pela produção de som nos animais aquáticos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Estão localizadas bilateralmente na faringe e permanecem no adulto apenas nos animais que respiram por brânquias.",
+                  "correta": true
+                },
+                {
+                  "texto": "Localizam‑se no dorso e dão origem ao tubo nervoso dorsal.",
+                  "correta": false
+                },
+                {
+                  "texto": "São estruturas presentes apenas nos vertebrados e desaparecem em todos os cordados na fase larval.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Características dos ciclóstomas incluem:",
+              "explicacao": "A descrição dos ciclóstomas no texto menciona ausência de mandíbulas, boca circular e ocorrência de espécies ectoparasitas, correspondendo à alternativa correta. As outras opções trazem características de condrictes, répteis e mamíferos, grupos diferentes do ciclóstoma.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "Têm coração tetracavitário e glândulas mamárias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem esqueleto cartilaginoso, escamas placóides e respiração branquial exclusiva.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam pele grossa rica em queratina e olhos com pálpebras.",
+                  "correta": false
+                },
+                {
+                  "texto": "São animais aquáticos sem mandíbulas, com boca circular e alguns são ectoparasitas.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação aos osteíctes, assinale a alternativa correta.",
+              "explicacao": "O texto indica que os osteíctes têm bexiga natatória, coração bicavitário e respiração branquial protegida por opérculo, exatamente como na alternativa correta. A segunda opção nega a presença da linha lateral, a terceira erra ao classificar a reprodução como ovovivípara, e a quarta confunde o tipo de esqueleto e o modo de respiração.",
+              "conceitoAvaliado": "Osteíctes",
+              "alternativas": [
+                {
+                  "texto": "Apresentam bexiga natatória, coração bicavitário e respiração branquial com opérculo que protege as brânquias.",
+                  "correta": true
+                },
+                {
+                  "texto": "São heterotérmicos, possuem cloaca e são ovovivíparos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm esqueleto cartilaginoso, não possuem bexiga natatória e respiram apenas por pulmões.",
+                  "correta": false
+                },
+                {
+                  "texto": "São exclusivamente marinhos, não possuem linha lateral e respiram apenas por brânquias.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações a seguir sobre as aves está correta?",
+              "explicacao": "O material descreve que as aves têm sacos aéreos conectados aos pulmões, são cobertas por penas e não possuem bexiga urinária, correspondendo à alternativa correta. As demais opções atribuem a aves características de répteis, de peixes e de mamíferos, respectivamente, que não são mencionadas para esse grupo.",
+              "conceitoAvaliado": "Aves",
+              "alternativas": [
+                {
+                  "texto": "Apresentam pele grossa rica em queratina e escamas nas patas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem sacos aéreos ligados aos pulmões, penas e ausência de bexiga urinária.",
+                  "correta": true
+                },
+                {
+                  "texto": "São ovovivíparas e apresentam glândulas mamárias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm coração bicavitário e respiração branquial.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre a notocorda nos cordados, é correto afirmar que:",
+              "explicacao": "O texto indica que a notocorda pode permanecer ao longo da vida ou ser substituída, durante a embriogênese, pelo crânio e pela coluna vertebral, o que corresponde à alternativa correta. A alternativa que afirma que a notocorda desaparece antes da fase larval e é trocada por músculos esqueléticos está errada porque o material não menciona essa substituição nem esse momento de desaparecimento.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "Ela pode persistir durante toda a vida ou ser substituída, na embriogênese, pelo crânio e coluna vertebral.",
+                  "correta": true
+                },
+                {
+                  "texto": "Ela permanece somente nos vertebrados, desaparecendo nos demais cordados.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ela desaparece totalmente antes da fase larval, sendo trocada por músculos esqueléticos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ela é rígida, mas não sustenta o embrião, sendo substituída por cartilagem após o nascimento.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 16,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 3,
+          "aprovadas": 3,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "reparo"
+          ],
+          "latenciaModeloMs": 18776,
+          "totalMs": 18793,
+          "questoes": [
+            {
+              "enunciado": "Quantas classes compõem o sub‑filo Vertebrata (ou craniata)?",
+              "explicacao": "O texto informa que o sub‑filo Vertebrata possui sete classes, portanto a alternativa que menciona sete classes está correta. A opção com seis classes pode parecer plausível, mas não corresponde ao número indicado no material.",
+              "conceitoAvaliado": "Sub-Filo Vertebrata (ou craniata)",
+              "alternativas": [
+                {
+                  "texto": "cinco classes",
+                  "correta": false
+                },
+                {
+                  "texto": "oito classes",
+                  "correta": false
+                },
+                {
+                  "texto": "sete classes",
+                  "correta": true
+                },
+                {
+                  "texto": "seis classes",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica descreve corretamente o desenvolvimento dos anfíbios?",
+              "explicacao": "A descrição dos anfíbios indica que os ovos são geralmente depositados na água, originando girinos que passam por metamorfose para se tornar adultos terrestres. As demais opções apresentam modos de desenvolvimento que não constam do texto, como incubação interna ou ausência de fase larval.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "Os ovos são postos em terra seca e os filhotes desenvolvem brânquias laterais para respirar na água.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os ovos são incubados no interior da mãe e eclodem como miniaturas adultas já adaptadas ao ambiente terrestre.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os ovos são postos na água, dão origem a girinos que, após fase larval aquática, sofrem metamorfose para se tornar adultos terrestres.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os ovos são postos na água, mas os filhotes nascem imediatamente com pulmões funcionais, sem fase larval.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmações corresponde à adaptação da pele dos répteis?",
+              "explicacao": "O texto descreve que os répteis possuem pele grossa e rica em queratina, característica que evita a perda de água. As outras alternativas referem‑se a adaptações de outros grupos, como a pele úmida dos anfíbios ou as escamas de peixes, não aos répteis.",
+              "conceitoAvaliado": "Répteis",
+              "alternativas": [
+                {
+                  "texto": "Pele fina e úmida que facilita a troca gasosa.",
+                  "correta": false
+                },
+                {
+                  "texto": "Pele grossa rica em queratina que impede a perda de água.",
+                  "correta": true
+                },
+                {
+                  "texto": "Pele coberta por escamas cicloides que permitem voo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Pele com glândulas mucosas que mantém o corpo hidratado.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 17,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 7948,
+          "totalMs": 7961,
+          "questoes": [
+            {
+              "enunciado": "Considerando as características gerais dos cordados apresentadas no texto, assinale a alternativa correta.",
+              "explicacao": "O texto indica que os cordados são celomados, triblásticos e deuterostômios, portanto a alternativa que repete exatamente esses três termos está correta. A alternativa que menciona diploblásticos e protostômios parece plausível porque confunde grupos de desenvolvimento, mas está errada, já que os cordados não são diploblásticos nem protostômios.",
+              "conceitoAvaliado": "Celomados; Triblásticos; Deuterostômios",
+              "alternativas": [
+                {
+                  "texto": "São celomados, diploblásticos e protostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São pseudocelomados, diploblásticos e deuterostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São acoelomados, diploblásticos e protostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados, triblásticos e deuterostômios.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual estrutura exclusiva dos cordados se dilata na região anterior para formar o encéfalo?",
+              "explicacao": "Segundo o texto, o tubo nervoso dorsal tem a região anterior que se dilata formando o encéfalo, logo essa alternativa está correta. A alternativa que aponta a notocorda como responsável pelo encéfalo pode parecer atraente, pois a notocorda também é característica dos cordados, porém o texto a descreve apenas como suporte do embrião, não como origem do encéfalo.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "Linha lateral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Tubo nervoso dorsal.",
+                  "correta": true
+                },
+                {
+                  "texto": "Fendas faríngeas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Notocorda.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em que fase a metameria dos cordados é mais evidente, de acordo com o material?",
+              "explicacao": "O texto afirma que a metameria é mais evidente na fase embrionária, portanto essa opção está correta. A alternativa que indica a fase adulta pode ser tentadora, pois a segmentação continua em alguns animais, porém o texto especifica que a evidência maior ocorre no embrião.",
+              "conceitoAvaliado": "metameria",
+              "alternativas": [
+                {
+                  "texto": "Fase larval.",
+                  "correta": false
+                },
+                {
+                  "texto": "Fase embrionária.",
+                  "correta": true
+                },
+                {
+                  "texto": "Fase de reprodução.",
+                  "correta": false
+                },
+                {
+                  "texto": "Fase adulta.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre o tubo nervoso dorsal dos cordados, assinale a afirmação correta.",
+              "explicacao": "O texto descreve que a região anterior do tubo nervoso dorsal se dilata e forma o encéfalo, confirmando a alternativa correta. A opção que coloca o tubo nervoso dorsal na posição ventral confunde a localização dorsal descrita no texto, por isso está errada.",
+              "conceitoAvaliado": "Tubo nervoso dorsal",
+              "alternativas": [
+                {
+                  "texto": "Ele está localizado ventralmente ao corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ele se dilata na região anterior formando o encéfalo.",
+                  "correta": true
+                },
+                {
+                  "texto": "Ele se transforma na coluna vertebral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ele desaparece completamente na fase adulta.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "De acordo com o texto, o filo dos cordados inclui qual dos seguintes grupos?",
+              "explicacao": "O texto inicia afirmando que o filo dos cordados inclui a espécie humana, tornando essa alternativa correta. A alternativa que restringe o filo a invertebrados pode parecer plausível por confusão com outros filos, porém o texto explicitamente menciona humanos, que são vertebrados.",
+              "conceitoAvaliado": "Filo dos Cordados",
+              "alternativas": [
+                {
+                  "texto": "Animais sem metameria.",
+                  "correta": false
+                },
+                {
+                  "texto": "Somente organismos aquáticos.",
+                  "correta": false
+                },
+                {
+                  "texto": "A espécie humana.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apenas invertebrados.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 18,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 9588,
+          "totalMs": 9600,
+          "questoes": [
+            {
+              "enunciado": "Sobre as fendas faríngeas nos cordados, qual afirmação está correta?",
+              "explicacao": "A alternativa que indica que as fendas faríngeas desaparecem na embriogênese das espécies que não respiram por brânquias está correta, conforme o texto. A opção que afirma que elas permanecem em todos os adultos é tentadora, mas o material especifica que só permanecem nos que respiram por brânquias.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "Em espécies que não utilizam brânquias, as fendas desaparecem ainda na embriogênese.",
+                  "correta": true
+                },
+                {
+                  "texto": "Estão localizadas na região ventral da faringe.",
+                  "correta": false
+                },
+                {
+                  "texto": "Desenvolvem‑se a partir da notocorda durante o desenvolvimento embrionário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Elas permanecem no adulto de todas as espécies, independentemente do modo respiratório.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica descreve adequadamente os ciclóstomas?",
+              "explicacao": "A opção que menciona boca circular, corpo alongado e vida aquática corresponde ao que o texto descreve dos ciclóstomas. A alternativa que fala de mandíbulas é atrativa, porém o material afirma que são sem mandíbulas.",
+              "conceitoAvaliado": "Ciclóstomas",
+              "alternativas": [
+                {
+                  "texto": "São predominantemente terrestres e possuem escamas cicloides.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm boca circular, corpo alongado e vivem em ambientes aquáticos.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem linha lateral e bexiga natatória como os peixes ósseos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam mandíbulas desenvolvidas para captura de presas.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das seguintes afirmações é típica dos condrictes?",
+              "explicacao": "A característica de escamas placóides associada à respiração exclusivamente branquial corresponde aos condrictes descritos no texto. A alternativa que traz escamas cicloides e bexiga natatória confunde com peixes ósseos, o que pode parecer plausível, mas não se aplica a esse grupo.",
+              "conceitoAvaliado": "Condrictes",
+              "alternativas": [
+                {
+                  "texto": "Possuem escamas cicloides e bexiga natatória.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam mandíbula e pulmões bem desenvolvidos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm escamas placóides e respiração exclusivamente branquial.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam esqueleto ósseo e coração tetracavitário.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação aos mamíferos, qual afirmação está correta?",
+              "explicacao": "A presença de glândulas mamárias e pelos é destacada no texto como característica dos mamíferos. A alternativa que menciona coração bicavitário e ectotermia pode parecer plausível por confusão com peixes, mas o material indica coração tetracavitário e homeotermia para os mamíferos.",
+              "conceitoAvaliado": "Mamíferos",
+              "alternativas": [
+                {
+                  "texto": "Apresentam glândulas mamárias e pelos no corpo.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem coração bicavitário e são ectotérmicos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm pele escamosa e respiram por brânquias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem cloaca e apresentam ovoviviparidade.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das descrições abaixo diferencia corretamente cornos de chifres?",
+              "explicacao": "A definição de cornos como projeção óssea envolta por queratina, com crescimento contínuo e sem troca, está exatamente conforme o texto. A opção que descreve corpos ósseos ramificados trocados anualmente corresponde aos chifres, o que pode confundir, mas não descreve cornos.",
+              "conceitoAvaliado": "Diferença entre Cornos e Chifres",
+              "alternativas": [
+                {
+                  "texto": "Corpos ósseos ramificados que são trocados anualmente.",
+                  "correta": false
+                },
+                {
+                  "texto": "Formações dérmicas sem componente ósseo que desaparecem após a maturidade.",
+                  "correta": false
+                },
+                {
+                  "texto": "Estruturas formadas por tecido cartilaginoso que se renovam a cada estação.",
+                  "correta": false
+                },
+                {
+                  "texto": "Projeção óssea do crânio coberta por queratina, que cresce continuamente sem ser trocada.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 19,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 1,
+          "recebidas": 5,
+          "aprovadas": 5,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 9555,
+          "totalMs": 9568,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente a notocorda nos cordados?",
+              "explicacao": "A alternativa que define a notocorda como um bastão cilíndrico e maciço está correta, pois esse é o seu descritor no texto. As demais apresentam informações que o texto nega: a notocorda pode persistir ou ser substituída, não forma a coluna em todos os cordados e não se restringe aos vertebrados adultos.",
+              "conceitoAvaliado": "Notocorda",
+              "alternativas": [
+                {
+                  "texto": "É um bastão cilíndrico e maciço constituído por células e substância gelatinosa.",
+                  "correta": true
+                },
+                {
+                  "texto": "Está presente apenas nos vertebrados adultos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Desaparece sempre antes do nascimento, independentemente da espécie.",
+                  "correta": false
+                },
+                {
+                  "texto": "Forma a coluna vertebral em todos os cordados durante a vida adulta.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em que situação as fendas faríngeas permanecem no adulto dos cordados?",
+              "explicacao": "O texto afirma que as fendas faríngeas permanecem no adulto somente nos cordados que utilizam brânquias para respirar. As outras opções contradizem a informação: não desaparecem em todos, não são exclusivas dos anfíbios e não estão associadas ao tubo nervoso dorsal.",
+              "conceitoAvaliado": "Fendas Faríngeas",
+              "alternativas": [
+                {
+                  "texto": "Localizadas na região posterior do tubo nervoso dorsal.",
+                  "correta": false
+                },
+                {
+                  "texto": "Em todos os cordados, independentemente do modo de respiração.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apenas nos anfíbios, durante a fase larval.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos cordados que respiram por brânquias.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual afirmação descreve corretamente o sub‑filo Vertebrata (ou Craniata)?",
+              "explicacao": "A única afirmação correta é a que lista as sete classes que compõem o sub‑filo, conforme o texto. As demais apresentam erros: o grupo não se restringe ao ambiente aquático, a notocorda pode ser substituída e a presença da coluna vertebral é típica dos vertebrados.",
+              "conceitoAvaliado": "Vertebrados",
+              "alternativas": [
+                {
+                  "texto": "Caracteriza‑se pela presença de notocorda ao longo de toda a vida dos seus membros.",
+                  "correta": false
+                },
+                {
+                  "texto": "É composto apenas por animais que vivem exclusivamente em ambientes aquáticos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Todas as suas espécies carecem de coluna vertebral.",
+                  "correta": false
+                },
+                {
+                  "texto": "Inclui sete classes: Ciclóstomas, Condrictes, Osteíctes, Anfíbios, Répteis, Aves e Mamíferos.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica é típica dos osteíctes?",
+              "explicacao": "O texto descreve os osteíctes como portadores de escamas cicloides e de bexiga natatória, tornando essa a alternativa correta. As outras opções confundem com características de outros grupos: esqueleto cartilaginoso dos condrictes, respiração branquial com opérculo nos osteíctes e reprodução ovulípara, não ovovivípara.",
+              "conceitoAvaliado": "Osteíctes",
+              "alternativas": [
+                {
+                  "texto": "São ovovivíparos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Têm esqueleto predominantemente cartilaginoso.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem escamas cicloides e bexiga natatória.",
+                  "correta": true
+                },
+                {
+                  "texto": "Respiram exclusivamente por pulmões.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das seguintes adaptações está diretamente relacionada ao voo nas aves?",
+              "explicacao": "A adaptação que envolve sacos aéreos e ossos pneumáticos é citada como essencial para o voo nas aves. As demais opções são incorretas: as aves não possuem bexiga urinária, a pele não tem glândulas sebáceas e as escamas nas patas não são uma adaptação ao voo.",
+              "conceitoAvaliado": "Aves",
+              "alternativas": [
+                {
+                  "texto": "Glândulas sebáceas na pele para impermeabilização.",
+                  "correta": false
+                },
+                {
+                  "texto": "Presença de bexiga urinária para armazenamento de resíduos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Escamas nas patas que protegem contra o atrito durante o voo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Presença de sacos aéreos ligados aos pulmões e aos ossos pneumáticos.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 20,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 5,
+          "tentativas": 2,
+          "recebidas": 5,
+          "aprovadas": 4,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 95 caracteres contra média 53 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 11995,
+          "totalMs": 12009,
+          "questoes": [
+            {
+              "enunciado": "Considerando as características gerais dos cordados, qual das afirmações está correta?",
+              "explicacao": "A alternativa que indica que os cordados são celomados, triblásticos e deuterostômios está de acordo com o texto, que lista exatamente essas três características gerais. As demais combinam atributos que não pertencem ao filo, como ser acelomado ou diploblástico, ou ainda confundem o tipo de desenvolvimento, levando a respostas incorretas.",
+              "conceitoAvaliado": "Características Gerais",
+              "alternativas": [
+                {
+                  "texto": "São celomados, diploblásticos e deuterostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados, triblásticos e deuterostômios.",
+                  "correta": true
+                },
+                {
+                  "texto": "São celomados, triblásticos e protostômios.",
+                  "correta": false
+                },
+                {
+                  "texto": "São acelomados, diploblásticos e protostômios.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual afirmação descreve corretamente a formação do encéfalo a partir do tubo nervoso dorsal nos cordados?",
+              "explicacao": "A alternativa correta reflete que a região anterior do tubo nervoso dorsal se dilata e dá origem ao encéfalo, conforme descrito nas características exclusivas. As demais opções alteram a posição (posterior), a localização (ventral) ou negam a relação, o que contradiz o conteúdo apresentado.",
+              "conceitoAvaliado": "Características exclusivas",
+              "alternativas": [
+                {
+                  "texto": "O tubo nervoso dorsal está localizado ventralmente ao longo do corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "O tubo nervoso dorsal não participa da formação do encéfalo.",
+                  "correta": false
+                },
+                {
+                  "texto": "O tubo nervoso dorsal se dilata na região anterior formando o encéfalo.",
+                  "correta": true
+                },
+                {
+                  "texto": "O tubo nervoso dorsal se dilata na região posterior formando o encéfalo.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica da pele dos répteis está de acordo com o texto?",
+              "explicacao": "A alternativa correta menciona a pele grossa e rica em queratina, que protege contra a desidratação, conforme descrito para os répteis. As demais opções introduzem características de aves, anfíbios ou adaptações inexistentes nos répteis, sendo incompatíveis com o conteúdo.",
+              "conceitoAvaliado": "Répteis",
+              "alternativas": [
+                {
+                  "texto": "Sua pele contém glândulas mucosas que mantêm a umidade.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possuem pele grossa rica em queratina que evita a perda de água.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam pele fina coberta por penas.",
+                  "correta": false
+                },
+                {
+                  "texto": "A pele dos répteis possui sacos aéreos ligados aos pulmões.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Em relação ao sistema circulatório dos anfíbios, qual das afirmações está correta?",
+              "explicacao": "O texto indica que os anfíbios possuem coração tricavitário, tornando essa a alternativa correta. As opções que sugerem dois, quatro cavidades ou a ausência de cavidades são inconsistentes com a descrição fornecida para o grupo.",
+              "conceitoAvaliado": "Anfíbios",
+              "alternativas": [
+                {
+                  "texto": "Apresentam coração tetracavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam coração bicavitário.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possuem cavidades cardíacas distintas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam coração tricavitário.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resumo": {
+        "geracoes": 20,
+        "porOrigem": {
+          "ia": 20,
+          "cache": 0,
+          "fixo": 0
+        },
+        "solicitadas": 100,
+        "recebidas": 104,
+        "aprovadas": 96,
+        "rejeitadas": 8,
+        "tentativasTotais": 26,
+        "retentativas": 6,
+        "latencias": [
+          7342,
+          7961,
+          9223,
+          9568,
+          9600,
+          10364,
+          10880,
+          11184,
+          12009,
+          12741,
+          13080,
+          14382,
+          14751,
+          15977,
+          17799,
+          18104,
+          18793,
+          19463,
+          25950,
+          49704
+        ],
+        "taxaAprovacao": 0.9230769230769231
+      }
+    }
+  ],
+  "fim": "2026-08-21T23:09:18.311Z",
+  "metricas": {
+    "geracoes": 26,
+    "falhasDeChamada": 0,
+    "falhasPorTipo": {},
+    "questoesRecebidas": 104,
+    "questoesAprovadas": 96,
+    "taxaAprovacao": 0.9230769230769231,
+    "taxaRejeicao": 0.07692307692307693,
+    "rejeicoesPorMotivo": {
+      "vazamento_por_comprimento": 4,
+      "explicacao_cita_letra": 3,
+      "alternativa_vazia": 1
+    },
+    "estrategiasDoParser": {
+      "direto": 24,
+      "reparo": 2
+    },
+    "origens": {
+      "ia": 20,
+      "cache": 0,
+      "fixo": 0
+    },
+    "motivosDeFallback": {},
+    "quizzesServidos": 20,
+    "latencia": {
+      "amostras": 26,
+      "mediaMs": 11861,
+      "medianaMs": 10352,
+      "p95Ms": 18776,
+      "minMs": 1669,
+      "maxMs": 49487
+    },
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 26,
+        "aprovadas": 96
+      }
+    },
+    "primeiroRegistro": "2026-08-21T23:04:59.102Z",
+    "ultimoRegistro": "2026-08-21T23:09:18.296Z"
+  },
+  "metricasBrutas": {
+    "versao": 1,
+    "geracoes": 26,
+    "falhasDeChamada": 0,
+    "questoesRecebidas": 104,
+    "questoesAprovadas": 96,
+    "rejeicoesPorMotivo": {
+      "vazamento_por_comprimento": 4,
+      "explicacao_cita_letra": 3,
+      "alternativa_vazia": 1
+    },
+    "estrategiasDoParser": {
+      "direto": 24,
+      "reparo": 2
+    },
+    "falhasPorTipo": {},
+    "latenciasMs": [
+      49487,
+      9207,
+      12729,
+      10342,
+      5622,
+      13584,
+      8343,
+      3995,
+      10534,
+      7254,
+      10869,
+      13068,
+      7330,
+      14738,
+      10352,
+      18073,
+      14370,
+      11169,
+      13638,
+      5808,
+      18776,
+      7948,
+      9588,
+      9555,
+      10326,
+      1669
+    ],
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 26,
+        "aprovadas": 96
+      }
+    },
+    "origens": {
+      "ia": 20,
+      "cache": 0,
+      "fixo": 0
+    },
+    "motivosDeFallback": {},
+    "primeiroRegistro": "2026-08-21T23:04:59.102Z",
+    "ultimoRegistro": "2026-08-21T23:09:18.296Z"
+  }
+}

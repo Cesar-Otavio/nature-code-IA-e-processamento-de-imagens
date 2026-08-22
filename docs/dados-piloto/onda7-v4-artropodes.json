@@ -1,0 +1,781 @@
+{
+  "rotulo": "onda7-v4-artropodes",
+  "versaoPrompt": "V4",
+  "modelo": "gpt-oss:120b-cloud",
+  "provedor": "cloud",
+  "inicio": "2026-08-21T23:55:39.191Z",
+  "geracoesPorTopico": 10,
+  "topicos": [
+    {
+      "moduloId": "animais",
+      "topicoId": "filo-artropodes",
+      "titulo": "Filo dos Artrópodes",
+      "caracteres": 1032,
+      "maxQuestoes": 2,
+      "suficiencia": "limitado",
+      "limitadoPor": "volume de texto",
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 6175,
+          "totalMs": 6308,
+          "questoes": [
+            {
+              "enunciado": "De acordo com o texto sobre o filo dos artrópodes, qual é a consequência direta da presença de um exoesqueleto de quitina impermeável e resistente?",
+              "explicacao": "A alternativa correta reflete o trecho que indica que o exoesqueleto impede o crescimento, sendo necessária a ecdise para que o animal aumente de tamanho. A opção que sugere crescimento contínuo está errada porque o texto aponta exatamente o oposto. A ideia de que o exoesqueleto atua na respiração não tem respaldo, já que ele é descrito como impermeável e resistente. Também não há menção de função energética da quitina, portanto a última opção está incorreta.",
+              "conceitoAvaliado": "Consequência",
+              "alternativas": [
+                {
+                  "texto": "Ele permite que o animal cresça continuamente sem necessidade de troca de camada.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ele serve como reserva de energia devido à sua composição de quitina.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ele funciona como um órgão respiratório, facilitando a troca de gases.",
+                  "correta": false
+                },
+                {
+                  "texto": "Ele impede o crescimento do animal, exigindo a realização de muda para aumentar de tamanho.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual das afirmativas abaixo descreve corretamente o tipo de sistema circulatório dos artrópodes, conforme o material apresentado?",
+              "explicacao": "O texto afirma que o sistema circulatório dos artrópodes é aberto e contém pigmento respiratório, com exceção dos insetos, correspondendo à alternativa correta. A opção que menciona circulação fechada contradiz a descrição de circulação aberta. A afirmação de que apenas insetos têm circulação aberta está invertida em relação ao que o texto diz. Por fim, dizer que nenhum artrópode tem pigmento respiratório ignora a informação de que ele está presente, salvo nos insetos.",
+              "conceitoAvaliado": "Sistema circulatório",
+              "alternativas": [
+                {
+                  "texto": "Não possui pigmento respiratório em nenhum dos artrópodes.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta circulação aberta com pigmento respiratório, exceto nos insetos.",
+                  "correta": true
+                },
+                {
+                  "texto": "É aberto apenas nos insetos, enquanto os demais grupos têm circulação fechada.",
+                  "correta": false
+                },
+                {
+                  "texto": "Possui circulação fechada sem pigmento respiratório.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 2,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 6570,
+          "totalMs": 6582,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas sobre o exoesqueleto dos artrópodes está correta?",
+              "explicacao": "O texto afirma que o exoesqueleto dos artrópodes é de quitina, um polissacarídeo impermeável e resistente, confirmando a alternativa correta. A alternativa que menciona colágeno está errada porque o material não indica a presença desse componente. A opção que diz que o exoesqueleto não impede o crescimento também está incorreta, já que o texto aponta a limitação ao crescimento como consequência da presença do exoesqueleto.",
+              "conceitoAvaliado": "Exoesqueleto de quitina",
+              "alternativas": [
+                {
+                  "texto": "Embora seja impermeável, não impede o crescimento do animal.",
+                  "correta": false
+                },
+                {
+                  "texto": "É constituído por quitina, um polissacarídeo impermeável e resistente.",
+                  "correta": true
+                },
+                {
+                  "texto": "É formado por colágeno, permitindo flexibilidade e absorção de água.",
+                  "correta": false
+                },
+                {
+                  "texto": "É composto de quitina, mas é macio e facilmente deformável.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Sobre o sistema digestório dos artrópodes, assinale a alternativa correta.",
+              "explicacao": "Conforme o conteúdo, o sistema digestório dos artrópodes é completo, com anatomia bucal diferenciada e peças especializadas, o que valida a alternativa correta. A opção que indica incompletude é equivocada, pois o texto deixa claro que o trato é completo. A afirmação de semelhança com vertebrados também não encontra respaldo no material apresentado.",
+              "conceitoAvaliado": "Sistema digestório",
+              "alternativas": [
+                {
+                  "texto": "É completo, possuindo anatomia bucal especializada e peças diferenciadas.",
+                  "correta": true
+                },
+                {
+                  "texto": "É semelhante ao dos vertebrados, com um estômago simples e intestinos curtos.",
+                  "correta": false
+                },
+                {
+                  "texto": "É incompleto, apresentando apenas uma abertura bucal sem diferenciação de peças.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possui anatomia bucal diferenciada, sendo uniforme em todos os artrópodes.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 3,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 9745,
+          "totalMs": 9756,
+          "questoes": [
+            {
+              "enunciado": "Qual é a estratégia que os artrópodes utilizam para contornar a impossibilidade de crescimento do exoesqueleto de quitina?",
+              "explicacao": "A muda (ecdise) permite a troca periódica do exoesqueleto, possibilitando o crescimento do animal, e é controlada pelo hormônio ecdisona. A alternativa que menciona metamorfose descreve a mudança de forma durante o desenvolvimento, não a substituição do exoesqueleto. As demais opções tratam de reprodução ou de um exoesqueleto flexível, que não ocorre nos artrópodes.",
+              "conceitoAvaliado": "muda (ecdise)",
+              "alternativas": [
+                {
+                  "texto": "Realizar fecundação externa para gerar descendentes maiores",
+                  "correta": false
+                },
+                {
+                  "texto": "Desenvolver um exoesqueleto flexível que se expande com o crescimento",
+                  "correta": false
+                },
+                {
+                  "texto": "Passar por metamorfose direta sem troca de exoesqueleto",
+                  "correta": false
+                },
+                {
+                  "texto": "Realizar muda (ecdise) regulada por hormônio ecdisona",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Quais são os tipos de sistemas respiratórios descritos para os artrópodes?",
+              "explicacao": "Os artrópodes apresentam três tipos de estruturas respiratórias: traqueais, pulmões foliáceos e brânquias, conforme descrito no texto. A alternativa que combina pulmões alveolares e respiração cutânea introduz termos que não constam do material. As opções que citam sacos de ar ou o sistema circulatório confundem funções distintas e não correspondem ao que o texto afirma.",
+              "conceitoAvaliado": "Sistema respiratório",
+              "alternativas": [
+                {
+                  "texto": "Brânquias, sacos de ar e respiração cutânea",
+                  "correta": false
+                },
+                {
+                  "texto": "Sistema circulatório aberto com pigmento respiratório",
+                  "correta": false
+                },
+                {
+                  "texto": "Traqueal, pulmões foliáceos e branquial",
+                  "correta": true
+                },
+                {
+                  "texto": "Pulmões alveolares, traqueal e respiração cutânea",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 4,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 2,
+          "recebidas": 3,
+          "aprovadas": 2,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 68 caracteres contra média 34 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 11820,
+          "totalMs": 11831,
+          "questoes": [
+            {
+              "enunciado": "Qual é o tipo de simetria corporal observado nos membros do filo dos artrópodes?",
+              "explicacao": "O texto afirma que os artrópodes apresentam simetria bilateral, portanto a alternativa que menciona esse tipo de simetria está correta. A opção que indica simetria radial pode parecer atraente, pois é comum em outros grupos aquáticos, mas não consta no material para os artrópodes, logo está errada.",
+              "conceitoAvaliado": "Simetria",
+              "alternativas": [
+                {
+                  "texto": "Assimetria",
+                  "correta": false
+                },
+                {
+                  "texto": "Simetria bilateral com variações",
+                  "correta": false
+                },
+                {
+                  "texto": "Simetria bilateral",
+                  "correta": true
+                },
+                {
+                  "texto": "Simetria radial",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "De acordo com o material sobre o filo dos artrópodes, qual afirmação descreve corretamente o sistema nervoso desses animais?",
+              "explicacao": "O texto afirma que o sistema nervoso dos artrópodes é ganglionar e apresenta órgãos sensoriais, o que corresponde à alternativa correta. A alternativa que menciona um cordão dorsal está errada porque o material não descreve esse tipo de organização nervosa nos artrópodes, indicando que a estrutura é ganglionar, não um cordão único dorsal. As demais opções também divergem do que o texto especifica ao apresentar características inexistentes, como um sistema fechado ou a ausência total de órgãos sensoriais.",
+              "conceitoAvaliado": "Sistema nervoso: ganglionar - órgãos sensoriais",
+              "alternativas": [
+                {
+                  "texto": "O sistema nervoso é ganglionar e possui órgãos sensoriais distribuídos pelo corpo.",
+                  "correta": true
+                },
+                {
+                  "texto": "O sistema nervoso é fechado, concentrado em um cérebro centralizado único.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso consiste em um cordão dorsal que regula todas as funções vitais.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso contém apenas neurônios, sem órgãos sensoriais especializados.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 5,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 2,
+          "recebidas": 3,
+          "aprovadas": 2,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "vazamento_por_comprimento",
+              "detalhe": "a correta tem 156 caracteres contra média 66 das outras"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 11655,
+          "totalMs": 11667,
+          "questoes": [
+            {
+              "enunciado": "Qual das seguintes estruturas faz parte do sistema excretor dos artrópodes?",
+              "explicacao": "O material especifica que o sistema excretor inclui túbulos de Malpighi, glândulas coxais e glândulas verdes nas antenas. Assim, a alternativa que menciona os túbulos de Malpighi está correta. As demais opções referem‑se a sistemas diferentes: veneno nas mandíbulas não foi citado, o coração aberto pertence ao sistema circulatório e o sistema traqueal ao respiratório.",
+              "conceitoAvaliado": "Sistema excretor",
+              "alternativas": [
+                {
+                  "texto": "Glândulas de veneno nas mandíbulas",
+                  "correta": false
+                },
+                {
+                  "texto": "Sistema traqueal de respiração",
+                  "correta": false
+                },
+                {
+                  "texto": "Túbulos de Malpighi",
+                  "correta": true
+                },
+                {
+                  "texto": "Coração aberto com pigmento respiratório",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Considerando as características gerais dos artrópodes, assinale a alternativa correta.",
+              "explicacao": "A alternativa que indica que os artrópodes são celomados está correta, pois o texto afirma explicitamente que eles são celomados. A alternativa que afirma que são diploblásticos está errada porque diploblásticos possuem apenas duas camadas germinativas, enquanto os artrópodes são celomados e, portanto, possuem três camadas germinativas (triploblastia). As demais opções também contradizem o texto ao atribuir a eles características de deuterostômios ou acoelomados, que não são mencionadas para esse filo.",
+              "conceitoAvaliado": "Celomados",
+              "alternativas": [
+                {
+                  "texto": "Os artrópodes são acoelomados, não apresentando cavidade corporal interna delimitada por mesoderme.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os artrópodes são diploblásticos, contendo apenas duas camadas germinativas no embrião.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os artrópodes são celomados, possuindo uma cavidade corporal verdadeira revestida por mesoderme.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os artrópodes são deuterostômios, formando primeiro o ânus antes da boca na gastrulação.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 6,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 8425,
+          "totalMs": 8436,
+          "questoes": [
+            {
+              "enunciado": "Qual dos termos a seguir está incluído nas características gerais dos artrópodes?",
+              "explicacao": "O texto lista \"Protostômios\" entre as características gerais dos artrópodes, portanto essa alternativa está correta. As demais opções, embora sejam termos biológicos conhecidos, não aparecem no material, logo estão erradas.",
+              "conceitoAvaliado": "Protostômios",
+              "alternativas": [
+                {
+                  "texto": "Deuterostômios",
+                  "correta": false
+                },
+                {
+                  "texto": "Planários",
+                  "correta": false
+                },
+                {
+                  "texto": "Acoelomados",
+                  "correta": false
+                },
+                {
+                  "texto": "Protostômios",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "De acordo com o material, qual afirmação descreve corretamente a reprodução dos artrópodes?",
+              "explicacao": "O texto afirma que a reprodução dos artrópodes é sexuada e pode ser dioica ou monoica, sustentando a alternativa correta. A opção que menciona apenas fecundação externa parece atraente, mas o texto também indica fecundação interna, tornando-a incompleta e incorreta.",
+              "conceitoAvaliado": "Reprodução",
+              "alternativas": [
+                {
+                  "texto": "São sexuados e podem ser dioicos ou monoicos.",
+                  "correta": true
+                },
+                {
+                  "texto": "São exclusivamente dioicos, nunca monoicos.",
+                  "correta": false
+                },
+                {
+                  "texto": "São assexuados e apresentam partenogênese.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam apenas fecundação externa.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 7,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 10118,
+          "totalMs": 10131,
+          "questoes": [
+            {
+              "enunciado": "Sobre o sistema circulatório dos artrópodes, assinale a alternativa correta.",
+              "explicacao": "O texto afirma que o sistema circulatório dos artrópodes é aberto e utiliza pigmento respiratório, com exceção dos insetos, portanto essa alternativa está correta. A opção que menciona que todos os artrópodes possuem pigmento respiratório parece plausível, mas ignora a exceção dos insetos, tornando‑a incorreta. As demais alternativas contradizem diretamente a descrição do texto ao dizer que o sistema é fechado ou que não há pigmento respiratório.",
+              "conceitoAvaliado": "Sistema circulatório: aberto com pigmento respiratório, exceto insetos",
+              "alternativas": [
+                {
+                  "texto": "Apresenta sistema circulatório fechado sem pigmento respiratório.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta sistema circulatório aberto, mas todos os artrópodes possuem pigmento respiratório.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta sistema circulatório fechado com pigmento respiratório apenas nos crustáceos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta sistema circulatório aberto com pigmento respiratório, exceto nos insetos.",
+                  "correta": true
+                }
+              ]
+            },
+            {
+              "enunciado": "Quanto à morfologia dos artrópodes, qual afirmação está de acordo com o texto?",
+              "explicacao": "O material descreve claramente que os artrópodes possuem corpo segmentado e apêndices articulados, confirmando a alternativa correta. A opção que afirma que o corpo é segmentado, porém sem apêndices articulados, é a mais tentadora porque confunde duas características distintas, mas o texto indica que ambas estão presentes simultaneamente. As outras duas opções negam a segmentação, o que também contraria a informação fornecida.",
+              "conceitoAvaliado": "Corpo segmentado com apêndices articulados",
+              "alternativas": [
+                {
+                  "texto": "Apresenta corpo segmentado, porém sem apêndices articulados.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta corpo não segmentado e sem apêndices articulados.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta corpo segmentado com apêndices articulados.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresenta corpo não segmentado, mas com apêndices articulados.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 8,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 6740,
+          "totalMs": 6750,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente uma característica do exoesqueleto dos artrópodes?",
+              "explicacao": "O texto afirma que o exoesqueleto dos artrópodes é de quitina, um polissacarídeo impermeável e resistente, o que garante proteção e limita o crescimento. A alternativa que menciona colágeno não corresponde ao que foi descrito. A ideia de crescimento contínuo contradiz a consequência apontada de impedir o crescimento, e a substituição por tecido ósseo não aparece no material.",
+              "conceitoAvaliado": "Exoesqueleto de quitina (polissacarídeo) impermeável e resistente",
+              "alternativas": [
+                {
+                  "texto": "É constituído principalmente por colágeno, permitindo flexibilidade extrema.",
+                  "correta": false
+                },
+                {
+                  "texto": "É substituído por tecido ósseo durante o desenvolvimento.",
+                  "correta": false
+                },
+                {
+                  "texto": "É formado por quitina, um polissacarídeo impermeável e resistente.",
+                  "correta": true
+                },
+                {
+                  "texto": "Facilita o crescimento contínuo do animal sem necessidade de troca.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica do sistema digestório dos artrópodes está presente no material estudado?",
+              "explicacao": "O conteúdo descreve o sistema digestório dos artrópodes como completo, possuindo anatomia bucal e peças diferenciadas, o que indica um trato completo. As demais opções introduzem informações que o texto não menciona, como a ausência de boca especializada ou funcionamento cutâneo, e descrevem um trato incompleto que não corresponde ao que foi apresentado.",
+              "conceitoAvaliado": "Sistema digestório: completo - anatomia bucal - peças diferenciadas",
+              "alternativas": [
+                {
+                  "texto": "Não possui boca especializada, realizando a ingestão por difusão cutânea.",
+                  "correta": false
+                },
+                {
+                  "texto": "É incompleto, terminando em uma única abertura cloacal.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta um trato digestivo completo com anatomia bucal diferenciada.",
+                  "correta": true
+                },
+                {
+                  "texto": "Funciona exclusivamente por absorção de nutrientes diretamente através da pele.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 9,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 10092,
+          "totalMs": 10104,
+          "questoes": [
+            {
+              "enunciado": "Assinale a alternativa que NÃO descreve um tipo de sistema respiratório encontrado nos artrópodes.",
+              "explicacao": "O texto indica que os artrópodes apresentam sistemas respiratórios traqueal, branquial e pulmonar foliáceo, portanto essas três opções são corretas. A alternativa que menciona respiração cutânea não consta do material, sendo a única incorreta.",
+              "conceitoAvaliado": "Sistema respiratório",
+              "alternativas": [
+                {
+                  "texto": "Sistema respiratório branquial",
+                  "correta": false
+                },
+                {
+                  "texto": "Sistema respiratório pulmonar foliáceo",
+                  "correta": false
+                },
+                {
+                  "texto": "Sistema respiratório cutâneo",
+                  "correta": true
+                },
+                {
+                  "texto": "Sistema respiratório traqueal",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual é a principal função da muda (ecdise) nos artrópodes?",
+              "explicacao": "O material aponta que o exoesqueleto impede o crescimento e que a solução adotada é a muda (ecdise), que troca o exoesqueleto periodicamente. As demais opções descrevem processos que não são mencionados como funções da muda, sendo, portanto, incorretas.",
+              "conceitoAvaliado": "Solução: Realizar muda (ecdise)",
+              "alternativas": [
+                {
+                  "texto": "Produzir novos apêndices corporais articulados",
+                  "correta": false
+                },
+                {
+                  "texto": "Regular a simetria bilateral do organismo",
+                  "correta": false
+                },
+                {
+                  "texto": "Iniciar o desenvolvimento de pulmões foliáceos",
+                  "correta": false
+                },
+                {
+                  "texto": "Permitir a troca periódica do exoesqueleto, possibilitando o crescimento",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 10,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 2,
+          "tentativas": 1,
+          "recebidas": 2,
+          "aprovadas": 2,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 7698,
+          "totalMs": 7710,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmações a seguir descreve corretamente a simetria dos artrópodes?",
+              "explicacao": "O texto indica que os artrópodes possuem simetria bilateral, portanto a alternativa que menciona bilateral está correta. A alternativa que sugere simetria radial parece atraente porque alguns animais invertebrados são radiais, mas o material não atribui essa característica aos artrópodes, tornando‑a incorreta.",
+              "conceitoAvaliado": "Simetria",
+              "alternativas": [
+                {
+                  "texto": "Apresentam simetria bilateral ao longo do corpo.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam simetria radial, como as estrelas‑do‑mar.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não apresentam nenhum tipo de simetria definida.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam simetria assimétrica, sem correspondência entre os lados.",
+                  "correta": false
+                }
+              ]
+            },
+            {
+              "enunciado": "Qual característica do sistema nervoso dos artrópodes está correta?",
+              "explicacao": "Conforme o material, o sistema nervoso dos artrópodes é descrito como ganglionar, ou seja, apresenta gânglios ao longo do corpo, o que confirma a alternativa correta. A alternativa que afirma ausência de gânglios é enganosa porque contradiz explicitamente a definição fornecida.",
+              "conceitoAvaliado": "Sistema nervoso",
+              "alternativas": [
+                {
+                  "texto": "O sistema nervoso possui um cérebro centralizado e não apresenta gânglios segmentares.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso é fechado, com sangue circulando em vasos que o envolvem.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso é ganglionar, com gânglios distribuídos ao longo do corpo.",
+                  "correta": true
+                },
+                {
+                  "texto": "O sistema nervoso consiste em um cordão dorsal único sem gânglios.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resumo": {
+        "geracoes": 10,
+        "porOrigem": {
+          "ia": 10,
+          "cache": 0,
+          "fixo": 0
+        },
+        "solicitadas": 20,
+        "recebidas": 22,
+        "aprovadas": 20,
+        "rejeitadas": 2,
+        "tentativasTotais": 12,
+        "retentativas": 2,
+        "latencias": [
+          6308,
+          6582,
+          6750,
+          7710,
+          8436,
+          9756,
+          10104,
+          10131,
+          11667,
+          11831
+        ],
+        "taxaAprovacao": 0.9090909090909091
+      }
+    }
+  ],
+  "fim": "2026-08-21T23:57:08.485Z",
+  "metricas": {
+    "geracoes": 12,
+    "falhasDeChamada": 0,
+    "falhasPorTipo": {},
+    "questoesRecebidas": 22,
+    "questoesAprovadas": 20,
+    "taxaAprovacao": 0.9090909090909091,
+    "taxaRejeicao": 0.09090909090909091,
+    "rejeicoesPorMotivo": {
+      "vazamento_por_comprimento": 2
+    },
+    "estrategiasDoParser": {
+      "direto": 12
+    },
+    "origens": {
+      "ia": 10,
+      "cache": 0,
+      "fixo": 0
+    },
+    "motivosDeFallback": {},
+    "quizzesServidos": 10,
+    "latencia": {
+      "amostras": 12,
+      "mediaMs": 7420,
+      "medianaMs": 6982,
+      "p95Ms": 10118,
+      "minMs": 4838,
+      "maxMs": 10118
+    },
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 12,
+        "aprovadas": 20
+      }
+    },
+    "primeiroRegistro": "2026-08-21T23:55:45.496Z",
+    "ultimoRegistro": "2026-08-21T23:57:08.485Z"
+  },
+  "metricasBrutas": {
+    "versao": 1,
+    "geracoes": 12,
+    "falhasDeChamada": 0,
+    "questoesRecebidas": 22,
+    "questoesAprovadas": 20,
+    "rejeicoesPorMotivo": {
+      "vazamento_por_comprimento": 2
+    },
+    "estrategiasDoParser": {
+      "direto": 12
+    },
+    "falhasPorTipo": {},
+    "latenciasMs": [
+      6175,
+      6570,
+      9745,
+      6982,
+      4838,
+      5874,
+      5781,
+      8425,
+      10118,
+      6740,
+      10092,
+      7698
+    ],
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 12,
+        "aprovadas": 20
+      }
+    },
+    "origens": {
+      "ia": 10,
+      "cache": 0,
+      "fixo": 0
+    },
+    "motivosDeFallback": {},
+    "primeiroRegistro": "2026-08-21T23:55:45.496Z",
+    "ultimoRegistro": "2026-08-21T23:57:08.485Z"
+  }
+}

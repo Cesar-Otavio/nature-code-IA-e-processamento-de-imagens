@@ -1,0 +1,1451 @@
+{
+  "rotulo": "onda6-v3-pequenos",
+  "versaoPrompt": "V3",
+  "modelo": "gpt-oss:120b-cloud",
+  "provedor": "cloud",
+  "inicio": "2026-08-21T23:49:14.969Z",
+  "geracoesPorTopico": 10,
+  "topicos": [
+    {
+      "moduloId": "animais",
+      "topicoId": "filo-cnidarios",
+      "titulo": "Filo dos Cnidários",
+      "caracteres": 668,
+      "maxQuestoes": 1,
+      "suficiencia": "limitado",
+      "limitadoPor": "volume de texto",
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4002,
+          "totalMs": 4122,
+          "questoes": [
+            {
+              "enunciado": "Qual é o tipo de simetria apresentado pelos cnidários?",
+              "explicacao": "O texto descreve que os cnidários possuem simetria radial, portanto essa alternativa está correta. A alternativa que indica simetria bilateral é enganosa porque, ao contrário dos vertebrados, os cnidários não apresentam um plano de simetria que divide o corpo em metades semelhantes. As demais opções (assimétrica e pentarradial) não são mencionadas no material, logo não correspondem à característica dos cnidários.",
+              "conceitoAvaliado": "Simetria",
+              "alternativas": [
+                {
+                  "texto": "Simetria pentarradial",
+                  "correta": false
+                },
+                {
+                  "texto": "Simetria radial",
+                  "correta": true
+                },
+                {
+                  "texto": "Simetria bilateral",
+                  "correta": false
+                },
+                {
+                  "texto": "Simetria assimétrica",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 2,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3937,
+          "totalMs": 3947,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas abaixo descreve corretamente o sistema circulatório dos cnidários?",
+              "explicacao": "A alternativa que afirma que os cnidários não têm sistema circulatório e que os nutrientes são distribuídos pela cavidade gástrica está correta, pois o texto indica que o sistema circulatório está ausente e que a nutrição ocorre por meio da cavidade gástrica. A opção que menciona a presença de um coração é a mais tentadora, mas está errada, já que o material deixa claro que não há nenhum sistema circulatório nos cnidários.",
+              "conceitoAvaliado": "Sistema circulatório",
+              "alternativas": [
+                {
+                  "texto": "Têm um sistema aberto com vasos que transportam hemolinfa.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam um coração que bombeia sangue para todo o corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possuem sistema circulatório; os nutrientes são distribuídos pela cavidade gástrica.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem vasos sanguíneos que levam sangue rico em oxigênio aos tecidos.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 3,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 2653,
+          "totalMs": 2663,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente o sistema digestório dos cnidários?",
+              "explicacao": "A alternativa correta indica que o sistema digestório dos cnidários é incompleto, sem ânus, e que a cavidade gastrovascular atua como órgão digestório interno e externo, conforme o material. A alternativa que menciona um tubo digestivo completo com boca e ânus é a mais tentadora, mas o texto deixa claro que o sistema é incompleto e não possui ânus, tornando essa afirmação errada. As demais opções introduzem estruturas que não são descritas no texto, como a ausência total do sistema ou glândulas especializadas, e por isso também estão incorretas.",
+              "conceitoAvaliado": "Sistema digestório",
+              "alternativas": [
+                {
+                  "texto": "É inexistente, pois a digestão ocorre exclusivamente por absorção direta dos nutrientes do meio ambiente.",
+                  "correta": false
+                },
+                {
+                  "texto": "É incompleto, não possui ânus, e a cavidade gastrovascular funciona como órgão digestório interno e externo.",
+                  "correta": true
+                },
+                {
+                  "texto": "Consiste em glândulas digestivas especializadas que secretam enzimas para digestão extracelular separada do corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta um tubo digestivo completo, com boca e ânus bem definidos.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 4,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 33% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 9384,
+          "totalMs": 9394,
+          "questoes": [
+            {
+              "enunciado": "Sobre os cnidócitos dos cnidários, assinale a alternativa correta.",
+              "explicacao": "Os cnidócitos são, conforme o texto, células urticantes dos cnidários, portanto a alternativa que os descreve como tais está correta. A alternativa que os associa à digestão está errada porque o sistema digestório dos cnidários é incompleto e não há menção de células digestivas específicas; a ideia de que formam o exoesqueleto confunde cnidócitos com o exoesqueleto mencionado para corais; e a afirmação de que realizam trocas gasosas conflita com a informação de que o sistema respiratório está ausente, ocorrendo apenas trocas entre a célula e a água.",
+              "conceitoAvaliado": "cnidócitos (células urticantes)",
+              "alternativas": [
+                {
+                  "texto": "São células responsáveis pela digestão dos alimentos.",
+                  "correta": false
+                },
+                {
+                  "texto": "São células urticantes presentes nos cnidários.",
+                  "correta": true
+                },
+                {
+                  "texto": "São células que realizam as trocas gasosas com o ambiente aquático.",
+                  "correta": false
+                },
+                {
+                  "texto": "São estruturas que constituem o exoesqueleto dos corais.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 5,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 2951,
+          "totalMs": 2965,
+          "questoes": [
+            {
+              "enunciado": "Qual das classes de cnidários inclui os organismos conhecidos como águas-vivas?",
+              "explicacao": "A classe Scyphozoa reúne as águas-vivas, conforme indicado no material. As outras classes referem‑se a grupos diferentes: Hydrozoa engloba hidras e caravelas; Anthozoa compreende anêmonas e corais; Cubozoa inclui cubozoários, como a vespa do Pacífico. Assim, apenas a alternativa que menciona Scyphozoa está correta.",
+              "conceitoAvaliado": "Principais Classes",
+              "alternativas": [
+                {
+                  "texto": "Scyphozoa - águas-vivas",
+                  "correta": true
+                },
+                {
+                  "texto": "Anthozoa - anêmonas e corais",
+                  "correta": false
+                },
+                {
+                  "texto": "Cubozoa - cubozoários, como a vespa do pacífico",
+                  "correta": false
+                },
+                {
+                  "texto": "Hydrozoa - hidras e caravelas",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 6,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3518,
+          "totalMs": 3525,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente o modo como os cnidários realizam as trocas gasosas?",
+              "explicacao": "O texto afirma que o sistema respiratório está ausente e que as trocas gasosas ocorrem diretamente entre as células e a água, o que confirma a alternativa correta. A alternativa que menciona brânquias parece plausível, mas o material não indica a presença de brânquias nos cnidários, portanto está errada.",
+              "conceitoAvaliado": "Sistema respiratório",
+              "alternativas": [
+                {
+                  "texto": "Dispõem de pulmões rudimentares que permitem a respiração aérea quando expostos à superfície.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possuem sistema respiratório, realizando as trocas diretamente entre as células e a água.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam brânquias que filtram oxigênio da água para o interior do corpo.",
+                  "correta": false
+                },
+                {
+                  "texto": "Utilizam um sistema circulatório especializado para transportar oxigênio até as células.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 7,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3611,
+          "totalMs": 3620,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmações descreve corretamente o sistema nervoso dos cnidários?",
+              "explicacao": "A alternativa que afirma que o sistema nervoso é difuso está correta, pois o texto indica que os cnidários possuem um sistema nervoso difuso. A opção que menciona um cérebro dorsal parece atraente, já que muitos animais têm um cérebro, mas o material não descreve tal estrutura nos cnidários, tornando‑a incorreta. As demais alternativas também divergem do que foi apresentado, pois não há cordões ventrais nem ausência total de tecido nervoso.",
+              "conceitoAvaliado": "Sistema nervoso difuso",
+              "alternativas": [
+                {
+                  "texto": "É difuso, distribuído por todo o corpo",
+                  "correta": true
+                },
+                {
+                  "texto": "É centralizado em um cérebro dorsal",
+                  "correta": false
+                },
+                {
+                  "texto": "É formado por cordões nervosos ventrais",
+                  "correta": false
+                },
+                {
+                  "texto": "É inexistente, não há tecido nervoso",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 8,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 31% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 10763,
+          "totalMs": 10772,
+          "questoes": [
+            {
+              "enunciado": "De acordo com o material, quais são as formas de reprodução observadas nos cnidários?",
+              "explicacao": "O texto indica que os cnidários possuem reprodução assexuada e sexuada, portanto a alternativa que menciona ambas está correta. A alternativa que afirma que reproduzem‑se apenas assexuadamente está errada porque o material também cita a reprodução sexuada. As demais opções limitam a reprodução a um único modo ou a um tipo específico não mencionado, contrariando a informação de que ocorrem os dois tipos.",
+              "conceitoAvaliado": "Reprodução",
+              "alternativas": [
+                {
+                  "texto": "Apresentam reprodução assexuada e sexuada.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam apenas reprodução assexuada.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam apenas reprodução sexuada.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam reprodução exclusivamente por brotamento.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 9,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4089,
+          "totalMs": 4099,
+          "questoes": [
+            {
+              "enunciado": "Qual afirmativa está correta sobre o sistema excretor dos cnidários?",
+              "explicacao": "O texto indica que o sistema excretor está ausente nos cnidários, de modo que a eliminação de resíduos ocorre diretamente com o meio ambiente, confirmando a alternativa correta. As demais opções introduzem estruturas (rins, vasos sanguíneos, glândulas) que não são mencionadas no material, sendo, portanto, incorretas.",
+              "conceitoAvaliado": "Sistema excretor",
+              "alternativas": [
+                {
+                  "texto": "Os cnidários não possuem sistema excretor, eliminando resíduos diretamente para o ambiente.",
+                  "correta": true
+                },
+                {
+                  "texto": "Dispõem de um sistema excretor complexo formado por vasos sanguíneos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam rins que filtram o líquido corporal antes da excreção.",
+                  "correta": false
+                },
+                {
+                  "texto": "Excretam resíduos por meio de glândulas especializadas no corpo.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 10,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 0% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 8681,
+          "totalMs": 8694,
+          "questoes": [
+            {
+              "enunciado": "Considerando a forma de vida dos cnidários, assinale a alternativa correta.",
+              "explicacao": "A alternativa que indica que os cnidários podem ser sésseis (pólipos) ou livres (medusas) está correta, pois o texto descreve exatamente essa característica. A opção que sugere que os cnidários alternam entre fase sésil e fase livre está errada porque o material não menciona alternância, apenas aponta que podem ser um ou outro. As demais alternativas afirmam exclusividade, o que contradiz a informação de que ambas as formas são possíveis.",
+              "conceitoAvaliado": "Sésseis (pólipos) ou livres (medusas)",
+              "alternativas": [
+                {
+                  "texto": "Todos os cnidários são exclusivamente sésseis, como os pólipos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os cnidários podem ser sésseis (pólipos) ou livres (medusas).",
+                  "correta": true
+                },
+                {
+                  "texto": "Todos os cnidários são exclusivamente livres, como as medusas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os cnidários alternam entre fase sésil e fase livre ao longo de seu ciclo de vida.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resumo": {
+        "geracoes": 10,
+        "porOrigem": {
+          "ia": 10,
+          "cache": 0,
+          "fixo": 0
+        },
+        "solicitadas": 10,
+        "recebidas": 13,
+        "aprovadas": 10,
+        "rejeitadas": 3,
+        "tentativasTotais": 13,
+        "retentativas": 3,
+        "latencias": [
+          2663,
+          2965,
+          3525,
+          3620,
+          3947,
+          4099,
+          4122,
+          8694,
+          9394,
+          10772
+        ],
+        "taxaAprovacao": 0.7692307692307693
+      }
+    },
+    {
+      "moduloId": "animais",
+      "topicoId": "reino-animalia",
+      "titulo": "Reino Animalia",
+      "caracteres": 663,
+      "maxQuestoes": 1,
+      "suficiencia": "limitado",
+      "limitadoPor": "volume de texto",
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3117,
+          "totalMs": 3130,
+          "questoes": [
+            {
+              "enunciado": "Qual dos grupos a seguir apresenta simetria radial?",
+              "explicacao": "O texto indica que a simetria radial ocorre em cnidários e equinodermos, portanto cnidários possuem esse tipo de organização corporal. Platelmintos são citados como exemplos de simetria bilateral, o que pode confundir, mas está incorreto para a questão. Poríferos são descritos como assimétricos e moluscos como bilaterais, logo não apresentam simetria radial.",
+              "conceitoAvaliado": "Simetria",
+              "alternativas": [
+                {
+                  "texto": "Cnidários",
+                  "correta": true
+                },
+                {
+                  "texto": "Moluscos",
+                  "correta": false
+                },
+                {
+                  "texto": "Poríferos",
+                  "correta": false
+                },
+                {
+                  "texto": "Platelmintos",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 2,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3627,
+          "totalMs": 3637,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas a seguir descreve corretamente uma característica geral dos animais do Reino Animalia?",
+              "explicacao": "A alternativa correta está de acordo com o material, que indica que os animais são células eucarióticas sem parede celular. A opção que menciona organismos procarióticos com parede celular está errada porque os animais são eucarióticos e não possuem parede celular. A afirmação de que são unicelulares e fotossintetizantes contradiz o fato de serem pluricelulares e heterotróficos. A ideia de que são autotróficos e contêm clorofila também está incorreta, já que o texto classifica os animais como aclorofilados e heterotrófos.",
+              "conceitoAvaliado": "Células",
+              "alternativas": [
+                {
+                  "texto": "São organismos procarióticos que apresentam parede celular.",
+                  "correta": false
+                },
+                {
+                  "texto": "São organismos eucarióticos que não apresentam parede celular.",
+                  "correta": true
+                },
+                {
+                  "texto": "São organismos pluricelulares que são autotróficos e contêm clorofila.",
+                  "correta": false
+                },
+                {
+                  "texto": "São organismos unicelulares que dependem de fotossíntese para obter energia.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 3,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 27% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 13197,
+          "totalMs": 13207,
+          "questoes": [
+            {
+              "enunciado": "Considerando as características gerais dos animais, qual das afirmações abaixo descreve corretamente sua forma de nutrição?",
+              "explicacao": "A alternativa correta afirma que os animais são heterótrofos e aclorofilados, exatamente como consta no material, indicando que obtêm energia ingerindo outros organismos e não possuem clorofila. A alternativa que menciona apenas heterotrofia e nega a aclorofilia parece atraente porque inclui o termo correto \"heterótrofos\", porém está errada porque o texto especifica que os animais são também aclorofilados, logo a negação contradiz a informação dada.",
+              "conceitoAvaliado": "Energia / Nutrição",
+              "alternativas": [
+                {
+                  "texto": "São heterótrofos e aclorofilados, obtendo energia a partir da ingestão de outros organismos.",
+                  "correta": true
+                },
+                {
+                  "texto": "São heterótrofos, mas não são aclorofilados.",
+                  "correta": false
+                },
+                {
+                  "texto": "Todos os animais são saprófagos, alimentando‑se apenas de matéria orgânica em decomposição.",
+                  "correta": false
+                },
+                {
+                  "texto": "Todos os animais são predadores, alimentando‑se exclusivamente de outros animais.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 4,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 6076,
+          "totalMs": 6086,
+          "questoes": [
+            {
+              "enunciado": "Sobre o processo digestivo nos animais, assinale a alternativa correta.",
+              "explicacao": "A alternativa correta está de acordo com o texto, que indica que a digestão animal envolve ingestão de alimento e o uso de enzimas hidrolíticas. A opção que menciona que a digestão depende exclusivamente de enzimas produzidas por outros organismos parece plausível, mas está errada porque o texto não indica nenhuma dependência externa; as enzimas são produzidas pelo próprio animal para digerir o alimento ingerido. As demais alternativas contradizem diretamente o que o material afirma sobre ingestão e ação enzimática.",
+              "conceitoAvaliado": "Digestão",
+              "alternativas": [
+                {
+                  "texto": "A digestão nos animais depende exclusivamente de enzimas hidrolíticas produzidas por outros organismos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos animais, a digestão ocorre apenas por meio de processos mecânicos, sem a ação de enzimas.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os animais realizam ingestão de alimento e utilizam enzimas hidrolíticas para digeri‑lo.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os animais obtêm nutrientes exclusivamente por absorção direta através da pele, sem ingerir alimentos.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 5,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3991,
+          "totalMs": 4003,
+          "questoes": [
+            {
+              "enunciado": "De acordo com as características gerais dos animais, qual sequência representa corretamente a hierarquia de organização dos seres do reino Animalia?",
+              "explicacao": "A organização correta inicia-se nas células que se diferenciam, formando tecidos, que se agrupam em órgãos e, por sua vez, constituem sistemas. A alternativa que coloca os tecidos antes das células está errada porque os tecidos são constituídos por células, não o contrário. As demais opções apresentam a ordem invertida ou misturam níveis de organização, violando a sequência descrita no material.",
+              "conceitoAvaliado": "Tecidos > Órgãos > Sistemas",
+              "alternativas": [
+                {
+                  "texto": "Sistemas → Órgãos → Tecidos → Células diferenciadas",
+                  "correta": false
+                },
+                {
+                  "texto": "Órgãos → Tecidos → Sistemas → Células diferenciadas",
+                  "correta": false
+                },
+                {
+                  "texto": "Tecidos → Células diferenciadas → Órgãos → Sistemas",
+                  "correta": false
+                },
+                {
+                  "texto": "Células diferenciadas → Tecidos → Órgãos → Sistemas",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 6,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 5607,
+          "totalMs": 5614,
+          "questoes": [
+            {
+              "enunciado": "Sobre a nutrição dos animais, assinale a alternativa correta.",
+              "explicacao": "A alternativa que afirma que os animais são heterotróficos e aclorofilados está correta porque o texto indica que os animais não possuem clorofila e obtêm energia ingerindo matéria orgânica. A alternativa que sugere que os animais obtêm energia apenas por absorção direta parece plausível, mas está errada porque o material descreve que a digestão ocorre por ingestão e ação de enzimas hidrolíticas, não apenas por absorção passiva. As demais opções introduzem a ideia de autotrofia ou fotossíntese, que contradizem explicitamente a informação de que os animais são heterotróficos e sem clorofila.",
+              "conceitoAvaliado": "HETERÓTROFOS e ACLOROFILADOS",
+              "alternativas": [
+                {
+                  "texto": "Os animais são autotróficos e produzem seu próprio alimento por meio da clorofila.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os animais realizam fotossíntese usando cloroplastos presentes em suas células.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os animais são heterotróficos e aclorofilados, obtendo energia a partir da ingestão de matéria orgânica.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os animais obtêm energia exclusivamente por absorção direta de nutrientes do meio, sem necessidade de ingestão.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 7,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4271,
+          "totalMs": 4281,
+          "questoes": [
+            {
+              "enunciado": "De acordo com o material, qual é a característica referente ao número de células dos animais?",
+              "explicacao": "O texto afirma que o número de células dos animais é PLURICELULARES, portanto a alternativa que indica que são organismos pluricelulares está correta. A opção que sugere que os animais podem ser unicelulares está errada porque o material não menciona unicelular para os animais, apenas pluricelular.",
+              "conceitoAvaliado": "Número de células: PLURICELULARES",
+              "alternativas": [
+                {
+                  "texto": "Os animais são organismos unicelulares.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os animais podem ser tanto unicelulares quanto pluricelulares.",
+                  "correta": false
+                },
+                {
+                  "texto": "Os animais são organismos pluricelulares.",
+                  "correta": true
+                },
+                {
+                  "texto": "Os animais não possuem células.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 8,
+          "origem": "fixo",
+          "motivoFallback": "modelo não devolveu questão aproveitável",
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 0,
+          "aprovadas": 0,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4234,
+          "totalMs": 4244,
+          "questoes": []
+        },
+        {
+          "indice": 9,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4090,
+          "totalMs": 4101,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas a seguir descreve corretamente uma característica das células dos animais?",
+              "explicacao": "A alternativa correta indica que as células dos animais são eucarióticas e, ao contrário das vegetais, não possuem parede celular, conforme o material. A opção que afirma que as células são eucarióticas mas têm parede celular é a mais tentadora, pois confunde a característica típica das plantas com a dos animais, porém o texto deixa claro que a parede celular está ausente nos animais. As demais opções combinam características incompatíveis, como ser procariótica, que não corresponde ao que o texto descreve.",
+              "conceitoAvaliado": "Células: EUCARIÓTICAS – EUCARIONTES - Sem parede celular!",
+              "alternativas": [
+                {
+                  "texto": "São células eucarióticas e não apresentam parede celular.",
+                  "correta": true
+                },
+                {
+                  "texto": "São células procarióticas e não apresentam parede celular.",
+                  "correta": false
+                },
+                {
+                  "texto": "São células eucarióticas e apresentam parede celular.",
+                  "correta": false
+                },
+                {
+                  "texto": "São células procarióticas e apresentam parede celular.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 10,
+          "origem": "fixo",
+          "motivoFallback": "modelo não devolveu questão aproveitável",
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 0,
+          "aprovadas": 0,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 6476,
+          "totalMs": 6486,
+          "questoes": []
+        }
+      ],
+      "resumo": {
+        "geracoes": 10,
+        "porOrigem": {
+          "ia": 8,
+          "cache": 0,
+          "fixo": 2
+        },
+        "solicitadas": 10,
+        "recebidas": 9,
+        "aprovadas": 8,
+        "rejeitadas": 1,
+        "tentativasTotais": 11,
+        "retentativas": 1,
+        "latencias": [
+          3130,
+          3637,
+          4003,
+          4101,
+          4244,
+          4281,
+          5614,
+          6086,
+          6486,
+          13207
+        ],
+        "taxaAprovacao": 0.8888888888888888
+      }
+    },
+    {
+      "moduloId": "animais",
+      "topicoId": "filo-moluscos",
+      "titulo": "Filo dos Moluscos",
+      "caracteres": 645,
+      "maxQuestoes": 1,
+      "suficiencia": "limitado",
+      "limitadoPor": "volume de texto",
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4217,
+          "totalMs": 4227,
+          "questoes": [
+            {
+              "enunciado": "Considerando as informações sobre o sistema digestório dos moluscos, assinale a alternativa correta.",
+              "explicacao": "A alternativa correta está de acordo com o texto, que indica que o sistema digestório dos moluscos é completo e a rádula está presente, exceto nos bivalves. A opção que afirma que todos os moluscos possuem rádula parece plausível, mas ignora a exceção dos bivalves descrita no material, tornando‑a incorreta. As demais opções contradizem a característica de completude do sistema digestório ou restringem a presença da rádula a um único grupo, o que não consta no texto.",
+              "conceitoAvaliado": "Sistema digestório",
+              "alternativas": [
+                {
+                  "texto": "A maioria dos moluscos possui sistema digestório completo com rádula, exceto os bivalves.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apenas os gastrópodes têm rádula em seu sistema digestório.",
+                  "correta": false
+                },
+                {
+                  "texto": "Todos os moluscos apresentam sistema digestório completo e possuem rádula.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema digestório dos moluscos é incompleto e não contém rádula.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 2,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3675,
+          "totalMs": 3685,
+          "questoes": [
+            {
+              "enunciado": "Considerando as características gerais dos moluscos, qual das afirmações abaixo está correta?",
+              "explicacao": "A afirmação de que os moluscos são celomados, triblásticos e protostômios está correta, pois o texto lista exatamente essas características gerais. A alternativa que menciona corpo segmentado e simetria radial parece plausível, mas o material especifica que os moluscos têm corpo não segmentado e simetria bilateral, portanto está errada.",
+              "conceitoAvaliado": "Celomados",
+              "alternativas": [
+                {
+                  "texto": "Vivem exclusivamente em ambientes terrestres.",
+                  "correta": false
+                },
+                {
+                  "texto": "São celomados, triblásticos e protostômios.",
+                  "correta": true
+                },
+                {
+                  "texto": "Possuem corpo segmentado e simetria radial.",
+                  "correta": false
+                },
+                {
+                  "texto": "Seu sistema circulatório é fechado, como nos vertebrados.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 3,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4870,
+          "totalMs": 4878,
+          "questoes": [
+            {
+              "enunciado": "Sobre a simetria dos moluscos, assinale a alternativa correta:",
+              "explicacao": "Os moluscos são descritos no texto como tendo simetria bilateral, portanto essa afirmação está correta. A alternativa que menciona simetria radial está errada porque o texto não indica esse tipo de simetria para o filo. A opção que fala em assimetria também contraria a informação explícita de bilateralidade. Por fim, a ideia de que a simetria bilateral ocorreria somente em ambientes aquáticos não encontra respaldo no material, que indica que esses animais vivem tanto em ambientes aquáticos quanto terrestres.",
+              "conceitoAvaliado": "Simetria",
+              "alternativas": [
+                {
+                  "texto": "Apresentam simetria radial.",
+                  "correta": false
+                },
+                {
+                  "texto": "São assimétricos, sem padrão definido.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam simetria bilateral.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresentam simetria bilateral apenas em ambientes aquáticos.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 4,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3900,
+          "totalMs": 3911,
+          "questoes": [
+            {
+              "enunciado": "Sobre o sistema circulatório dos moluscos, assinale a alternativa correta:",
+              "explicacao": "A alternativa que indica que o sistema circulatório dos moluscos é aberto e que o pigmento respiratório é a hemocianina está correta, pois o texto afirma exatamente essas características. As demais combinam erroneamente o tipo de circulação com um pigmento que não foi mencionado (hemoglobina) ou trocam o tipo de circulação (fechado), o que contraria a descrição do material.",
+              "conceitoAvaliado": "Sistema circulatório",
+              "alternativas": [
+                {
+                  "texto": "Nos moluscos, o sistema circulatório é fechado e o pigmento respiratório é a hemoglobina.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos moluscos, o sistema circulatório é fechado e o pigmento respiratório é a hemocianina.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos moluscos, o sistema circulatório é aberto, mas o pigmento respiratório é a hemoglobina.",
+                  "correta": false
+                },
+                {
+                  "texto": "Nos moluscos, o sistema circulatório é aberto e o pigmento respiratório é a hemocianina.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 5,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3140,
+          "totalMs": 3149,
+          "questoes": [
+            {
+              "enunciado": "Considerando o filo dos Moluscos, qual alternativa descreve corretamente o sistema respiratório desses animais?",
+              "explicacao": "O material afirma que o sistema respiratório dos moluscos compreende brânquias e pulmões, logo a alternativa que menciona ambos está correta. As demais opções estão equivocadas porque o texto não indica a exclusão de um desses órgãos nem a inexistência de estruturas respiratórias.",
+              "conceitoAvaliado": "Sistema respiratório",
+              "alternativas": [
+                {
+                  "texto": "Apresenta brânquias e pulmões como estruturas respiratórias.",
+                  "correta": true
+                },
+                {
+                  "texto": "Apresenta apenas pulmões, ausentes as brânquias.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresenta apenas brânquias, não possuindo pulmões.",
+                  "correta": false
+                },
+                {
+                  "texto": "Não possui estruturas especializadas para respiração, realizando a troca gasosa pela pele.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 6,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 4001,
+          "totalMs": 4008,
+          "questoes": [
+            {
+              "enunciado": "Sobre a reprodução dos moluscos, assinale a alternativa correta:",
+              "explicacao": "A alternativa correta está de acordo com o texto, que indica que a reprodução dos moluscos é sexuada e pode ser dioica ou monoica. A opção que afirma que todos os moluscos têm desenvolvimento direto está errada, pois o material menciona tanto desenvolvimento direto quanto indireto, com larvas trocóforas ou véliger. As demais opções apresentam processos que não são mencionados no texto, como reprodução assexuada ou a exclusividade de um tipo de larva.",
+              "conceitoAvaliado": "Reprodução",
+              "alternativas": [
+                {
+                  "texto": "A reprodução desses animais é assexuada, por fissão binária.",
+                  "correta": false
+                },
+                {
+                  "texto": "Todos os moluscos apresentam desenvolvimento direto, sem fase larval.",
+                  "correta": false
+                },
+                {
+                  "texto": "A reprodução é sexuada, podendo ocorrer em espécies dioicas ou monoicas.",
+                  "correta": true
+                },
+                {
+                  "texto": "As larvas dos moluscos são sempre trocóforas, nunca véliger.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 7,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3891,
+          "totalMs": 3900,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas a seguir descreve corretamente o sistema excretor dos moluscos?",
+              "explicacao": "O material indica que o sistema excretor dos moluscos é composto por metanefrídios, portanto essa afirmação está correta. A alternativa que menciona nefrídios pode parecer plausível pela semelhança dos termos, porém o texto não faz tal referência. As demais opções introduzem estruturas que não são citadas para moluscos, como glândulas de Malpighi ou a simples difusão, e por isso estão erradas.",
+              "conceitoAvaliado": "metanefrídios",
+              "alternativas": [
+                {
+                  "texto": "Seu sistema excretor é formado por glândulas de Malpighi.",
+                  "correta": false
+                },
+                {
+                  "texto": "Eliminam resíduos apenas por difusão, sem órgão especializado.",
+                  "correta": false
+                },
+                {
+                  "texto": "Utilizam nefrídios para a excreção de resíduos.",
+                  "correta": false
+                },
+                {
+                  "texto": "Apresentam metanefrídios como órgão excretor.",
+                  "correta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 8,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 1,
+          "recebidas": 1,
+          "aprovadas": 1,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "direto"
+          ],
+          "latenciaModeloMs": 3788,
+          "totalMs": 3796,
+          "questoes": [
+            {
+              "enunciado": "Sobre o sistema nervoso dos moluscos, assinale a alternativa correta:",
+              "explicacao": "O texto indica que o sistema nervoso dos moluscos é ganglionar e que o desenvolvimento mais avançado ocorre nos cefalópodes, confirmando a alternativa correta. A alternativa que menciona maior desenvolvimento nos gastrópodes parece plausível porque também cita um grupo de moluscos, porém o material especifica os cefalópodes como os mais desenvolvidos. As demais opções apresentam características que o texto não atribui ao sistema nervoso dos moluscos, como ser segmentado ou difuso.",
+              "conceitoAvaliado": "Sistema nervoso",
+              "alternativas": [
+                {
+                  "texto": "O sistema nervoso dos moluscos é segmentado e apresenta maior desenvolvimento nos bivalves.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso dos moluscos é ganglionar, mas é mais desenvolvido nos gastrópodes.",
+                  "correta": false
+                },
+                {
+                  "texto": "O sistema nervoso dos moluscos é ganglionar e está mais desenvolvido nos cefalópodes.",
+                  "correta": true
+                },
+                {
+                  "texto": "O sistema nervoso dos moluscos é difuso, sem especialização em nenhum grupo.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 9,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 30% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 8481,
+          "totalMs": 8490,
+          "questoes": [
+            {
+              "enunciado": "Qual das afirmativas descreve corretamente a presença de concha nos moluscos?",
+              "explicacao": "O texto afirma que a maioria dos moluscos possui concha, mas reconhece a existência de exceções, portanto essa alternativa está correta. A alternativa que diz que todos os moluscos têm concha está errada porque o material menciona exceções. A ideia de que nenhum molusco tem concha contradiz a informação de que a maioria possui. Por fim, a afirmação de que apenas os terrestres têm concha não tem respaldo no texto, que não faz distinção desse tipo entre ambientes.",
+              "conceitoAvaliado": "concha",
+              "alternativas": [
+                {
+                  "texto": "Todos os moluscos têm concha rígida, sem exceções.",
+                  "correta": false
+                },
+                {
+                  "texto": "A maioria dos moluscos possui concha, embora existam exceções.",
+                  "correta": true
+                },
+                {
+                  "texto": "Nenhum molusco possui concha, pois são animais de corpo mole.",
+                  "correta": false
+                },
+                {
+                  "texto": "Somente os moluscos terrestres apresentam concha, enquanto os aquáticos não a têm.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "indice": 10,
+          "origem": "ia",
+          "motivoFallback": null,
+          "alvo": 1,
+          "tentativas": 2,
+          "recebidas": 2,
+          "aprovadas": 1,
+          "rejeitadas": 1,
+          "rejeicoes": [
+            {
+              "motivo": "enunciado_fora_do_material",
+              "detalhe": "só 17% dos termos do enunciado e da resposta correta aparecem no conteúdo"
+            }
+          ],
+          "estrategiasParser": [
+            "direto",
+            "direto"
+          ],
+          "latenciaModeloMs": 9507,
+          "totalMs": 9516,
+          "questoes": [
+            {
+              "enunciado": "Sobre a presença da rádula nos moluscos, assinale a alternativa correta.",
+              "explicacao": "O texto informa que a rádula está presente em moluscos, mas há exceção nos bivalentes, o que confirma a alternativa que menciona essa exceção como correta. A alternativa que afirma que a rádula está presente inclusive nos bivalentes está errada porque contradiz a informação de exceção. As demais opções apresentam afirmações que o material não sustenta, como ausência nos gastrópodes ou presença exclusiva nos cefalópodes.",
+              "conceitoAvaliado": "rádula",
+              "alternativas": [
+                {
+                  "texto": "A rádula está ausente nos gastrópodes.",
+                  "correta": false
+                },
+                {
+                  "texto": "A rádula está presente em todos os moluscos, exceto nos bivalentes.",
+                  "correta": true
+                },
+                {
+                  "texto": "A rádula está presente em todos os moluscos, inclusive nos bivalentes.",
+                  "correta": false
+                },
+                {
+                  "texto": "A rádula está presente apenas nos cefalópodes.",
+                  "correta": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resumo": {
+        "geracoes": 10,
+        "porOrigem": {
+          "ia": 10,
+          "cache": 0,
+          "fixo": 0
+        },
+        "solicitadas": 10,
+        "recebidas": 12,
+        "aprovadas": 10,
+        "rejeitadas": 2,
+        "tentativasTotais": 12,
+        "retentativas": 2,
+        "latencias": [
+          3149,
+          3685,
+          3796,
+          3900,
+          3911,
+          4008,
+          4227,
+          4878,
+          8490,
+          9516
+        ],
+        "taxaAprovacao": 0.8333333333333334
+      }
+    }
+  ],
+  "fim": "2026-08-21T23:51:53.127Z",
+  "metricas": {
+    "geracoes": 36,
+    "falhasDeChamada": 0,
+    "falhasPorTipo": {},
+    "questoesRecebidas": 34,
+    "questoesAprovadas": 28,
+    "taxaAprovacao": 0.8235294117647058,
+    "taxaRejeicao": 0.17647058823529413,
+    "rejeicoesPorMotivo": {
+      "enunciado_fora_do_material": 6
+    },
+    "estrategiasDoParser": {
+      "direto": 36
+    },
+    "origens": {
+      "ia": 28,
+      "cache": 0,
+      "fixo": 2
+    },
+    "motivosDeFallback": {
+      "modelo não devolveu questão aproveitável": 2
+    },
+    "quizzesServidos": 30,
+    "latencia": {
+      "amostras": 36,
+      "mediaMs": 4382,
+      "medianaMs": 4002,
+      "p95Ms": 7268,
+      "minMs": 2653,
+      "maxMs": 9547
+    },
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 36,
+        "aprovadas": 28
+      }
+    },
+    "primeiroRegistro": "2026-08-21T23:49:19.088Z",
+    "ultimoRegistro": "2026-08-21T23:51:53.126Z"
+  },
+  "metricasBrutas": {
+    "versao": 1,
+    "geracoes": 36,
+    "falhasDeChamada": 0,
+    "questoesRecebidas": 34,
+    "questoesAprovadas": 28,
+    "rejeicoesPorMotivo": {
+      "enunciado_fora_do_material": 6
+    },
+    "estrategiasDoParser": {
+      "direto": 36
+    },
+    "falhasPorTipo": {},
+    "latenciasMs": [
+      4002,
+      3937,
+      2653,
+      4036,
+      5348,
+      2951,
+      3518,
+      3611,
+      3495,
+      7268,
+      4089,
+      3690,
+      4991,
+      3117,
+      3627,
+      3650,
+      9547,
+      6076,
+      3991,
+      5607,
+      4271,
+      4234,
+      4090,
+      6476,
+      4217,
+      3675,
+      4870,
+      3900,
+      3140,
+      4001,
+      3891,
+      3788,
+      5349,
+      3132,
+      4086,
+      5421
+    ],
+    "porModelo": {
+      "gpt-oss:120b-cloud": {
+        "geracoes": 36,
+        "aprovadas": 28
+      }
+    },
+    "origens": {
+      "ia": 28,
+      "cache": 0,
+      "fixo": 2
+    },
+    "motivosDeFallback": {
+      "modelo não devolveu questão aproveitável": 2
+    },
+    "primeiroRegistro": "2026-08-21T23:49:19.088Z",
+    "ultimoRegistro": "2026-08-21T23:51:53.126Z"
+  }
+}
