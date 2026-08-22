@@ -261,6 +261,20 @@ const ServicoQuiz = (function () {
       if (status && !status.modeloRegistrado) return `modelo não registrado: ${status.motivo}`;
       const geracao = diagnostico.geracao;
       if (geracao && geracao.erroFinal) return `falha na chamada: ${geracao.erroFinal.tipo}`;
+
+      // Falhas que não interrompem o laço — HTTP e timeout geram nova tentativa — não
+      // deixavam rastro no motivo, e o fallback aparecia como "modelo não devolveu
+      // questão aproveitável". Observado na Fase 5 quando o plano gratuito do Ollama
+      // Cloud atingiu o limite de uso da sessão: 20 erros HTTP seguidos foram
+      // registrados como se o modelo tivesse respondido e não servido.
+      // Um motivo errado no diagnóstico é pior que motivo nenhum: manda procurar
+      // problema de qualidade onde o problema é de infraestrutura.
+      const falhas = (geracao ? geracao.tentativas : []).filter((t) => t.falha);
+      if (geracao && falhas.length === geracao.tentativas.length && falhas.length) {
+        const tipos = [...new Set(falhas.map((t) => t.falha))].join(", ");
+        return `falha na chamada: ${tipos}`;
+      }
+
       if (geracao && geracao.totalRejeitadas) return "questões recusadas pelo validador";
       if (geracao) return "modelo não devolveu questão aproveitável";
       return "indeterminado";
