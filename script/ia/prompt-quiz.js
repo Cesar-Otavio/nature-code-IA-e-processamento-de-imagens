@@ -43,6 +43,64 @@ const INSTRUCAO_JSON_V1 = [
 ].join("\n");
 
 // ---------------------------------------------------------------------------
+// V2 — regra acrescentada na Fase 5. ALTERAÇÃO ÚNICA em relação ao V1.
+// ---------------------------------------------------------------------------
+// Motivo: numa geração observada, o modelo tratou o título de seção
+// "## Características exclusivas" como se fosse uma classificação exaustiva. Como só o
+// tubo nervoso dorsal aparece sob aquele título — a notocorda e as fendas faríngeas têm
+// seções próprias —, ele produziu "qual é a característica exclusiva dos cordados?" com
+// três alternativas igualmente verdadeiras. O próprio quiz fixo do site diz que os três
+// são exclusivos.
+//
+// Não é alucinação: é fidelidade à ORGANIZAÇÃO do texto em vez de fidelidade ao que o
+// texto AFIRMA. A regra abaixo separa as duas coisas.
+//
+// Esta é a única diferença entre V1 e V2, para que a comparação antes × depois tenha
+// uma causa só. Ver docs/05-AVALIACAO-PILOTO.md.
+const REGRA_SECOES_V2 = [
+  "",
+  "SOBRE A ORGANIZAÇÃO DO MATERIAL:",
+  "Os títulos de seção (as linhas que começam com ##) servem para organizar o texto e NÃO são",
+  "listas exaustivas. Um fato que aparece sob um título continua valendo para o tópico inteiro, e",
+  "um fato que aparece em outra seção não deixa de valer por isso. Exemplo: se houver uma seção",
+  '"Características exclusivas" com um item, isso NÃO significa que os assuntos das outras seções',
+  "não sejam também exclusivos.",
+  "Portanto: a resposta correta tem que se sustentar no que o texto AFIRMA, nunca em ONDE o fato",
+  "está escrito. Se a pergunta só tiver uma resposta certa por causa da divisão em seções, ela tem",
+  "mais de uma resposta certa de verdade — não faça essa pergunta.",
+].join("\n");
+
+// ---------------------------------------------------------------------------
+// V3 — regra acrescentada na Fase 5. ALTERAÇÃO ÚNICA em relação ao V1.
+// ---------------------------------------------------------------------------
+// Motivo: o único defeito pedagógico confirmado na leitura de 193 questões apareceu num
+// enunciado negativo. "Sobre os condrictes, qual característica NÃO se aplica a eles?"
+// trazia "possuem bexiga natatória" como resposta e "possuem brânquias externas" como
+// distrator — só que condrictes também não têm brânquias externas, então havia duas
+// respostas válidas. A própria explicação do modelo hesitava: "mandíbula e brânquias
+// externas não são mencionadas... ainda assim, a única opção explicitamente refutada
+// pelo texto é...".
+//
+// A causa é estrutural: numa pergunta negativa, as três alternativas que NÃO são a
+// resposta precisam ser verdadeiras, e o modelo tende a inventá-las em vez de tirá-las
+// do texto. A regra fecha essa porta.
+//
+// V3 = V1 + esta regra. Não é V2 + regra: V2 foi medido e recusado (ver
+// docs/05-AVALIACAO-PILOTO.md), então acumular as duas confundiria as causas.
+const REGRA_NEGATIVAS_V3 = [
+  "",
+  "SOBRE PERGUNTAS NEGATIVAS:",
+  'Se você formular uma pergunta do tipo "qual NÃO se aplica", "assinale a INCORRETA", "EXCETO"',
+  "ou equivalente, as TRÊS alternativas que não são a resposta precisam ser afirmações que o",
+  "material declara explicitamente sobre AQUELE MESMO assunto. Não invente características",
+  "plausíveis para preencher; não use afirmações que o texto apenas deixa de mencionar.",
+  "Se o material não tiver três afirmações explícitas sobre o assunto, NÃO faça a pergunta na",
+  "forma negativa — reescreva na forma afirmativa.",
+  "Motivo: numa pergunta negativa, qualquer alternativa que também seja falsa vira uma segunda",
+  "resposta correta, e a questão passa a ter duas respostas.",
+].join("\n");
+
+// ---------------------------------------------------------------------------
 // Prompt do usuário
 // ---------------------------------------------------------------------------
 const PROMPT_USUARIO_V1 = function (dados) {
@@ -90,6 +148,10 @@ const PROMPT_USUARIO_V1 = function (dados) {
     '- "conceitoAvaliado": o termo do material que a questão cobra, escrito como aparece no texto;',
     `- dificuldade compatível com o nível ${dados.nivel === "ensino_medio" ? "de ensino médio" : dados.nivel}.`
   );
+
+  if (dados.regraExtra) {
+    partes.push(dados.regraExtra);
+  }
 
   if (dados.motivoRejeicao) {
     partes.push("");
@@ -163,6 +225,17 @@ const PromptQuiz = (function () {
       nivel: dados.topico.nivel,
       conceitosExcluir: dados.conceitosExcluir || [],
       motivoRejeicao: dados.motivoRejeicao || null,
+      // A versão do prompt é escolhida na configuração. Cada versão acrescenta ao V1
+      // UMA regra e nada mais, para que a comparação entre elas tenha causa única.
+      //   V1  original
+      //   V2  + regra sobre títulos de seção
+      //   V3  + regra sobre perguntas negativas
+      //   V4  as duas regras — é o padrão adotado ao fim da Fase 5
+      regraExtra: {
+        V2: REGRA_SECOES_V2,
+        V3: REGRA_NEGATIVAS_V3,
+        V4: REGRA_NEGATIVAS_V3 + "\n" + REGRA_SECOES_V2,
+      }[CONFIG_IA.versaoPrompt] || null,
       // A instrução de formato em texto só entra quando o schema não vai ser respeitado.
       incluirInstrucaoJson: !cfg.suportaSchema,
     });
