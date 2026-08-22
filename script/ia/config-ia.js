@@ -71,9 +71,57 @@ const CONFIG_IA = {
   // Migração gradual: só estes tópicos usam IA; os demais seguem com quiz fixo.
   // Um tópico listado aqui ainda pode ser recusado em tempo de execução se a base de
   // conhecimento disser que ele não tem texto suficiente (maxQuestoes = 0).
-  topicosComIA: ["filo-cordados"],
+  //
+  // Lista definida na Fase 5 por medição: 190 gerações, 435 questões, ~90 lidas uma a
+  // uma. Cada tópico entrou por atender três critérios ao mesmo tempo — entregar quiz
+  // por IA em pelo menos 80% das tentativas, taxa de aprovação estrutural acima de 70%
+  // e nenhum defeito pedagógico não corrigido na leitura. Números por tópico em
+  // docs/05-AVALIACAO-PILOTO.md.
+  topicosComIA: [
+    // Reino Animal
+    "filo-cordados",
+    "filo-artropodes",
+    "filo-poriferos",
+    "filo-equinodermos",
+    "filo-cnidarios",
+    "filo-moluscos",
+    "reino-animalia",
+    // Plantas
+    "pteridofitas",
+    "briofitas",
+    // Ecossistemas
+    "fluxo-de-energia",
+    "piramides-ecologicas",
+    "ecossistemas-da-terra",
+    "sucessao-ecologica",
+  ],
+
+  // Fora da lista de propósito, com o motivo medido:
+  //   reino-plantae ............. o modelo devolveu quiz em 1 de 10 tentativas
+  //   definicao-e-componentes ... 3 de 10
+  //   mundo-vivo-ecologia ....... 4 de 10
+  //     Nesses três o modelo respondeu {"questoes":[]} — ele mesmo julgou o material
+  //     insuficiente. Habilitá-los faria o aluno esperar alguns segundos para receber o
+  //     quiz fixo na maioria das vezes.
+  //   angiospermas, gimnospermas, filo-platelmintos, filo-anelideos e
+  //   filo-nematelmintos ........ maxQuestoes = 0 desde a Fase 1; nem chegam a ser
+  //                               consultados em tempo de execução.
 
   cacheHabilitado: true,
+
+  // Versão do prompt do usuário. Cada versão acrescenta ao V1 uma regra e nada mais,
+  // para que a comparação entre elas tenha causa única. Ver script/ia/prompt-quiz.js.
+  //   V1  original
+  //   V2  + títulos de seção não são exaustivos — MEDIDO E RECUSADO: não reduziu o
+  //         problema que mirava e derrubou a aprovação de 92,3% para 87,4%
+  //   V3  + perguntas negativas exigem três não-respostas explícitas no texto —
+  //         enunciados negativos caíram de 5,2% para 2,1% em Cordados e os que
+  //         restaram vieram ancorados no material
+  //   V4  as duas regras juntas — ADOTADO. Medido em Artrópodes, onde o defeito de
+  //         título de seção realmente ocorria: aprovação 80% -> 91%, retentativas
+  //         5 -> 2, e os distratores deixaram de ser fatos verdadeiros de outra seção
+  // Números em docs/05-AVALIACAO-PILOTO.md.
+  versaoPrompt: "V4",
 
   // true -> loga no console o prompt enviado, a resposta crua e o motivo de cada rejeição.
   modoDebug: false,
