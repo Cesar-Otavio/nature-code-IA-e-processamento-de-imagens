@@ -476,7 +476,11 @@ async function testarServico(ia, sandbox) {
   daemonOnline = true;
 
   // --- tópico fora de topicosComIA ---
-  quiz = await ia.obterQuiz("plantas", "briofitas", { quizFixo, numQuestoes: 2 });
+  // `mundo-vivo-ecologia` tem conteúdo suficiente (maxQuestoes = 2) mas ficou fora da
+  // lista na Fase 5, porque o modelo só entregou quiz em 4 de 10 tentativas. É o caso
+  // certo para este teste: a recusa tem que vir da lista, não da falta de conteúdo.
+  // Antes daqui usava-se `briofitas`, que passou a ser habilitado ao fim da Fase 5.
+  quiz = await ia.obterQuiz("ecossistemas", "mundo-vivo-ecologia", { quizFixo, numQuestoes: 2 });
   verificar("tópico fora de topicosComIA -> quiz fixo", quiz.origem === "fixo", quiz.origem);
   verificar("diagnóstico explica por que não foi elegível",
     /topicosComIA/.test(quiz.diagnostico.motivoNaoElegivel || ""),

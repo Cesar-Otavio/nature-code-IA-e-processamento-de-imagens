@@ -190,10 +190,16 @@ function testarPaineisVazios() {
   verificar("tabela lista os 21 tópicos",
     pagina.doc.getElementById("tabela-topicos").children.length === 21,
     String(pagina.doc.getElementById("tabela-topicos").children.length));
-  verificar("o tópico habilitado aparece destacado", (() => {
+  // Uma linha destacada para cada tópico de CONFIG_IA.topicosComIA — a lista cresceu de
+  // 1 para 13 na Fase 5, então o teste confere contra a configuração e não contra um
+  // número fixo, para não voltar a quebrar quando a lista mudar de novo.
+  verificar("cada tópico habilitado aparece destacado na tabela", (() => {
     const linhas = pagina.doc.getElementById("tabela-topicos").children;
     const destacadas = linhas.filter((l) => l.className.indexOf("habilitado") !== -1);
-    return destacadas.length === 1 && destacadas[0].textContent.indexOf("Cordados") !== -1;
+    return (
+      destacadas.length === pagina.ia.CONFIG_IA.topicosComIA.length &&
+      destacadas.some((l) => l.textContent.indexOf("Cordados") !== -1)
+    );
   })());
   verificar("os 5 tópicos sem conteúdo aparecem marcados como quiz fixo", (() => {
     const linhas = pagina.doc.getElementById("tabela-topicos").children;
@@ -478,7 +484,9 @@ async function testarRegistroDeOrigem() {
   const quizFixo = [{ title: "Cordados", type: "multiple", question: "fixa", explanation: "fixa", options: [] }];
 
   await pagina.contexto.obterQuiz("animais", "filo-cordados", { quizFixo });
-  await pagina.contexto.obterQuiz("plantas", "briofitas", { quizFixo });
+  // Tópico com conteúdo suficiente mas fora de topicosComIA — ver a nota equivalente em
+  // scripts/testar-camada-ia.js. `briofitas` deixou de servir aqui ao ser habilitado.
+  await pagina.contexto.obterQuiz("ecossistemas", "mundo-vivo-ecologia", { quizFixo });
 
   const resumo = pagina.ia.MetricasIA.resumo();
   verificar("dois quizzes servidos pelo quiz fixo foram contados",
