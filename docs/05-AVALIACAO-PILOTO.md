@@ -341,6 +341,35 @@ coerência interna, mas o julgamento final sobre correção biológica é seu.
 
 ---
 
+## 10b. Defeito conhecido: alucinação ou corrupção de termo técnico
+
+**Alucinação ou corrupção de termo técnico parcialmente mascarada pela sobreposição
+lexical.**
+
+Encontrado na revalidação do V4 (`docs/05b-REVALIDACAO-V4.md` §4). Numa questão sobre as
+características gerais dos cordados, o modelo escreveu **"trilobulados"** onde o material
+diz **"triblásticos"** — uma palavra que não existe no texto do site nem na embriologia —
+e repetiu a invenção na explicação. Como a outra alternativa plausível traz
+"diploblásticos", nenhuma das quatro alternativas fica inteiramente correta.
+
+**Por que escapa das camadas automáticas:** a alternativa correta tem 67% de cobertura
+contra o material, porque *celomados* e *deuterostômios* seguram o índice sozinhos. Um
+termo inventado dentro de uma alternativa majoritariamente correta é invisível para
+qualquer medida de sobreposição lexical — tanto para o validador quanto para a triagem.
+
+**Frequência medida:** 1 ocorrência em 74 questões (1,4%), sem outro termo fabricado na
+amostra. Não tem relação com as regras do prompt V4.
+
+**Estado:** documentado, **não corrigido**. A correção não foi implementada por decisão
+de não alterar prompt nem validador antes do benchmark da Fase 6.
+
+**Melhoria futura registrada:** uma regra de validação que compare os termos técnicos da
+alternativa correta com os termos presentes no material e recuse quando a alternativa
+introduzir um termo técnico inédito. Pegaria "trilobulados" sem depender do comportamento
+do modelo. Exige medição antes e depois, como as demais alterações desta fase.
+
+---
+
 ## 11. Limitações desta fase
 
 1. **A verificação do V4 em Cordados está incompleta** — a amostra foi perdida para o
