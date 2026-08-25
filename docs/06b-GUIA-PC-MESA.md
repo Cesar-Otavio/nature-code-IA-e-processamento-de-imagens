@@ -16,13 +16,16 @@
 Leve para o PC de mesa **um arquivo só**:
 
 ```
-nature-code-fase6-preparada-20260825.bundle      (119 MB)
-sha256: bbe21ddbf986a3e372a04c1baa1ea0246b0e0529db3583e2d3d4269d2f278eae
+nature-code-fase6-preparada-20260825.bundle      (~119 MB)
 ```
 
 > **Atenção ao nome do arquivo.** Existe um bundle anterior,
 > `nature-code-fase5-20260823.bundle`, gerado antes da preparação da Fase 6. Ele **não
-> contém os scripts do benchmark**. Use o arquivo acima, com a data de 25/08.
+> contém os scripts do benchmark**. Use o arquivo com `fase6-preparada` no nome.
+>
+> O SHA-256 do bundle não fica escrito aqui de propósito: um arquivo não pode conter o
+> próprio hash. Ele é informado junto com o bundle — a conferência do passo 7 usa esse
+> valor.
 
 Ele está em `C:\Users\zrazo\Downloads\`. Copie para um pendrive.
 
@@ -116,9 +119,8 @@ Confira que o arquivo chegou inteiro:
 Get-FileHash .\nature-code-fase6-preparada-20260825.bundle -Algorithm SHA256
 ```
 
-**Esperado:** exatamente
-`BBE21DDBF986A3E372A04C1BAA1EA0246B0E0529DB3583E2D3D4269D2F278EAE`
-(o PowerShell mostra em maiúsculas; é o mesmo hash).
+**Esperado:** o mesmo valor que foi informado junto com o bundle. O PowerShell mostra em
+maiúsculas; é o mesmo hash.
 
 Se não bater, a cópia corrompeu. Copie de novo antes de seguir.
 
@@ -158,9 +160,21 @@ git branch --show-current
 git rev-parse --short HEAD
 ```
 
-**Esperado:** `feat/quiz-ia` e `ecef180` — o commit com a Fase 6 já preparada.
+**Esperado:** `feat/quiz-ia`.
 
-Se aparecer `8a85e29`, você clonou o bundle antigo. Refaça o passo 7 com o arquivo certo.
+O hash do commit não é conferido aqui — ele muda a cada correção, e um número fixo neste
+guia envelheceria. A verificação que importa é de **conteúdo**: os scripts da Fase 6
+precisam existir no clone.
+
+```powershell
+Test-Path scripts\benchmark-fase6.js, scripts\comparar-benchmark.js, scripts\testar-benchmark.js
+git log --oneline -1
+```
+
+**Esperado:** três `True` e um commit que menciona a Fase 6.
+
+Se algum der `False`, você clonou o bundle antigo. Refaça o passo 7 com o arquivo que tem
+`fase6-preparada` no nome.
 
 ## Passo 10. Confirmar que o working tree está limpo
 
