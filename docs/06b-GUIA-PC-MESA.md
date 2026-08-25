@@ -16,9 +16,13 @@
 Leve para o PC de mesa **um arquivo só**:
 
 ```
-nature-code-fase5-20260823.bundle      (119 MB)
-sha256: 289866069f92c870278f3f4d59e9126dd72a3c6c441bc12f4053312266725e49
+nature-code-fase6-preparada-20260825.bundle      (119 MB)
+sha256: bbe21ddbf986a3e372a04c1baa1ea0246b0e0529db3583e2d3d4269d2f278eae
 ```
+
+> **Atenção ao nome do arquivo.** Existe um bundle anterior,
+> `nature-code-fase5-20260823.bundle`, gerado antes da preparação da Fase 6. Ele **não
+> contém os scripts do benchmark**. Use o arquivo acima, com a data de 25/08.
 
 Ele está em `C:\Users\zrazo\Downloads\`. Copie para um pendrive.
 
@@ -103,24 +107,24 @@ Escolha uma pasta de trabalho, por exemplo `C:\Projetos`:
 ```powershell
 New-Item -ItemType Directory -Force C:\Projetos
 Set-Location C:\Projetos
-Copy-Item E:\nature-code-fase5-20260823.bundle .    # ajuste a letra do pendrive
+Copy-Item E:\nature-code-fase6-preparada-20260825.bundle .    # ajuste a letra do pendrive
 ```
 
 Confira que o arquivo chegou inteiro:
 
 ```powershell
-Get-FileHash .\nature-code-fase5-20260823.bundle -Algorithm SHA256
+Get-FileHash .\nature-code-fase6-preparada-20260825.bundle -Algorithm SHA256
 ```
 
 **Esperado:** exatamente
-`289866069F92C870278F3F4D59E9126DD72A3C6C441BC12F4053312266725E49`
+`BBE21DDBF986A3E372A04C1BAA1EA0246B0E0529DB3583E2D3D4269D2F278EAE`
 (o PowerShell mostra em maiúsculas; é o mesmo hash).
 
 Se não bater, a cópia corrompeu. Copie de novo antes de seguir.
 
 ```powershell
-git bundle verify .\nature-code-fase5-20260823.bundle
-git clone -b feat/quiz-ia .\nature-code-fase5-20260823.bundle Site-Nature-Code-main
+git bundle verify .\nature-code-fase6-preparada-20260825.bundle
+git clone -b feat/quiz-ia .\nature-code-fase6-preparada-20260825.bundle Site-Nature-Code-main
 Set-Location Site-Nature-Code-main
 ```
 
@@ -154,7 +158,9 @@ git branch --show-current
 git rev-parse --short HEAD
 ```
 
-**Esperado:** `feat/quiz-ia` e `8a85e29`.
+**Esperado:** `feat/quiz-ia` e `ecef180` — o commit com a Fase 6 já preparada.
+
+Se aparecer `8a85e29`, você clonou o bundle antigo. Refaça o passo 7 com o arquivo certo.
 
 ## Passo 10. Confirmar que o working tree está limpo
 
