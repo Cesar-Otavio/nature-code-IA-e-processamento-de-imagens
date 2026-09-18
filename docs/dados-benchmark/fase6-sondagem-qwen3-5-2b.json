@@ -1,0 +1,225 @@
+{
+  "fase": 6,
+  "braco": "B",
+  "nomeDoBraco": "B — Local sem schema",
+  "rotulo": "fase6-sondagem-qwen3-5-2b",
+  "modelo": "qwen3.5:2b",
+  "provedor": "local",
+  "schemaEnviado": false,
+  "versaoPrompt": "V4",
+  "sondagem": true,
+  "inicio": "2026-09-18T02:32:35.963Z",
+  "geracoesPorTopico": 3,
+  "maquina": {
+    "plataforma": "win32",
+    "node": "v24.21.0",
+    "cpus": 12,
+    "memoriaTotalGB": 15.7
+  },
+  "topicos": [
+    {
+      "moduloId": "animais",
+      "topicoId": "filo-cordados",
+      "titulo": "Filo dos Cordados",
+      "caracteres": 4675,
+      "maxQuestoes": 5,
+      "geracoes": [
+        {
+          "indice": 1,
+          "origem": "fixo",
+          "motivoFallback": "falha na chamada: resposta",
+          "alvo": 5,
+          "tentativas": 3,
+          "recebidas": 0,
+          "aprovadas": 0,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "resposta",
+            "resposta",
+            "resposta"
+          ],
+          "jsonValidoDePrimeira": false,
+          "latenciaModeloMs": 0,
+          "totalMs": 355950,
+          "prompts": [
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            }
+          ],
+          "questoes": []
+        },
+        {
+          "indice": 2,
+          "origem": "fixo",
+          "motivoFallback": "falha na chamada: resposta",
+          "alvo": 5,
+          "tentativas": 3,
+          "recebidas": 0,
+          "aprovadas": 0,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "resposta",
+            "resposta",
+            "resposta"
+          ],
+          "jsonValidoDePrimeira": false,
+          "latenciaModeloMs": 0,
+          "totalMs": 307482,
+          "prompts": [
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            }
+          ],
+          "questoes": []
+        },
+        {
+          "indice": 3,
+          "origem": "fixo",
+          "motivoFallback": "falha na chamada: resposta",
+          "alvo": 5,
+          "tentativas": 3,
+          "recebidas": 0,
+          "aprovadas": 0,
+          "rejeitadas": 0,
+          "rejeicoes": [],
+          "estrategiasParser": [
+            "resposta",
+            "resposta",
+            "resposta"
+          ],
+          "jsonValidoDePrimeira": false,
+          "latenciaModeloMs": 0,
+          "totalMs": 316623,
+          "prompts": [
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            },
+            {
+              "topicoId": "filo-cordados",
+              "numQuestoes": 5,
+              "primeiraTentativa": true,
+              "caracteres": 9263,
+              "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43"
+            }
+          ],
+          "questoes": []
+        }
+      ],
+      "resumo": {
+        "geracoes": 3,
+        "porOrigem": {
+          "ia": 0,
+          "cache": 0,
+          "fixo": 3
+        },
+        "solicitadas": 15,
+        "recebidas": 0,
+        "aprovadas": 0,
+        "rejeitadas": 0,
+        "retentativas": 6,
+        "geracoesComRetentativa": 3,
+        "jsonValidoDePrimeira": 0,
+        "latencias": [
+          307482,
+          316623,
+          355950
+        ],
+        "latenciasModelo": [
+          0,
+          0,
+          0
+        ],
+        "taxaAprovacao": null
+      }
+    }
+  ],
+  "fim": "2026-09-18T02:48:56.023Z",
+  "metricas": {
+    "geracoes": 0,
+    "falhasDeChamada": 9,
+    "falhasPorTipo": {
+      "resposta": 9
+    },
+    "questoesRecebidas": 0,
+    "questoesAprovadas": 0,
+    "taxaAprovacao": null,
+    "taxaRejeicao": null,
+    "rejeicoesPorMotivo": {},
+    "estrategiasDoParser": {},
+    "origens": {
+      "ia": 0,
+      "cache": 0,
+      "fixo": 3
+    },
+    "motivosDeFallback": {
+      "falha na chamada: resposta": 3
+    },
+    "quizzesServidos": 3,
+    "latencia": {
+      "amostras": 0,
+      "mediaMs": 0,
+      "medianaMs": 0,
+      "p95Ms": 0,
+      "minMs": 0,
+      "maxMs": 0
+    },
+    "porModelo": {},
+    "primeiroRegistro": "2026-09-18T02:35:09.327Z",
+    "ultimoRegistro": "2026-09-18T02:48:56.022Z"
+  },
+  "hashesDePrompt": {
+    "filo-cordados": {
+      "hash": "db375a6d56ce20aafe239e2e7bfe218296fa8451daba787cebef73b9a6ad0c43",
+      "caracteres": 9263
+    }
+  }
+}
