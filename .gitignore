@@ -1,0 +1,92 @@
+# ============================================================================
+# Nature Code — .gitignore
+#
+# Criado na Fase 1 do módulo de Processamento de Imagens e Sinais, ANTES de
+# qualquer trabalho com Python ou dataset, conforme o risco R2 registrado em
+# docs/processamento-imagens/00-PLANEJAMENTO.md.
+#
+# REGRA: nada de documentação, nenhum exemplo deliberadamente versionado e
+# nenhuma evidência acadêmica escolhida pode ser ignorada aqui.
+# ============================================================================
+
+
+# ----------------------------------------------------------------------------
+# Python — ambiente e artefatos de execução
+# ----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Ferramentas de teste e análise
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+
+# ----------------------------------------------------------------------------
+# Dataset — NUNCA versionado
+#
+# O repositório já pesa 120 MB em images/ (risco R3). O dataset é distribuído
+# por link e reconstruído por download. Versiona-se apenas a documentação e o
+# manifesto que identifica quais imagens participaram da avaliação.
+# ----------------------------------------------------------------------------
+processamento-imagens/dataset/*
+!processamento-imagens/dataset/README.md
+!processamento-imagens/dataset/manifesto.csv
+!processamento-imagens/dataset/amostras.txt
+!processamento-imagens/dataset/.gitkeep
+
+
+# ----------------------------------------------------------------------------
+# Arquivos compactados
+#
+# Cobre os pacotes de entrega da etapa de IA (124 MB cada) e qualquer dataset
+# baixado em formato comprimido.
+# ----------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+
+# ----------------------------------------------------------------------------
+# Resultados gerados automaticamente
+#
+# Saídas do pipeline, imagens intermediárias de depuração e arquivos temporários
+# da API. A pasta evidencias/ é a EXCEÇÃO deliberada: ali ficam os resultados
+# escolhidos como evidência acadêmica, que devem ser versionados.
+# ----------------------------------------------------------------------------
+processamento-imagens/resultados/*
+!processamento-imagens/resultados/.gitkeep
+!processamento-imagens/resultados/evidencias/
+!processamento-imagens/resultados/evidencias/**
+
+# Armazenamento temporário da API local
+processamento-imagens/tmp/
+processamento-imagens/uploads/
+
+
+# ----------------------------------------------------------------------------
+# Sistema operacional e editores
+# ----------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
