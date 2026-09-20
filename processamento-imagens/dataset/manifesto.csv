@@ -1,0 +1,161 @@
+arquivo,dataset_origem,classe_original,uso,subconjunto,observacao
+1009.jpg,flavia,01-Phyllostachys edulis,avaliacao,aval-v1,Bambu pubescente
+1023.jpg,flavia,01-Phyllostachys edulis,avaliacao,aval-v1,Bambu pubescente
+1052.jpg,flavia,01-Phyllostachys edulis,avaliacao,aval-v1,Bambu pubescente
+1107.jpg,flavia,02-Aesculus chinensis,avaliacao,aval-v1,Castanha-da-india chinesa
+1109.jpg,flavia,02-Aesculus chinensis,avaliacao,aval-v1,Castanha-da-india chinesa
+1112.jpg,flavia,02-Aesculus chinensis,avaliacao,aval-v1,Castanha-da-india chinesa
+1559.jpg,flavia,03-Berberis anhweiensis,avaliacao,aval-v1,Berberis de Anhui
+1560.jpg,flavia,03-Berberis anhweiensis,avaliacao,aval-v1,Berberis de Anhui
+1587.jpg,flavia,03-Berberis anhweiensis,avaliacao,aval-v1,Berberis de Anhui
+1125.jpg,flavia,04-Cercis chinensis,avaliacao,aval-v1,Olaia chinesa
+1163.jpg,flavia,04-Cercis chinensis,avaliacao,aval-v1,Olaia chinesa
+1191.jpg,flavia,04-Cercis chinensis,avaliacao,aval-v1,Olaia chinesa
+1195.jpg,flavia,05-Indigofera tinctoria,avaliacao,aval-v1,Anil verdadeiro
+1199.jpg,flavia,05-Indigofera tinctoria,avaliacao,aval-v1,Anil verdadeiro
+1258.jpg,flavia,05-Indigofera tinctoria,avaliacao,aval-v1,Anil verdadeiro
+1269.jpg,flavia,06-Acer palmatum,avaliacao,aval-v1,Bordo japones
+1282.jpg,flavia,06-Acer palmatum,avaliacao,aval-v1,Bordo japones
+1302.jpg,flavia,06-Acer palmatum,avaliacao,aval-v1,Bordo japones
+1334.jpg,flavia,07-Phoebe nanmu,avaliacao,aval-v1,Nanmu
+1358.jpg,flavia,07-Phoebe nanmu,avaliacao,aval-v1,Nanmu
+1359.jpg,flavia,07-Phoebe nanmu,avaliacao,aval-v1,Nanmu
+1392.jpg,flavia,08-Kalopanax septemlobus,avaliacao,aval-v1,Aralia-de-mamona
+1406.jpg,flavia,08-Kalopanax septemlobus,avaliacao,aval-v1,Aralia-de-mamona
+1416.jpg,flavia,08-Kalopanax septemlobus,avaliacao,aval-v1,Aralia-de-mamona
+1497.jpg,flavia,09-Cinnamomum japonicum,avaliacao,aval-v1,Canela chinesa
+1502.jpg,flavia,09-Cinnamomum japonicum,avaliacao,aval-v1,Canela chinesa
+1510.jpg,flavia,09-Cinnamomum japonicum,avaliacao,aval-v1,Canela chinesa
+1443.jpg,flavia,10-Koelreuteria paniculata,avaliacao,aval-v1,Arvore-da-chuva-dourada
+1447.jpg,flavia,10-Koelreuteria paniculata,avaliacao,aval-v1,Arvore-da-chuva-dourada
+1490.jpg,flavia,10-Koelreuteria paniculata,avaliacao,aval-v1,Arvore-da-chuva-dourada
+2001.jpg,flavia,11-Ilex macrocarpa,avaliacao,aval-v1,Azevinho de fruto grande
+2017.jpg,flavia,11-Ilex macrocarpa,avaliacao,aval-v1,Azevinho de fruto grande
+2024.jpg,flavia,11-Ilex macrocarpa,avaliacao,aval-v1,Azevinho de fruto grande
+2091.jpg,flavia,12-Pittosporum tobira,avaliacao,aval-v1,Pitosporo japones
+2094.jpg,flavia,12-Pittosporum tobira,avaliacao,aval-v1,Pitosporo japones
+2108.jpg,flavia,12-Pittosporum tobira,avaliacao,aval-v1,Pitosporo japones
+2128.jpg,flavia,14-Chimonanthus praecox,avaliacao,aval-v1,Jasmim-de-inverno
+2158.jpg,flavia,14-Chimonanthus praecox,avaliacao,aval-v1,Jasmim-de-inverno
+2162.jpg,flavia,14-Chimonanthus praecox,avaliacao,aval-v1,Jasmim-de-inverno
+2176.jpg,flavia,15-Cinnamomum camphora,avaliacao,aval-v1,Canforeira
+2189.jpg,flavia,15-Cinnamomum camphora,avaliacao,aval-v1,Canforeira
+2194.jpg,flavia,15-Cinnamomum camphora,avaliacao,aval-v1,Canforeira
+2278.jpg,flavia,16-Viburnum awabuki,avaliacao,aval-v1,Viburno japones
+2280.jpg,flavia,16-Viburnum awabuki,avaliacao,aval-v1,Viburno japones
+2286.jpg,flavia,16-Viburnum awabuki,avaliacao,aval-v1,Viburno japones
+2302.jpg,flavia,17-Osmanthus fragrans,avaliacao,aval-v1,Osmanto perfumado
+2326.jpg,flavia,17-Osmanthus fragrans,avaliacao,aval-v1,Osmanto perfumado
+2327.jpg,flavia,17-Osmanthus fragrans,avaliacao,aval-v1,Osmanto perfumado
+2353.jpg,flavia,18-Cedrus deodara,avaliacao,aval-v1,Cedro-do-himalaia
+2370.jpg,flavia,18-Cedrus deodara,avaliacao,aval-v1,Cedro-do-himalaia
+2417.jpg,flavia,18-Cedrus deodara,avaliacao,aval-v1,Cedro-do-himalaia
+2458.jpg,flavia,19-Ginkgo biloba,avaliacao,aval-v1,Ginkgo
+2460.jpg,flavia,19-Ginkgo biloba,avaliacao,aval-v1,Ginkgo
+2479.jpg,flavia,19-Ginkgo biloba,avaliacao,aval-v1,Ginkgo
+2488.jpg,flavia,20-Lagerstroemia indica,avaliacao,aval-v1,Resedá
+2514.jpg,flavia,20-Lagerstroemia indica,avaliacao,aval-v1,Resedá
+2537.jpg,flavia,20-Lagerstroemia indica,avaliacao,aval-v1,Resedá
+2557.jpg,flavia,21-Nerium oleander,avaliacao,aval-v1,Espirradeira
+2593.jpg,flavia,21-Nerium oleander,avaliacao,aval-v1,Espirradeira
+2594.jpg,flavia,21-Nerium oleander,avaliacao,aval-v1,Espirradeira
+2625.jpg,flavia,22-Podocarpus macrophyllus,avaliacao,aval-v1,Pinheiro-budista
+2635.jpg,flavia,22-Podocarpus macrophyllus,avaliacao,aval-v1,Pinheiro-budista
+2642.jpg,flavia,22-Podocarpus macrophyllus,avaliacao,aval-v1,Pinheiro-budista
+3026.jpg,flavia,23-Prunus serrulata,avaliacao,aval-v1,Cerejeira japonesa
+3049.jpg,flavia,23-Prunus serrulata,avaliacao,aval-v1,Cerejeira japonesa
+3053.jpg,flavia,23-Prunus serrulata,avaliacao,aval-v1,Cerejeira japonesa
+3061.jpg,flavia,24-Ligustrum lucidum,avaliacao,aval-v1,Alfeneiro
+3091.jpg,flavia,24-Ligustrum lucidum,avaliacao,aval-v1,Alfeneiro
+3109.jpg,flavia,24-Ligustrum lucidum,avaliacao,aval-v1,Alfeneiro
+3136.jpg,flavia,25-Toona sinensis,avaliacao,aval-v1,Toona chinesa
+3139.jpg,flavia,25-Toona sinensis,avaliacao,aval-v1,Toona chinesa
+3150.jpg,flavia,25-Toona sinensis,avaliacao,aval-v1,Toona chinesa
+3194.jpg,flavia,26-Prunus persica,avaliacao,aval-v1,Pessegueiro
+3218.jpg,flavia,26-Prunus persica,avaliacao,aval-v1,Pessegueiro
+3226.jpg,flavia,26-Prunus persica,avaliacao,aval-v1,Pessegueiro
+3246.jpg,flavia,27-Manglietia fordiana,avaliacao,aval-v1,Manglietia
+3255.jpg,flavia,27-Manglietia fordiana,avaliacao,aval-v1,Manglietia
+3259.jpg,flavia,27-Manglietia fordiana,avaliacao,aval-v1,Manglietia
+3283.jpg,flavia,28-Acer buergerianum,avaliacao,aval-v1,Bordo tridente
+3317.jpg,flavia,28-Acer buergerianum,avaliacao,aval-v1,Bordo tridente
+3326.jpg,flavia,28-Acer buergerianum,avaliacao,aval-v1,Bordo tridente
+3335.jpg,flavia,29-Mahonia bealei,avaliacao,aval-v1,Mahonia
+3336.jpg,flavia,29-Mahonia bealei,avaliacao,aval-v1,Mahonia
+3385.jpg,flavia,29-Mahonia bealei,avaliacao,aval-v1,Mahonia
+3411.jpg,flavia,30-Magnolia grandiflora,avaliacao,aval-v1,Magnolia do sul
+3416.jpg,flavia,30-Magnolia grandiflora,avaliacao,aval-v1,Magnolia do sul
+3424.jpg,flavia,30-Magnolia grandiflora,avaliacao,aval-v1,Magnolia do sul
+3455.jpg,flavia,31-Populus x canadensis,avaliacao,aval-v1,Choupo canadense
+3494.jpg,flavia,31-Populus x canadensis,avaliacao,aval-v1,Choupo canadense
+3495.jpg,flavia,31-Populus x canadensis,avaliacao,aval-v1,Choupo canadense
+3514.jpg,flavia,32-Liriodendron chinense,avaliacao,aval-v1,Tulipeira chinesa
+3535.jpg,flavia,32-Liriodendron chinense,avaliacao,aval-v1,Tulipeira chinesa
+3560.jpg,flavia,32-Liriodendron chinense,avaliacao,aval-v1,Tulipeira chinesa
+3581.jpg,flavia,33-Citrus reticulata,avaliacao,aval-v1,Tangerina
+3608.jpg,flavia,33-Citrus reticulata,avaliacao,aval-v1,Tangerina
+3617.jpg,flavia,33-Citrus reticulata,avaliacao,aval-v1,Tangerina
+1007.jpg,flavia,01-Phyllostachys edulis,desenvolvimento,dev-v1,Bambu pubescente
+1041.jpg,flavia,01-Phyllostachys edulis,desenvolvimento,dev-v1,Bambu pubescente
+1101.jpg,flavia,02-Aesculus chinensis,desenvolvimento,dev-v1,Castanha-da-india chinesa
+1110.jpg,flavia,02-Aesculus chinensis,desenvolvimento,dev-v1,Castanha-da-india chinesa
+1595.jpg,flavia,03-Berberis anhweiensis,desenvolvimento,dev-v1,Berberis de Anhui
+1603.jpg,flavia,03-Berberis anhweiensis,desenvolvimento,dev-v1,Berberis de Anhui
+1134.jpg,flavia,04-Cercis chinensis,desenvolvimento,dev-v1,Olaia chinesa
+1177.jpg,flavia,04-Cercis chinensis,desenvolvimento,dev-v1,Olaia chinesa
+1198.jpg,flavia,05-Indigofera tinctoria,desenvolvimento,dev-v1,Anil verdadeiro
+1244.jpg,flavia,05-Indigofera tinctoria,desenvolvimento,dev-v1,Anil verdadeiro
+1307.jpg,flavia,06-Acer palmatum,desenvolvimento,dev-v1,Bordo japones
+1322.jpg,flavia,06-Acer palmatum,desenvolvimento,dev-v1,Bordo japones
+1341.jpg,flavia,07-Phoebe nanmu,desenvolvimento,dev-v1,Nanmu
+1376.jpg,flavia,07-Phoebe nanmu,desenvolvimento,dev-v1,Nanmu
+1394.jpg,flavia,08-Kalopanax septemlobus,desenvolvimento,dev-v1,Aralia-de-mamona
+1430.jpg,flavia,08-Kalopanax septemlobus,desenvolvimento,dev-v1,Aralia-de-mamona
+1503.jpg,flavia,09-Cinnamomum japonicum,desenvolvimento,dev-v1,Canela chinesa
+1547.jpg,flavia,09-Cinnamomum japonicum,desenvolvimento,dev-v1,Canela chinesa
+1454.jpg,flavia,10-Koelreuteria paniculata,desenvolvimento,dev-v1,Arvore-da-chuva-dourada
+1491.jpg,flavia,10-Koelreuteria paniculata,desenvolvimento,dev-v1,Arvore-da-chuva-dourada
+2032.jpg,flavia,11-Ilex macrocarpa,desenvolvimento,dev-v1,Azevinho de fruto grande
+2047.jpg,flavia,11-Ilex macrocarpa,desenvolvimento,dev-v1,Azevinho de fruto grande
+2078.jpg,flavia,12-Pittosporum tobira,desenvolvimento,dev-v1,Pitosporo japones
+2098.jpg,flavia,12-Pittosporum tobira,desenvolvimento,dev-v1,Pitosporo japones
+2146.jpg,flavia,14-Chimonanthus praecox,desenvolvimento,dev-v1,Jasmim-de-inverno
+2150.jpg,flavia,14-Chimonanthus praecox,desenvolvimento,dev-v1,Jasmim-de-inverno
+2174.jpg,flavia,15-Cinnamomum camphora,desenvolvimento,dev-v1,Canforeira
+2179.jpg,flavia,15-Cinnamomum camphora,desenvolvimento,dev-v1,Canforeira
+2233.jpg,flavia,16-Viburnum awabuki,desenvolvimento,dev-v1,Viburno japones
+2259.jpg,flavia,16-Viburnum awabuki,desenvolvimento,dev-v1,Viburno japones
+2305.jpg,flavia,17-Osmanthus fragrans,desenvolvimento,dev-v1,Osmanto perfumado
+2334.jpg,flavia,17-Osmanthus fragrans,desenvolvimento,dev-v1,Osmanto perfumado
+2400.jpg,flavia,18-Cedrus deodara,desenvolvimento,dev-v1,Cedro-do-himalaia
+2407.jpg,flavia,18-Cedrus deodara,desenvolvimento,dev-v1,Cedro-do-himalaia
+2480.jpg,flavia,19-Ginkgo biloba,desenvolvimento,dev-v1,Ginkgo
+2485.jpg,flavia,19-Ginkgo biloba,desenvolvimento,dev-v1,Ginkgo
+2497.jpg,flavia,20-Lagerstroemia indica,desenvolvimento,dev-v1,Resedá
+2505.jpg,flavia,20-Lagerstroemia indica,desenvolvimento,dev-v1,Resedá
+2562.jpg,flavia,21-Nerium oleander,desenvolvimento,dev-v1,Espirradeira
+2572.jpg,flavia,21-Nerium oleander,desenvolvimento,dev-v1,Espirradeira
+2620.jpg,flavia,22-Podocarpus macrophyllus,desenvolvimento,dev-v1,Pinheiro-budista
+2627.jpg,flavia,22-Podocarpus macrophyllus,desenvolvimento,dev-v1,Pinheiro-budista
+3036.jpg,flavia,23-Prunus serrulata,desenvolvimento,dev-v1,Cerejeira japonesa
+3047.jpg,flavia,23-Prunus serrulata,desenvolvimento,dev-v1,Cerejeira japonesa
+3068.jpg,flavia,24-Ligustrum lucidum,desenvolvimento,dev-v1,Alfeneiro
+3087.jpg,flavia,24-Ligustrum lucidum,desenvolvimento,dev-v1,Alfeneiro
+3123.jpg,flavia,25-Toona sinensis,desenvolvimento,dev-v1,Toona chinesa
+3154.jpg,flavia,25-Toona sinensis,desenvolvimento,dev-v1,Toona chinesa
+3188.jpg,flavia,26-Prunus persica,desenvolvimento,dev-v1,Pessegueiro
+3219.jpg,flavia,26-Prunus persica,desenvolvimento,dev-v1,Pessegueiro
+3254.jpg,flavia,27-Manglietia fordiana,desenvolvimento,dev-v1,Manglietia
+3274.jpg,flavia,27-Manglietia fordiana,desenvolvimento,dev-v1,Manglietia
+3287.jpg,flavia,28-Acer buergerianum,desenvolvimento,dev-v1,Bordo tridente
+3306.jpg,flavia,28-Acer buergerianum,desenvolvimento,dev-v1,Bordo tridente
+3363.jpg,flavia,29-Mahonia bealei,desenvolvimento,dev-v1,Mahonia
+3373.jpg,flavia,29-Mahonia bealei,desenvolvimento,dev-v1,Mahonia
+3430.jpg,flavia,30-Magnolia grandiflora,desenvolvimento,dev-v1,Magnolia do sul
+3436.jpg,flavia,30-Magnolia grandiflora,desenvolvimento,dev-v1,Magnolia do sul
+3452.jpg,flavia,31-Populus x canadensis,desenvolvimento,dev-v1,Choupo canadense
+3487.jpg,flavia,31-Populus x canadensis,desenvolvimento,dev-v1,Choupo canadense
+3525.jpg,flavia,32-Liriodendron chinense,desenvolvimento,dev-v1,Tulipeira chinesa
+3526.jpg,flavia,32-Liriodendron chinense,desenvolvimento,dev-v1,Tulipeira chinesa
+3577.jpg,flavia,33-Citrus reticulata,desenvolvimento,dev-v1,Tangerina
+3590.jpg,flavia,33-Citrus reticulata,desenvolvimento,dev-v1,Tangerina
