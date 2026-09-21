@@ -227,3 +227,92 @@ def test_dependencias_instaladas_nao_incluem_biblioteca_de_ia() -> None:
     proibidos = instalados & BIBLIOTECAS_PROIBIDAS
 
     assert not proibidos, f"Bibliotecas de IA no ambiente: {sorted(proibidos)}"
+
+
+# ---------------------------------------------------------------------------
+# Fase 9 — isolamento no lado web
+# ---------------------------------------------------------------------------
+
+def _js_sem_comentarios(texto: str) -> str:
+    """Remove comentários ``/* */`` e ``//`` de um JavaScript.
+
+    Mesmo princípio de ``_codigo_sem_docstrings``: um comentário que diz "separado de
+    script/ia/" documenta a ausência da dependência, e não é violação.
+    """
+    sem_blocos = re.sub(r"/\*.*?\*/", "", texto, flags=re.DOTALL)
+    return re.sub(r"(?m)^\s*//.*$", "", sem_blocos)
+
+
+def test_frontend_do_pdi_nao_referencia_a_ia() -> None:
+    """O JavaScript da análise de folhas não fala com Ollama nem com a camada de IA."""
+    pasta = RAIZ_PROJETO / "script" / "pdi"
+    if not pasta.is_dir():
+        pytest.skip("frontend do PDI ausente")
+
+    violacoes = []
+    for arquivo in pasta.glob("*.js"):
+        texto = _js_sem_comentarios(arquivo.read_text(encoding="utf-8"))
+        for padrao in (r"11434", r"ollama", r"script/ia", r"servico-quiz", r"config-ia", r"api/chat"):
+            if re.search(padrao, texto, flags=re.IGNORECASE):
+                violacoes.append(f"{arquivo.name}: {padrao}")
+
+    assert not violacoes, f"O frontend do PDI referencia a IA: {violacoes}"
+
+
+def test_camada_de_ia_nao_referencia_o_frontend_do_pdi() -> None:
+    pasta = RAIZ_PROJETO / "script" / "ia"
+    if not pasta.is_dir():
+        pytest.skip("camada de IA ausente")
+
+    violacoes = [
+        arquivo.name for arquivo in pasta.glob("*.js")
+        if re.search(r"script/pdi|config-pdi|analise-folha|CONFIG_PDI|:5000",
+                     arquivo.read_text(encoding="utf-8"))
+    ]
+    assert not violacoes, f"A camada de IA referencia o PDI: {violacoes}"
+
+
+def test_pagina_de_analise_nao_carrega_scripts_de_ia() -> None:
+    pagina = RAIZ_PROJETO / "pages" / "modulos" / "analise-folha.html"
+    if not pagina.is_file():
+        pytest.skip("página de análise ausente")
+
+    scripts = re.findall(r'<script[^>]*src="([^"]+)"', pagina.read_text(encoding="utf-8"))
+
+    assert not [s for s in scripts if "script/ia/" in s], f"scripts de IA carregados: {scripts}"
+    assert any(s.endswith("script/pdi/config-pdi.js") for s in scripts)
+
+
+def test_pagina_declara_que_nao_usa_ia() -> None:
+    """Exigência acadêmica: o texto precisa estar na interface."""
+    pagina = RAIZ_PROJETO / "pages" / "modulos" / "analise-folha.html"
+    if not pagina.is_file():
+        pytest.skip("página de análise ausente")
+
+    texto = pagina.read_text(encoding="utf-8")
+    assert "Não utiliza inteligência artificial" in texto
+    assert "não identifica espécies" in texto
+
+
+def test_url_da_api_existe_em_um_unico_lugar() -> None:
+    """A URL do serviço fica centralizada em config-pdi.js."""
+    pasta = RAIZ_PROJETO / "script" / "pdi"
+    ocorrencias = [
+        arquivo.name for arquivo in pasta.glob("*.js")
+        if "127.0.0.1:5000" in arquivo.read_text(encoding="utf-8")
+    ]
+    assert ocorrencias == ["config-pdi.js"]
+
+
+def test_varredura_js_ainda_detecta_violacao_real() -> None:
+    """Remover comentários não pode cegar o detector."""
+    codigo = (
+        "/* separado de script/ia/ */\n"
+        "// nada de ollama aqui\n"
+        "fetch('http://localhost:11434/api/chat');\n"
+    )
+    limpo = _js_sem_comentarios(codigo)
+
+    assert "11434" in limpo
+    assert "api/chat" in limpo
+    assert "script/ia" not in limpo

@@ -1,0 +1,12 @@
+# Nature Code — módulo de Processamento de Imagens e Sinais
+# Dependências de EXECUÇÃO (pipeline, CLI e API local).
+#
+# Nenhuma biblioteca de inteligência artificial ou aprendizado de máquina.
+# Versões validadas com Python 3.14.3 em Windows 11 (AMD64).
+#
+# As dependências transitivas do Flask (Werkzeug, Jinja2, click, itsdangerous,
+# blinker, MarkupSafe) são resolvidas automaticamente pelo pip.
+
+numpy==2.5.3
+opencv-python==5.0.0.93
+Flask==3.1.3

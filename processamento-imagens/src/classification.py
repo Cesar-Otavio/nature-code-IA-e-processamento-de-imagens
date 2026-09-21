@@ -491,26 +491,40 @@ _TEXTO_ALONGAMENTO = {
     "indeterminado": "com alongamento indeterminado",
 }
 
+#: Concavidade é medida por **área** (solidez): fala de reentrâncias profundas.
+#: Não usa a palavra "borda" — a borda em pequena escala é o atributo seguinte. A
+#: versão anterior dizia "borda pouco recortada" para solidez alta, e a folha
+#: ``amostra-flavia/16.jpg`` (solidez 0,977, razão perímetro/hull 1,479) saía com
+#: complexidade ``complexa`` e resumo "borda pouco recortada".
 _TEXTO_CONCAVIDADE = {
-    "baixa": "borda pouco recortada",
-    "moderada": "borda moderadamente recortada",
-    "alta": "borda fortemente recortada",
-    "ambigua": "concavidade ambígua — pode ser recorte ou curvatura",
-    "indeterminado": "concavidade indeterminada",
+    "baixa": "sem reentrâncias profundas",
+    "moderada": "com reentrâncias moderadas",
+    "alta": "com reentrâncias profundas",
+    "ambigua": "com concavidade ambígua (recorte ou curvatura)",
+    "indeterminado": "com concavidade indeterminada",
+}
+
+#: Complexidade da borda é medida por **perímetro** (razão perímetro/hull): fala do
+#: contorno — irregularidades pequenas que alongam o perímetro sem tirar área.
+_TEXTO_COMPLEXIDADE_BORDA = {
+    "regular": "de contorno regular",
+    "moderada": "de contorno moderadamente irregular",
+    "complexa": "de contorno complexo (muito irregular)",
+    "indeterminado": "de complexidade do contorno indeterminada",
 }
 
 _TEXTO_COMPACIDADE = {
     "baixa": "geometricamente pouco compacta",
-    "moderada": "compacidade intermediária",
+    "moderada": "de compacidade intermediária",
     "alta": "geometricamente compacta",
-    "indeterminado": "compacidade indeterminada",
+    "indeterminado": "de compacidade indeterminada",
 }
 
 _TEXTO_ORIENTACAO = {
-    "bem_definida": "eixo principal bem definido",
-    "pouco_definida": "eixo principal pouco definido",
+    "bem_definida": "com eixo principal bem definido",
+    "pouco_definida": "com eixo principal pouco definido",
     "indefinida": "sem eixo principal definido",
-    "indeterminado": "orientação indeterminada",
+    "indeterminado": "com orientação indeterminada",
 }
 
 
@@ -519,20 +533,24 @@ def montar_resumo(
     concavidade: ResultadoRegra,
     compacidade: ResultadoRegra,
     orientacao: ResultadoRegra,
+    complexidade_borda: ResultadoRegra,
 ) -> str:
-    """Monta uma frase a partir das categorias já decididas.
+    """Monta uma frase a partir das categorias já decididas — **dos cinco atributos**.
 
     O texto é composto por **concatenação de mapeamentos fixos** — nenhum modelo de
     linguagem participa, e nada é gerado. Mudar uma categoria muda exatamente a parte
     correspondente da frase.
+
+    O acesso aos mapeamentos é direto (``[]``, não ``.get``): uma categoria sem texto
+    levanta ``KeyError`` em vez de vazar o identificador cru para a frase.
     """
     partes = [
-        f"Folha {_TEXTO_ALONGAMENTO.get(alongamento.categoria, alongamento.categoria)}",
-        _TEXTO_COMPACIDADE.get(compacidade.categoria, compacidade.categoria),
-        f"com {_TEXTO_CONCAVIDADE.get(concavidade.categoria, concavidade.categoria)}",
-        f"e {_TEXTO_ORIENTACAO.get(orientacao.categoria, orientacao.categoria)}",
+        f"Folha {_TEXTO_ALONGAMENTO[alongamento.categoria]}",
+        _TEXTO_COMPACIDADE[compacidade.categoria],
+        _TEXTO_CONCAVIDADE[concavidade.categoria],
+        _TEXTO_COMPLEXIDADE_BORDA[complexidade_borda.categoria],
     ]
-    return ", ".join(partes) + "."
+    return ", ".join(partes) + f" e {_TEXTO_ORIENTACAO[orientacao.categoria]}."
 
 
 def classificar_morfologia(
@@ -586,6 +604,6 @@ def classificar_morfologia(
         compacidade=compacidade,
         complexidade_borda=complexidade,
         orientacao=orientacao,
-        resumo=montar_resumo(alongamento, concavidade, compacidade, orientacao),
+        resumo=montar_resumo(alongamento, concavidade, compacidade, orientacao, complexidade),
         avisos=avisos,
     )

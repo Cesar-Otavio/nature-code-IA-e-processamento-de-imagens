@@ -141,6 +141,93 @@ def validar_dimensoes(imagem: np.ndarray, lado_minimo: int = LADO_MINIMO_PX_EXPE
     return largura, altura
 
 
+#: Cor de fundo usada ao compor imagens com canal alfa.
+#:
+#: **Branco, e não preto.** O pipeline foi calibrado para folha escura sobre fundo
+#: claro; compor um PNG transparente sobre preto criaria um fundo que a segmentação
+#: não sabe tratar. Branco reproduz a condição do dataset.
+FUNDO_PARA_ALFA: tuple[int, int, int] = (255, 255, 255)
+
+
+#: Assinatura de um arquivo PNG.
+_ASSINATURA_PNG = b"\x89PNG\r\n\x1a\n"
+
+
+def _declara_canal_alfa(bruto: np.ndarray) -> bool:
+    """Informa se o cabeçalho declara canal alfa, sem decodificar a imagem.
+
+    Só PNG e BMP de 32 bits carregam alfa entre os formatos aceitos — JPEG não tem
+    canal alfa por definição. Inspecionar o cabeçalho custa alguns bytes, contra uma
+    decodificação completa se a detecção fosse feita depois.
+
+    No PNG, o byte 25 do arquivo é o *color type* do bloco IHDR: **4** é cinza com
+    alfa e **6** é RGB com alfa.
+
+    Args:
+        bruto: Bytes do arquivo, como array.
+
+    Returns:
+        ``True`` se houver canal alfa declarado.
+    """
+    if bruto.size < 26:
+        return False
+
+    dados = bruto[:26].tobytes()
+    if not dados.startswith(_ASSINATURA_PNG):
+        return False
+
+    return dados[25] in (4, 6)
+
+
+def normalizar_canais(imagem: np.ndarray) -> tuple[np.ndarray, bool]:
+    """Converte qualquer imagem decodificada para 3 canais BGR.
+
+    Trata os três casos que o ``imdecode`` pode devolver:
+
+    - **1 canal** (escala de cinza): replicado para 3;
+    - **3 canais**: devolvido como está;
+    - **4 canais** (BGRA): **composto sobre fundo branco**.
+
+    O caso do alfa é o que exige cuidado. Um pixel totalmente transparente ainda
+    carrega valores nos canais de cor — normalmente preto —, e simplesmente descartar
+    o alfa faria uma região transparente virar preta. Para um pipeline calibrado em
+    folha escura sobre fundo claro, isso produziria uma máscara errada.
+
+    A composição usa ``resultado = cor·α + fundo·(1−α)``, com fundo branco.
+
+    Args:
+        imagem: Matriz recém-decodificada.
+
+    Returns:
+        ``(imagem_bgr, tinha_alfa)``.
+
+    Raises:
+        ErroImagem: ``E004`` se o número de canais não for 1, 3 ou 4.
+    """
+    if imagem.ndim == 2:
+        return cv2.cvtColor(imagem, cv2.COLOR_GRAY2BGR), False
+
+    if imagem.ndim != 3:
+        raise ErroImagem("E004", f"Matriz com {imagem.ndim} dimensões não é uma imagem.")
+
+    canais = imagem.shape[2]
+
+    if canais == 3:
+        return imagem, False
+
+    if canais == 4:
+        bgr = imagem[:, :, :3].astype(np.float32)
+        alfa = (imagem[:, :, 3:4].astype(np.float32)) / 255.0
+        fundo = np.array(FUNDO_PARA_ALFA, dtype=np.float32).reshape(1, 1, 3)
+        composta = bgr * alfa + fundo * (1.0 - alfa)
+        return composta.round().astype(np.uint8), True
+
+    if canais == 1:
+        return cv2.cvtColor(imagem[:, :, 0], cv2.COLOR_GRAY2BGR), False
+
+    raise ErroImagem("E004", f"Imagem com {canais} canais não é suportada.")
+
+
 def ler_imagem(
     caminho: str | Path,
     lado_minimo: int = LADO_MINIMO_PX_EXPERIMENTAL,
@@ -177,7 +264,19 @@ def ler_imagem(
     if bruto.size == 0:
         raise ErroImagem("E004", "O arquivo está vazio.")
 
-    imagem = cv2.imdecode(bruto, cv2.IMREAD_COLOR)
+    # As duas flags do OpenCV resolvem problemas diferentes e são mutuamente
+    # exclusivas — descoberto por medição, não presumido:
+    #
+    #   IMREAD_COLOR      aplica a orientação EXIF, mas descarta o canal alfa
+    #                     deixando o pixel transparente com a cor que estava sob ele
+    #   IMREAD_UNCHANGED  preserva o alfa, mas IGNORA a orientação EXIF
+    #
+    # A escolha é feita inspecionando o cabeçalho, o que custa alguns bytes em vez de
+    # uma segunda decodificação completa.
+    if _declara_canal_alfa(bruto):
+        imagem = cv2.imdecode(bruto, cv2.IMREAD_UNCHANGED)
+    else:
+        imagem = cv2.imdecode(bruto, cv2.IMREAD_COLOR)
 
     if imagem is None:
         raise ErroImagem(
@@ -185,6 +284,8 @@ def ler_imagem(
             "O arquivo não pôde ser lido como imagem. Pode estar corrompido "
             "ou não ser realmente uma imagem.",
         )
+
+    imagem, tinha_alfa = normalizar_canais(imagem)
 
     largura, altura = validar_dimensoes(imagem, lado_minimo)
 
@@ -195,6 +296,7 @@ def ler_imagem(
         "altura_original_px": altura,
         "canais": imagem.shape[2] if imagem.ndim == 3 else 1,
         "bytes": int(bruto.size),
+        "tinha_canal_alfa": tinha_alfa,
     }
 
     return imagem, metadados
