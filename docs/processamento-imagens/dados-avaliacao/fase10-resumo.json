@@ -1,0 +1,1416 @@
+{
+  "metadados": {
+    "fase": 10,
+    "descricao": "avaliação final congelada nas imagens reservadas",
+    "commit": "4b669811006f8fd5b46e515f054c7611b2f2031f",
+    "tag": "fase-9-completa",
+    "commit_da_tag": "4b669811006f8fd5b46e515f054c7611b2f2031f",
+    "versao_pipeline": "1.0.0",
+    "inicio": "2026-09-21T11:37:58-03:00",
+    "fim": "2026-09-21T11:38:27-03:00",
+    "total_esperado": 96,
+    "total_processado": 96,
+    "salvar_imagens": false,
+    "manifesto": "processamento-imagens/dataset/manifesto.csv",
+    "pasta_imagens": "processamento-imagens/dataset/dados/Leaves (não versionada)",
+    "python": "3.14.3"
+  },
+  "cobertura": {
+    "total_imagens": 96,
+    "processadas": 96,
+    "sucesso": 0,
+    "sucesso_com_avisos": 96,
+    "erro": 0,
+    "taxa_processamento_valido_pct": 100.0,
+    "validas_com_aviso_tecnico": 65,
+    "validas_sem_aviso_tecnico": 31,
+    "observacao": "o status 'sucesso_com_avisos' inclui o aviso padrão de não identificação botânica, anexado a toda descrição; por isso a contagem de avisos técnicos é reportada à parte"
+  },
+  "erros": {
+    "total": 0,
+    "por_codigo": {}
+  },
+  "avisos": {
+    "aviso_padrao_nao_identificacao": {
+      "texto": "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica",
+      "imagens": 96
+    },
+    "tecnicos_agrupados": {
+      "atributos proximos de um limiar": {
+        "quantidade": 62,
+        "percentual": 64.58
+      },
+      "solidez_baixa_borda_muito_recortada": {
+        "quantidade": 9,
+        "percentual": 9.38
+      },
+      "concavidade ambigua": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "objeto_muito_alongado": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "orientacao_nao_confiavel": {
+        "quantidade": 1,
+        "percentual": 1.04
+      }
+    },
+    "tecnicos_texto_exato": {
+      "atributos proximos de um limiar: complexidade_borda": {
+        "quantidade": 16,
+        "percentual": 16.67
+      },
+      "atributos proximos de um limiar: concavidade, complexidade_borda": {
+        "quantidade": 12,
+        "percentual": 12.5
+      },
+      "atributos proximos de um limiar: concavidade": {
+        "quantidade": 9,
+        "percentual": 9.38
+      },
+      "solidez_baixa_borda_muito_recortada": {
+        "quantidade": 9,
+        "percentual": 9.38
+      },
+      "atributos proximos de um limiar: compacidade": {
+        "quantidade": 6,
+        "percentual": 6.25
+      },
+      "atributos proximos de um limiar: alongamento": {
+        "quantidade": 4,
+        "percentual": 4.17
+      },
+      "atributos proximos de um limiar: alongamento, concavidade": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "atributos proximos de um limiar: concavidade, compacidade, complexidade_borda": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "concavidade ambigua: ver observacoes do atributo": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "objeto_muito_alongado": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "atributos proximos de um limiar: alongamento, complexidade_borda": {
+        "quantidade": 2,
+        "percentual": 2.08
+      },
+      "atributos proximos de um limiar: concavidade, compacidade": {
+        "quantidade": 2,
+        "percentual": 2.08
+      },
+      "atributos proximos de um limiar: orientacao": {
+        "quantidade": 2,
+        "percentual": 2.08
+      },
+      "atributos proximos de um limiar: alongamento, concavidade, compacidade": {
+        "quantidade": 1,
+        "percentual": 1.04
+      },
+      "atributos proximos de um limiar: alongamento, concavidade, complexidade_borda": {
+        "quantidade": 1,
+        "percentual": 1.04
+      },
+      "atributos proximos de um limiar: compacidade, complexidade_borda": {
+        "quantidade": 1,
+        "percentual": 1.04
+      },
+      "orientacao_nao_confiavel": {
+        "quantidade": 1,
+        "percentual": 1.04
+      }
+    },
+    "imagens_por_aviso_tecnico": {
+      "atributos proximos de um limiar": [
+        "1009.jpg",
+        "1023.jpg",
+        "1107.jpg",
+        "1109.jpg",
+        "1112.jpg",
+        "1559.jpg",
+        "1560.jpg",
+        "1587.jpg",
+        "1125.jpg",
+        "1163.jpg",
+        "1392.jpg",
+        "1406.jpg",
+        "1416.jpg",
+        "1510.jpg",
+        "1443.jpg",
+        "1447.jpg",
+        "1490.jpg",
+        "2017.jpg",
+        "2024.jpg",
+        "2091.jpg",
+        "2158.jpg",
+        "2162.jpg",
+        "2176.jpg",
+        "2189.jpg",
+        "2194.jpg",
+        "2278.jpg",
+        "2280.jpg",
+        "2302.jpg",
+        "2326.jpg",
+        "2327.jpg",
+        "2353.jpg",
+        "2370.jpg",
+        "2417.jpg",
+        "2458.jpg",
+        "2460.jpg",
+        "2479.jpg",
+        "2488.jpg",
+        "2593.jpg",
+        "2594.jpg",
+        "3026.jpg",
+        "3049.jpg",
+        "3053.jpg",
+        "3109.jpg",
+        "3136.jpg",
+        "3139.jpg",
+        "3150.jpg",
+        "3226.jpg",
+        "3283.jpg",
+        "3317.jpg",
+        "3335.jpg",
+        "3336.jpg",
+        "3385.jpg",
+        "3416.jpg",
+        "3424.jpg",
+        "3455.jpg",
+        "3494.jpg",
+        "3495.jpg",
+        "3535.jpg",
+        "3560.jpg",
+        "3581.jpg",
+        "3608.jpg",
+        "3617.jpg"
+      ],
+      "solidez_baixa_borda_muito_recortada": [
+        "1269.jpg",
+        "1282.jpg",
+        "1302.jpg",
+        "1392.jpg",
+        "1416.jpg",
+        "2370.jpg",
+        "2417.jpg",
+        "3283.jpg",
+        "3317.jpg"
+      ],
+      "orientacao_nao_confiavel": [
+        "1302.jpg"
+      ],
+      "objeto_muito_alongado": [
+        "2353.jpg",
+        "2370.jpg",
+        "2417.jpg"
+      ],
+      "concavidade ambigua": [
+        "2353.jpg",
+        "2370.jpg",
+        "2417.jpg"
+      ]
+    }
+  },
+  "estatisticas_features": {
+    "area_contorno_px2": {
+      "n": 96,
+      "minimo": 20095.5,
+      "p5": 95052.875,
+      "p25": 180866.875,
+      "mediana": 273714.0,
+      "media": 251782.53125,
+      "p75": 333505.125,
+      "p95": 383796.5,
+      "maximo": 413855.0,
+      "desvio_padrao": 97845.335608
+    },
+    "area_mascara_px2": {
+      "n": 96,
+      "minimo": 21037.0,
+      "p5": 95982.25,
+      "p25": 182090.25,
+      "mediana": 274969.5,
+      "media": 252806.71875,
+      "p75": 334727.25,
+      "p95": 385003.25,
+      "maximo": 414919.0,
+      "desvio_padrao": 97872.85886
+    },
+    "perimetro_px": {
+      "n": 96,
+      "minimo": 1318.1463,
+      "p5": 1818.047925,
+      "p25": 2335.49275,
+      "mediana": 2484.01465,
+      "media": 2537.540119,
+      "p75": 2721.410225,
+      "p95": 3268.12375,
+      "maximo": 4970.0524,
+      "desvio_padrao": 533.755494
+    },
+    "elongacao": {
+      "n": 96,
+      "minimo": 1.007511,
+      "p5": 1.020457,
+      "p25": 1.46095,
+      "mediana": 2.192396,
+      "media": 3.30925,
+      "p75": 3.16311,
+      "p95": 8.534362,
+      "maximo": 30.621581,
+      "desvio_padrao": 4.50435
+    },
+    "circularidade": {
+      "n": 96,
+      "minimo": 0.045395,
+      "p5": 0.109758,
+      "p25": 0.389883,
+      "mediana": 0.520937,
+      "media": 0.507182,
+      "p75": 0.624702,
+      "p95": 0.777082,
+      "maximo": 0.830482,
+      "desvio_padrao": 0.184425
+    },
+    "solidez": {
+      "n": 96,
+      "minimo": 0.463344,
+      "p5": 0.63095,
+      "p25": 0.925372,
+      "mediana": 0.968193,
+      "media": 0.917272,
+      "p75": 0.983077,
+      "p95": 0.993673,
+      "maximo": 0.995382,
+      "desvio_padrao": 0.120044
+    },
+    "extent": {
+      "n": 96,
+      "minimo": 0.037093,
+      "p5": 0.192802,
+      "p25": 0.400599,
+      "mediana": 0.573716,
+      "media": 0.525356,
+      "p75": 0.660014,
+      "p95": 0.72678,
+      "maximo": 0.810882,
+      "desvio_padrao": 0.173043
+    },
+    "extent_rotacionado": {
+      "n": 96,
+      "minimo": 0.350489,
+      "p5": 0.503784,
+      "p25": 0.634053,
+      "mediana": 0.669244,
+      "media": 0.663453,
+      "p75": 0.713841,
+      "p95": 0.777439,
+      "maximo": 0.825401,
+      "desvio_padrao": 0.085255
+    },
+    "razao_perimetro_hull": {
+      "n": 96,
+      "minimo": 1.050784,
+      "p5": 1.055762,
+      "p25": 1.062849,
+      "mediana": 1.083452,
+      "media": 1.143204,
+      "p75": 1.138324,
+      "p95": 1.377293,
+      "maximo": 2.070494,
+      "desvio_padrao": 0.17912
+    },
+    "anisotropia": {
+      "n": 96,
+      "minimo": 0.006358,
+      "p5": 0.083507,
+      "p25": 0.435407,
+      "mediana": 0.633656,
+      "media": 0.58208,
+      "p75": 0.799008,
+      "p95": 0.971911,
+      "maximo": 0.999038,
+      "desvio_padrao": 0.27958
+    },
+    "fracao_foreground": {
+      "n": 96,
+      "minimo": 0.02675,
+      "p5": 0.122048,
+      "p25": 0.231535,
+      "mediana": 0.349642,
+      "media": 0.321415,
+      "p75": 0.425628,
+      "p95": 0.489553,
+      "maximo": 0.527597,
+      "desvio_padrao": 0.124412
+    }
+  },
+  "distribuicoes_classificacao": {
+    "alongamento": {
+      "baixa": {
+        "quantidade": 27,
+        "percentual": 28.12
+      },
+      "moderada": {
+        "quantidade": 43,
+        "percentual": 44.79
+      },
+      "alta": {
+        "quantidade": 16,
+        "percentual": 16.67
+      },
+      "extrema": {
+        "quantidade": 10,
+        "percentual": 10.42
+      },
+      "indeterminado": {
+        "quantidade": 0,
+        "percentual": 0.0
+      }
+    },
+    "concavidade": {
+      "baixa": {
+        "quantidade": 73,
+        "percentual": 76.04
+      },
+      "moderada": {
+        "quantidade": 13,
+        "percentual": 13.54
+      },
+      "alta": {
+        "quantidade": 7,
+        "percentual": 7.29
+      },
+      "ambigua": {
+        "quantidade": 3,
+        "percentual": 3.12
+      },
+      "indeterminado": {
+        "quantidade": 0,
+        "percentual": 0.0
+      }
+    },
+    "compacidade": {
+      "baixa": {
+        "quantidade": 25,
+        "percentual": 26.04
+      },
+      "moderada": {
+        "quantidade": 50,
+        "percentual": 52.08
+      },
+      "alta": {
+        "quantidade": 21,
+        "percentual": 21.88
+      },
+      "indeterminado": {
+        "quantidade": 0,
+        "percentual": 0.0
+      }
+    },
+    "complexidade_borda": {
+      "regular": {
+        "quantidade": 71,
+        "percentual": 73.96
+      },
+      "moderada": {
+        "quantidade": 17,
+        "percentual": 17.71
+      },
+      "complexa": {
+        "quantidade": 8,
+        "percentual": 8.33
+      },
+      "indeterminado": {
+        "quantidade": 0,
+        "percentual": 0.0
+      }
+    },
+    "orientacao": {
+      "bem_definida": {
+        "quantidade": 78,
+        "percentual": 81.25
+      },
+      "pouco_definida": {
+        "quantidade": 17,
+        "percentual": 17.71
+      },
+      "indefinida": {
+        "quantidade": 1,
+        "percentual": 1.04
+      },
+      "indeterminado": {
+        "quantidade": 0,
+        "percentual": 0.0
+      }
+    }
+  },
+  "limitrofes": {
+    "imagens_com_pelo_menos_um": 62,
+    "percentual": 64.58,
+    "por_atributo": {
+      "alongamento": 11,
+      "concavidade": 31,
+      "compacidade": 13,
+      "complexidade_borda": 35,
+      "orientacao": 2
+    },
+    "distribuicao_do_numero_por_imagem": {
+      "0": 34,
+      "1": 37,
+      "2": 20,
+      "3": 5,
+      "4": 0,
+      "5": 0
+    },
+    "principais_casos": [
+      {
+        "arquivo": "2194.jpg",
+        "especie_id": "15",
+        "n_limitrofes": 3,
+        "atributos": [
+          "alongamento",
+          "concavidade",
+          "compacidade"
+        ],
+        "margens": {
+          "alongamento": 0.016904,
+          "concavidade": 0.042612,
+          "compacidade": 0.018629
+        }
+      },
+      {
+        "arquivo": "2458.jpg",
+        "especie_id": "19",
+        "n_limitrofes": 3,
+        "atributos": [
+          "concavidade",
+          "compacidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "concavidade": 0.00761,
+          "compacidade": 0.045857,
+          "complexidade_borda": 0.018802
+        }
+      },
+      {
+        "arquivo": "3026.jpg",
+        "especie_id": "23",
+        "n_limitrofes": 3,
+        "atributos": [
+          "concavidade",
+          "compacidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "concavidade": 0.010421,
+          "compacidade": 0.03934,
+          "complexidade_borda": 0.024724
+        }
+      },
+      {
+        "arquivo": "3494.jpg",
+        "especie_id": "31",
+        "n_limitrofes": 3,
+        "atributos": [
+          "concavidade",
+          "compacidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "concavidade": 0.006348,
+          "compacidade": 0.033752,
+          "complexidade_borda": 0.008834
+        }
+      },
+      {
+        "arquivo": "3617.jpg",
+        "especie_id": "33",
+        "n_limitrofes": 3,
+        "atributos": [
+          "alongamento",
+          "concavidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "alongamento": 0.008068,
+          "concavidade": 0.022008,
+          "complexidade_borda": 0.01417
+        }
+      },
+      {
+        "arquivo": "1009.jpg",
+        "especie_id": "01",
+        "n_limitrofes": 2,
+        "atributos": [
+          "alongamento",
+          "concavidade"
+        ],
+        "margens": {
+          "alongamento": 0.019853,
+          "concavidade": 0.017792
+        }
+      },
+      {
+        "arquivo": "1109.jpg",
+        "especie_id": "02",
+        "n_limitrofes": 2,
+        "atributos": [
+          "concavidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "concavidade": 0.047343,
+          "complexidade_borda": 0.033292
+        }
+      },
+      {
+        "arquivo": "1559.jpg",
+        "especie_id": "03",
+        "n_limitrofes": 2,
+        "atributos": [
+          "alongamento",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "alongamento": 0.014237,
+          "complexidade_borda": 0.032347
+        }
+      },
+      {
+        "arquivo": "1560.jpg",
+        "especie_id": "03",
+        "n_limitrofes": 2,
+        "atributos": [
+          "alongamento",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "alongamento": 0.021007,
+          "complexidade_borda": 0.007042
+        }
+      },
+      {
+        "arquivo": "1125.jpg",
+        "especie_id": "04",
+        "n_limitrofes": 2,
+        "atributos": [
+          "concavidade",
+          "complexidade_borda"
+        ],
+        "margens": {
+          "concavidade": 0.043435,
+          "complexidade_borda": 0.025581
+        }
+      }
+    ]
+  },
+  "por_especie": {
+    "01": {
+      "especie": "Phyllostachys edulis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "1009.jpg",
+        "1023.jpg",
+        "1052.jpg"
+      ],
+      "mediana_elongacao": 7.040523,
+      "mediana_circularidade": 0.27855,
+      "mediana_solidez": 0.951651,
+      "mediana_razao_perimetro_hull": 1.059846
+    },
+    "02": {
+      "especie": "Aesculus chinensis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "1107.jpg",
+        "1109.jpg",
+        "1112.jpg"
+      ],
+      "mediana_elongacao": 2.477897,
+      "mediana_circularidade": 0.558433,
+      "mediana_solidez": 0.967659,
+      "mediana_razao_perimetro_hull": 1.10106
+    },
+    "03": {
+      "especie": "Berberis anhweiensis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "1559.jpg",
+        "1560.jpg",
+        "1587.jpg"
+      ],
+      "mediana_elongacao": 2.957289,
+      "mediana_circularidade": 0.527304,
+      "mediana_solidez": 0.974167,
+      "mediana_razao_perimetro_hull": 1.093448
+    },
+    "04": {
+      "especie": "Cercis chinensis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "1125.jpg",
+        "1163.jpg",
+        "1191.jpg"
+      ],
+      "mediana_elongacao": 1.090336,
+      "mediana_circularidade": 0.786895,
+      "mediana_solidez": 0.965442,
+      "mediana_razao_perimetro_hull": 1.071519
+    },
+    "05": {
+      "especie": "Indigofera tinctoria",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 0,
+      "com_erro": 0,
+      "arquivos": [
+        "1195.jpg",
+        "1199.jpg",
+        "1258.jpg"
+      ],
+      "mediana_elongacao": 2.186862,
+      "mediana_circularidade": 0.714091,
+      "mediana_solidez": 0.99384,
+      "mediana_razao_perimetro_hull": 1.057087
+    },
+    "06": {
+      "especie": "Acer palmatum",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "1269.jpg",
+        "1282.jpg",
+        "1302.jpg"
+      ],
+      "mediana_elongacao": 1.087629,
+      "mediana_circularidade": 0.107143,
+      "mediana_solidez": 0.468097,
+      "mediana_razao_perimetro_hull": 2.013162
+    },
+    "07": {
+      "especie": "Phoebe nanmu",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 0,
+      "com_erro": 0,
+      "arquivos": [
+        "1334.jpg",
+        "1358.jpg",
+        "1359.jpg"
+      ],
+      "mediana_elongacao": 3.335581,
+      "mediana_circularidade": 0.470045,
+      "mediana_solidez": 0.97085,
+      "mediana_razao_perimetro_hull": 1.058581
+    },
+    "08": {
+      "especie": "Kalopanax septemlobus",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "1392.jpg",
+        "1406.jpg",
+        "1416.jpg"
+      ],
+      "mediana_elongacao": 1.168356,
+      "mediana_circularidade": 0.331754,
+      "mediana_solidez": 0.689481,
+      "mediana_razao_perimetro_hull": 1.380901
+    },
+    "09": {
+      "especie": "Cinnamomum japonicum",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 1,
+      "com_erro": 0,
+      "arquivos": [
+        "1497.jpg",
+        "1502.jpg",
+        "1510.jpg"
+      ],
+      "mediana_elongacao": 2.85489,
+      "mediana_circularidade": 0.514569,
+      "mediana_solidez": 0.9773,
+      "mediana_razao_perimetro_hull": 1.062778
+    },
+    "10": {
+      "especie": "Koelreuteria paniculata",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "1443.jpg",
+        "1447.jpg",
+        "1490.jpg"
+      ],
+      "mediana_elongacao": 1.759935,
+      "mediana_circularidade": 0.429944,
+      "mediana_solidez": 0.93209,
+      "mediana_razao_perimetro_hull": 1.278064
+    },
+    "11": {
+      "especie": "Ilex macrocarpa",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "2001.jpg",
+        "2017.jpg",
+        "2024.jpg"
+      ],
+      "mediana_elongacao": 1.180278,
+      "mediana_circularidade": 0.730825,
+      "mediana_solidez": 0.982264,
+      "mediana_razao_perimetro_hull": 1.071233
+    },
+    "12": {
+      "especie": "Pittosporum tobira",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 1,
+      "com_erro": 0,
+      "arquivos": [
+        "2091.jpg",
+        "2094.jpg",
+        "2108.jpg"
+      ],
+      "mediana_elongacao": 2.13237,
+      "mediana_circularidade": 0.612375,
+      "mediana_solidez": 0.980276,
+      "mediana_razao_perimetro_hull": 1.066392
+    },
+    "14": {
+      "especie": "Chimonanthus praecox",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "2128.jpg",
+        "2158.jpg",
+        "2162.jpg"
+      ],
+      "mediana_elongacao": 2.036017,
+      "mediana_circularidade": 0.669214,
+      "mediana_solidez": 0.981483,
+      "mediana_razao_perimetro_hull": 1.062873
+    },
+    "15": {
+      "especie": "Cinnamomum camphora",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "2176.jpg",
+        "2189.jpg",
+        "2194.jpg"
+      ],
+      "mediana_elongacao": 1.624867,
+      "mediana_circularidade": 0.622099,
+      "mediana_solidez": 0.958101,
+      "mediana_razao_perimetro_hull": 1.06675
+    },
+    "16": {
+      "especie": "Viburnum awabuki",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "2278.jpg",
+        "2280.jpg",
+        "2286.jpg"
+      ],
+      "mediana_elongacao": 2.651748,
+      "mediana_circularidade": 0.534156,
+      "mediana_solidez": 0.983016,
+      "mediana_razao_perimetro_hull": 1.086475
+    },
+    "17": {
+      "especie": "Osmanthus fragrans",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "2302.jpg",
+        "2326.jpg",
+        "2327.jpg"
+      ],
+      "mediana_elongacao": 2.243365,
+      "mediana_circularidade": 0.58151,
+      "mediana_solidez": 0.968661,
+      "mediana_razao_perimetro_hull": 1.107048
+    },
+    "18": {
+      "especie": "Cedrus deodara",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "2353.jpg",
+        "2370.jpg",
+        "2417.jpg"
+      ],
+      "mediana_elongacao": 28.282403,
+      "mediana_circularidade": 0.070348,
+      "mediana_solidez": 0.633897,
+      "mediana_razao_perimetro_hull": 1.084178
+    },
+    "19": {
+      "especie": "Ginkgo biloba",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "2458.jpg",
+        "2460.jpg",
+        "2479.jpg"
+      ],
+      "mediana_elongacao": 1.708656,
+      "mediana_circularidade": 0.613995,
+      "mediana_solidez": 0.923966,
+      "mediana_razao_perimetro_hull": 1.108754
+    },
+    "20": {
+      "especie": "Lagerstroemia indica",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 1,
+      "com_erro": 0,
+      "arquivos": [
+        "2488.jpg",
+        "2514.jpg",
+        "2537.jpg"
+      ],
+      "mediana_elongacao": 1.470271,
+      "mediana_circularidade": 0.819812,
+      "mediana_solidez": 0.993564,
+      "mediana_razao_perimetro_hull": 1.064392
+    },
+    "21": {
+      "especie": "Nerium oleander",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "2557.jpg",
+        "2593.jpg",
+        "2594.jpg"
+      ],
+      "mediana_elongacao": 5.785516,
+      "mediana_circularidade": 0.311078,
+      "mediana_solidez": 0.988072,
+      "mediana_razao_perimetro_hull": 1.059394
+    },
+    "22": {
+      "especie": "Podocarpus macrophyllus",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 0,
+      "com_erro": 0,
+      "arquivos": [
+        "2625.jpg",
+        "2635.jpg",
+        "2642.jpg"
+      ],
+      "mediana_elongacao": 8.360541,
+      "mediana_circularidade": 0.236481,
+      "mediana_solidez": 0.973855,
+      "mediana_razao_perimetro_hull": 1.070264
+    },
+    "23": {
+      "especie": "Prunus serrulata",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "3026.jpg",
+        "3049.jpg",
+        "3053.jpg"
+      ],
+      "mediana_elongacao": 1.690248,
+      "mediana_circularidade": 0.470593,
+      "mediana_solidez": 0.909476,
+      "mediana_razao_perimetro_hull": 1.228073
+    },
+    "24": {
+      "especie": "Ligustrum lucidum",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 1,
+      "com_erro": 0,
+      "arquivos": [
+        "3061.jpg",
+        "3091.jpg",
+        "3109.jpg"
+      ],
+      "mediana_elongacao": 2.038631,
+      "mediana_circularidade": 0.701332,
+      "mediana_solidez": 0.988258,
+      "mediana_razao_perimetro_hull": 1.055938
+    },
+    "25": {
+      "especie": "Toona sinensis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "3136.jpg",
+        "3139.jpg",
+        "3150.jpg"
+      ],
+      "mediana_elongacao": 3.545211,
+      "mediana_circularidade": 0.366745,
+      "mediana_solidez": 0.903866,
+      "mediana_razao_perimetro_hull": 1.092824
+    },
+    "26": {
+      "especie": "Prunus persica",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 1,
+      "com_erro": 0,
+      "arquivos": [
+        "3194.jpg",
+        "3218.jpg",
+        "3226.jpg"
+      ],
+      "mediana_elongacao": 3.591219,
+      "mediana_circularidade": 0.431811,
+      "mediana_solidez": 0.9742,
+      "mediana_razao_perimetro_hull": 1.069793
+    },
+    "27": {
+      "especie": "Manglietia fordiana",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 0,
+      "com_erro": 0,
+      "arquivos": [
+        "3246.jpg",
+        "3255.jpg",
+        "3259.jpg"
+      ],
+      "mediana_elongacao": 3.851362,
+      "mediana_circularidade": 0.455449,
+      "mediana_solidez": 0.993618,
+      "mediana_razao_perimetro_hull": 1.05259
+    },
+    "28": {
+      "especie": "Acer buergerianum",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "3283.jpg",
+        "3317.jpg",
+        "3326.jpg"
+      ],
+      "mediana_elongacao": 1.115322,
+      "mediana_circularidade": 0.351589,
+      "mediana_solidez": 0.647042,
+      "mediana_razao_perimetro_hull": 1.246126
+    },
+    "29": {
+      "especie": "Mahonia bealei",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "3335.jpg",
+        "3336.jpg",
+        "3385.jpg"
+      ],
+      "mediana_elongacao": 1.39722,
+      "mediana_circularidade": 0.538674,
+      "mediana_solidez": 0.841535,
+      "mediana_razao_perimetro_hull": 1.175515
+    },
+    "30": {
+      "especie": "Magnolia grandiflora",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "3411.jpg",
+        "3416.jpg",
+        "3424.jpg"
+      ],
+      "mediana_elongacao": 2.440544,
+      "mediana_circularidade": 0.620591,
+      "mediana_solidez": 0.990672,
+      "mediana_razao_perimetro_hull": 1.056587
+    },
+    "31": {
+      "especie": "Populus x canadensis",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "3455.jpg",
+        "3494.jpg",
+        "3495.jpg"
+      ],
+      "mediana_elongacao": 1.021802,
+      "mediana_circularidade": 0.714799,
+      "mediana_solidez": 0.971721,
+      "mediana_razao_perimetro_hull": 1.099864
+    },
+    "32": {
+      "especie": "Liriodendron chinense",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 2,
+      "com_erro": 0,
+      "arquivos": [
+        "3514.jpg",
+        "3535.jpg",
+        "3560.jpg"
+      ],
+      "mediana_elongacao": 1.063707,
+      "mediana_circularidade": 0.582414,
+      "mediana_solidez": 0.862574,
+      "mediana_razao_perimetro_hull": 1.192
+    },
+    "33": {
+      "especie": "Citrus reticulata",
+      "imagens_previstas": 3,
+      "imagens_no_conjunto": 3,
+      "processadas_validas": 3,
+      "com_aviso_tecnico": 3,
+      "com_erro": 0,
+      "arquivos": [
+        "3581.jpg",
+        "3608.jpg",
+        "3617.jpg"
+      ],
+      "mediana_elongacao": 2.695901,
+      "mediana_circularidade": 0.496625,
+      "mediana_solidez": 0.942418,
+      "mediana_razao_perimetro_hull": 1.111045
+    }
+  },
+  "performance": {
+    "tempo_parede_por_imagem_ms": {
+      "n": 96,
+      "minimo": 201.2,
+      "p5": 229.49625,
+      "p25": 259.47075,
+      "mediana": 284.6885,
+      "media": 282.211094,
+      "p75": 306.21075,
+      "p95": 326.93825,
+      "maximo": 367.877,
+      "desvio_padrao": 32.686419
+    },
+    "tempo_pipeline_por_imagem_ms": {
+      "n": 96,
+      "minimo": 167.115,
+      "p5": 192.79275,
+      "p25": 216.2015,
+      "mediana": 240.9075,
+      "media": 237.194969,
+      "p75": 259.459,
+      "p95": 276.5445,
+      "maximo": 309.781,
+      "desvio_padrao": 28.003746
+    },
+    "por_etapa_ms": {
+      "redimensionamento": {
+        "n": 96,
+        "minimo": 4.918,
+        "p5": 5.03075,
+        "p25": 5.20975,
+        "mediana": 5.434,
+        "media": 7.783156,
+        "p75": 9.32325,
+        "p95": 14.23975,
+        "maximo": 23.795,
+        "desvio_padrao": 3.542107
+      },
+      "suavizacao": {
+        "n": 96,
+        "minimo": 1.153,
+        "p5": 1.288,
+        "p25": 1.383,
+        "mediana": 1.4475,
+        "media": 1.556479,
+        "p75": 1.58625,
+        "p95": 2.20475,
+        "maximo": 3.617,
+        "desvio_padrao": 0.357328
+      },
+      "segmentacao": {
+        "n": 96,
+        "minimo": 26.384,
+        "p5": 27.1,
+        "p25": 27.7115,
+        "mediana": 28.432,
+        "media": 29.430896,
+        "p75": 30.1125,
+        "p95": 34.69425,
+        "maximo": 51.176,
+        "desvio_padrao": 3.181362
+      },
+      "limpeza": {
+        "n": 96,
+        "minimo": 74.242,
+        "p5": 75.074,
+        "p25": 76.5595,
+        "mediana": 78.614,
+        "media": 80.177896,
+        "p75": 81.11575,
+        "p95": 87.76775,
+        "maximo": 127.236,
+        "desvio_padrao": 6.484803
+      },
+      "contornos": {
+        "n": 96,
+        "minimo": 19.925,
+        "p5": 20.30825,
+        "p25": 20.552,
+        "mediana": 20.794,
+        "media": 21.085302,
+        "p75": 21.58025,
+        "p95": 22.5105,
+        "maximo": 23.99,
+        "desvio_padrao": 0.774179
+      },
+      "caracteristicas": {
+        "n": 96,
+        "minimo": 38.081,
+        "p5": 55.046,
+        "p25": 78.72075,
+        "mediana": 100.059,
+        "media": 96.972458,
+        "p75": 117.934,
+        "p95": 130.35375,
+        "maximo": 134.76,
+        "desvio_padrao": 25.058871
+      },
+      "classificacao": {
+        "n": 96,
+        "minimo": 0.086,
+        "p5": 0.08775,
+        "p25": 0.093,
+        "mediana": 0.0995,
+        "media": 0.101375,
+        "p75": 0.10825,
+        "p95": 0.1225,
+        "maximo": 0.14,
+        "desvio_padrao": 0.011248
+      }
+    },
+    "observacao": "execução sem imagens intermediárias (salvar_imagens=False): 'visualizacao' não entra. tempo_parede inclui leitura do arquivo, que o pipeline não cronometra",
+    "tempo_total_96_s": 27.106
+  },
+  "determinismo": {
+    "imagens": 5,
+    "todas_identicas": true,
+    "casos": [
+      {
+        "indice": 0,
+        "arquivo": "1009.jpg",
+        "identico": true,
+        "blocos": {
+          "status": true,
+          "objeto": true,
+          "caracteristicas": true,
+          "classificacao": true,
+          "erro": true
+        }
+      },
+      {
+        "indice": 24,
+        "arquivo": "1497.jpg",
+        "identico": true,
+        "blocos": {
+          "status": true,
+          "objeto": true,
+          "caracteristicas": true,
+          "classificacao": true,
+          "erro": true
+        }
+      },
+      {
+        "indice": 48,
+        "arquivo": "2353.jpg",
+        "identico": true,
+        "blocos": {
+          "status": true,
+          "objeto": true,
+          "caracteristicas": true,
+          "classificacao": true,
+          "erro": true
+        }
+      },
+      {
+        "indice": 71,
+        "arquivo": "3150.jpg",
+        "identico": true,
+        "blocos": {
+          "status": true,
+          "objeto": true,
+          "caracteristicas": true,
+          "classificacao": true,
+          "erro": true
+        }
+      },
+      {
+        "indice": 95,
+        "arquivo": "3617.jpg",
+        "identico": true,
+        "blocos": {
+          "status": true,
+          "objeto": true,
+          "caracteristicas": true,
+          "classificacao": true,
+          "erro": true
+        }
+      }
+    ]
+  },
+  "inspecao_selecionada": [
+    {
+      "arquivo": "2370.jpg",
+      "indice": 49,
+      "especie_id": "18",
+      "motivos": "maior elongacao; menor circularidade"
+    },
+    {
+      "arquivo": "2353.jpg",
+      "indice": 48,
+      "especie_id": "18",
+      "motivos": "maior elongacao; menor circularidade"
+    },
+    {
+      "arquivo": "2417.jpg",
+      "indice": 50,
+      "especie_id": "18",
+      "motivos": "maior elongacao; menor circularidade"
+    },
+    {
+      "arquivo": "1302.jpg",
+      "indice": 17,
+      "especie_id": "06",
+      "motivos": "menor solidez; maior razao perimetro/hull"
+    },
+    {
+      "arquivo": "1282.jpg",
+      "indice": 16,
+      "especie_id": "06",
+      "motivos": "menor solidez; maior razao perimetro/hull"
+    },
+    {
+      "arquivo": "1269.jpg",
+      "indice": 15,
+      "especie_id": "06",
+      "motivos": "menor solidez; maior razao perimetro/hull"
+    },
+    {
+      "arquivo": "2194.jpg",
+      "indice": 41,
+      "especie_id": "15",
+      "motivos": "mais atributos limitrofes"
+    },
+    {
+      "arquivo": "2458.jpg",
+      "indice": 51,
+      "especie_id": "19",
+      "motivos": "mais atributos limitrofes"
+    },
+    {
+      "arquivo": "3026.jpg",
+      "indice": 63,
+      "especie_id": "23",
+      "motivos": "mais atributos limitrofes"
+    },
+    {
+      "arquivo": "1052.jpg",
+      "indice": 2,
+      "especie_id": "01",
+      "motivos": "controle sem aviso tecnico"
+    },
+    {
+      "arquivo": "1191.jpg",
+      "indice": 11,
+      "especie_id": "04",
+      "motivos": "controle sem aviso tecnico"
+    },
+    {
+      "arquivo": "1195.jpg",
+      "indice": 12,
+      "especie_id": "05",
+      "motivos": "controle sem aviso tecnico"
+    }
+  ]
+}

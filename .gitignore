@@ -79,6 +79,12 @@ processamento-imagens/resultados/*
 processamento-imagens/tmp/
 processamento-imagens/uploads/
 
+# Fotos externas da Fase 11: NUNCA versionadas (podem conter metadados da câmera,
+# localização ou elementos pessoais). O README e o manifesto são versionados; o
+# .gitkeep só mantém a pasta existindo num clone novo.
+processamento-imagens/fotos-externas/imagens/*
+!processamento-imagens/fotos-externas/imagens/.gitkeep
+
 
 # ----------------------------------------------------------------------------
 # Sistema operacional e editores

@@ -77,7 +77,7 @@ python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
-Esperado: **todos os testes passando** (746 na versão atual). Os testes não precisam do
+Esperado: **todos os testes passando** (881 na versão atual, mais 1 pulado no Windows). Os testes não precisam do
 dataset — usam imagens sintéticas geradas no próprio teste.
 
 Os testes de comportamento da página web (`tests/test_interface_web.py`) executam o

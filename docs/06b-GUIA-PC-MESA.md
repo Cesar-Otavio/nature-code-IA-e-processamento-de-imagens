@@ -27,7 +27,7 @@ nature-code-fase6-preparada-20260825.bundle      (~119 MB)
 > próprio hash. Ele é informado junto com o bundle — a conferência do passo 7 usa esse
 > valor.
 
-Ele está em `C:\Users\zrazo\Downloads\`. Copie para um pendrive.
+Ele está na pasta Downloads do computador onde foi gerado. Copie para um pendrive.
 
 ---
 

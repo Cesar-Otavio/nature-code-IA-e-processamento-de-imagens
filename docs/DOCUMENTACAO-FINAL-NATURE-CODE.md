@@ -66,7 +66,7 @@
 | | |
 |---|---|
 | **Nome** | Nature Code |
-| **Instituição** | Universidade Sagrado Coração — Bauru/SP |
+| **Instituição** | Universidade do Sagrado Coração — Bauru/SP |
 | **Curso** | Ciência da Computação |
 | **Disciplina** | Aplicações Digitais: Planejamento e Produção |
 | **Professor orientador** | Prof. Luiz Ricardo Mantovani da Silva |

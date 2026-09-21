@@ -1,7 +1,7 @@
 # File Tree: nature-site
 
 **Generated:** 10/24/2025, 8:27:50 PM
-**Root Path:** `c:\Users\zrazo\Desktop\nature-site`
+**Root Path:** `nature-site/` (raiz do projeto)
 
 ```
 ├── 📁 css
