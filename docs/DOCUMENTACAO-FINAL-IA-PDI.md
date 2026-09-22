@@ -9,8 +9,10 @@
 > fase.
 >
 > **Estado:** pipeline de PDI congelado em `fase-9-completa` (`4b66981`); avaliação final
-> (Fase 10) executada; robustez com fotos externas (Fase 11) com infraestrutura pronta e
-> aguardando fotos; inspeção humana e teste manual da interface pendentes.
+> (Fase 10) executada e inspeção humana dos 12 casos selecionados concluída (12/12
+> utilizáveis); robustez com imagens externas (Fase 11) executada e inspecionada —
+> **robustez externa limitada** (0 adequados, 2 parciais, 7 inadequados em 9); testes
+> manuais de interface, API, CLI e IA concluídos.
 
 ---
 
@@ -224,7 +226,7 @@ Documentação fase a fase em [`processamento-imagens/`](processamento-imagens/)
 | 8 | [`08-CLASSIFICACAO-DETERMINISTICA.md`](processamento-imagens/08-CLASSIFICACAO-DETERMINISTICA.md) | Regras e limiares |
 | 9 | [`09-PIPELINE-INTEGRACAO.md`](processamento-imagens/09-PIPELINE-INTEGRACAO.md) | Pipeline, CLI, API, interface |
 | 10 | [`10-AVALIACAO-FINAL.md`](processamento-imagens/10-AVALIACAO-FINAL.md) | Avaliação final congelada |
-| 11 | [`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md) | Robustez com fotos externas (infraestrutura) |
+| 11 | [`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md) | Robustez com imagens externas: execução, inspeção e conclusão |
 
 Regra que atravessa todas as fases: **uma fase por vez, medir antes de decidir, nenhum
 parâmetro escolhido por opinião**, e registrar os erros encontrados.
@@ -374,8 +376,10 @@ anotado com legenda), as medidas, a descrição e os avisos. Todo texto da API e
 página por `textContent`. Com a API desligada, a página explica como iniciá-la.
 
 O comportamento do JavaScript é testado no Node com DOM simulado (API fora, JSON inválido,
-URL maliciosa, tempo esgotado, troca de imagem). **A interface ainda não foi testada por
-uma pessoa no navegador.**
+URL maliciosa, tempo esgotado, troca de imagem). A interface também foi **testada
+manualmente no navegador** — upload, preview, processamento, troca e remoção de imagem,
+arquivo inválido, API offline e recuperação, celular, tablet e desktop
+([`TESTES-MANUAIS-FINAIS.md`](TESTES-MANUAIS-FINAIS.md) §2).
 
 ---
 
@@ -399,22 +403,64 @@ limiares de concavidade (0,70) e orientação (0,30) não estão vazios no conju
 avaliação (7 e 6 imagens); e o limiar de complexidade da borda (1,13) fica numa região
 densa, como a Fase 8 previa.
 
-> **Não é acurácia**: não há referência de verdade para as categorias. A inspeção humana
-> das segmentações está **pendente**. Ver [`10-AVALIACAO-FINAL.md`](processamento-imagens/10-AVALIACAO-FINAL.md).
+**Inspeção humana:** os 12 casos selecionados foram revisados — **12/12 considerados
+visualmente utilizáveis**, sem necessidade de correção do pipeline. As outras 84 imagens
+não foram inspecionadas individualmente.
+
+> **Não é acurácia**: não há referência de verdade para as categorias. Ver
+> [`10-AVALIACAO-FINAL.md`](processamento-imagens/10-AVALIACAO-FINAL.md).
 
 ---
 
 ## 23. Robustez — Fase 11
 
 ```text
-Status: infraestrutura pronta; avaliação externa aguardando fotos reais da equipe.
+Status: concluída — avaliação externa executada e inspecionada manualmente.
 ```
 
-Protocolo de **10 a 15 fotos reais** (preferência 12), variando fundo, iluminação, posição
-e distância, com inspeção humana de todas. Script, validação do manifesto, testes e
-documentação prontos; **nenhum resultado existe**. Ver
-[`11-PROTOCOLO-FOTOS-EXTERNAS.md`](processamento-imagens/11-PROTOCOLO-FOTOS-EXTERNAS.md) e
-[`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md).
+Pipeline congelado executado uma única vez sobre **9 imagens externas ao Flavia**, obtidas
+de fontes externas, convertidas para JPG e nunca usadas no desenvolvimento. Hashes do
+algoritmo idênticos antes e depois. Todas as 9 foram inspecionadas por uma pessoa.
+
+| Métrica              | Resultado |
+| -------------------- | --------: |
+| Imagens externas     |         9 |
+| Processadas          |         9 |
+| Erros                |         0 |
+| Resultado adequado   |         0 |
+| Resultado parcial    |         2 |
+| Resultado inadequado |         7 |
+
+*Resultado* = coluna `resultado_util` da inspeção humana.
+
+**Principais causas** (problema principal, por imagem):
+
+- fundo confundido com folha: 5
+- objeto secundário incorporado: 2
+- folha parcialmente perdida: 1
+- cor fora da faixa HSV: 1
+
+> **Sucesso operacional não é adequação visual.** 100 % de processamento significa só que
+> o pipeline chegou ao fim sem erro em todas as imagens; não significa que o objeto medido
+> seja a folha.
+
+**Conclusão.** O pipeline apresentou 100% de sucesso operacional nas 9 imagens externas,
+pois todas chegaram ao fim do processamento sem erro. Porém, a inspeção humana mostrou
+baixa robustez visual fora das condições controladas do Flavia: nenhum caso foi
+considerado totalmente adequado, 2 foram parcialmente utilizáveis e 7 inadequados. As
+principais limitações foram confusão entre fundo e folha, incorporação de objetos
+secundários, perda parcial da folha e cores fora da faixa HSV calibrada. Isso indica que o
+método funciona bem no domínio controlado para o qual foi desenvolvido, mas não generaliza
+de forma confiável para fotografias naturais complexas sem novas estratégias de
+segmentação.
+
+| | Flavia — Fase 10 | Externas — Fase 11 |
+|---|---|---|
+| Processamento sem erro | 96/96 | 9/9 |
+| Inspeção humana | 12/12 utilizáveis | 0 adequados · 2 parciais · 7 inadequados |
+
+Ver [`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md)
+e [`11-PROTOCOLO-FOTOS-EXTERNAS.md`](processamento-imagens/11-PROTOCOLO-FOTOS-EXTERNAS.md).
 
 ---
 
@@ -437,7 +483,7 @@ Testes em `processamento-imagens/tests/test_isolamento.py`.
 
 | Suíte | Resultado |
 |---|---|
-| PDI (`pytest`) | **881 passam, 1 pulado** — o link simbólico, sem permissão no Windows; a mesma checagem é coberta por outro teste |
+| PDI (`pytest`) | **886 passam, 1 pulado** — o link simbólico, sem permissão no Windows; a mesma checagem é coberta por outro teste |
 | IA (Node) | **256/256** |
 
 Os testes do PDI cobrem cada fase, o contrato JSON, a CLI, a API (inclusive segurança), o
@@ -456,10 +502,10 @@ e a integridade dos links da documentação. Os testes críticos foram verificad
 | R16 — EXIF e canal alfa | 🟢 Resolvido, com uma limitação (PNG com alfa e rotação EXIF) |
 | R32 — resumo textual contradizendo a categoria | 🟢 Resolvido na Fase 9 |
 | R14 / R22 — viés do perímetro e da área digitais | 🟡 Medido e documentado, não corrigido |
-| R19 — calibração só em folha verde e fundo claro | 🟠 Aberto — Fase 11 vai observar |
+| R19 — calibração só em folha verde e fundo claro | 🔴 **Confirmado na Fase 11** — 0/9 adequados fora do Flavia; não corrigido (pipeline congelado) |
 | R25 — concavidade ambígua em objeto curvado | 🟡 Tratado pela categoria `ambigua` |
 | R27 — descrição geométrica lida como botânica | 🟠 Mitigado por avisos na página, JSON e CLI |
-| R30 — interface sem validação manual | 🟠 Aberto |
+| R30 — interface sem validação manual | 🟢 Resolvido — testada manualmente no navegador |
 | R31 — servidor de desenvolvimento do Flask | 🟡 Adequado só a uso local |
 | R33 — `minAreaRect` desalinhado do eixo | 🟡 Observado, não alterado |
 
@@ -475,7 +521,9 @@ e a integridade dos links da documentação. Os testes críticos foram verificad
 - Perímetro digital com viés conhecido; `minAreaRect` pode divergir do eixo principal;
   `proporcao_verde` tem viés circular.
 - A cor depende da iluminação.
-- Avaliação externa com fotos reais: **pendente**.
+- **Robustez externa limitada** (Fase 11): em 9 imagens externas, 0 adequadas, 2 parciais,
+  7 inadequadas — fundo confundido com folha, objetos secundários, perda parcial, cor fora
+  da faixa HSV. Amostra pequena, sem controle de aquisição.
 - IA: depende do Ollama instalado e autenticado; não publicável em hospedagem nesta
   arquitetura; JSON Schema não respeitado por modelos `:cloud`; validação no cliente;
   leitura manual de ~12 % das questões.
@@ -530,18 +578,22 @@ determinística e com o algoritmo provadamente intacto. A avaliação também mo
 justificativas do desenvolvimento não se sustentam, e isso foi registrado em vez de
 corrigido.
 
-O que este trabalho **não** estabelece ainda: se as segmentações estão visualmente corretas
-(inspeção humana pendente) e como o pipeline se comporta em fotos reais fora do Flavia
-(Fase 11 pendente).
+A inspeção humana dos 12 casos selecionados da Fase 10 considerou todos utilizáveis. Fora
+do Flavia, porém, a Fase 11 mostrou o limite do método: o pipeline processou 9/9 imagens
+externas sem erro, mas **nenhuma** com resultado totalmente adequado (2 parciais, 7
+inadequadas). O método funciona no domínio controlado para o qual foi desenvolvido e não
+generaliza de forma confiável para fotografias naturais complexas.
 
 ---
 
 ## 31. Próximos passos
 
-1. Inspeção humana dos 12 casos selecionados na Fase 10.
-2. Fotos externas e execução da Fase 11.
-3. Teste manual da interface no navegador ([`TESTES-MANUAIS-FINAIS.md`](TESTES-MANUAIS-FINAIS.md)).
+1. ~~Inspeção humana dos 12 casos da Fase 10~~ — concluída: 12/12 `correta`,
+   registradas em `fase10-casos-inspecao.csv`.
+2. ~~Imagens externas e execução da Fase 11~~ — concluída.
+3. ~~Teste manual da interface~~ — concluído ([`TESTES-MANUAIS-FINAIS.md`](TESTES-MANUAIS-FINAIS.md)).
 4. Conferência final ([`CHECKLIST-ENTREGA-FINAL.md`](CHECKLIST-ENTREGA-FINAL.md)) e
    demonstração ([`ROTEIRO-DEMO.md`](ROTEIRO-DEMO.md)).
 5. Trabalho futuro, fora do escopo atual: benchmark completo do modelo local (IA);
-   eventual revisão do pipeline de PDI — que exigiria **novo conjunto de avaliação**.
+   segmentação de PDI robusta a fundos naturais (não só por cor) — que exigiria **novo
+   conjunto de avaliação**.

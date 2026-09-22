@@ -89,10 +89,25 @@ def test_verificar_e_inspecao_sem_fotos(ambiente, capsys: pytest.CaptureFixture)
     assert "Traceback" not in capsys.readouterr().out
 
 
-def test_manifesto_versionado_tem_so_o_cabecalho() -> None:
-    """O modelo real não contém dados inventados."""
-    linhas = (ext.RAIZ_MODULO / "fotos-externas" / "manifesto.csv").read_text(encoding="utf-8").splitlines()
-    assert linhas == [CABECALHO.strip()]
+def test_manifesto_versionado_corresponde_a_avaliacao_executada() -> None:
+    """O manifesto real não contém dados inventados.
+
+    Antes da execução da Fase 11 o manifesto tinha só o cabeçalho. Depois dela, cada linha
+    precisa ter correspondente, com o mesmo id e arquivo, nos resultados e na inspeção
+    humana versionados — uma linha sem avaliação seria dado inventado.
+    """
+    manifesto = ext.RAIZ_MODULO / "fotos-externas" / "manifesto.csv"
+    linhas = manifesto.read_text(encoding="utf-8").splitlines()
+    assert linhas[0] == CABECALHO.strip()
+
+    def pares(caminho: Path) -> list[tuple[str, str]]:
+        with caminho.open(encoding="utf-8-sig", newline="") as f:
+            return [(l["id"], l["arquivo"]) for l in csv.DictReader(f)]
+
+    saida = ext.RAIZ_REPOSITORIO / "docs" / "processamento-imagens" / "dados-robustez"
+    do_manifesto = pares(manifesto)
+    assert do_manifesto == pares(saida / "fase11-resultados.csv")
+    assert do_manifesto == pares(saida / "fase11-inspecao.csv")
 
 
 def test_pasta_de_imagens_real_nao_tem_fotos_versionadas() -> None:

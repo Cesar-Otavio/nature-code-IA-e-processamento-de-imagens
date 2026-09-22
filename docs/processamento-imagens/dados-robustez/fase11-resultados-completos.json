@@ -1,0 +1,3047 @@
+{
+  "metadados": {
+    "fase": 11,
+    "descricao": "robustez com fotos externas — pipeline congelado",
+    "commit": "6a9ff6071e03e708c99ac17a02358724fe2ce517",
+    "tag_congelada": "fase-9-completa",
+    "versao_pipeline": "1.0.0",
+    "inicio": "2026-09-21T21:38:04-03:00",
+    "fim": "2026-09-21T21:38:05-03:00",
+    "manifesto": "processamento-imagens/fotos-externas/manifesto.csv",
+    "pasta_imagens": "processamento-imagens/fotos-externas/imagens (não versionada)",
+    "imagens_intermediarias": "processamento-imagens/resultados/robustez-fase11/<id>/ (não versionada)",
+    "hashes_identicos_antes": true,
+    "hashes_identicos_depois": true
+  },
+  "resultados": [
+    {
+      "linha": {
+        "id": "EXT001",
+        "arquivo": "folha-01.jpg",
+        "fundo": "colorido",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 345,
+        "altura_original_px": 245,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.514191,
+        "numero_contornos": 7,
+        "dominancia": 0.916635,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 40991.0,
+        "elongacao": 1.09417,
+        "circularidade": 0.250743,
+        "solidez": 0.773276,
+        "razao_perimetro_hull": 1.554036,
+        "anisotropia": 0.335937,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.99154,
+        "cat_alongamento": "baixa",
+        "limitrofe_alongamento": false,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "baixa",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "complexa",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 0,
+        "tempo_pipeline_ms": 144.911,
+        "tempo_parede_ms": 149.436,
+        "n_avisos_tecnicos": 2,
+        "avisos": "multiplos_contornos | objeto_toca_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "253d39152a644a2dafc89a0a12b69ad1",
+        "entrada": {
+          "arquivo": "folha-01.jpg",
+          "formato": "JPG",
+          "largura_original_px": 345,
+          "altura_original_px": 245,
+          "largura_processada_px": 345,
+          "altura_processada_px": 245,
+          "bytes": 96292,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 144.911,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.014,
+            "suavizacao": 6.387,
+            "segmentacao": 24.336,
+            "limpeza": 8.882,
+            "contornos": 2.28,
+            "caracteristicas": 11.333,
+            "classificacao": 0.103,
+            "visualizacao": 91.461
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 7,
+          "dominancia": 0.916635,
+          "fracao_foreground": 0.514191,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 224,
+            "altura": 245
+          },
+          "bbox_rotacionada": {
+            "centro_x": 111.5,
+            "centro_y": 122.0,
+            "lado_maior": 244.0,
+            "lado_menor": 223.0,
+            "angulo_graus": 90.0,
+            "largura_bruta": 244.0,
+            "altura_bruta": 223.0,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 87.2264,
+            "y": 117.6704
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": false,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": -80.1125,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.335937
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 40991.0,
+            "area_mascara_px2": 43501,
+            "diferenca_area_px2": -2510.0,
+            "diferenca_area_pct": -5.77,
+            "perimetro_px": 1433.2935,
+            "largura_px": 224,
+            "altura_px": 245,
+            "lado_maior_px": 244.0,
+            "lado_menor_px": 223.0
+          },
+          "forma": {
+            "aspect_ratio": 0.914286,
+            "elongacao": 1.09417,
+            "circularidade": 0.250743,
+            "solidez": 0.773276,
+            "extent": 0.746921,
+            "extent_rotacionado": 0.753345
+          },
+          "orientacao": {
+            "angulo_graus": -80.1125,
+            "anisotropia": 0.335937,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 53009.5,
+            "perimetro_hull_px": 922.3042,
+            "pontos_hull": 6,
+            "razao_perimetro_hull": 1.554036
+          },
+          "cor": {
+            "media_rgb": [
+              128.18,
+              137.03,
+              48.98
+            ],
+            "mediana_rgb": [
+              126.0,
+              139.0,
+              15.0
+            ],
+            "media_hsv": [
+              32.96,
+              189.36,
+              137.85
+            ],
+            "mediana_hsv": [
+              33.0,
+              217.0,
+              140.0
+            ],
+            "proporcao_verde": 0.99154,
+            "pixels_analisados": 43501
+          },
+          "qualidade": {
+            "centroide_x_px": 87.2264,
+            "centroide_y_px": 117.6704,
+            "centroide_x_norm": 0.25283,
+            "centroide_y_norm": 0.480287,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 7,
+            "dominancia": 0.916635,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "multiplos_contornos",
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "baixa",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.09417
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.270553,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.773276,
+              "elongacao": 1.09417
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.10468,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.250743
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.373143,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "complexa",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.554036
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.195412,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.335937,
+              "angulo_graus": -80.1125
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.11979,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha pouco alongada, geometricamente pouco compacta, com reentrâncias moderadas, de contorno complexo (muito irregular) e com eixo principal bem definido.",
+          "avisos": [
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "multiplos_contornos",
+          "objeto_toca_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT002",
+        "arquivo": "folha-02.jpg",
+        "fundo": "irregular",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 362,
+        "altura_original_px": 241,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.99506,
+        "numero_contornos": 1,
+        "dominancia": 1.0,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 86596.5,
+        "elongacao": 1.504167,
+        "circularidade": 0.725896,
+        "solidez": 0.999498,
+        "razao_perimetro_hull": 1.018623,
+        "anisotropia": 0.387035,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.992661,
+        "cat_alongamento": "moderada",
+        "limitrofe_alongamento": true,
+        "cat_concavidade": "baixa",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "alta",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "regular",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 1,
+        "tempo_pipeline_ms": 87.69,
+        "tempo_parede_ms": 92.188,
+        "n_avisos_tecnicos": 2,
+        "avisos": "objeto_toca_borda | atributos proximos de um limiar: alongamento | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "41f7cad522df4f31b33033715258d14e",
+        "entrada": {
+          "arquivo": "folha-02.jpg",
+          "formato": "JPG",
+          "largura_original_px": 362,
+          "altura_original_px": 241,
+          "largura_processada_px": 362,
+          "altura_processada_px": 241,
+          "bytes": 84205,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 87.69,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.014,
+            "suavizacao": 0.465,
+            "segmentacao": 4.549,
+            "limpeza": 10.444,
+            "contornos": 1.966,
+            "caracteristicas": 18.121,
+            "classificacao": 0.089,
+            "visualizacao": 51.937
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 1,
+          "dominancia": 1.0,
+          "fracao_foreground": 0.99506,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 362,
+            "altura": 241
+          },
+          "bbox_rotacionada": {
+            "centro_x": 180.5,
+            "centro_y": 120.0,
+            "lado_maior": 361.0,
+            "lado_menor": 240.0,
+            "angulo_graus": 0.0,
+            "largura_bruta": 240.0,
+            "altura_bruta": 361.0,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 180.4717,
+            "y": 120.0127
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": 0.0144,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.387035
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 86596.5,
+            "area_mascara_px2": 87207,
+            "diferenca_area_px2": -610.5,
+            "diferenca_area_pct": -0.7001,
+            "perimetro_px": 1224.3848,
+            "largura_px": 362,
+            "altura_px": 241,
+            "lado_maior_px": 361.0,
+            "lado_menor_px": 240.0
+          },
+          "forma": {
+            "aspect_ratio": 1.502075,
+            "elongacao": 1.504167,
+            "circularidade": 0.725896,
+            "solidez": 0.999498,
+            "extent": 0.992601,
+            "extent_rotacionado": 0.999498
+          },
+          "orientacao": {
+            "angulo_graus": 0.0144,
+            "anisotropia": 0.387035,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 86640.0,
+            "perimetro_hull_px": 1202.0,
+            "pontos_hull": 4,
+            "razao_perimetro_hull": 1.018623
+          },
+          "cor": {
+            "media_rgb": [
+              111.04,
+              125.98,
+              49.98
+            ],
+            "mediana_rgb": [
+              108.0,
+              125.0,
+              44.0
+            ],
+            "media_hsv": [
+              36.49,
+              144.3,
+              125.99
+            ],
+            "mediana_hsv": [
+              36.0,
+              149.0,
+              125.0
+            ],
+            "proporcao_verde": 0.992661,
+            "pixels_analisados": 87207
+          },
+          "qualidade": {
+            "centroide_x_px": 180.4717,
+            "centroide_y_px": 120.0127,
+            "centroide_x_norm": 0.498541,
+            "centroide_y_norm": 0.497978,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 1,
+            "dominancia": 1.0,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "moderada",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.504167
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.002778,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.999498,
+              "elongacao": 1.504167
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.086411,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "alta",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.725896
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.116763,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "regular",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.018623
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.098564,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.387035,
+              "angulo_graus": 0.0144
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.290117,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha moderadamente alongada, geometricamente compacta, sem reentrâncias profundas, de contorno regular e com eixo principal bem definido.",
+          "avisos": [
+            "atributos proximos de um limiar: alongamento",
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "objeto_toca_borda",
+          "atributos proximos de um limiar: alongamento",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT003",
+        "arquivo": "folha-03.jpg",
+        "fundo": "colorido",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 352,
+        "altura_original_px": 235,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.015921,
+        "numero_contornos": 35,
+        "dominancia": 0.384019,
+        "toca_borda": false,
+        "distancia_minima_borda_px": 27,
+        "area_contorno_px2": 396.5,
+        "elongacao": 1.465117,
+        "circularidade": 0.546348,
+        "solidez": 0.863834,
+        "razao_perimetro_hull": 1.174598,
+        "anisotropia": 0.38954,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.889901,
+        "cat_alongamento": "baixa",
+        "limitrofe_alongamento": true,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "moderada",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "moderada",
+        "limitrofe_complexidade_borda": true,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 2,
+        "tempo_pipeline_ms": 65.959,
+        "tempo_parede_ms": 70.217,
+        "n_avisos_tecnicos": 3,
+        "avisos": "selecao_ambigua | multiplos_contornos | atributos proximos de um limiar: alongamento, complexidade_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "5d08e565e85248c0a43153c63a3fb907",
+        "entrada": {
+          "arquivo": "folha-03.jpg",
+          "formato": "JPG",
+          "largura_original_px": 352,
+          "altura_original_px": 235,
+          "largura_processada_px": 352,
+          "altura_processada_px": 235,
+          "bytes": 81496,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 65.959,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.011,
+            "suavizacao": 0.399,
+            "segmentacao": 3.333,
+            "limpeza": 7.49,
+            "contornos": 2.383,
+            "caracteristicas": 3.194,
+            "classificacao": 0.069,
+            "visualizacao": 49.017
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 35,
+          "dominancia": 0.384019,
+          "fracao_foreground": 0.015921,
+          "bbox": {
+            "x": 270,
+            "y": 183,
+            "largura": 28,
+            "altura": 25
+          },
+          "bbox_rotacionada": {
+            "centro_x": 281.5,
+            "centro_y": 194.5,
+            "lado_maior": 28.1745,
+            "lado_menor": 19.2302,
+            "angulo_graus": 153.4349,
+            "largura_bruta": 28.1745,
+            "altura_bruta": 19.2302,
+            "angulo_bruto": -26.5651
+          },
+          "centroide": {
+            "x": 282.6633,
+            "y": 194.7188
+          },
+          "toca_borda": {
+            "topo": false,
+            "base": false,
+            "esquerda": false,
+            "direita": false,
+            "qualquer": false
+          },
+          "distancia_minima_borda_px": 27,
+          "orientacao_graus": -33.1964,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.38954
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 396.5,
+            "area_mascara_px2": 1317,
+            "diferenca_area_px2": -920.5,
+            "diferenca_area_pct": -69.8937,
+            "perimetro_px": 95.4975,
+            "largura_px": 28,
+            "altura_px": 25,
+            "lado_maior_px": 28.1745,
+            "lado_menor_px": 19.2302
+          },
+          "forma": {
+            "aspect_ratio": 1.12,
+            "elongacao": 1.465117,
+            "circularidade": 0.546348,
+            "solidez": 0.863834,
+            "extent": 0.566429,
+            "extent_rotacionado": 0.731818
+          },
+          "orientacao": {
+            "angulo_graus": -33.1964,
+            "anisotropia": 0.38954,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 459.0,
+            "perimetro_hull_px": 81.3023,
+            "pontos_hull": 14,
+            "razao_perimetro_hull": 1.174598
+          },
+          "cor": {
+            "media_rgb": [
+              101.04,
+              87.21,
+              13.95
+            ],
+            "mediana_rgb": [
+              104.0,
+              89.0,
+              10.0
+            ],
+            "media_hsv": [
+              25.41,
+              219.89,
+              101.05
+            ],
+            "mediana_hsv": [
+              25.0,
+              229.0,
+              104.0
+            ],
+            "proporcao_verde": 0.889901,
+            "pixels_analisados": 1317
+          },
+          "qualidade": {
+            "centroide_x_px": 282.6633,
+            "centroide_y_px": 194.7188,
+            "centroide_x_norm": 0.803021,
+            "centroide_y_norm": 0.828591,
+            "toca_borda": false,
+            "distancia_minima_borda_px": 27,
+            "numero_contornos": 35,
+            "dominancia": 0.384019,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "selecao_ambigua",
+            "multiplos_contornos"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "baixa",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.465117
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.023255,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.863834,
+              "elongacao": 1.465117
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.06105,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.546348
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.159465,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "moderada",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.174598
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.039467,
+            "limitrofe": true,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.38954,
+              "angulo_graus": -33.1964
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.298467,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha pouco alongada, de compacidade intermediária, com reentrâncias moderadas, de contorno moderadamente irregular e com eixo principal bem definido.",
+          "avisos": [
+            "atributos proximos de um limiar: alongamento, complexidade_borda",
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "selecao_ambigua",
+          "multiplos_contornos",
+          "atributos proximos de um limiar: alongamento, complexidade_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT004",
+        "arquivo": "folha-04.jpg",
+        "fundo": "claro",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 387,
+        "altura_original_px": 241,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.998746,
+        "numero_contornos": 1,
+        "dominancia": 1.0,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 92539.0,
+        "elongacao": 1.608333,
+        "circularidade": 0.684662,
+        "solidez": 0.998996,
+        "razao_perimetro_hull": 1.042399,
+        "anisotropia": 0.442396,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.996523,
+        "cat_alongamento": "moderada",
+        "limitrofe_alongamento": false,
+        "cat_concavidade": "baixa",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "alta",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "regular",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 0,
+        "tempo_pipeline_ms": 85.172,
+        "tempo_parede_ms": 90.305,
+        "n_avisos_tecnicos": 1,
+        "avisos": "objeto_toca_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "cd6a41ce1706491fa7c4f0c99e414ba9",
+        "entrada": {
+          "arquivo": "folha-04.jpg",
+          "formato": "JPG",
+          "largura_original_px": 387,
+          "altura_original_px": 241,
+          "largura_processada_px": 387,
+          "altura_processada_px": 241,
+          "bytes": 95320,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 85.172,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.011,
+            "suavizacao": 0.292,
+            "segmentacao": 4.122,
+            "limpeza": 9.189,
+            "contornos": 2.012,
+            "caracteristicas": 21.672,
+            "classificacao": 0.072,
+            "visualizacao": 47.742
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 1,
+          "dominancia": 1.0,
+          "fracao_foreground": 0.998746,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 387,
+            "altura": 241
+          },
+          "bbox_rotacionada": {
+            "centro_x": 193.0,
+            "centro_y": 120.0,
+            "lado_maior": 386.0,
+            "lado_menor": 240.0,
+            "angulo_graus": 0.0,
+            "largura_bruta": 240.0,
+            "altura_bruta": 386.0,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 193.1978,
+            "y": 120.1229
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": -0.1682,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.442396
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 92539.0,
+            "area_mascara_px2": 93185,
+            "diferenca_area_px2": -646.0,
+            "diferenca_area_pct": -0.6932,
+            "perimetro_px": 1303.2548,
+            "largura_px": 387,
+            "altura_px": 241,
+            "lado_maior_px": 386.0,
+            "lado_menor_px": 240.0
+          },
+          "forma": {
+            "aspect_ratio": 1.605809,
+            "elongacao": 1.608333,
+            "circularidade": 0.684662,
+            "solidez": 0.998996,
+            "extent": 0.992194,
+            "extent_rotacionado": 0.99891
+          },
+          "orientacao": {
+            "angulo_graus": -0.1682,
+            "anisotropia": 0.442396,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 92632.0,
+            "perimetro_hull_px": 1250.2462,
+            "pontos_hull": 5,
+            "razao_perimetro_hull": 1.042399
+          },
+          "cor": {
+            "media_rgb": [
+              127.09,
+              174.05,
+              55.77
+            ],
+            "mediana_rgb": [
+              129.0,
+              176.0,
+              73.0
+            ],
+            "media_hsv": [
+              43.25,
+              176.42,
+              174.08
+            ],
+            "mediana_hsv": [
+              43.0,
+              157.0,
+              176.0
+            ],
+            "proporcao_verde": 0.996523,
+            "pixels_analisados": 93185
+          },
+          "qualidade": {
+            "centroide_x_px": 193.1978,
+            "centroide_y_px": 120.1229,
+            "centroide_x_norm": 0.499219,
+            "centroide_y_norm": 0.498435,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 1,
+            "dominancia": 1.0,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "moderada",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.608333
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.072222,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.998996,
+              "elongacao": 1.608333
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.085865,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "alta",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.684662
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.053326,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "regular",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.042399
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.077523,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.442396,
+              "angulo_graus": -0.1682
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.474653,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha moderadamente alongada, geometricamente compacta, sem reentrâncias profundas, de contorno regular e com eixo principal bem definido.",
+          "avisos": [
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "objeto_toca_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT005",
+        "arquivo": "folha-05.jpg",
+        "fundo": "irregular",
+        "iluminacao": "desigual",
+        "posicao": "deslocada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 338,
+        "altura_original_px": 234,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.624147,
+        "numero_contornos": 9,
+        "dominancia": 0.94035,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 46473.5,
+        "elongacao": 1.446352,
+        "circularidade": 0.167368,
+        "solidez": 0.75646,
+        "razao_perimetro_hull": 1.881335,
+        "anisotropia": 0.554319,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.951792,
+        "cat_alongamento": "baixa",
+        "limitrofe_alongamento": true,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "baixa",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "complexa",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 1,
+        "tempo_pipeline_ms": 80.055,
+        "tempo_parede_ms": 84.197,
+        "n_avisos_tecnicos": 5,
+        "avisos": "variacao_area_acima_de_1pct | iou_abaixo_de_0_99 | multiplos_contornos | objeto_toca_borda | atributos proximos de um limiar: alongamento | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "36fa5ac23cb04d9ab8962c21fd2e39ac",
+        "entrada": {
+          "arquivo": "folha-05.jpg",
+          "formato": "JPG",
+          "largura_original_px": 338,
+          "altura_original_px": 234,
+          "largura_processada_px": 338,
+          "altura_processada_px": 234,
+          "bytes": 78697,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 80.055,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.011,
+            "suavizacao": 0.244,
+            "segmentacao": 3.659,
+            "limpeza": 13.624,
+            "contornos": 2.288,
+            "caracteristicas": 12.262,
+            "classificacao": 0.068,
+            "visualizacao": 47.836
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 9,
+          "dominancia": 0.94035,
+          "fracao_foreground": 0.624147,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 338,
+            "altura": 234
+          },
+          "bbox_rotacionada": {
+            "centro_x": 168.5,
+            "centro_y": 116.5,
+            "lado_maior": 336.9999,
+            "lado_menor": 233.0,
+            "angulo_graus": 0.0,
+            "largura_bruta": 233.0,
+            "altura_bruta": 336.9999,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 161.3018,
+            "y": 137.3263
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": -29.5505,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.554319
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 46473.5,
+            "area_mascara_px2": 49992,
+            "diferenca_area_px2": -3518.5,
+            "diferenca_area_pct": -7.0381,
+            "perimetro_px": 1867.9768,
+            "largura_px": 338,
+            "altura_px": 234,
+            "lado_maior_px": 336.9999,
+            "lado_menor_px": 233.0
+          },
+          "forma": {
+            "aspect_ratio": 1.444444,
+            "elongacao": 1.446352,
+            "circularidade": 0.167368,
+            "solidez": 0.75646,
+            "extent": 0.587588,
+            "extent_rotacionado": 0.591861
+          },
+          "orientacao": {
+            "angulo_graus": -29.5505,
+            "anisotropia": 0.554319,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 61435.5,
+            "perimetro_hull_px": 992.8995,
+            "pontos_hull": 9,
+            "razao_perimetro_hull": 1.881335
+          },
+          "cor": {
+            "media_rgb": [
+              135.72,
+              140.61,
+              70.9
+            ],
+            "mediana_rgb": [
+              147.0,
+              155.0,
+              67.0
+            ],
+            "media_hsv": [
+              31.15,
+              119.51,
+              141.26
+            ],
+            "mediana_hsv": [
+              32.0,
+              123.0,
+              156.0
+            ],
+            "proporcao_verde": 0.951792,
+            "pixels_analisados": 49992
+          },
+          "qualidade": {
+            "centroide_x_px": 161.3018,
+            "centroide_y_px": 137.3263,
+            "centroide_x_norm": 0.477224,
+            "centroide_y_norm": 0.586865,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 9,
+            "dominancia": 0.94035,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "multiplos_contornos",
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "baixa",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.446352
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.035765,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.75646,
+              "elongacao": 1.446352
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.080657,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.167368
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.58158,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "complexa",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.881335
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.447181,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.554319,
+              "angulo_graus": -29.5505
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.84773,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha pouco alongada, geometricamente pouco compacta, com reentrâncias moderadas, de contorno complexo (muito irregular) e com eixo principal bem definido.",
+          "avisos": [
+            "atributos proximos de um limiar: alongamento",
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "variacao_area_acima_de_1pct",
+          "iou_abaixo_de_0_99",
+          "multiplos_contornos",
+          "objeto_toca_borda",
+          "atributos proximos de um limiar: alongamento",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT006",
+        "arquivo": "folha-06.jpg",
+        "fundo": "colorido",
+        "iluminacao": "natural",
+        "posicao": "proxima_borda",
+        "distancia": "grande",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 332,
+        "altura_original_px": 249,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.585547,
+        "numero_contornos": 2,
+        "dominancia": 0.934265,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 44542.5,
+        "elongacao": 1.250304,
+        "circularidade": 0.282706,
+        "solidez": 0.829577,
+        "razao_perimetro_hull": 1.587801,
+        "anisotropia": 0.224472,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.993018,
+        "cat_alongamento": "baixa",
+        "limitrofe_alongamento": false,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "baixa",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "complexa",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "pouco_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 0,
+        "tempo_pipeline_ms": 79.705,
+        "tempo_parede_ms": 84.675,
+        "n_avisos_tecnicos": 2,
+        "avisos": "multiplos_contornos | objeto_toca_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "1fcdec5a522c42fdaf6437b8cf2e9f47",
+        "entrada": {
+          "arquivo": "folha-06.jpg",
+          "formato": "JPG",
+          "largura_original_px": 332,
+          "altura_original_px": 249,
+          "largura_processada_px": 332,
+          "altura_processada_px": 249,
+          "bytes": 108640,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 79.705,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.011,
+            "suavizacao": 0.393,
+            "segmentacao": 3.67,
+            "limpeza": 7.49,
+            "contornos": 2.029,
+            "caracteristicas": 12.223,
+            "classificacao": 0.084,
+            "visualizacao": 53.73
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 2,
+          "dominancia": 0.934265,
+          "fracao_foreground": 0.585547,
+          "bbox": {
+            "x": 26,
+            "y": 9,
+            "largura": 306,
+            "altura": 240
+          },
+          "bbox_rotacionada": {
+            "centro_x": 216.2901,
+            "centro_y": 151.9141,
+            "lado_maior": 298.9326,
+            "lado_menor": 239.088,
+            "angulo_graus": 37.2236,
+            "largura_bruta": 239.088,
+            "altura_bruta": 298.9326,
+            "angulo_bruto": -52.7764
+          },
+          "centroide": {
+            "x": 198.4716,
+            "y": 135.1817
+          },
+          "toca_borda": {
+            "topo": false,
+            "base": true,
+            "esquerda": false,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": 22.27,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.224472
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 44542.5,
+            "area_mascara_px2": 48409,
+            "diferenca_area_px2": -3866.5,
+            "diferenca_area_pct": -7.9872,
+            "perimetro_px": 1407.0996,
+            "largura_px": 306,
+            "altura_px": 240,
+            "lado_maior_px": 298.9326,
+            "lado_menor_px": 239.088
+          },
+          "forma": {
+            "aspect_ratio": 1.275,
+            "elongacao": 1.250304,
+            "circularidade": 0.282706,
+            "solidez": 0.829577,
+            "extent": 0.606516,
+            "extent_rotacionado": 0.623223
+          },
+          "orientacao": {
+            "angulo_graus": 22.27,
+            "anisotropia": 0.224472,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 53693.0,
+            "perimetro_hull_px": 886.1939,
+            "pontos_hull": 18,
+            "razao_perimetro_hull": 1.587801
+          },
+          "cor": {
+            "media_rgb": [
+              67.01,
+              99.36,
+              15.75
+            ],
+            "mediana_rgb": [
+              68.0,
+              101.0,
+              10.0
+            ],
+            "media_hsv": [
+              42.88,
+              219.5,
+              99.39
+            ],
+            "mediana_hsv": [
+              41.0,
+              229.0,
+              101.0
+            ],
+            "proporcao_verde": 0.993018,
+            "pixels_analisados": 48409
+          },
+          "qualidade": {
+            "centroide_x_px": 198.4716,
+            "centroide_y_px": 135.1817,
+            "centroide_x_norm": 0.597806,
+            "centroide_y_norm": 0.542898,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 2,
+            "dominancia": 0.934265,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "multiplos_contornos",
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "baixa",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.250304
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.166464,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.829577,
+              "elongacao": 1.250304
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.098286,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.282706
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.293235,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "complexa",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.587801
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.221385,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "pouco_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.224472,
+              "angulo_graus": 22.27
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.25176,
+            "limitrofe": false,
+            "observacoes": [
+              "anisotropia de 0.2245: eixo existe, mas é fraco — o ângulo pode variar com pequenas alterações da borda"
+            ]
+          },
+          "resumo": "Folha pouco alongada, geometricamente pouco compacta, com reentrâncias moderadas, de contorno complexo (muito irregular) e com eixo principal pouco definido.",
+          "avisos": [
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "multiplos_contornos",
+          "objeto_toca_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT007",
+        "arquivo": "folha-07.jpg",
+        "fundo": "irregular",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 367,
+        "altura_original_px": 243,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.842478,
+        "numero_contornos": 1,
+        "dominancia": 1.0,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 75056.0,
+        "elongacao": 1.512396,
+        "circularidade": 0.186019,
+        "solidez": 0.847401,
+        "razao_perimetro_hull": 1.851763,
+        "anisotropia": 0.439688,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.993955,
+        "cat_alongamento": "moderada",
+        "limitrofe_alongamento": true,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "baixa",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "complexa",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 1,
+        "tempo_pipeline_ms": 92.985,
+        "tempo_parede_ms": 98.215,
+        "n_avisos_tecnicos": 2,
+        "avisos": "objeto_toca_borda | atributos proximos de um limiar: alongamento | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "adef9283ee4642a59b35bbca6818c610",
+        "entrada": {
+          "arquivo": "folha-07.jpg",
+          "formato": "JPG",
+          "largura_original_px": 367,
+          "altura_original_px": 243,
+          "largura_processada_px": 367,
+          "altura_processada_px": 243,
+          "bytes": 91244,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 92.985,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.013,
+            "suavizacao": 0.355,
+            "segmentacao": 4.619,
+            "limpeza": 9.785,
+            "contornos": 3.903,
+            "caracteristicas": 18.288,
+            "classificacao": 0.068,
+            "visualizacao": 55.866
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 1,
+          "dominancia": 1.0,
+          "fracao_foreground": 0.842478,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 367,
+            "altura": 243
+          },
+          "bbox_rotacionada": {
+            "centro_x": 183.0,
+            "centro_y": 121.0,
+            "lado_maior": 365.9999,
+            "lado_menor": 242.0,
+            "angulo_graus": 0.0,
+            "largura_bruta": 242.0,
+            "altura_bruta": 365.9999,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 183.4108,
+            "y": 132.4865
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": -4.7938,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.439688
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 75056.0,
+            "area_mascara_px2": 75264,
+            "diferenca_area_px2": -208.0,
+            "diferenca_area_pct": -0.2764,
+            "perimetro_px": 2251.7443,
+            "largura_px": 367,
+            "altura_px": 243,
+            "lado_maior_px": 365.9999,
+            "lado_menor_px": 242.0
+          },
+          "forma": {
+            "aspect_ratio": 1.510288,
+            "elongacao": 1.512396,
+            "circularidade": 0.186019,
+            "solidez": 0.847401,
+            "extent": 0.841614,
+            "extent_rotacionado": 0.847401
+          },
+          "orientacao": {
+            "angulo_graus": -4.7938,
+            "anisotropia": 0.439688,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 88572.0,
+            "perimetro_hull_px": 1216.0,
+            "pontos_hull": 4,
+            "razao_perimetro_hull": 1.851763
+          },
+          "cor": {
+            "media_rgb": [
+              104.69,
+              143.46,
+              65.02
+            ],
+            "mediana_rgb": [
+              101.0,
+              143.0,
+              58.0
+            ],
+            "media_hsv": [
+              45.11,
+              145.33,
+              143.56
+            ],
+            "mediana_hsv": [
+              45.0,
+              144.0,
+              143.0
+            ],
+            "proporcao_verde": 0.993955,
+            "pixels_analisados": 75264
+          },
+          "qualidade": {
+            "centroide_x_px": 183.4108,
+            "centroide_y_px": 132.4865,
+            "centroide_x_norm": 0.499757,
+            "centroide_y_norm": 0.545212,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 1,
+            "dominancia": 1.0,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "moderada",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.512396
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.008264,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.847401,
+              "elongacao": 1.512396
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.078912,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.186019
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.534953,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "complexa",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.851763
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.424433,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.439688,
+              "angulo_graus": -4.7938
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.465627,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha moderadamente alongada, geometricamente pouco compacta, com reentrâncias moderadas, de contorno complexo (muito irregular) e com eixo principal bem definido.",
+          "avisos": [
+            "atributos proximos de um limiar: alongamento",
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "objeto_toca_borda",
+          "atributos proximos de um limiar: alongamento",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT008",
+        "arquivo": "folha-08.jpg",
+        "fundo": "irregular",
+        "iluminacao": "natural",
+        "posicao": "centralizada",
+        "distancia": "media",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 378,
+        "altura_original_px": 252,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.939878,
+        "numero_contornos": 2,
+        "dominancia": 0.991499,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 89051.5,
+        "elongacao": 1.501992,
+        "circularidade": 0.473611,
+        "solidez": 0.960626,
+        "razao_perimetro_hull": 1.256888,
+        "anisotropia": 0.39601,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.982771,
+        "cat_alongamento": "moderada",
+        "limitrofe_alongamento": true,
+        "cat_concavidade": "baixa",
+        "limitrofe_concavidade": true,
+        "cat_compacidade": "moderada",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "moderada",
+        "limitrofe_complexidade_borda": true,
+        "cat_orientacao": "bem_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 3,
+        "tempo_pipeline_ms": 101.742,
+        "tempo_parede_ms": 107.211,
+        "n_avisos_tecnicos": 5,
+        "avisos": "variacao_area_acima_de_1pct | iou_abaixo_de_0_99 | multiplos_contornos | objeto_toca_borda | atributos proximos de um limiar: alongamento, concavidade, complexidade_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "ee60e816abd6447faf5419a9cff1bc6f",
+        "entrada": {
+          "arquivo": "folha-08.jpg",
+          "formato": "JPG",
+          "largura_original_px": 378,
+          "altura_original_px": 252,
+          "largura_processada_px": 378,
+          "altura_processada_px": 252,
+          "bytes": 127211,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 101.742,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.014,
+            "suavizacao": 0.424,
+            "segmentacao": 5.05,
+            "limpeza": 13.003,
+            "contornos": 2.523,
+            "caracteristicas": 21.203,
+            "classificacao": 0.07,
+            "visualizacao": 59.366
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 2,
+          "dominancia": 0.991499,
+          "fracao_foreground": 0.939878,
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "largura": 378,
+            "altura": 252
+          },
+          "bbox_rotacionada": {
+            "centro_x": 188.5,
+            "centro_y": 125.5,
+            "lado_maior": 377.0,
+            "lado_menor": 251.0,
+            "angulo_graus": 0.0,
+            "largura_bruta": 251.0,
+            "altura_bruta": 377.0,
+            "angulo_bruto": -90.0
+          },
+          "centroide": {
+            "x": 192.64,
+            "y": 126.5629
+          },
+          "toca_borda": {
+            "topo": true,
+            "base": true,
+            "esquerda": true,
+            "direita": true,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": -5.5785,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.39601
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 89051.5,
+            "area_mascara_px2": 90605,
+            "diferenca_area_px2": -1553.5,
+            "diferenca_area_pct": -1.7146,
+            "perimetro_px": 1537.1442,
+            "largura_px": 378,
+            "altura_px": 252,
+            "lado_maior_px": 377.0,
+            "lado_menor_px": 251.0
+          },
+          "forma": {
+            "aspect_ratio": 1.5,
+            "elongacao": 1.501992,
+            "circularidade": 0.473611,
+            "solidez": 0.960626,
+            "extent": 0.934865,
+            "extent_rotacionado": 0.941079
+          },
+          "orientacao": {
+            "angulo_graus": -5.5785,
+            "anisotropia": 0.39601,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 92701.5,
+            "perimetro_hull_px": 1222.9765,
+            "pontos_hull": 6,
+            "razao_perimetro_hull": 1.256888
+          },
+          "cor": {
+            "media_rgb": [
+              40.48,
+              109.52,
+              9.93
+            ],
+            "mediana_rgb": [
+              27.0,
+              107.0,
+              3.0
+            ],
+            "media_hsv": [
+              53.14,
+              237.4,
+              109.72
+            ],
+            "mediana_hsv": [
+              54.0,
+              247.0,
+              107.0
+            ],
+            "proporcao_verde": 0.982771,
+            "pixels_analisados": 90605
+          },
+          "qualidade": {
+            "centroide_x_px": 192.64,
+            "centroide_y_px": 126.5629,
+            "centroide_x_norm": 0.50963,
+            "centroide_y_norm": 0.502234,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 2,
+            "dominancia": 0.991499,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "multiplos_contornos",
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "moderada",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.501992
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.001328,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.960626,
+              "elongacao": 1.501992
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.044159,
+            "limitrofe": true,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.473611
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.184027,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "moderada",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 1.256888
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.033163,
+            "limitrofe": true,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "bem_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.39601,
+              "angulo_graus": -5.5785
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.320033,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "resumo": "Folha moderadamente alongada, de compacidade intermediária, sem reentrâncias profundas, de contorno moderadamente irregular e com eixo principal bem definido.",
+          "avisos": [
+            "atributos proximos de um limiar: alongamento, concavidade, complexidade_borda",
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "variacao_area_acima_de_1pct",
+          "iou_abaixo_de_0_99",
+          "multiplos_contornos",
+          "objeto_toca_borda",
+          "atributos proximos de um limiar: alongamento, concavidade, complexidade_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    },
+    {
+      "linha": {
+        "id": "EXT009",
+        "arquivo": "folha-09.jpg",
+        "fundo": "colorido",
+        "iluminacao": "desigual",
+        "posicao": "centralizada",
+        "distancia": "grande",
+        "formato": "JPG",
+        "status": "sucesso_com_avisos",
+        "erro_codigo": null,
+        "erro_mensagem": null,
+        "largura_original_px": 408,
+        "altura_original_px": 252,
+        "tinha_canal_alfa": false,
+        "detectado": true,
+        "fracao_foreground": 0.322965,
+        "numero_contornos": 21,
+        "dominancia": 0.816847,
+        "toca_borda": true,
+        "distancia_minima_borda_px": 0,
+        "area_contorno_px2": 26086.0,
+        "elongacao": 1.042188,
+        "circularidade": 0.158087,
+        "solidez": 0.736986,
+        "razao_perimetro_hull": 2.082863,
+        "anisotropia": 0.062045,
+        "orientacao_confiavel": true,
+        "proporcao_verde": 0.962357,
+        "cat_alongamento": "baixa",
+        "limitrofe_alongamento": false,
+        "cat_concavidade": "moderada",
+        "limitrofe_concavidade": false,
+        "cat_compacidade": "baixa",
+        "limitrofe_compacidade": false,
+        "cat_complexidade_borda": "complexa",
+        "limitrofe_complexidade_borda": false,
+        "cat_orientacao": "pouco_definida",
+        "limitrofe_orientacao": false,
+        "n_limitrofes": 0,
+        "tempo_pipeline_ms": 97.102,
+        "tempo_parede_ms": 102.305,
+        "n_avisos_tecnicos": 3,
+        "avisos": "iou_abaixo_de_0_99 | multiplos_contornos | objeto_toca_borda | descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+      },
+      "resultado": {
+        "status": "sucesso_com_avisos",
+        "versao_pipeline": "1.0.0",
+        "id_execucao": "fda419a25ef146708c22a19691ca629e",
+        "entrada": {
+          "arquivo": "folha-09.jpg",
+          "formato": "JPG",
+          "largura_original_px": 408,
+          "altura_original_px": 252,
+          "largura_processada_px": 408,
+          "altura_processada_px": 252,
+          "bytes": 115552,
+          "tinha_canal_alfa": false
+        },
+        "processamento": {
+          "etapas": [
+            "validacao",
+            "leitura",
+            "redimensionamento",
+            "suavizacao_gaussiana",
+            "conversao_hsv",
+            "segmentacao",
+            "limpeza_morfologica",
+            "contornos",
+            "selecao_objeto",
+            "caracteristicas",
+            "classificacao"
+          ],
+          "parametros": {
+            "lado_maximo_px": 1024,
+            "kernel_gaussiano": 5,
+            "faixa_hsv": {
+              "h": [
+                25,
+                95
+              ],
+              "s": [
+                40,
+                255
+              ],
+              "v": [
+                20,
+                255
+              ]
+            },
+            "fator_escala": 1.0,
+            "operacoes_limpeza": [
+              "remover_componentes_pequenos",
+              "preencher_buracos_pequenos"
+            ]
+          },
+          "tempo_total_ms": 97.102,
+          "tempo_por_etapa_ms": {
+            "redimensionamento": 0.01,
+            "suavizacao": 0.695,
+            "segmentacao": 6.297,
+            "limpeza": 15.093,
+            "contornos": 2.753,
+            "caracteristicas": 9.728,
+            "classificacao": 0.074,
+            "visualizacao": 62.365
+          }
+        },
+        "objeto": {
+          "detectado": true,
+          "numero_contornos": 21,
+          "dominancia": 0.816847,
+          "fracao_foreground": 0.322965,
+          "bbox": {
+            "x": 85,
+            "y": 50,
+            "largura": 224,
+            "altura": 202
+          },
+          "bbox_rotacionada": {
+            "centro_x": 205.7,
+            "centro_y": 158.9,
+            "lado_maior": 214.3151,
+            "lado_menor": 205.6395,
+            "angulo_graus": 162.8973,
+            "largura_bruta": 214.3151,
+            "altura_bruta": 205.6395,
+            "angulo_bruto": -17.1027
+          },
+          "centroide": {
+            "x": 203.0975,
+            "y": 146.8246
+          },
+          "toca_borda": {
+            "topo": false,
+            "base": true,
+            "esquerda": false,
+            "direita": false,
+            "qualquer": true
+          },
+          "distancia_minima_borda_px": 0,
+          "orientacao_graus": 40.3866,
+          "orientacao_confiavel": true,
+          "anisotropia": 0.062045
+        },
+        "caracteristicas": {
+          "dimensoes": {
+            "area_contorno_px2": 26086.0,
+            "area_mascara_px2": 32888,
+            "diferenca_area_px2": -6802.0,
+            "diferenca_area_pct": -20.6823,
+            "perimetro_px": 1439.9941,
+            "largura_px": 224,
+            "altura_px": 202,
+            "lado_maior_px": 214.3151,
+            "lado_menor_px": 205.6395
+          },
+          "forma": {
+            "aspect_ratio": 1.108911,
+            "elongacao": 1.042188,
+            "circularidade": 0.158087,
+            "solidez": 0.736986,
+            "extent": 0.576512,
+            "extent_rotacionado": 0.5919
+          },
+          "orientacao": {
+            "angulo_graus": 40.3866,
+            "anisotropia": 0.062045,
+            "confiavel": true
+          },
+          "convexidade": {
+            "area_hull_px2": 35395.5,
+            "perimetro_hull_px": 691.3531,
+            "pontos_hull": 25,
+            "razao_perimetro_hull": 2.082863
+          },
+          "cor": {
+            "media_rgb": [
+              50.09,
+              62.6,
+              22.97
+            ],
+            "mediana_rgb": [
+              46.0,
+              61.0,
+              18.0
+            ],
+            "media_hsv": [
+              41.4,
+              172.27,
+              62.72
+            ],
+            "mediana_hsv": [
+              40.0,
+              177.0,
+              61.0
+            ],
+            "proporcao_verde": 0.962357,
+            "pixels_analisados": 32888
+          },
+          "qualidade": {
+            "centroide_x_px": 203.0975,
+            "centroide_y_px": 146.8246,
+            "centroide_x_norm": 0.497788,
+            "centroide_y_norm": 0.582637,
+            "toca_borda": true,
+            "distancia_minima_borda_px": 0,
+            "numero_contornos": 21,
+            "dominancia": 0.816847,
+            "orientacao_confiavel": true
+          },
+          "avisos": [
+            "multiplos_contornos",
+            "objeto_toca_borda"
+          ]
+        },
+        "classificacao": {
+          "alongamento": {
+            "atributo": "alongamento",
+            "categoria": "baixa",
+            "features_usadas": [
+              "elongacao"
+            ],
+            "valores": {
+              "elongacao": 1.042188
+            },
+            "limiares_aplicados": {
+              "baixa_ate": 1.5,
+              "alta_a_partir_de": 3.0,
+              "extrema_a_partir_de": 6.0
+            },
+            "margem_relativa": 0.305208,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "concavidade": {
+            "atributo": "concavidade",
+            "categoria": "moderada",
+            "features_usadas": [
+              "solidez",
+              "elongacao"
+            ],
+            "valores": {
+              "solidez": 0.736986,
+              "elongacao": 1.042188
+            },
+            "limiares_aplicados": {
+              "alta_abaixo_de": 0.7,
+              "baixa_a_partir_de": 0.92,
+              "elongacao_que_torna_ambiguo": 6.0
+            },
+            "margem_relativa": 0.052837,
+            "limitrofe": false,
+            "observacoes": []
+          },
+          "compacidade": {
+            "atributo": "compacidade",
+            "categoria": "baixa",
+            "features_usadas": [
+              "circularidade"
+            ],
+            "valores": {
+              "circularidade": 0.158087
+            },
+            "limiares_aplicados": {
+              "baixa_abaixo_de": 0.4,
+              "alta_a_partir_de": 0.65
+            },
+            "margem_relativa": 0.604783,
+            "limitrofe": false,
+            "observacoes": [
+              "a circularidade tem teto digital de aproximadamente 0,90 (R14); os limiares refletem a distribuição observada, não o valor teórico de 1,0"
+            ]
+          },
+          "complexidade_borda": {
+            "atributo": "complexidade_borda",
+            "categoria": "complexa",
+            "features_usadas": [
+              "razao_perimetro_hull"
+            ],
+            "valores": {
+              "razao_perimetro_hull": 2.082863
+            },
+            "limiares_aplicados": {
+              "moderada_a_partir_de": 1.13,
+              "complexa_a_partir_de": 1.3
+            },
+            "margem_relativa": 0.602202,
+            "limitrofe": false,
+            "observacoes": [
+              "métrica experimental: a referência de forma convexa é aproximadamente 1,05, e não 1,0, por efeito do viés do perímetro digital (R14)"
+            ]
+          },
+          "orientacao": {
+            "atributo": "orientacao",
+            "categoria": "pouco_definida",
+            "features_usadas": [
+              "anisotropia",
+              "orientacao_graus"
+            ],
+            "valores": {
+              "anisotropia": 0.062045,
+              "angulo_graus": 40.3866
+            },
+            "limiares_aplicados": {
+              "indefinida_abaixo_de": 0.05,
+              "bem_definida_a_partir_de": 0.3
+            },
+            "margem_relativa": 0.2409,
+            "limitrofe": false,
+            "observacoes": [
+              "anisotropia de 0.0620: eixo existe, mas é fraco — o ângulo pode variar com pequenas alterações da borda"
+            ]
+          },
+          "resumo": "Folha pouco alongada, geometricamente pouco compacta, com reentrâncias moderadas, de contorno complexo (muito irregular) e com eixo principal pouco definido.",
+          "avisos": [
+            "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+          ]
+        },
+        "avisos": [
+          "iou_abaixo_de_0_99",
+          "multiplos_contornos",
+          "objeto_toca_borda",
+          "descricao geometrica automatica; nao constitui identificacao botanica nem taxonomica"
+        ],
+        "erro": null,
+        "imagens_intermediarias": {
+          "00-original": "00-original.png",
+          "01-cinza": "01-cinza.png",
+          "02-hsv-matiz": "02-hsv-matiz.png",
+          "03-suavizada": "03-suavizada.png",
+          "04-mascara": "04-mascara.png",
+          "05-mascara-limpa": "05-mascara-limpa.png",
+          "06-contorno": "06-contorno.png",
+          "07-final": "07-final.png"
+        }
+      }
+    }
+  ],
+  "entradas_invalidas": []
+}

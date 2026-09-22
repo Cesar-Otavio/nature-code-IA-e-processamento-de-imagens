@@ -1,7 +1,13 @@
 # Fotos externas — Fase 11
 
-Esta pasta recebe as **fotografias reais de folhas** tiradas pela equipe, para testar o
-pipeline fora do ambiente controlado do dataset Flavia.
+Esta pasta recebe as **imagens de folhas externas ao dataset Flavia**, para testar o
+pipeline fora do ambiente controlado do Flavia.
+
+> **Estado:** avaliação executada com **9 imagens obtidas de fontes externas** (não tiradas
+> pela equipe), convertidas para JPG e listadas em `manifesto.csv`. Resultado: 9/9
+> processadas sem erro; inspeção humana com 0 adequados, 2 parciais e 7 inadequados. Ver
+> [`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](../../docs/processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md).
+> O passo a passo abaixo continua válido para uma reexecução com novas imagens.
 
 > **As fotos NÃO são versionadas.** Tudo o que for colocado em `imagens/` é ignorado pelo
 > Git. Fotos podem carregar dados da câmera, localização (GPS) ou elementos pessoais no

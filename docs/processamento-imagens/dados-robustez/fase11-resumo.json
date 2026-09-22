@@ -1,0 +1,394 @@
+{
+  "metadados": {
+    "fase": 11,
+    "descricao": "robustez com fotos externas — pipeline congelado",
+    "commit": "6a9ff6071e03e708c99ac17a02358724fe2ce517",
+    "tag_congelada": "fase-9-completa",
+    "versao_pipeline": "1.0.0",
+    "inicio": "2026-09-21T21:38:04-03:00",
+    "fim": "2026-09-21T21:38:05-03:00",
+    "manifesto": "processamento-imagens/fotos-externas/manifesto.csv",
+    "pasta_imagens": "processamento-imagens/fotos-externas/imagens (não versionada)",
+    "imagens_intermediarias": "processamento-imagens/resultados/robustez-fase11/<id>/ (não versionada)",
+    "hashes_identicos_antes": true,
+    "hashes_identicos_depois": true
+  },
+  "cobertura": {
+    "entradas_no_manifesto": 9,
+    "entradas_invalidas_nao_processadas": 0,
+    "processadas": 9,
+    "sucesso_operacional": 9,
+    "erro": 0,
+    "taxa_processamento_pct": 100.0,
+    "com_aviso_tecnico": 9,
+    "observacao": "sucesso operacional = o pipeline chegou ao fim com um objeto medido; não diz se o objeto é a folha — isso é da inspeção humana"
+  },
+  "erros": {
+    "total": 0,
+    "por_codigo": {}
+  },
+  "entradas_invalidas": [],
+  "avisos_tecnicos": {
+    "multiplos_contornos": {
+      "quantidade": 6,
+      "ids": [
+        "EXT001",
+        "EXT003",
+        "EXT005",
+        "EXT006",
+        "EXT008",
+        "EXT009"
+      ]
+    },
+    "objeto_toca_borda": {
+      "quantidade": 8,
+      "ids": [
+        "EXT001",
+        "EXT002",
+        "EXT004",
+        "EXT005",
+        "EXT006",
+        "EXT007",
+        "EXT008",
+        "EXT009"
+      ]
+    },
+    "atributos proximos de um limiar": {
+      "quantidade": 5,
+      "ids": [
+        "EXT002",
+        "EXT003",
+        "EXT005",
+        "EXT007",
+        "EXT008"
+      ]
+    },
+    "selecao_ambigua": {
+      "quantidade": 1,
+      "ids": [
+        "EXT003"
+      ]
+    },
+    "variacao_area_acima_de_1pct": {
+      "quantidade": 2,
+      "ids": [
+        "EXT005",
+        "EXT008"
+      ]
+    },
+    "iou_abaixo_de_0_99": {
+      "quantidade": 3,
+      "ids": [
+        "EXT005",
+        "EXT008",
+        "EXT009"
+      ]
+    }
+  },
+  "caracteristicas": {
+    "fracao_foreground": {
+      "n": 9,
+      "minimo": 0.015921,
+      "p5": 0.138739,
+      "p25": 0.514191,
+      "mediana": 0.624147,
+      "media": 0.64877,
+      "p75": 0.939878,
+      "p95": 0.997272,
+      "maximo": 0.998746,
+      "desvio_padrao": 0.334296
+    },
+    "elongacao": {
+      "n": 9,
+      "minimo": 1.042188,
+      "p5": 1.062981,
+      "p25": 1.250304,
+      "mediana": 1.465117,
+      "media": 1.380558,
+      "p75": 1.504167,
+      "p95": 1.569958,
+      "maximo": 1.608333,
+      "desvio_padrao": 0.201322
+    },
+    "circularidade": {
+      "n": 9,
+      "minimo": 0.158087,
+      "p5": 0.161799,
+      "p25": 0.186019,
+      "mediana": 0.282706,
+      "media": 0.38616,
+      "p75": 0.546348,
+      "p95": 0.709402,
+      "maximo": 0.725896,
+      "desvio_padrao": 0.225504
+    },
+    "solidez": {
+      "n": 9,
+      "minimo": 0.736986,
+      "p5": 0.744776,
+      "p25": 0.773276,
+      "mediana": 0.847401,
+      "media": 0.862962,
+      "p75": 0.960626,
+      "p95": 0.999297,
+      "maximo": 0.999498,
+      "desvio_padrao": 0.102041
+    },
+    "razao_perimetro_hull": {
+      "n": 9,
+      "minimo": 1.018623,
+      "p5": 1.028133,
+      "p25": 1.174598,
+      "mediana": 1.554036,
+      "media": 1.494478,
+      "p75": 1.851763,
+      "p95": 2.002252,
+      "maximo": 2.082863,
+      "desvio_padrao": 0.391368
+    },
+    "anisotropia": {
+      "n": 9,
+      "minimo": 0.062045,
+      "p5": 0.127016,
+      "p25": 0.335937,
+      "mediana": 0.38954,
+      "media": 0.359049,
+      "p75": 0.439688,
+      "p95": 0.50955,
+      "maximo": 0.554319,
+      "desvio_padrao": 0.142089
+    }
+  },
+  "classificacoes": {
+    "alongamento": {
+      "baixa": 5,
+      "moderada": 4
+    },
+    "concavidade": {
+      "moderada": 6,
+      "baixa": 3
+    },
+    "compacidade": {
+      "baixa": 5,
+      "alta": 2,
+      "moderada": 2
+    },
+    "complexidade_borda": {
+      "complexa": 5,
+      "regular": 2,
+      "moderada": 2
+    },
+    "orientacao": {
+      "bem_definida": 7,
+      "pouco_definida": 2
+    }
+  },
+  "por_condicao": {
+    "fundo": {
+      "claro": {
+        "fotos": 1,
+        "sucesso_operacional": 1,
+        "erro": 0,
+        "com_aviso_tecnico": 1,
+        "ids": [
+          "EXT004"
+        ]
+      },
+      "escuro": {
+        "fotos": 0,
+        "sucesso_operacional": 0,
+        "erro": 0,
+        "com_aviso_tecnico": 0,
+        "ids": []
+      },
+      "colorido": {
+        "fotos": 4,
+        "sucesso_operacional": 4,
+        "erro": 0,
+        "com_aviso_tecnico": 4,
+        "ids": [
+          "EXT001",
+          "EXT003",
+          "EXT006",
+          "EXT009"
+        ]
+      },
+      "irregular": {
+        "fotos": 4,
+        "sucesso_operacional": 4,
+        "erro": 0,
+        "com_aviso_tecnico": 4,
+        "ids": [
+          "EXT002",
+          "EXT005",
+          "EXT007",
+          "EXT008"
+        ]
+      }
+    },
+    "iluminacao": {
+      "natural": {
+        "fotos": 7,
+        "sucesso_operacional": 7,
+        "erro": 0,
+        "com_aviso_tecnico": 7,
+        "ids": [
+          "EXT001",
+          "EXT002",
+          "EXT003",
+          "EXT004",
+          "EXT006",
+          "EXT007",
+          "EXT008"
+        ]
+      },
+      "artificial": {
+        "fotos": 0,
+        "sucesso_operacional": 0,
+        "erro": 0,
+        "com_aviso_tecnico": 0,
+        "ids": []
+      },
+      "sombra": {
+        "fotos": 0,
+        "sucesso_operacional": 0,
+        "erro": 0,
+        "com_aviso_tecnico": 0,
+        "ids": []
+      },
+      "desigual": {
+        "fotos": 2,
+        "sucesso_operacional": 2,
+        "erro": 0,
+        "com_aviso_tecnico": 2,
+        "ids": [
+          "EXT005",
+          "EXT009"
+        ]
+      }
+    },
+    "posicao": {
+      "centralizada": {
+        "fotos": 7,
+        "sucesso_operacional": 7,
+        "erro": 0,
+        "com_aviso_tecnico": 7,
+        "ids": [
+          "EXT001",
+          "EXT002",
+          "EXT003",
+          "EXT004",
+          "EXT007",
+          "EXT008",
+          "EXT009"
+        ]
+      },
+      "inclinada": {
+        "fotos": 0,
+        "sucesso_operacional": 0,
+        "erro": 0,
+        "com_aviso_tecnico": 0,
+        "ids": []
+      },
+      "proxima_borda": {
+        "fotos": 1,
+        "sucesso_operacional": 1,
+        "erro": 0,
+        "com_aviso_tecnico": 1,
+        "ids": [
+          "EXT006"
+        ]
+      },
+      "deslocada": {
+        "fotos": 1,
+        "sucesso_operacional": 1,
+        "erro": 0,
+        "com_aviso_tecnico": 1,
+        "ids": [
+          "EXT005"
+        ]
+      }
+    },
+    "distancia": {
+      "grande": {
+        "fotos": 2,
+        "sucesso_operacional": 2,
+        "erro": 0,
+        "com_aviso_tecnico": 2,
+        "ids": [
+          "EXT006",
+          "EXT009"
+        ]
+      },
+      "media": {
+        "fotos": 7,
+        "sucesso_operacional": 7,
+        "erro": 0,
+        "com_aviso_tecnico": 7,
+        "ids": [
+          "EXT001",
+          "EXT002",
+          "EXT003",
+          "EXT004",
+          "EXT005",
+          "EXT007",
+          "EXT008"
+        ]
+      },
+      "pequena": {
+        "fotos": 0,
+        "sucesso_operacional": 0,
+        "erro": 0,
+        "com_aviso_tecnico": 0,
+        "ids": []
+      }
+    }
+  },
+  "performance": {
+    "tempo_parede_ms": {
+      "n": 9,
+      "minimo": 70.217,
+      "p5": 75.809,
+      "p25": 84.675,
+      "mediana": 92.188,
+      "media": 97.638778,
+      "p75": 102.305,
+      "p95": 132.546,
+      "maximo": 149.436,
+      "desvio_padrao": 22.307161
+    },
+    "tempo_pipeline_ms": {
+      "n": 9,
+      "minimo": 65.959,
+      "p5": 71.4574,
+      "p25": 80.055,
+      "mediana": 87.69,
+      "media": 92.813444,
+      "p75": 97.102,
+      "p95": 127.6434,
+      "maximo": 144.911,
+      "desvio_padrao": 22.2281
+    },
+    "observacao": "inclui a geração das 8 imagens intermediárias de cada foto; não é diretamente comparável ao tempo da Fase 10, que foi sem imagens"
+  },
+  "comparacao_fase10": {
+    "flavia_fase10": {
+      "condicao": "Flavia, fundo branco controlado",
+      "imagens": 96,
+      "taxa_processamento_pct": 100.0,
+      "com_aviso_tecnico": 65,
+      "tempo_parede_mediana_ms": 284.6885,
+      "inspecao_humana": "pendente (Fase 10)"
+    },
+    "fotos_externas_fase11": {
+      "condicao": "fotos reais, fundo e iluminação não controlados",
+      "imagens": 9,
+      "taxa_processamento_pct": 100.0,
+      "com_aviso_tecnico": 9,
+      "tempo_parede_mediana_ms": 92.188,
+      "inspecao_humana": "ver fase11-inspecao-resumo.json, após a revisão"
+    },
+    "conclusao": null,
+    "observacao": "a comparação é descritiva; a conclusão é escrita por pessoas, após a inspeção"
+  }
+}

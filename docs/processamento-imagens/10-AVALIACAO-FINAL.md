@@ -7,8 +7,9 @@
 >
 > **Esta é uma avaliação operacional**, não uma avaliação de acerto: não existe ground
 > truth para as categorias geométricas, e o pipeline não identifica espécies. A inspeção
-> visual humana prevista na Fase 2 (§15) **ainda não foi feita** — esta fase entrega os
-> números e os casos selecionados para ela.
+> visual humana dos **12 casos selecionados** (§17) foi **concluída depois da execução**:
+> 12/12 revisados, todos considerados visualmente utilizáveis, sem necessidade de correção
+> do pipeline. As outras 84 imagens não foram inspecionadas individualmente.
 
 ---
 
@@ -502,8 +503,8 @@ idênticos aos da execução principal — mais 12 confirmações.
 
 Selecionados **automaticamente, por critérios objetivos**, sem julgamento de qualidade.
 Arquivo: [`fase10-casos-inspecao.csv`](dados-avaliacao/fase10-casos-inspecao.csv), com as
-colunas `inspecao_humana` e `observacao` **vazias**, para a equipe preencher com o
-protocolo da Fase 2 §15 (correta · aceitável · falha).
+colunas `inspecao_humana` e `observacao` para a equipe preencher com o protocolo da Fase 2
+§15 (correta · aceitável · falha).
 
 | # | Arquivo | Espécie | Motivo |
 |---:|---|---|---|
@@ -535,8 +536,27 @@ cd processamento-imagens
 observação: `1416` (a 2 px da borda; solidez no vale de 0,70) e `1406`/`1392` (solidez
 perto de 0,70).
 
-> **A inspeção humana das 96 imagens, prevista na Fase 2 §15, não foi feita.** Esta fase
-> entrega os números e o ponto de partida para ela.
+### Status da inspeção humana
+
+| Item | Estado |
+|---|---|
+| Casos revisados | **12/12** |
+| Resultado | **Todos considerados visualmente utilizáveis** |
+| Correção do pipeline | **Nenhuma necessária, nenhuma feita** — hashes inalterados |
+| Reprocessamento | Nenhum; os números desta fase são os da execução única |
+| Registro por caso | [`fase10-casos-inspecao.csv`](dados-avaliacao/fase10-casos-inspecao.csv): **12 × `correta`** — folha principal segmentada, máscara e contorno adequados |
+
+Observações registradas no CSV:
+
+| Caso | Observação |
+|---|---|
+| `1302` | Orientação pouco/não confiável é coerente com a geometria quase simétrica da folha; não é erro de segmentação |
+| `3026` | A caixa mínima rotacionada pode ultrapassar visualmente a imagem — comportamento conhecido do `minAreaRect` (R33); não é falha de segmentação |
+| `2370`, `2353`, `2417` | Casos extremamente alongados; a geometria observada é coerente |
+
+> **Alcance:** a inspeção cobriu os 12 casos selecionados, não as 96 imagens. Ela reforça,
+> mas não prova, que o processamento válido das outras 84 corresponde a segmentações
+> corretas.
 
 ---
 
@@ -545,7 +565,7 @@ perto de 0,70).
 | # | Limitação |
 |---|---|
 | 1 | **Sem ground truth.** Não há máscaras de referência nem categorias de referência; nada aqui mede acerto |
-| 2 | **Inspeção visual pendente.** "Processamento válido" = objeto detectado e medido, não segmentação conferida |
+| 2 | **Inspeção visual só dos 12 casos selecionados** (12/12 utilizáveis). Nas outras 84, "processamento válido" = objeto detectado e medido, não segmentação conferida |
 | 3 | `sucesso` puro nunca ocorre, pelo desenho do contrato (§8) |
 | 4 | 64,6 % das imagens têm algum atributo limítrofe; a descrição textual é sensível perto dos limiares |
 | 5 | Os vales que justificavam dois limiares não se confirmaram na avaliação (§12) |
@@ -570,7 +590,7 @@ perto de 0,70).
 | **`proporcao_verde` tem viés circular** | É medida sobre a máscara que a própria faixa verde definiu; valores próximos de 1 são esperados por construção (mínimo observado 0,981) |
 | **O perímetro digital tem viés conhecido (R14)** | Superestima ~5 %; afeta circularidade e razão perímetro/hull (referência convexa ≈1,05, não 1,0) |
 | **`minAreaRect` pode divergir do eixo principal** | A elongação vem da caixa de área mínima, que em folhas pouco alongadas pode se alinhar a uma aresta do envelope convexo (R33, Fase 9) |
-| **A avaliação externa com fotos reais é outra etapa** | Nenhuma foto fora do Flavia foi usada aqui |
+| **A avaliação externa com fotos reais é outra etapa** | Nenhuma foto fora do Flavia foi usada aqui; a Fase 11 ([`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](11-ROBUSTEZ-FOTOS-EXTERNAS.md)) mostrou baixa robustez visual fora do Flavia |
 
 ---
 
@@ -596,17 +616,20 @@ Duas descobertas que só uma avaliação reservada podia fazer:
 Nenhuma das duas motivou ajuste. Ambas ficam registradas para trabalho futuro, que
 precisaria de um novo conjunto de avaliação.
 
-O que esta fase **não** estabelece: se as segmentações estão corretas. Isso depende da
-inspeção humana.
+O que esta fase **não** estabelece sozinha: se as segmentações estão corretas. A inspeção
+humana dos 12 casos selecionados, feita depois, considerou **todos os 12 utilizáveis**, sem
+necessidade de correção do pipeline.
 
 ---
 
 ## 21. Próximos passos
 
-1. **Inspeção humana** com o protocolo da Fase 2 §15: primeiro os 12 casos selecionados,
-   preenchendo `fase10-casos-inspecao.csv`; depois, idealmente, as 96.
-2. **Validação manual da interface no navegador** (pendente desde a Fase 9).
-3. **Avaliação externa com fotos reais**, fora do Flavia, como etapa separada.
+1. ~~Inspeção humana dos 12 casos selecionados~~ — **concluída**: 12/12 utilizáveis.
+   Julgamento por caso em `fase10-casos-inspecao.csv` (12 × `correta`); inspecionar as 96
+   continua opcional.
+2. ~~Validação manual da interface no navegador~~ — **concluída**
+   ([`TESTES-MANUAIS-FINAIS.md`](../TESTES-MANUAIS-FINAIS.md)).
+3. ~~Avaliação externa com fotos reais~~ — **executada na Fase 11**.
 4. Se, depois disso, algum limiar ou parâmetro for revisto: **sortear um novo conjunto de
    avaliação** e registrar a revisão, conforme a Fase 2 §13.
 5. Documentação final e README raiz.
@@ -625,7 +648,7 @@ inspeção humana.
 | `docs/processamento-imagens/dados-avaliacao/fase10-resultados-completos.json` | Metadados + resultado completo de cada imagem (~1 MB) |
 | `docs/processamento-imagens/dados-avaliacao/fase10-resultados.csv` | 96 linhas, 54 colunas |
 | `docs/processamento-imagens/dados-avaliacao/fase10-resumo.json` | Agregados |
-| `docs/processamento-imagens/dados-avaliacao/fase10-casos-inspecao.csv` | 12 casos, colunas de inspeção vazias |
+| `docs/processamento-imagens/dados-avaliacao/fase10-casos-inspecao.csv` | 12 casos, inspecionados: 12 × `correta` (§17) |
 
 **Testes ao final:** PDI **776 passed** (748 + 26 da infraestrutura + 2 parametrizações de
 isolamento que passaram a cobrir o arquivo de teste novo); legado **256/256**.

@@ -1,1 +1,10 @@
 id,arquivo,fundo,iluminacao,posicao,distancia,formato,observacao
+EXT001,folha-01.jpg,colorido,natural,centralizada,media,JPG,folha avermelhada com fundo natural desfocado
+EXT002,folha-02.jpg,irregular,natural,centralizada,media,JPG,folha verde escura com fundo natural desfocado
+EXT003,folha-03.jpg,colorido,natural,centralizada,media,JPG,folha amarelada contra ceu e vegetacao
+EXT004,folha-04.jpg,claro,natural,centralizada,media,JPG,folha verde em fundo relativamente uniforme
+EXT005,folha-05.jpg,irregular,desigual,deslocada,media,JPG,samambaia com estrutura composta e fundo natural
+EXT006,folha-06.jpg,colorido,natural,proxima_borda,grande,JPG,folha contra ceu e nuvens
+EXT007,folha-07.jpg,irregular,natural,centralizada,media,JPG,folha com gotas de agua e outras folhas ao fundo
+EXT008,folha-08.jpg,irregular,natural,centralizada,media,JPG,multiplas folhas em ramo; caso de robustez
+EXT009,folha-09.jpg,colorido,desigual,centralizada,grande,JPG,folha contra ceu com forte contraluz

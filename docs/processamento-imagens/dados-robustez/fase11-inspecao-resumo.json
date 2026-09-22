@@ -1,0 +1,43 @@
+{
+  "fotos": 9,
+  "revisadas": 9,
+  "valores_invalidos": [],
+  "folha_principal_segmentada": {
+    "sim": 2,
+    "parcial": 5,
+    "nao": 2,
+    "nao_preenchido": 0
+  },
+  "mascara_visual_adequada": {
+    "sim": 0,
+    "parcial": 2,
+    "nao": 7,
+    "nao_preenchido": 0
+  },
+  "contorno_visual_adequado": {
+    "sim": 0,
+    "parcial": 2,
+    "nao": 7,
+    "nao_preenchido": 0
+  },
+  "resultado_util": {
+    "sim": 0,
+    "parcial": 2,
+    "nao": 7,
+    "nao_preenchido": 0
+  },
+  "problema_principal": {
+    "fundo confundido com folha": 5,
+    "folha parcialmente perdida": 1,
+    "sombra incorporada": 0,
+    "objeto secundario incorporado": 2,
+    "folha fragmentada": 0,
+    "folha nao detectada": 0,
+    "contorno inadequado": 0,
+    "recorte pela borda": 0,
+    "cor fora da faixa": 1,
+    "resultado adequado": 0,
+    "outro": 0,
+    "nao_preenchido": 0
+  }
+}

@@ -1,14 +1,31 @@
 # 🌿 Nature Code
 
+Projeto interdisciplinar utilizado em:
+
+- **Inteligência Artificial** — quizzes dinâmicos gerados por LLM
+- **Processamento Digital de Imagens** — análise morfológica de folhas, **sem IA**
+
+| 📘 [**Documentação — Inteligência Artificial**](docs/IA.md) | 📗 [**Documentação — Processamento Digital de Imagens**](docs/PDI.md) | 📋 [**Guia Geral de Entrega**](docs/ENTREGA-GERAL.md) |
+|:---:|:---:|:---:|
+
 **Portal educacional de Biologia com dois módulos técnicos independentes:
 quizzes gerados por IA e análise morfológica de folhas por processamento digital de
-imagens.**
+imagens.** Requisitos da entrega e onde cada um é atendido:
+[`docs/REQUISITOS-PROFESSOR.md`](docs/REQUISITOS-PROFESSOR.md).
 
 | | |
 |---|---|
 | **Instituição** | Universidade do Sagrado Coração — Bauru/SP |
 | **Curso** | Ciência da Computação |
 | **Repositório** | https://github.com/Cesar-Otavio/nature-code-IA-e-processamento-de-imagens |
+
+## Relatórios finais
+
+| Documento | Conteúdo |
+|---|---|
+| [**`RELATORIO-FINAL-IA.md`**](docs/RELATORIO-FINAL-IA.md) | Relatório da disciplina de **Inteligência Artificial** |
+| [**`RELATORIO-FINAL-PDI.md`**](docs/RELATORIO-FINAL-PDI.md) | Relatório da disciplina de **Processamento Digital de Imagens** |
+| [**`DOCUMENTACAO-FINAL-IA-PDI.md`**](docs/DOCUMENTACAO-FINAL-IA-PDI.md) | Documento de **integração** entre as duas disciplinas |
 
 ## Integrantes
 
@@ -149,6 +166,23 @@ entrada → validação → leitura → redimensionamento → suavização → H
        → regras determinísticas → resultado
 ```
 
+### O que cada etapa faz
+
+| Etapa | Função |
+|---|---|
+| Validação | Confere se o arquivo existe, tem extensão aceita (JPG, JPEG, PNG, BMP), é de fato uma imagem e não excede o tamanho máximo |
+| Leitura | Carrega a imagem, aplica a orientação EXIF e descarta o canal alfa |
+| Redimensionamento | Limita o lado maior, para que as medidas e o tempo não dependam da resolução da câmera |
+| Suavização | Filtro Gaussiano: reduz ruído e textura fina que fragmentariam a máscara |
+| HSV | Converte a cor para matiz, saturação e brilho — o verde da folha fica num intervalo de matiz, pouco dependente da intensidade da luz |
+| Segmentação | Limiarização em HSV: pixels no intervalo de verde viram folha (branco), o resto fundo (preto) |
+| Morfologia | Limpeza da máscara: remove manchas pequenas e preenche buracos internos pequenos |
+| Contornos | Traça a borda de cada região da máscara |
+| Objeto principal | Escolhe o maior contorno como a folha e registra avisos (vários contornos, toque na borda, seleção ambígua) |
+| Características | Mede a forma: área, perímetro, elongação, circularidade, solidez, extent, razão perímetro/hull, orientação, anisotropia e cor |
+| Regras determinísticas | Compara as medidas com limiares fixos e atribui 5 descrições geométricas, registrando os limiares usados |
+| Resultado | JSON, resumo textual e 8 imagens intermediárias |
+
 ### Parâmetros congelados (tag `fase-9-completa`)
 
 | Etapa | Parâmetro |
@@ -165,7 +199,8 @@ A saída inclui os valores, os limiares aplicados, avisos, um resumo textual geo
 8 imagens intermediárias (original, cinza, matiz, suavizada, máscara, máscara limpa,
 contorno, resultado anotado).
 
-Detalhes: [`processamento-imagens/README.md`](processamento-imagens/README.md) ·
+Detalhes: [`docs/PDI.md`](docs/PDI.md) ·
+[`processamento-imagens/README.md`](processamento-imagens/README.md) ·
 [`docs/processamento-imagens/`](docs/processamento-imagens/).
 
 ---
@@ -242,31 +277,37 @@ acrescenta `pytest==9.1.1`. A camada de IA **não tem dependências**: é JavaSc
 
 ## 9. Instalação
 
+No Windows. Pré-requisito: **Python 3.12+** no PATH.
+
+**1. Clonar**
+
 ```cmd
 git clone https://github.com/Cesar-Otavio/nature-code-IA-e-processamento-de-imagens.git
-cd nature-code-IA-e-processamento-de-imagens\processamento-imagens
-
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
+cd nature-code-IA-e-processamento-de-imagens
 ```
 
-Para desenvolvimento e testes:
+**2. Criar o ambiente Python** (na raiz do repositório)
 
 ```cmd
-pip install -r requirements-dev.txt
+python -m venv processamento-imagens\.venv
 ```
 
-A partir da **raiz** do repositório, com o ambiente virtual ativado, também funciona:
+**3. Instalar as dependências**
 
 ```cmd
-pip install -r requirements.txt
+processamento-imagens\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-O arquivo da raiz delega a `processamento-imagens/requirements.txt`.
+O `requirements.txt` da raiz delega a `processamento-imagens/requirements.txt`. Para rodar
+os testes, instale também `processamento-imagens\requirements-dev.txt` (acrescenta
+`pytest`).
 
-Linux/macOS: `source .venv/bin/activate`. Passo a passo detalhado em
+Linux/macOS: `processamento-imagens/.venv/bin/python` no lugar de
+`processamento-imagens\.venv\Scripts\python.exe`. Passo a passo detalhado em
 [`processamento-imagens/README.md`](processamento-imagens/README.md).
+
+> A **IA não precisa desta instalação**: para testar só os quizzes, basta o Ollama e servir
+> o site (§10.4).
 
 ---
 
@@ -275,19 +316,9 @@ Linux/macOS: `source .venv/bin/activate`. Passo a passo detalhado em
 > **Nunca abra o site por duplo clique (`file://`).** O navegador trata essa origem como
 > `null`: o Ollama a recusa e a API do PDI também. Sempre sirva por HTTP.
 
-### 10.1 Site
+### 10.1 API do PDI
 
-Na **raiz** do repositório:
-
-```cmd
-python -m http.server 8000
-```
-
-Acesse **http://localhost:8000/index.html**.
-
-### 10.2 API do PDI
-
-Em outro terminal:
+Terminal 1, a partir da raiz:
 
 ```cmd
 cd processamento-imagens
@@ -295,8 +326,29 @@ cd processamento-imagens
 ```
 
 Escuta em `http://127.0.0.1:5000` (só na própria máquina). Verificação:
-`curl http://127.0.0.1:5000/health`. No site: **Módulos → Plantas → Análise Morfológica
-de Folhas**.
+`curl http://127.0.0.1:5000/health`. Necessária só para a análise de folhas.
+
+### 10.2 Site
+
+Terminal 2, **a partir da raiz** do repositório:
+
+```cmd
+python -m http.server 8000
+```
+
+Acesse **http://127.0.0.1:8000/**.
+
+### Usar o PDI no site
+
+1. API do PDI ligada (§10.1) e site servido (§10.2).
+2. Abrir **Plantas** → **Análise Morfológica de Folhas**.
+3. Selecionar uma imagem **JPG, PNG ou BMP** de uma folha — de preferência em fundo claro e
+   uniforme, como no Flavia.
+4. Clicar em **Analisar folha**: aparecem a máscara, o contorno, as medidas e a descrição.
+
+O PDI **não usa IA** e **não identifica a espécie**: descreve só a geometria da folha. Se a
+API estiver desligada, a página explica como iniciá-la; o resto do site continua
+funcionando.
 
 ### 10.3 CLI do PDI
 
@@ -310,8 +362,12 @@ Opções: `--json-apenas`, `--sem-imagens`, `--saida DIR`, `--verboso`. Códigos
 
 ### 10.4 IA / Ollama
 
-Conforme [`docs/DOCUMENTACAO-FINAL-NATURE-CODE.md`](docs/DOCUMENTACAO-FINAL-NATURE-CODE.md) §31:
+A IA **requer o Ollama** e **não requer o PDI** — nem ambiente virtual nem API; só o
+servidor do site. Conforme
+[`docs/DOCUMENTACAO-FINAL-NATURE-CODE.md`](docs/DOCUMENTACAO-FINAL-NATURE-CODE.md) §31:
 
+0. Instale o Ollama: https://ollama.com/download (instalação externa ao repositório; exige
+   conta e internet, porque o modelo é `:cloud`).
 1. Abra o Ollama pela **bandeja do sistema** e confirme a autenticação:
    ```cmd
    ollama signin
@@ -320,8 +376,11 @@ Conforme [`docs/DOCUMENTACAO-FINAL-NATURE-CODE.md`](docs/DOCUMENTACAO-FINAL-NATU
    ```
    (`ollama signin` só se ainda não estiver autenticado.)
 2. Sirva o site (§10.1).
-3. Tópico que gera por IA: `http://localhost:8000/pages/modulos/topicos/topicos-animais/filo-cordados.html`
-4. Diagnóstico: `http://localhost:8000/ferramentas/diagnostico.html`
+3. Tópico que gera por IA: `http://127.0.0.1:8000/pages/modulos/topicos/topicos-animais/filo-cordados.html`
+4. Diagnóstico: `http://127.0.0.1:8000/ferramentas/diagnostico.html`
+
+**Fallback:** `IA → cache → quiz fixo`. Sem Ollama, sem internet ou sem cota, o quiz sai do
+cache; sem cache para o tópico, sai o quiz fixo original. O aluno nunca fica sem quiz.
 
 Se aparecer erro de CORS em outra máquina: `setx OLLAMA_ORIGINS "*"` e reiniciar o Ollama
 pela bandeja. **Botão de pânico:** `CONFIG_IA.habilitada = false` em
@@ -343,9 +402,16 @@ pela bandeja. **Botão de pânico:** `CONFIG_IA.habilitada = false` em
 | Download | https://sourceforge.net/projects/flavia/files/Leaf%20Image%20Dataset/1.0/Leaves.tar.bz2/download |
 | Artigo | Stephen Gang Wu et al., *A Leaf Recognition Algorithm for Plant Classification Using Probabilistic Neural Network*, IEEE ISSPIT, 2007 |
 
-**O dataset não está no repositório.** Instruções de download e o manifesto dos
+**O dataset completo não está no repositório.** Instruções de download e o manifesto dos
 subconjuntos usados (64 de desenvolvimento, 96 de avaliação, semente `20260919`):
 [`processamento-imagens/dataset/README.md`](processamento-imagens/dataset/README.md).
+
+Os dados de avaliação e reprodutibilidade **estão versionados**: resultados por imagem,
+resumos, hashes do pipeline e inspeção humana em
+[`docs/processamento-imagens/dados-avaliacao/`](docs/processamento-imagens/dados-avaliacao/)
+(Fase 10) e [`docs/processamento-imagens/dados-robustez/`](docs/processamento-imagens/dados-robustez/)
+(Fase 11). A página do PDI funciona com qualquer imagem de folha; o dataset só é
+necessário para reproduzir a avaliação.
 
 > **Ressalva sobre a licença** (de [`02-DATASET.md`](docs/processamento-imagens/02-DATASET.md)):
 > o SourceForge declara o **projeto** Flavia como GPLv2, o que inclui o software de
@@ -375,14 +441,28 @@ reservadas, nunca usadas no desenvolvimento.
 
 > **Isto não é acurácia.** Não existe referência de verdade para as categorias
 > geométricas. "Processamento válido" significa que o pipeline chegou ao fim com um objeto
-> medido; se a segmentação está visualmente correta depende da **inspeção humana, ainda
-> pendente**. Detalhes: [`10-AVALIACAO-FINAL.md`](docs/processamento-imagens/10-AVALIACAO-FINAL.md).
+> medido. A **inspeção humana** dos 12 casos selecionados foi concluída: **12/12
+> considerados visualmente utilizáveis**, sem correção do pipeline. Detalhes:
+> [`10-AVALIACAO-FINAL.md`](docs/processamento-imagens/10-AVALIACAO-FINAL.md).
 
-### PDI — Fase 11: robustez com fotos externas
+### PDI — Fase 11: robustez com imagens externas
 
-**Infraestrutura pronta; avaliação externa aguardando fotos reais da equipe.** O protocolo
-prevê 10 a 15 fotografias reais (preferência 12), variando fundo, iluminação, posição e
-distância, com inspeção humana de todas. Nenhum resultado existe ainda. Ver
+**Executada e inspecionada manualmente — robustez externa limitada.**
+
+> Em imagens externas ao Flavia, o pipeline processou 9/9 arquivos sem erro, porém a
+> inspeção visual mostrou 0 resultados totalmente adequados, 2 parciais e 7 inadequados,
+> evidenciando limitação de generalização para fundos e iluminações não controlados.
+
+| Métrica | Resultado |
+|---|---:|
+| Imagens externas (fontes externas ao Flavia, não usadas no desenvolvimento) | 9 |
+| Processadas sem erro | 9 |
+| Resultado adequado / parcial / inadequado (inspeção humana) | **0 / 2 / 7** |
+
+Causas principais: fundo confundido com folha (5), objeto secundário incorporado (2),
+folha parcialmente perdida (1), cor fora da faixa HSV (1). **Sucesso operacional não é
+segmentação correta**: o pipeline chegou ao fim em todas, mas mediu a folha de forma
+adequada em nenhuma. Ver
 [`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](docs/processamento-imagens/11-ROBUSTEZ-FOTOS-EXTERNAS.md).
 
 ### IA
@@ -397,7 +477,7 @@ Piloto da Fase 5 e revalidação do Prompt V4:
 
 | Suíte | Comando | Resultado |
 |---|---|---|
-| PDI | `cd processamento-imagens` → `.venv\Scripts\python.exe -m pytest` | **881 passam, 1 pulado** (link simbólico, sem permissão no Windows) |
+| PDI | `cd processamento-imagens` → `.venv\Scripts\python.exe -m pytest` | **886 passam, 1 pulado** (link simbólico, sem permissão no Windows) |
 | IA — camada | `node scripts\testar-camada-ia.js` | 67/67 |
 | IA — integração | `node scripts\testar-integracao.js` | 46/46 |
 | IA — diagnóstico | `node scripts\testar-diagnostico.js` | 82/82 |
@@ -424,7 +504,9 @@ do PDI que executam o JavaScript da página usam Node.js; sem ele, são pulados.
 - `proporcao_verde` tem **viés circular**: é medida sobre a máscara definida pela própria
   faixa verde.
 - Segmentação por cor: folhas não verdes e fundos verdes são pontos fracos conhecidos.
-- **Avaliação externa com fotos reais ainda pendente** (Fase 11).
+- **Robustez externa limitada** (Fase 11): em 9 imagens externas, 0 resultados adequados,
+  2 parciais e 7 inadequados. O método não generaliza de forma confiável para fotografias
+  naturais com fundo e iluminação não controlados.
 - Servidor de desenvolvimento do Flask: adequado a uso local, não a publicação.
 
 **IA**
@@ -450,11 +532,14 @@ Listas completas: [`docs/README.md`](docs/README.md) §6 e
 | IA: benchmark local (Fase 6) | ⚠️ Parcial — duas sondagens, bateria completa não executada |
 | PDI: pipeline, CLI, API, interface | ✅ Concluído e congelado (`fase-9-completa`) |
 | PDI: avaliação final nas 96 reservadas | ✅ Executada — 96/96 processadas, 0 erros |
-| PDI: inspeção humana da Fase 10 | ⏳ Pendente |
-| PDI: fotos externas (Fase 11) | ⏳ Infraestrutura pronta, aguardando fotos |
-| Interface do PDI testada no navegador por pessoa | ⏳ Pendente |
+| PDI: Fase 10 | ✅ Concluída |
+| PDI: inspeção humana da Fase 10 | ✅ Concluída — 12/12 casos selecionados utilizáveis |
+| PDI: Fase 11 — imagens externas | ✅ Executada e inspecionada — 9/9 processadas, 0 erros |
+| PDI: robustez externa | ⚠️ **Limitada** — 0 adequados, 2 parciais, 7 inadequados em 9 |
+| Interface do PDI testada no navegador por pessoa | ✅ Concluída — celular, tablet e desktop |
+| Testes manuais de API, CLI e IA | ✅ Concluídos |
 
-O que falta conferir manualmente: [`docs/CHECKLIST-ENTREGA-FINAL.md`](docs/CHECKLIST-ENTREGA-FINAL.md)
+Pendências restantes: [`docs/CHECKLIST-ENTREGA-FINAL.md`](docs/CHECKLIST-ENTREGA-FINAL.md)
 e [`docs/TESTES-MANUAIS-FINAIS.md`](docs/TESTES-MANUAIS-FINAIS.md).
 
 ---
@@ -463,6 +548,11 @@ e [`docs/TESTES-MANUAIS-FINAIS.md`](docs/TESTES-MANUAIS-FINAIS.md).
 
 | Documento | Conteúdo |
 |---|---|
+| [`docs/RELATORIO-FINAL-IA.md`](docs/RELATORIO-FINAL-IA.md) | **Relatório final da disciplina de Inteligência Artificial** |
+| [`docs/RELATORIO-FINAL-PDI.md`](docs/RELATORIO-FINAL-PDI.md) | **Relatório final da disciplina de Processamento Digital de Imagens** |
+| [`docs/IA.md`](docs/IA.md) | **Índice da disciplina de Inteligência Artificial** |
+| [`docs/PDI.md`](docs/PDI.md) | **Índice da disciplina de Processamento Digital de Imagens** |
+| [`docs/ENTREGA-GERAL.md`](docs/ENTREGA-GERAL.md) | **Guia geral de entrega: as duas disciplinas, instalação e execução** |
 | [`docs/DOCUMENTACAO-FINAL-IA-PDI.md`](docs/DOCUMENTACAO-FINAL-IA-PDI.md) | **Documento técnico principal do projeto inteiro** |
 | [`docs/DOCUMENTACAO-FINAL-NATURE-CODE.md`](docs/DOCUMENTACAO-FINAL-NATURE-CODE.md) | Documentação final detalhada do módulo de IA |
 | [`docs/README.md`](docs/README.md) | Resumo e índice da documentação de IA |
@@ -477,5 +567,5 @@ e [`docs/TESTES-MANUAIS-FINAIS.md`](docs/TESTES-MANUAIS-FINAIS.md).
 
 ## 17. Licença
 
-O repositório **não define licença** para o código. O dataset Flavia não é redistribuído;
+Licença do código: não definida pela equipe. O dataset Flavia não é redistribuído;
 ver a ressalva da §11.

@@ -5,8 +5,10 @@
 > de cada tópico, **sem backend, sem dependências novas e sem alterar o conteúdo original**.
 >
 > **Estado:** implementado, integrado, testado e documentado. **13 dos 21 tópicos** geram
-> questões por IA. Falta apenas executar o benchmark do modelo local (Fase 6), que roda em
-> outra máquina.
+> questões por IA. Na Fase 6, foram executadas as **sondagens locais** de `qwen3.5:4b` e
+> `qwen3.5:2b` ([`06c-RESULTADO-BENCHMARK.md`](06c-RESULTADO-BENCHMARK.md)): no hardware e
+> na configuração testados, nenhum dos dois atingiu o critério de viabilidade do protocolo.
+> A bateria completa Cloud × Local não foi executada.
 
 ---
 
@@ -266,6 +268,7 @@ verdadeira **para o assunto daquela pergunta**, e isso nenhum método lexical re
 | [`05b-REVALIDACAO-V4.md`](05b-REVALIDACAO-V4.md) | 5 | Revalidação do V4 em amostra limpa |
 | [`06-BENCHMARK-LOCAL.md`](06-BENCHMARK-LOCAL.md) | 6 | Protocolo do benchmark Cloud × Local |
 | [`06b-GUIA-PC-MESA.md`](06b-GUIA-PC-MESA.md) | 6 | Passo a passo de 28 etapas para executar em outra máquina |
+| [`06c-RESULTADO-BENCHMARK.md`](06c-RESULTADO-BENCHMARK.md) | 6 | Resultado das sondagens locais `qwen3.5:4b` e `qwen3.5:2b` |
 
 ---
 
@@ -315,7 +318,13 @@ Escritas com honestidade, porque este ponto conta na avaliação.
     real rodando sobre um DOM mínimo, mais checagem de carregamento por HTTP. Layout e CSS
     foram conferidos manualmente.
 
-12. **O benchmark do modelo local não foi executado.** É a Fase 6, pendente.
+12. **O benchmark Cloud × Local foi executado só em parte.** Foram feitas as sondagens
+    locais de `qwen3.5:4b` e `qwen3.5:2b` (3 gerações cada, em Cordados): nenhum quiz
+    entregue pela IA e latência mediana de 505,7 s e 316,6 s por geração. **No hardware e na
+    configuração testados**, os modelos locais não atingiram o critério de viabilidade
+    definido no protocolo — o que não permite concluir que modelos locais em geral não
+    funcionem. Os braços Cloud e Local com JSON Schema não foram executados, e a causa das
+    respostas vazias não foi comprovada. Ver [`06c-RESULTADO-BENCHMARK.md`](06c-RESULTADO-BENCHMARK.md).
 
 ---
 
@@ -323,7 +332,7 @@ Escritas com honestidade, porque este ponto conta na avaliação.
 
 | | Por quê |
 |---|---|
-| **Modelo local** | Religa o JSON Schema, remove a dependência de internet e o limite de cota. É a Fase 6, já preparada |
+| **Modelo local** | Religa o JSON Schema, remove a dependência de internet e o limite de cota. As sondagens da Fase 6 não atingiram o critério de viabilidade no hardware testado; caminhos registrados, ainda não testados: `think: false`, outros modelos locais, hardware diferente e os braços restantes ([`06c`](06c-RESULTADO-BENCHMARK.md) §13) |
 | **Validar termo técnico inédito** | Pegaria o defeito da §6.6 sem depender do comportamento do modelo |
 | **RAG para conteúdos maiores** | Hoje o tópico inteiro cabe no prompt. Com material maior, seria preciso recuperar só os trechos relevantes |
 | **Ajuste fino para estilo pedagógico** | Reduziria a dependência de regras acumuladas no prompt |

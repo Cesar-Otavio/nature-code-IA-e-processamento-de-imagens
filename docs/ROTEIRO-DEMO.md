@@ -15,6 +15,7 @@
 | Imagem de folha à mão | Uma do **conjunto de desenvolvimento** do Flavia (`1101.jpg`, `2400.jpg`, `1307.jpg` ou `2497.jpg`), copiada para a Área de Trabalho |
 | Cache aquecido | Abrir o tópico de Cordados uma vez antes, para haver cache |
 | Abas abertas | Início, Cordados, Diagnóstico, Análise de folhas, GitHub |
+| Cache do navegador limpo | `Ctrl+F5` uma vez em cada aba — no teste manual, o navegador serviu uma versão antiga até isso |
 
 ---
 
@@ -34,7 +35,8 @@
 | 10 | Mostrar as características | Tabela de medidas | Área, perímetro, elongação, circularidade, solidez — em pixels |
 | 11 | Mostrar a classificação | Descrição morfológica | Cinco atributos por **regras fixas**, com os limiares que as motivaram |
 | 12 | Explicar que o PDI não usa IA | Aviso no topo da página | Processamento de imagens clássico; determinístico; **não identifica espécie** |
-| 13 | Mostrar documentação e testes | GitHub + terminal com `pytest` | 881 testes do PDI e 256 da IA; avaliação em 96 imagens reservadas: 96/96 processadas, 0 erros — **não é acurácia**, é taxa de processamento válido |
+| 13 | Mostrar documentação e testes | GitHub + terminal com `pytest` | 886 testes do PDI e 256 da IA; avaliação em 96 imagens reservadas: 96/96 processadas, 0 erros — **não é acurácia**, é taxa de processamento válido |
+| 14 | Falar da robustez | Tabela da Fase 11 no README | *"No Flavia controlado, o pipeline processou todo o conjunto reservado sem erro e os 12 casos inspecionados foram utilizáveis. Em imagens externas mais complexas, o pipeline continuou executando sem erro, mas a inspeção mostrou limitações de segmentação. Isso evidencia a dependência atual do método em condições visuais próximas às usadas no desenvolvimento."* |
 
 ---
 
@@ -45,7 +47,7 @@
 | **IA offline** (sem internet, cota esgotada, Ollama com problema) | Mostrar que o quiz continua saindo do **cache** ou do **quiz fixo** — é exatamente a cascata funcionando. A página de diagnóstico mostra o motivo |
 | **API do PDI offline** | A página mostra a mensagem com o comando para iniciar. Explicar e, se não subir, usar a **CLI**: `.venv\Scripts\python.exe -m src.cli <imagem>` mostra as mesmas medidas e descrição no terminal, e as imagens ficam em `resultados\execucoes\` |
 | **Sem internet** | O PDI é **todo local** e funciona igual. A IA cai para cache ou quiz fixo. Bootstrap e Google Fonts vêm de CDN: o layout pode ficar simplificado, sem perder função |
-| **Foto externa falha** | Não improvisar. Explicar que o pipeline foi calibrado no Flavia (fundo branco) e que a robustez em fotos reais é a Fase 11, com protocolo próprio. Usar a imagem do Flavia já validada |
+| **Foto externa falha** | Não improvisar. É o resultado esperado e documentado: na Fase 11, 0 de 9 imagens externas tiveram resultado adequado (2 parciais, 7 inadequados). Explicar a causa (segmentação por cor, calibrada em fundo branco) e usar a imagem do Flavia já validada |
 | **Pergunta sobre "acerto"** | Não há acurácia: não existe referência de verdade para as categorias geométricas. O que foi medido é taxa de processamento, determinismo e distribuição; a inspeção visual é humana |
 
 ---
@@ -56,5 +58,6 @@
 |---|---|
 | "A IA reconhece a folha" | "O PDI mede a forma da folha, sem IA" |
 | "Acurácia de 100 %" | "100 % de processamento válido no conjunto reservado" |
+| "Funciona em qualquer foto" / "100 % nas fotos externas" | "Processou 9/9 sem erro, mas a inspeção mostrou 0 adequados, 2 parciais e 7 inadequados" |
 | "O sistema identifica a espécie" | "O sistema descreve a geometria; não identifica espécie" |
 | "Treinamos o modelo de folhas" | "Os limiares foram calibrados por medição no conjunto de desenvolvimento" |

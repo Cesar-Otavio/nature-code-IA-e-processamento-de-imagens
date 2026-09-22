@@ -1,17 +1,53 @@
-# Fase 11 — Protocolo de captura das fotos externas
+# Fase 11 — Protocolo das imagens externas
 
-> Este protocolo é definido **antes** de qualquer foto ser tirada, pelo mesmo motivo da
-> Fase 2 (§15): o critério não pode se acomodar ao que se vê depois.
+> Este protocolo foi definido **antes** de qualquer imagem externa ser processada, pelo
+> mesmo motivo da Fase 2 (§15): o critério não pode se acomodar ao que se vê depois.
+
+---
+
+## 0. Como o protocolo foi aplicado
+
+A avaliação foi executada com **9 imagens externas ao dataset Flavia**, **obtidas de fontes
+externas** e convertidas para JPG, **selecionadas para representar condições visuais
+diferentes** das do Flavia (fundo natural, céu, contraluz, várias folhas). **As imagens não
+foram tiradas pela equipe.** Resultado e análise em
+[`11-ROBUSTEZ-FOTOS-EXTERNAS.md`](11-ROBUSTEZ-FOTOS-EXTERNAS.md).
+
+O protocolo original previa fotos capturadas para este fim. A tabela registra o que foi
+seguido e onde a execução se afastou dele:
+
+| Item do protocolo | Previsto | Executado |
+|---|---|---|
+| Quantidade (§1) | 10–15, preferência 12 | **9** |
+| Origem (§4) | Fotografia real, tirada para este fim, sem edição | **Imagens de fontes externas**, convertidas para JPG; edição e compressão prévias desconhecidas |
+| Cobertura das condições (§2) | Cada valor ao menos uma vez | Parcial: sem fundo escuro, luz artificial, sombra, inclinação, folha pequena |
+| Formatos (§3) | JPG e, se possível, uma PNG | Só JPG |
+| Uma folha principal por imagem (§4) | Sim | Sim, exceto EXT008 (ramo com várias folhas, incluída como caso de robustez) |
+| Sem pessoas, textos ou dados privados (§4) | Sim | Não registrado na inspeção; as imagens não são versionadas |
+| Não refazer nem remover imagens com falha (§5) | Sim | **Sim** — as 9 foram mantidas |
+| Não ajustar parâmetros (§5) | Sim | **Sim** — hashes idênticos antes e depois |
+| Inspeção humana de todas (§6) | Sim | **Sim** — 9/9 |
+| Duas pessoas independentes (§6) | Se possível | Não registrado |
+
+### Limitações introduzidas pela origem das imagens
+
+- **Não houve controle de aquisição**: câmera, distância, balanço de branco e iluminação
+  são desconhecidos.
+- **Compressão e processamento prévios podem ser desconhecidos**: recompressão,
+  redimensionamento ou filtros anteriores podem ter alterado as cores, e a segmentação do
+  pipeline é por cor.
+- **A avaliação é descritiva**: 9 imagens escolhidas manualmente não permitem estatística
+  nem generalização.
 
 ---
 
 ## 1. Quantidade
 
-**Entre 10 e 15 fotografias reais. Preferência: 12.**
+**Entre 10 e 15 imagens. Preferência: 12.** (Executado: 9 — ver §0.)
 
 O conjunto é pequeno de propósito: a Fase 11 não busca estatística, e sim observar o
 comportamento do pipeline congelado sob condições que o Flavia não tem, com **inspeção
-humana de todas as fotos**.
+humana de todas as imagens**.
 
 ---
 
@@ -65,6 +101,9 @@ sem editar a imagem.
 ---
 
 ## 4. Regras de captura
+
+> Regras escritas para a captura planejada. Na execução, as imagens vieram de fontes
+> externas; as divergências estão na §0.
 
 Cada foto **deve**:
 
