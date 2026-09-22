@@ -272,7 +272,7 @@ motor; mutar o array em seu lugar foi a decisão de menor risco.
 
 ## 6. Objetivos da integração com IA
 
-Requisitos estabelecidos no roteiro [`PROMPT_CLAUDE_CODE_QUIZ_IA.md`](../PROMPT_CLAUDE_CODE_QUIZ_IA.md)
+Requisitos definidos no planejamento da integração com IA
 e confirmados pela implementação:
 
 | | Requisito | Onde foi atendido |
@@ -1799,7 +1799,6 @@ Todo número deste documento tem origem verificável. Nenhuma fonte externa foi 
 | [`docs/06-BENCHMARK-LOCAL.md`](06-BENCHMARK-LOCAL.md) | Protocolo e braços (§20, §21) |
 | [`docs/06b-GUIA-PC-MESA.md`](06b-GUIA-PC-MESA.md) | Critérios dos passos 20 e 21 (§21, §23) |
 | [`docs/06c-RESULTADO-BENCHMARK.md`](06c-RESULTADO-BENCHMARK.md) | Relatório das sondagens (§22 a §27) |
-| [`PROMPT_CLAUDE_CODE_QUIZ_IA.md`](../PROMPT_CLAUDE_CODE_QUIZ_IA.md) | Roteiro e requisitos (§6) |
 
 ### Arquivos de dados
 
@@ -1844,7 +1843,6 @@ Site-Nature-Code-main/
 │
 ├── index.html                    Página inicial; contém o modal de identificação (§1)
 ├── README.md                     README original do site, anterior à integração com IA
-├── PROMPT_CLAUDE_CODE_QUIZ_IA.md Roteiro que define requisitos e fases
 │
 ├── pages/modulos/topicos/        21 páginas de tópico — conteúdo didático + quiz
 │   ├── topicos-animais/          10 tópicos

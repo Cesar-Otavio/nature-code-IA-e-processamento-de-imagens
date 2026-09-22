@@ -29,7 +29,6 @@ Site-Nature-Code-main/
 ├── index.html                      Capa: vídeo de fundo + modal de informações + botão COMEÇAR
 ├── README.md                       Descrição acadêmica do site (lista os 21 tópicos)
 ├── Markdown-Nature-Code.md         Anotações de conteúdo do trabalho
-├── PROMPT_CLAUDE_CODE_QUIZ_IA.md   Este roteiro de integração com IA
 ├── .hintrc                         Config do webhint (lint de HTML)
 │
 ├── css/
@@ -416,7 +415,7 @@ Este é o achado que mais afeta o resto do trabalho, então fica destacado.
 | 800 – 1.500 | 9 — Cnidários (832), Equinodermos (860), Briófitas (866), Reino Plantae (869), Pteridófitas (999), Poríferos (1.002), Mundo Vivo (1.085), Definição e Componentes (1.087), Artrópodes (1.167) | Limítrofe. Dá 2 a 3 questões honestas |
 | > 2.000 | 5 — Ecossistemas da Terra (2.124), Sucessão (2.141), Pirâmides (2.820), Fluxo de Energia (3.229), **Cordados (5.120)** | Confortável |
 
-**Correção a um pressuposto do roteiro:** a seção 9 do `PROMPT_CLAUDE_CODE_QUIZ_IA.md` sugere o Filo
+**Correção a um pressuposto inicial:** o planejamento sugeria o Filo
 Artrópodes para o piloto por ser "o conteúdo mais extenso". Medido, ele tem **1.167 caracteres** —
 o mais extenso é **Filo dos Cordados, com 5.120**, seguido de Fluxo de Energia (3.229). Se o critério
 é ter a maior base textual, o piloto deveria ser Cordados; se o critério é observar o comportamento da
