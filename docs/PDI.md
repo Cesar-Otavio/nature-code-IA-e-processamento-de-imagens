@@ -1,8 +1,8 @@
-# Nature Code — Processamento Digital de Imagens
+# Nature Code — Processamento de Imagens e Sinais
 
-> 📄 **Relatório final da disciplina:** [`RELATORIO-FINAL-PDI.md`](RELATORIO-FINAL-PDI.md)
+> 📄 **Relatório final da disciplina:** [`Relatorio final - Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md)
 
-> **Disciplina:** Processamento Digital de Imagens.
+> **Disciplina:** Processamento de Imagens e Sinais.
 > **Funcionalidade:** análise morfológica de folhas — mede a forma de uma folha numa
 > imagem e a descreve em termos geométricos.
 >
@@ -109,4 +109,4 @@ O PDI **não precisa do Ollama**. CLI e demais opções: [`processamento-imagens
 Dados de avaliação e reprodutibilidade:
 [`dados-avaliacao/`](processamento-imagens/dados-avaliacao/) (Fase 10) e
 [`dados-robustez/`](processamento-imagens/dados-robustez/) (Fase 11). Documento técnico dos
-dois módulos: [`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md).
+dois módulos: [`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md).

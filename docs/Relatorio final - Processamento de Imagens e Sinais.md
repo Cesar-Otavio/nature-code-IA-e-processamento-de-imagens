@@ -1,14 +1,14 @@
-# Relatório final — Processamento Digital de Imagens
+# Relatório final — Processamento de Imagens e Sinais
 
 **Nature Code: análise morfológica de folhas**
 
-> Relatório da disciplina de **Processamento Digital de Imagens**. É autocontido: resume o
+> Relatório da disciplina de **Processamento de Imagens e Sinais**. É autocontido: resume o
 > problema, cada etapa do pipeline com a sua justificativa, a avaliação e os resultados.
 > Cada seção aponta o documento de fase de onde o conteúdo vem; onde houver divergência,
 > vale o documento de fase.
 >
-> Relatório da outra disciplina: [`RELATORIO-FINAL-IA.md`](RELATORIO-FINAL-IA.md).
-> Integração entre as duas: [`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md).
+> Relatório da outra disciplina: [`Relatorio final - IA.md`](Relatorio%20final%20-%20IA.md).
+> Integração entre as duas: [`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md).
 
 > **100 % de sucesso operacional não significa 100 % de segmentação correta.** Neste
 > relatório, *sucesso operacional* quer dizer apenas que o pipeline chegou ao fim sem erro
@@ -24,7 +24,7 @@
 | | |
 |---|---|
 | **Projeto** | Nature Code — módulo de análise morfológica de folhas |
-| **Disciplina** | Processamento Digital de Imagens |
+| **Disciplina** | Processamento de Imagens e Sinais |
 | **Instituição** | Universidade do Sagrado Coração — Bauru/SP |
 | **Curso** | Ciência da Computação |
 | **Repositório** | https://github.com/Cesar-Otavio/nature-code-IA-e-processamento-de-imagens |
@@ -40,7 +40,6 @@
 - Giovana Giraldeli
 - Giovani Nogueira Pires
 - Marcus Vinicius da Silva Capeteruchi
-- Guilherme Ribeiro Zangrande
 
 ---
 

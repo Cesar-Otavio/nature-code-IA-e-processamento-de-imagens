@@ -3,9 +3,9 @@
 Projeto interdisciplinar utilizado em:
 
 - **Inteligência Artificial** — quizzes dinâmicos gerados por LLM
-- **Processamento Digital de Imagens** — análise morfológica de folhas, **sem IA**
+- **Processamento de Imagens e Sinais** — análise morfológica de folhas, **sem IA**
 
-| 📘 [**Documentação — Inteligência Artificial**](docs/IA.md) | 📗 [**Documentação — Processamento Digital de Imagens**](docs/PDI.md) | 📋 [**Guia Geral de Entrega**](docs/ENTREGA-GERAL.md) |
+| 📘 [**Documentação — Inteligência Artificial**](docs/IA.md) | 📗 [**Documentação — Processamento de Imagens e Sinais**](docs/PDI.md) | 📋 [**Guia Geral de Entrega**](docs/ENTREGA-GERAL.md) |
 |:---:|:---:|:---:|
 
 **Portal educacional de Biologia com dois módulos técnicos independentes:
@@ -23,11 +23,13 @@ imagens.** Requisitos da entrega e onde cada um é atendido:
 
 | Documento | Conteúdo |
 |---|---|
-| [**`RELATORIO-FINAL-IA.md`**](docs/RELATORIO-FINAL-IA.md) | Relatório da disciplina de **Inteligência Artificial** |
-| [**`RELATORIO-FINAL-PDI.md`**](docs/RELATORIO-FINAL-PDI.md) | Relatório da disciplina de **Processamento Digital de Imagens** |
-| [**`DOCUMENTACAO-FINAL-IA-PDI.md`**](docs/DOCUMENTACAO-FINAL-IA-PDI.md) | Documento de **integração** entre as duas disciplinas |
+| [**`Relatorio final - IA.md`**](docs/Relatorio%20final%20-%20IA.md) | Relatório da disciplina de **Inteligência Artificial** |
+| [**`Relatorio final - Processamento de Imagens e Sinais.md`**](docs/Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md) | Relatório da disciplina de **Processamento de Imagens e Sinais** |
+| [**`Relatorio final - IA + Processamento de Imagens e Sinais.md`**](docs/Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md) | Documento de **integração** entre as duas disciplinas |
 
 ## Integrantes
+
+### Inteligência Artificial
 
 - Amanda Pazold dos Santos
 - Cesar Otavio da Silva Boiani
@@ -35,6 +37,14 @@ imagens.** Requisitos da entrega e onde cada um é atendido:
 - Giovani Nogueira Pires
 - Marcus Vinicius da Silva Capeteruchi
 - Guilherme Ribeiro Zangrande
+
+### Processamento de Imagens e Sinais
+
+- Amanda Pazold dos Santos
+- Cesar Otavio da Silva Boiani
+- Giovana Giraldeli
+- Giovani Nogueira Pires
+- Marcus Vinicius da Silva Capeteruchi
 
 ---
 
@@ -548,12 +558,12 @@ e [`docs/TESTES-MANUAIS-FINAIS.md`](docs/TESTES-MANUAIS-FINAIS.md).
 
 | Documento | Conteúdo |
 |---|---|
-| [`docs/RELATORIO-FINAL-IA.md`](docs/RELATORIO-FINAL-IA.md) | **Relatório final da disciplina de Inteligência Artificial** |
-| [`docs/RELATORIO-FINAL-PDI.md`](docs/RELATORIO-FINAL-PDI.md) | **Relatório final da disciplina de Processamento Digital de Imagens** |
+| [`docs/Relatorio final - IA.md`](docs/Relatorio%20final%20-%20IA.md) | **Relatório final da disciplina de Inteligência Artificial** |
+| [`docs/Relatorio final - Processamento de Imagens e Sinais.md`](docs/Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md) | **Relatório final da disciplina de Processamento de Imagens e Sinais** |
 | [`docs/IA.md`](docs/IA.md) | **Índice da disciplina de Inteligência Artificial** |
-| [`docs/PDI.md`](docs/PDI.md) | **Índice da disciplina de Processamento Digital de Imagens** |
+| [`docs/PDI.md`](docs/PDI.md) | **Índice da disciplina de Processamento de Imagens e Sinais** |
 | [`docs/ENTREGA-GERAL.md`](docs/ENTREGA-GERAL.md) | **Guia geral de entrega: as duas disciplinas, instalação e execução** |
-| [`docs/DOCUMENTACAO-FINAL-IA-PDI.md`](docs/DOCUMENTACAO-FINAL-IA-PDI.md) | **Documento técnico principal do projeto inteiro** |
+| [`docs/Relatorio final - IA + Processamento de Imagens e Sinais.md`](docs/Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md) | **Documento técnico principal do projeto inteiro** |
 | [`docs/DOCUMENTACAO-FINAL-NATURE-CODE.md`](docs/DOCUMENTACAO-FINAL-NATURE-CODE.md) | Documentação final detalhada do módulo de IA |
 | [`docs/README.md`](docs/README.md) | Resumo e índice da documentação de IA |
 | [`docs/processamento-imagens/`](docs/processamento-imagens/) | Fases 0–11 do PDI, uma por documento |

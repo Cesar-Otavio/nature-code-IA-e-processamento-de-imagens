@@ -1,13 +1,13 @@
 # Nature Code — Guia geral de entrega
 
 > O **Nature Code** é um projeto interdisciplinar entregue em **duas disciplinas**:
-> **Inteligência Artificial** e **Processamento Digital de Imagens**.
+> **Inteligência Artificial** e **Processamento de Imagens e Sinais**.
 
 ---
 
 ## 1. Duas disciplinas, um site
 
-| | Inteligência Artificial | Processamento Digital de Imagens |
+| | Inteligência Artificial | Processamento de Imagens e Sinais |
 |---|---|---|
 | Funcionalidade | Quizzes dinâmicos gerados por LLM | Análise morfológica de folhas |
 | Usa IA? | **Sim** — LLM `gpt-oss:120b-cloud` via Ollama | **Não** — processamento clássico e determinístico |
@@ -28,9 +28,9 @@ dados. Nenhum módulo importa o outro, e testes automatizados verificam essa sep
 
 | Documento | Para quem |
 |---|---|
-| [**`RELATORIO-FINAL-IA.md`**](RELATORIO-FINAL-IA.md) | Disciplina de **Inteligência Artificial** |
-| [**`RELATORIO-FINAL-PDI.md`**](RELATORIO-FINAL-PDI.md) | Disciplina de **Processamento Digital de Imagens** |
-| [**`DOCUMENTACAO-FINAL-IA-PDI.md`**](DOCUMENTACAO-FINAL-IA-PDI.md) | Integração entre as duas disciplinas |
+| [**`Relatorio final - IA.md`**](Relatorio%20final%20-%20IA.md) | Disciplina de **Inteligência Artificial** |
+| [**`Relatorio final - Processamento de Imagens e Sinais.md`**](Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md) | Disciplina de **Processamento de Imagens e Sinais** |
+| [**`Relatorio final - IA + Processamento de Imagens e Sinais.md`**](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md) | Integração entre as duas disciplinas |
 
 ---
 
@@ -105,7 +105,7 @@ Cada disciplina pode ser testada sem a outra. Detalhes: [`IA.md`](IA.md) §4 e
 - Resultados versionados da avaliação: [`dados-avaliacao/`](processamento-imagens/dados-avaliacao/)
   (Fase 10) e [`dados-robustez/`](processamento-imagens/dados-robustez/) (Fase 11). As
   imagens externas da Fase 11 **não** são publicadas.
-- Documento técnico dos dois módulos: [`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md).
+- Documento técnico dos dois módulos: [`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md).
 
 ---
 

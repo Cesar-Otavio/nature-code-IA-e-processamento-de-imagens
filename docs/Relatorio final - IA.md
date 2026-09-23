@@ -6,8 +6,8 @@
 > a solução, os experimentos e os resultados. Cada seção aponta o documento detalhado de
 > onde o conteúdo vem; onde houver divergência, vale o documento de origem.
 >
-> Relatório da outra disciplina: [`RELATORIO-FINAL-PDI.md`](RELATORIO-FINAL-PDI.md).
-> Integração entre as duas: [`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md).
+> Relatório da outra disciplina: [`Relatorio final - Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md).
+> Integração entre as duas: [`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md).
 
 ---
 
@@ -440,7 +440,7 @@ versionadas.
 
 ## 25. Relação com o módulo PDI
 
-O Nature Code também contém um módulo de **Processamento Digital de Imagens** (análise
+O Nature Code também contém um módulo de **Processamento de Imagens e Sinais** (análise
 morfológica de folhas), da outra disciplina. Os dois compartilham **só o site**:
 
 | | IA | PDI |
@@ -451,8 +451,8 @@ morfológica de folhas), da outra disciplina. Os dois compartilham **só o site*
 
 Nenhum módulo importa o outro, e testes verificam isso: a camada de IA não referencia o PDI,
 e o PDI não usa nenhuma biblioteca de IA nem fala com o Ollama. Ver
-[`RELATORIO-FINAL-PDI.md`](RELATORIO-FINAL-PDI.md) e
-[`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md) §24.
+[`Relatorio final - Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20Processamento%20de%20Imagens%20e%20Sinais.md) e
+[`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md) §24.
 
 ---
 

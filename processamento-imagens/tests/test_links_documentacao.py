@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
+from urllib.parse import unquote
 
 import pytest
 
@@ -55,7 +56,7 @@ def links_quebrados(caminho: Path) -> tuple[list[str], int]:
         if re.match(r"^[a-zA-Z][a-zA-Z+.-]*:", alvo):  # http:, https:, mailto:
             continue
         conferidos += 1
-        arquivo, _, ancora = alvo.partition("#")
+        arquivo, _, ancora = unquote(alvo).partition("#")  # nomes com espaço vêm como %20
         destino = (caminho.parent / arquivo).resolve() if arquivo else caminho.resolve()
         if not destino.exists():
             problemas.append(f"{alvo} → arquivo inexistente")
@@ -82,7 +83,10 @@ def test_a_varredura_confere_links_de_verdade() -> None:
 
 def test_documentos_da_entrega_estao_na_varredura() -> None:
     nomes = {p.relative_to(RAIZ).as_posix() for p in DOCUMENTOS}
-    for obrigatorio in ("README.md", "docs/DOCUMENTACAO-FINAL-IA-PDI.md", "docs/CHECKLIST-ENTREGA-FINAL.md",
+    for obrigatorio in ("README.md", "docs/Relatorio final - IA.md",
+                        "docs/Relatorio final - Processamento de Imagens e Sinais.md",
+                        "docs/Relatorio final - IA + Processamento de Imagens e Sinais.md",
+                        "docs/CHECKLIST-ENTREGA-FINAL.md",
                         "docs/TESTES-MANUAIS-FINAIS.md", "docs/ROTEIRO-DEMO.md", "docs/REQUISITOS-PROFESSOR.md"):
         assert obrigatorio in nomes
 

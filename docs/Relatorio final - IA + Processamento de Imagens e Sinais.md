@@ -73,12 +73,22 @@ limiares que a motivaram. O PDI **não** identifica espécie, **não** diagnosti
 
 Universidade do Sagrado Coração — Bauru/SP · Ciência da Computação
 
+### Inteligência Artificial
+
 - Amanda Pazold dos Santos
 - Cesar Otavio da Silva Boiani
 - Giovana Giraldeli
 - Giovani Nogueira Pires
 - Marcus Vinicius da Silva Capeteruchi
 - Guilherme Ribeiro Zangrande
+
+### Processamento de Imagens e Sinais
+
+- Amanda Pazold dos Santos
+- Cesar Otavio da Silva Boiani
+- Giovana Giraldeli
+- Giovani Nogueira Pires
+- Marcus Vinicius da Silva Capeteruchi
 
 ---
 

@@ -1,6 +1,6 @@
 # Nature Code — Inteligência Artificial
 
-> 📄 **Relatório final da disciplina:** [`RELATORIO-FINAL-IA.md`](RELATORIO-FINAL-IA.md)
+> 📄 **Relatório final da disciplina:** [`Relatorio final - IA.md`](Relatorio%20final%20-%20IA.md)
 
 > **Disciplina:** Inteligência Artificial.
 > **Funcionalidade:** quizzes dinâmicos, com perguntas geradas por uma LLM a partir do
@@ -106,7 +106,7 @@ solução de problemas (CORS, autenticação): [`02-EXECUCAO.md`](02-EXECUCAO.md
 | [`05b-REVALIDACAO-V4.md`](05b-REVALIDACAO-V4.md) | Fase 5 — Revalidação do Prompt V4 |
 | [`06-BENCHMARK-LOCAL.md`](06-BENCHMARK-LOCAL.md) | Fase 6 — Protocolo do benchmark nuvem × local |
 | [`06c-RESULTADO-BENCHMARK.md`](06c-RESULTADO-BENCHMARK.md) | Fase 6 — Resultado das sondagens |
-| [`DOCUMENTACAO-FINAL-IA-PDI.md`](DOCUMENTACAO-FINAL-IA-PDI.md) | Documento técnico dos dois módulos |
+| [`Relatorio final - IA + Processamento de Imagens e Sinais.md`](Relatorio%20final%20-%20IA%20+%20Processamento%20de%20Imagens%20e%20Sinais.md) | Documento técnico dos dois módulos |
 
 As numerações de fase da IA e do PDI são **independentes**: "Fase 5" da IA não tem relação
 com "Fase 5" do PDI.
